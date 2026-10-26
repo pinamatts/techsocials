@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vcente Bat Choyan Mandaue · Iloilo La Paz Batchoy, Open 24 Hours</title>
+<meta name="description" content="Home of Iloilo's original special La Paz batchoy in Mandaue. Open 24 hours on S.B. Cabahug St, Ibabao-Estancia. Build your bowl and text your order ahead.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#c8202b">
+<link rel="icon" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Work+Sans:wght@400;500;600;700&family=Yellowtail&display=swap" rel="stylesheet">
+<style>
+:root{--red:#c8202b;--red-d:#9e1520;--green:#1f6b3a;--green-d:#154a28;--gold:#e8a317;--cream:#fffaf1;--paper:#fff;--ink:#1f1a16;--mute:#6b625a;--line:#eadfce;--black:#151311}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Work Sans',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.55;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+button{font:inherit;cursor:pointer;color:inherit}
+a{color:inherit}
+.preview{background:var(--black);color:#f3ece2;font-size:14px;text-align:center;padding:8px 16px}
+.preview a{font-weight:700;color:#ffd36b}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.serif{font-family:'DM Serif Display',Georgia,serif;font-weight:400}
+.script{font-family:'Yellowtail',cursive}
+
+/* header */
+header{background:var(--paper);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand img{width:50px;height:50px}
+.brand b{font-family:'DM Serif Display',serif;font-weight:400;font-size:21px;color:var(--red);line-height:1}
+.brand small{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--green);font-weight:600;margin-top:3px}
+header nav{display:flex;gap:26px;font-size:15px;font-weight:500}
+header nav a{text-decoration:none}
+header nav a:hover{color:var(--red)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:999px;padding:13px 22px;font-weight:600;font-size:15px;text-decoration:none;transition:transform .15s,background .15s}
+.btn:active{transform:scale(.97)}
+.btn-red{background:var(--red);color:#fff}.btn-red:hover{background:var(--red-d)}
+.btn-line{border:1.5px solid var(--ink);background:transparent}.btn-line:hover{background:var(--ink);color:#fff}
+.btn-green{background:var(--green);color:#fff}.btn-green:hover{background:var(--green-d)}
+@media(max-width:820px){header nav{display:none}header .btn{display:none}}
+
+/* hero */
+.hero{background:var(--paper);overflow:hidden;padding:0}
+.hero .wrap{display:grid;grid-template-columns:1fr 1.15fr;gap:40px;align-items:center;padding-top:56px;padding-bottom:64px}
+.tag{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--green)}
+.tag:before,.tag:after{content:"";width:26px;height:1.5px;background:currentColor}
+.hero h1{font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(40px,5.6vw,72px);line-height:1.02;letter-spacing:-.01em;margin:18px 0 18px}
+.hero h1 em{color:var(--red);font-style:italic}
+.hero p.lede{font-size:18px;color:var(--mute);max-width:30em}
+.open{display:inline-flex;align-items:center;gap:10px;margin-top:24px;background:#eef6f0;color:var(--green-d);border-radius:999px;padding:8px 16px 8px 12px;font-weight:600;font-size:14px}
+.open i{width:10px;height:10px;border-radius:50%;background:#1fa152;box-shadow:0 0 0 4px rgba(31,161,82,.18)}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.proof{display:flex;gap:22px;margin-top:30px;font-size:14px;color:var(--mute);flex-wrap:wrap}
+.proof b{display:block;font-family:'DM Serif Display',serif;font-weight:400;font-size:28px;color:var(--ink);line-height:1.1}
+.stars{color:var(--gold);letter-spacing:2px}
+.plate{position:relative}
+.plate img{width:100%;aspect-ratio:3/2.1;object-fit:cover;border-radius:28px 28px 28px 160px}
+.stamp{position:absolute;left:-26px;bottom:26px;width:132px;height:132px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;text-align:center;transform:rotate(-10deg);box-shadow:0 14px 30px rgba(158,21,32,.35);border:3px dashed rgba(255,255,255,.55);outline:6px solid var(--red)}
+.stamp span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;display:block}
+.stamp b{font-family:'DM Serif Display',serif;font-weight:400;font-size:42px;line-height:.9;display:block}
+@media(max-width:900px){.tag{font-size:12px;letter-spacing:.1em}.tag:before,.tag:after{width:18px}.hero .wrap{grid-template-columns:1fr;padding-top:34px;gap:34px}.plate{order:-1}.plate img{border-radius:22px 22px 22px 90px}.stamp{left:auto;right:12px;bottom:-22px;width:108px;height:108px}.stamp b{font-size:34px}}
+
+/* ribbon */
+.ribbon{background:var(--green);color:#fff;overflow:hidden;white-space:nowrap;font-family:'DM Serif Display',serif;font-size:22px;padding:14px 0}
+.ribbon div{display:inline-block;padding-left:100%;animation:tick 38s linear infinite}
+.ribbon span{margin:0 18px}.ribbon span.d{color:var(--gold)}
+@keyframes tick{to{transform:translateX(-100%)}}
+@media(prefers-reduced-motion:reduce){.ribbon div{animation:none;padding-left:20px}}
+
+/* section head */
+section{padding:88px 0}
+.head{max-width:640px;margin-bottom:40px}
+.head h2{font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(34px,4.4vw,54px);line-height:1.05;margin:12px 0}
+.head p{color:var(--mute);font-size:17px}
+
+/* builder */
+#order{background:var(--cream)}
+.builder{display:grid;grid-template-columns:1fr 360px;gap:32px;align-items:start}
+.sizes{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.size{position:relative;background:var(--paper);border:1.5px solid var(--line);border-radius:20px;padding:46px 14px 16px;text-align:center;transition:border-color .15s,transform .15s,box-shadow .15s}
+.size:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(60,40,20,.08)}
+.size.on{border-color:var(--red);box-shadow:0 0 0 3px rgba(200,32,43,.12)}
+.label{position:absolute;top:12px;left:50%;transform:translateX(-50%);background:var(--black);color:#fff;font-weight:700;letter-spacing:.12em;font-size:13px;padding:6px 22px;clip-path:polygon(0 0,100% 0,94% 50%,100% 100%,0 100%,6% 50%)}
+.size img{width:86%;margin:4px auto 0;aspect-ratio:1;object-fit:contain}
+.price{position:absolute;right:8px;top:44px;width:58px;height:58px;border-radius:50%;background:#fff;border:2px solid var(--gold);display:grid;place-items:center;font-family:'DM Serif Display',serif;font-size:22px;line-height:1;box-shadow:0 4px 10px rgba(0,0,0,.08)}
+.price small{display:block;font-family:'Work Sans';font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);margin-bottom:-4px}
+.size p{font-size:13px;color:var(--mute);margin:8px 0 12px;min-height:40px}
+.step{display:inline-flex;align-items:center;border:1.5px solid var(--line);border-radius:999px;overflow:hidden;background:#fff}
+.step button{width:38px;height:38px;border:0;background:transparent;font-size:20px;font-weight:600}
+.step button:hover{background:#f6efe4}
+.step output{min-width:28px;text-align:center;font-weight:700}
+.add{border:0;background:var(--red);color:#fff;border-radius:999px;padding:10px 20px;font-weight:600;font-size:14px}
+.add:hover{background:var(--red-d)}
+.extras{margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.box{background:var(--paper);border:1.5px solid var(--line);border-radius:20px;padding:20px 22px}
+.box h3{font-family:'DM Serif Display',serif;font-weight:400;font-size:24px;margin-bottom:6px}
+.row{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 0;border-top:1px dashed var(--line)}
+.row:first-of-type{border-top:0}
+.row b{font-weight:600}.row small{color:var(--mute);margin-left:6px}
+.row .step button{width:32px;height:32px;font-size:17px}
+.opts{margin-top:16px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.seg{display:flex;gap:8px;flex-wrap:wrap}
+.seg button{border:1.5px solid var(--line);background:#fff;border-radius:12px;padding:10px 14px;font-weight:600;font-size:14px;flex:1}
+.seg button[aria-pressed=true]{border-color:var(--green);background:#eef6f0;color:var(--green-d)}
+.fld{display:block;margin-top:12px;font-size:13px;font-weight:600;color:var(--mute)}
+.fld input{display:block;width:100%;margin-top:6px;border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;font:inherit;font-size:16px;color:var(--ink);background:#fff}
+.fld input:focus{outline:2px solid var(--green);outline-offset:1px;border-color:transparent}
+
+/* order slip */
+.slip{position:sticky;top:88px;scroll-margin-top:90px;background:#fff;border-radius:6px;padding:26px 24px 22px;box-shadow:0 22px 50px rgba(60,40,20,.12);font-size:14px}
+.slip:before,.slip:after{content:"";position:absolute;left:0;right:0;height:12px;background:radial-gradient(circle at 8px -2px,transparent 8px,#fff 9px) 0 0/16px 12px repeat-x}
+.slip:before{top:-11px;transform:rotate(180deg)}
+.slip:after{bottom:-11px}
+.slip .t{text-align:center;border-bottom:1.5px dashed #cfc4b4;padding-bottom:14px;margin-bottom:12px}
+.slip .t img{width:70px;margin:0 auto 6px}
+.slip .t b{font-family:'DM Serif Display',serif;font-weight:400;font-size:22px;display:block}
+.slip .t small{color:var(--mute);font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+.lines{min-height:84px;font-variant-numeric:tabular-nums}
+.lines div{display:flex;justify-content:space-between;gap:10px;padding:4px 0}
+.lines .empty{color:var(--mute);text-align:center;padding:22px 0;display:block}
+.tot{display:flex;justify-content:space-between;align-items:baseline;border-top:1.5px dashed #cfc4b4;margin-top:10px;padding-top:12px}
+.tot b{font-family:'DM Serif Display',serif;font-weight:400;font-size:34px;color:var(--red)}
+.slip .btn{width:100%;margin-top:16px}
+.slip .btn[disabled]{opacity:.45;cursor:not-allowed}
+.slip .note{font-size:12px;color:var(--mute);text-align:center;margin-top:10px}
+@media(max-width:1040px){.builder{grid-template-columns:1fr}.slip{position:relative;top:0}}
+@media(max-width:760px){.sizes{grid-template-columns:1fr 1fr;gap:12px}.extras,.opts{grid-template-columns:1fr}.price{width:50px;height:50px;font-size:19px;right:4px;top:40px}}
+
+/* night */
+.night{position:relative;color:#fff;padding:0;background:var(--black)}
+.night .wrap{display:grid;grid-template-columns:1.05fr 1fr;min-height:520px;align-items:stretch;padding:0}
+.night .ph{background:url(img/p10.jpg) center/cover}
+.night .tx{padding:72px 48px;display:flex;flex-direction:column;justify-content:center}
+.night .clock{font-family:'DM Serif Display',serif;font-size:clamp(56px,7vw,96px);line-height:1;color:var(--gold);font-variant-numeric:tabular-nums}
+.night h2{font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(30px,3.6vw,46px);line-height:1.08;margin:12px 0 14px}
+.night p{color:#cfc6bb;font-size:17px;max-width:28em}
+.night .script{font-size:30px;color:#ff8a8f}
+@media(max-width:860px){.night .wrap{grid-template-columns:1fr}.night .ph{min-height:300px}.night .tx{padding:48px 20px 56px}}
+
+/* talk */
+.talk{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.chip{background:var(--paper);border:1.5px solid var(--line);border-radius:22px;padding:26px}
+.chip b{font-family:'DM Serif Display',serif;font-weight:400;font-size:54px;line-height:1;color:var(--red)}
+.chip h3{font-size:19px;margin:10px 0 4px}
+.chip p{color:var(--mute);font-size:15px}
+.gal{display:grid;grid-template-columns:1.4fr 1fr 1fr;grid-template-rows:240px 240px;gap:14px;margin-top:36px}
+.gal img{width:100%;height:100%;object-fit:cover;border-radius:18px}
+.gal img:first-child{grid-row:span 2}
+@media(max-width:760px){.talk{grid-template-columns:1fr}.gal{grid-template-columns:1fr 1fr;grid-template-rows:200px 150px 150px}.gal img:first-child{grid-column:span 2;grid-row:auto}}
+
+/* visit */
+#visit{background:var(--paper)}
+.visit{display:grid;grid-template-columns:1fr 1.2fr;gap:36px;align-items:stretch}
+.card{border:6px solid var(--green);outline:1.5px solid var(--green);outline-offset:-14px;border-radius:6px;padding:38px 34px;background:#fff}
+.card dl{display:grid;gap:18px;margin-top:18px}
+.card dt{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--green)}
+.card dd{font-size:17px;margin-top:2px}
+.card dd a{text-decoration:none;border-bottom:1.5px solid var(--gold)}
+.map{border-radius:22px;overflow:hidden;min-height:380px;background:#eee}
+.map iframe{width:100%;height:100%;min-height:380px;border:0;display:block}
+@media(max-width:860px){.visit{grid-template-columns:1fr}.card{padding:30px 24px}}
+
+footer{background:var(--black);color:#b9b0a5;padding:40px 0 110px;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+footer b{color:#fff;font-family:'DM Serif Display',serif;font-weight:400;font-size:20px}
+
+/* mobile bar */
+.mbar{display:none}
+@media(max-width:820px){
+  .mbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:30;background:var(--black);border-radius:18px;padding:8px;gap:8px;box-shadow:0 12px 30px rgba(0,0,0,.3)}
+  .mbar a{flex:1;text-align:center;color:#fff;text-decoration:none;font-weight:600;font-size:14px;padding:12px 6px;border-radius:12px}
+  .mbar a.go{background:var(--red)}
+  .mbar a span{display:inline-block;background:#fff;color:var(--red);border-radius:999px;font-size:12px;padding:0 7px;margin-left:4px}
+}
+.reveal{opacity:1}
+</style>
+</head>
+<body>
+<div class="preview">Sample website for Vcente Batchoy by TechSocials. We can change anything you like. <a href="techsocials-websites-and-systems.pdf" target="_blank" rel="noopener">See pricing</a> or <a href="tel:+639989919318">message Matt, 0998 991 9318</a></div>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="img/logo.png" alt="Vcente Bat Choyan logo"><span><b>Vcente</b><small>Bat Choyan · Mandaue</small></span></a>
+    <nav><a href="#order">Order ahead</a><a href="#night">Open 24/7</a><a href="#visit">Find us</a></nav>
+    <a class="btn btn-red" href="#order">Build your bowl</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="tag">Refreshment Parlor · Mandaue</span>
+      <h1>Home of Iloilo's original <em>La Paz batchoy.</em></h1>
+      <p class="lede">Rich pork broth, fresh egg noodles, chicharon, liver and egg. Served hot on S.B. Cabahug St, Ibabao-Estancia, any hour you need it.</p>
+      <div class="open"><i></i><span id="openText">Open now · 24 hours, every day</span></div>
+      <div class="ctas">
+        <a class="btn btn-red" href="#order">Build your bowl and order ahead</a>
+        <a class="btn btn-line" href="tel:+639202972150">Call 0920 297 2150</a>
+      </div>
+      <div class="proof">
+        <div><b>4.3 <span class="stars">★★★★</span></b>Google rating</div>
+        <div><b>443</b>reviews</div>
+        <div><b>₱98</b>bowls start at</div>
+      </div>
+    </div>
+    <div class="plate">
+      <img src="img/cover.jpg" alt="Overhead shot of Vcente batchoy bowls with egg, chicharon, siopao and siomai" fetchpriority="high">
+      <div class="stamp"><div><span>Open</span><b>24</b><span>hours</span></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="ribbon" aria-hidden="true"><div>
+  <span>La Paz Batchoy</span><span class="d">✦</span><span>Chicharon</span><span class="d">✦</span><span>Atay</span><span class="d">✦</span><span>Itlog</span><span class="d">✦</span><span>Siopao</span><span class="d">✦</span><span>Siomai</span><span class="d">✦</span><span>Pan</span><span class="d">✦</span><span>Open 24 hours</span><span class="d">✦</span><span>La Paz Batchoy</span><span class="d">✦</span><span>Chicharon</span><span class="d">✦</span><span>Atay</span><span class="d">✦</span><span>Itlog</span><span class="d">✦</span>
+</div></div>
+
+<section id="order">
+  <div class="wrap">
+    <div class="head">
+      <span class="tag">Order ahead</span>
+      <h2>Build your bowl. Skip the line.</h2>
+      <p>Pick your size, add siopao or siomai, and text your order straight to Vcente. It's hot and waiting when you arrive.</p>
+    </div>
+    <div class="builder">
+      <div>
+        <div class="sizes" id="sizes"></div>
+        <div class="extras">
+          <div class="box"><h3>Partner it with</h3><div id="sides"></div></div>
+          <div class="box"><h3>Drinks</h3><div id="drinks"></div></div>
+        </div>
+        <div class="opts">
+          <div class="box">
+            <h3>Dine in or take out?</h3>
+            <div class="seg" id="mode"><button type="button" aria-pressed="true" data-v="Dine in">Dine in</button><button type="button" aria-pressed="false" data-v="Take out">Take out <small>+₱10/bowl</small></button></div>
+          </div>
+          <div class="box">
+            <h3>Ready by</h3>
+            <div class="seg" id="when"><button type="button" aria-pressed="true" data-v="As soon as possible">ASAP</button><button type="button" aria-pressed="false" data-v="In 30 minutes">30 min</button><button type="button" aria-pressed="false" data-v="In 1 hour">1 hour</button></div>
+            <label class="fld">Your name<input id="nm" autocomplete="given-name" placeholder="e.g. Jun"></label>
+          </div>
+        </div>
+      </div>
+
+      <aside class="slip" id="slip" aria-live="polite">
+        <div class="t"><img src="img/logo.png" alt=""><b>Order slip</b><small>Vcente Bat Choyan · Mandaue</small></div>
+        <div class="lines" id="lines"><span class="empty">Your bowl goes here.<br>Tap a size to start.</span></div>
+        <div class="tot"><span>Total</span><b id="tot">₱0</b></div>
+        <button class="btn btn-red" id="send" disabled>Text this order to Vcente</button>
+        <p class="note">Pay when you pick up. No app, no account.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="night" id="night">
+  <div class="wrap">
+    <div class="ph" role="img" aria-label="Vcente Batchoy storefront lit up at night"></div>
+    <div class="tx">
+      <span class="script">Gutom sa kaadlawon?</span>
+      <div class="clock" id="clock">--:--</div>
+      <h2>That's Mandaue time right now. And we're open.</h2>
+      <p>After a late shift, a long night out, or a 4am flight out of Mactan. A hot bowl of batchoy fixes it. Reviewers call it their hangover cure.</p>
+      <div class="ctas"><a class="btn btn-red" href="#order">Order a bowl now</a><a class="btn btn-line" style="border-color:#fff;color:#fff" href="https://www.google.com/maps/dir/?api=1&destination=Vcente+Batchoy+Mandaue" target="_blank" rel="noopener">Get directions</a></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head">
+      <span class="tag">From 443 Google reviews</span>
+      <h2>What people keep coming back for.</h2>
+    </div>
+    <div class="talk">
+      <div class="chip"><b>37</b><h3>reviews rave about the batchoy</h3><p>The broth, the noodles, the generous chicharon. The bowl that started it all.</p></div>
+      <div class="chip"><b>24/7</b><h3>open while Mandaue sleeps</h3><p>A full hot meal at 3 in the morning, every day of the year.</p></div>
+      <div class="chip"><b>₱50</b><h3>siopao, the perfect partner</h3><p>Reviewers mention it too. Best with a hot bowl and a squeeze of calamansi.</p></div>
+    </div>
+    <div class="gal">
+      <img src="img/p4.jpg" alt="Batchoy with liver, egg and chicharon" loading="lazy">
+      <img src="img/p1.jpg" alt="Vcente Bat Choyan storefront on S.B. Cabahug St" loading="lazy">
+      <img src="img/p3.jpg" alt="Batchoy topped with chicharon and pork" loading="lazy">
+      <img src="img/p7.jpg" alt="Clean, open dining area inside Vcente" loading="lazy">
+      <img src="img/p8.jpg" alt="Batchoy with pan bread on the side" loading="lazy" style="object-position:center 70%">
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap visit">
+    <div class="card">
+      <span class="tag">Visit</span>
+      <h2 class="serif" style="font-size:40px;line-height:1.05;margin-top:10px">Come hungry.</h2>
+      <dl>
+        <div><dt>Address</dt><dd>223 S.B. Cabahug St, Ibabao-Estancia, Mandaue City, Cebu</dd></div>
+        <div><dt>Hours</dt><dd>Open 24 hours, every day</dd></div>
+        <div><dt>Call or text</dt><dd><a href="tel:+639202972150">0920 297 2150</a> · <a href="tel:+639936780810">0993 678 0810</a></dd></div>
+        <div><dt>Email</dt><dd><a href="mailto:vcntebatchoy00@gmail.com">vcntebatchoy00@gmail.com</a></dd></div>
+      </dl>
+      <div class="ctas"><a class="btn btn-green" href="https://www.google.com/maps/dir/?api=1&destination=Vcente+Batchoy+Mandaue" target="_blank" rel="noopener">Get directions</a></div>
+    </div>
+    <div class="map"><iframe title="Map to Vcente Batchoy" loading="lazy" src="https://www.google.com/maps?q=Vcente+Batchoy,+S.B.+Cabahug+St,+Mandaue&output=embed"></iframe></div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><div><b>Vcente Bat Choyan</b><br>Refreshment Parlor · Mandaue</div><div>Home of Iloilo's original special La Paz batchoy.</div></div></footer>
+
+<div class="mbar"><a class="go" id="mgo" href="#order">Order <span id="mcount">0</span></a><a href="tel:+639202972150">Call</a><a href="https://www.google.com/maps/dir/?api=1&destination=Vcente+Batchoy+Mandaue" target="_blank" rel="noopener">Directions</a></div>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","name":"Vcente Bat Choyan","servesCuisine":"Filipino, La Paz Batchoy","telephone":"+639202972150","email":"vcntebatchoy00@gmail.com","address":{"@type":"PostalAddress","streetAddress":"223 S.B. Cabahug St, Ibabao-Estancia","addressLocality":"Mandaue City","addressRegion":"Cebu","addressCountry":"PH"},"openingHours":"Mo-Su 00:00-23:59","priceRange":"₱","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.3","reviewCount":"443"}}</script>
+<script src="tsk.js"></script>
+<script>
+const PHONE='+639202972150', P=TSK.peso;
+const SIZES=[
+  {n:'Special',p:98,img:'b-special',d:'The classic. Noodles, broth, chicharon and pork.'},
+  {n:'Super',p:110,img:'b-super',d:'More toppings, with a soft egg on top.'},
+  {n:'Gran',p:115,img:'b-gran',d:'Loaded with liver and two egg halves.'},
+  {n:'Xtra',p:127,img:'b-xtra',d:'Everything in it. For the really hungry.'}
+];
+const SIDES=[['Siopao',50],['Siomai',10],['Pan',7],['Rice',15]];
+const DRINKS=[['Softdrink 8oz',20],['Mountain Dew / Tropicana / Sting / Mismo',25],['Lemon / Swakto',18],['Softdrink 1 litre',50],['Water',20]];
+let mode='Dine in', when='As soon as possible';
+const c=TSK.cart(render);
+
+const stepper=(name,price)=>`<div class="step" data-n="${name}" data-p="${price}"><button type="button" aria-label="Remove ${name}" data-d="-1">−</button><output>0</output><button type="button" aria-label="Add ${name}" data-d="1">+</button></div>`;
+document.getElementById('sizes').innerHTML=SIZES.map(s=>`<div class="size" data-size="${s.n}"><span class="label">${s.n.toUpperCase()}</span><img src="img/${s.img}.png" alt="${s.n} batchoy bowl" loading="lazy"><div class="price"><div><small>₱</small>${s.p}</div></div><p>${s.d}</p>${stepper(s.n+' Batchoy',s.p)}</div>`).join('');
+const rowHtml=([n,p])=>`<div class="row"><span><b>${n}</b><small>${P(p)}</small></span>${stepper(n,p)}</div>`;
+document.getElementById('sides').innerHTML=SIDES.map(rowHtml).join('');
+document.getElementById('drinks').innerHTML=DRINKS.map(rowHtml).join('');
+
+document.addEventListener('click',e=>{
+  const b=e.target.closest('.step button'); if(!b) return;
+  const s=b.closest('.step'), n=s.dataset.n, p=+s.dataset.p, d=+b.dataset.d;
+  const cur=c.items.get(n)?.q||0;
+  if(d>0) c.add(n,p); else if(cur>0) c.set(n,cur-1);
+});
+function seg(id,fn){const el=document.getElementById(id);el.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;el.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));fn(b.dataset.v);render(c);});}
+seg('mode',v=>mode=v); seg('when',v=>when=v);
+
+function bowls(){let q=0;SIZES.forEach(s=>q+=c.items.get(s.n+' Batchoy')?.q||0);return q;}
+function render(api){
+  document.querySelectorAll('.step').forEach(s=>{const q=api.items.get(s.dataset.n)?.q||0;s.querySelector('output').textContent=q;const card=s.closest('.size');if(card)card.classList.toggle('on',q>0);});
+  const L=document.getElementById('lines'); const to=mode==='Take out'?bowls()*10:0;
+  if(!api.count()){L.innerHTML='<span class="empty">Your bowl goes here.<br>Tap a size to start.</span>';}
+  else{let h='';api.each((k,v)=>h+=`<div><span>${v.q}× ${k}</span><span>${P(v.q*v.p)}</span></div>`);if(to)h+=`<div><span>Take-out (${bowls()} bowl${bowls()>1?'s':''})</span><span>${P(to)}</span></div>`;L.innerHTML=h;}
+  document.getElementById('tot').textContent=P(api.total()+to);
+  document.getElementById('send').disabled=!api.count();
+  document.getElementById('mcount').textContent=api.count();const g=document.getElementById('mgo');g.href=api.count()?'#slip':'#order';
+}
+document.getElementById('send').onclick=()=>{
+  const to=mode==='Take out'?bowls()*10:0, nm=document.getElementById('nm').value.trim();
+  const lines=['Hi Vcente! Order from your website:','',...c.lines()];
+  if(to) lines.push('Take-out charge ('+P(to)+')');
+  lines.push('','Total: '+P(c.total()+to),mode+' · '+when); if(nm) lines.push('Name: '+nm);
+  TSK.sms(PHONE,lines);
+};
+render(c);
+
+function tick(){const t=new Date().toLocaleTimeString('en-US',{timeZone:'Asia/Manila',hour:'numeric',minute:'2-digit'});document.getElementById('clock').textContent=t;}
+tick(); setInterval(tick,15000);
+</script>
+</body>
+</html>

@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Uzumaki Japanese Hair Salon | A.S. Fortuna, Mandaue</title>
+<meta name="description" content="Rebond, balayage, hair color and treatments on A.S. Fortuna St, Mandaue. Open every day, 9am to 6pm.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+<style>
+:root{
+  --bg:#fafaf8;
+  --panel:#ffffff;
+  --line:#e6e4df;
+  --text:#191a1c;
+  --muted:#5d5f63;
+  --red:#c2412d;
+  --red-2:#a3341f;
+  --radius:4px;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#121315;--panel:#1a1b1e;--line:#2b2c30;--text:#f0efec;--muted:#a9aaae;--red:#e0624c;--red-2:#c9523d}
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:"Manrope",system-ui,sans-serif;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1240px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;letter-spacing:-.01em;line-height:1.1}
+
+.preview{background:var(--text);color:var(--bg);font-size:14px;text-align:center;padding:8px 16px}
+.preview a{font-weight:600}
+
+nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.mark{display:flex;align-items:baseline;gap:12px;text-decoration:none}
+.mark b{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:900;font-size:24px;letter-spacing:.14em}
+.mark span{font-family:"Zen Kaku Gothic New",sans-serif;font-size:13px;color:var(--red);letter-spacing:.1em}
+nav ul{display:flex;gap:32px;list-style:none;align-items:center}
+nav ul a{text-decoration:none;color:var(--muted);font-weight:500;font-size:15px}
+nav ul a:hover{color:var(--text)}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:16px;text-decoration:none;padding:14px 26px;border-radius:var(--radius);white-space:nowrap;transition:background .2s,transform .2s cubic-bezier(.16,1,.3,1)}
+.btn:active{transform:scale(.98)}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{background:var(--red-2)}
+.btn-line{border:1px solid var(--text);color:var(--text)}
+.btn-line:hover{background:var(--text);color:var(--bg)}
+.btn-sm{padding:10px 18px;font-size:15px}
+
+.hero{padding:56px 0 96px}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:64px;align-items:end}
+.jp{font-family:"Zen Kaku Gothic New",sans-serif;color:var(--red);font-weight:500;letter-spacing:.2em;font-size:15px;margin-bottom:22px}
+.hero h1{font-size:clamp(46px,6vw,84px)}
+.hero p{color:var(--muted);font-size:19px;max-width:34ch;margin:24px 0 36px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap}
+.hero-pics{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:end}
+.hero-pics img{width:100%;object-fit:cover;border-radius:var(--radius)}
+.hero-pics .tall{aspect-ratio:3/4.4}
+.hero-pics .short{aspect-ratio:3/3.6;margin-bottom:48px}
+
+.rating{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.rating .wrap{display:flex;gap:48px;align-items:center;padding-top:24px;padding-bottom:24px;flex-wrap:wrap}
+.rating .stars{display:flex;gap:2px;color:#e1a325;font-size:20px}
+.rating b{font-family:"Zen Kaku Gothic New",sans-serif;font-size:22px}
+.rating span{color:var(--muted);font-size:15px}
+.rating .item{display:flex;gap:12px;align-items:center}
+.rating i.ph-clock,.rating i.ph-map-pin{font-size:22px;color:var(--red)}
+
+section{padding:112px 0}
+.head{margin-bottom:56px;max-width:640px}
+.head h2{font-size:clamp(36px,4.4vw,58px)}
+.head p{color:var(--muted);margin-top:14px;max-width:52ch}
+
+/* services index */
+.svc-list{border-top:1px solid var(--text)}
+.svc{display:grid;grid-template-columns:130px 1fr 1.4fr 240px;gap:32px;align-items:center;padding:28px 0;border-bottom:1px solid var(--line)}
+.svc .kana{font-family:"Zen Kaku Gothic New",sans-serif;color:var(--red);font-size:14px;letter-spacing:.08em}
+.svc h3{font-size:clamp(28px,3vw,40px)}
+.svc p{color:var(--muted);font-size:16px}
+.svc img{width:240px;height:150px;object-fit:cover;border-radius:var(--radius)}
+.svc .ph-img{width:240px;height:150px;border-radius:var(--radius);background:var(--panel);border:1px solid var(--line);display:grid;place-items:center;color:var(--muted);font-size:34px}
+
+/* care note */
+.care{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:center;padding:28px 32px;margin-top:48px}
+.care i{font-size:34px;color:var(--red)}
+.care h3{font-size:22px}
+.care p{color:var(--muted);font-size:16px}
+
+/* space */
+.space{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:300px 300px;gap:16px}
+.space img{width:100%;height:100%;object-fit:cover;border-radius:var(--radius)}
+.space .wide{grid-row:span 2}
+.space .quote{background:var(--red);color:#fff;border-radius:var(--radius);padding:32px;display:flex;flex-direction:column;justify-content:space-between}
+.space .quote b{font-family:"Zen Kaku Gothic New",sans-serif;font-size:64px;line-height:1}
+.space .quote p{font-size:18px}
+
+/* topics */
+.topics{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.bars{display:grid;gap:22px}
+.bar{display:grid;grid-template-columns:1fr auto;gap:6px 16px;align-items:baseline}
+.bar span{font-weight:600}
+.bar b{font-family:"Zen Kaku Gothic New",sans-serif;color:var(--red);font-size:22px}
+.bar small{grid-column:1/-1;color:var(--muted);font-size:14px}
+
+/* visit */
+.visit{display:grid;grid-template-columns:1fr 1.25fr;gap:32px}
+.vinfo{display:grid;gap:26px;align-content:start}
+.vinfo .line{display:flex;gap:14px}
+.vinfo i{font-size:24px;color:var(--red);margin-top:3px}
+.vinfo h3{font-size:20px}
+.vinfo p,.vinfo a{color:var(--muted);text-decoration:none}
+.vinfo img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius)}
+.map{border:0;width:100%;height:100%;min-height:520px;border-radius:var(--radius)}
+
+footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+@media (prefers-reduced-motion:no-preference){
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1)}
+  .reveal.in{opacity:1;transform:none}
+}
+@media (max-width:900px){
+  .wrap{padding:0 16px}
+  nav ul li:not(:last-child){display:none}
+  .hero{padding:36px 0 72px}
+  .hero .wrap,.topics,.visit{grid-template-columns:1fr;gap:48px}
+  section{padding:76px 0}
+  .svc{grid-template-columns:1fr;gap:10px}
+  .svc img,.svc .ph-img{width:100%;height:200px}
+  .care{grid-template-columns:1fr}
+  .space{grid-template-columns:1fr;grid-template-rows:260px 260px 200px}
+  .space .wide{grid-row:span 1}
+  .map{min-height:340px}
+}
+</style>
+
+
+
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HairSalon", "name": "Uzumaki Japanese Hair Salon", "address": {"@type": "PostalAddress", "streetAddress": "A.S. Fortuna St, Bakilid", "addressLocality": "Mandaue City", "addressRegion": "Cebu", "addressCountry": "PH"}, "openingHours": ["Mo-Su 09:00-18:00"], "telephone": "+639271410823"}</script>
+</head>
+<body>
+
+<div class="preview">Sample website for Uzumaki Japanese Hair Salon by TechSocials. We can change anything you like. <a href="techsocials-websites-and-systems.pdf" target="_blank" rel="noopener">See pricing</a> or <a href="tel:+639989919318">message Matt, 0998 991 9318</a></div>
+
+<nav>
+  <div class="wrap">
+    <a class="mark" href="#top"><b>UZUMAKI</b><span>ウズマキ 美容院</span></a>
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#salon">The salon</a></li>
+      <li><a href="#visit">Visit</a></li>
+      <li><a class="btn btn-red btn-sm" href="tel:+639271410823">Book an appointment</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <p class="jp">ウズマキ 美容院</p>
+      <h1>Japanese hair care on A.S. Fortuna.</h1>
+      <p>Rebond, balayage, color and hair treatments, in a bright salon open every day.</p>
+      <div class="ctas">
+        <a class="btn btn-red" href="tel:+639271410823"><i class="ph ph-phone"></i>Book an appointment</a>
+        <a class="btn btn-line" href="#services">See services</a>
+      </div>
+    </div>
+    <div class="hero-pics">
+      <img class="short" src="img/p9.jpg" alt="Long layered hair with soft balayage highlights">
+      <img class="tall" src="img/p6.jpg" alt="Sleek, straight rebonded hair">
+    </div>
+  </div>
+</header>
+
+<div class="rating">
+  <div class="wrap">
+    <div class="item"><span class="stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></span><p><b>4.9</b> <span>on Google from 136 reviews</span></p></div>
+    <div class="item"><i class="ph ph-clock"></i><p><b>Open daily</b> <span>9:00 am to 6:00 pm</span></p></div>
+    <div class="item"><i class="ph ph-map-pin"></i><p><b>A.S. Fortuna St</b> <span>Bakilid, Mandaue</span></p></div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="head reveal">
+      <h2>Services</h2>
+      <p>Tell us the hair you want. We will check your hair first and tell you honestly what it can take.</p>
+    </div>
+    <div class="svc-list reveal">
+      <div class="svc"><span class="kana">リボンド</span><h3>Rebond</h3><p>Straight, smooth, low-maintenance hair that stays manageable in Cebu humidity.</p><img src="img/p6.jpg" alt="Rebonded straight hair"></div>
+      <div class="svc"><span class="kana">バレイヤージュ</span><h3>Balayage</h3><p>Hand-painted highlights that grow out softly, without a hard regrowth line.</p><img src="img/p9.jpg" alt="Balayage highlights in long hair"></div>
+      <div class="svc"><span class="kana">カラー</span><h3>Hair color</h3><p>Full color, refresh or a brand-new shade, matched to your skin tone.</p><div class="ph-img"><i class="ph ph-palette"></i></div></div>
+      <div class="svc"><span class="kana">トリートメント</span><h3>Treatments</h3><p>Brazilian and repair treatments to bring back softness and shine.</p><div class="ph-img"><i class="ph ph-drop"></i></div></div>
+    </div>
+    <div class="care reveal">
+      <i class="ph ph-flask"></i>
+      <div><h3>Ask for a hair test first</h3><p>Before any chemical service, we can test a strand so you know how your hair will react.</p></div>
+      <a class="btn btn-line" href="tel:+639271410823">Book an appointment</a>
+    </div>
+  </div>
+</section>
+
+<section id="salon" style="padding-top:0">
+  <div class="wrap">
+    <div class="head reveal"><h2>The salon</h2></div>
+    <div class="space reveal">
+      <img class="wide" src="img/p1.jpg" alt="The long, bright Uzumaki salon floor with styling stations">
+      <img src="img/p3.jpg" alt="A styling station with a lit mirror">
+      <div class="quote"><b>11</b><p>Google reviews single out our accommodating staff.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap topics">
+    <div class="head reveal" style="margin-bottom:0">
+      <h2>What clients come back for</h2>
+      <p>Pulled from the topics clients mention most in their Google reviews of Uzumaki.</p>
+    </div>
+    <div class="bars reveal">
+      <div class="bar"><span>Accommodating staff</span><b>11</b><small>reviews mention it</small></div>
+      <div class="bar"><span>Rebond</span><b>6</b><small>reviews mention it</small></div>
+      <div class="bar"><span>Hair color</span><b>4</b><small>reviews mention it</small></div>
+      <div class="bar"><span>Brazilian treatment</span><b>3</b><small>reviews mention it</small></div>
+    </div>
+  </div>
+</section>
+
+<!--kit-->
+<style>
+#k-order{--ka:#c2412d;--kb:#ffffff;--kp:#fafaf8;--kt:#191a1c;--km:#5d5f63;--kl:#e6e4df;--ko:#ffffff;background:var(--kb);color:var(--kt);padding:96px 0}
+#k-order .kw{max-width:1200px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:start}
+#k-order h2{font-size:clamp(34px,4vw,52px);line-height:1.08;color:var(--kt)}
+#k-order .ks{color:var(--km);margin-top:16px;max-width:44ch}
+#k-order ul{list-style:none;margin-top:26px;display:grid;gap:12px}
+#k-order li{display:flex;gap:12px;align-items:center;color:var(--kt)}
+#k-order li i{color:var(--ka);font-size:22px}
+#k-order form{background:var(--kp);border:1px solid var(--kl);border-radius:16px;padding:28px;display:grid;gap:16px}
+#k-order label{display:grid;gap:7px;font-weight:600;font-size:15px;color:var(--kt)}
+#k-order input,#k-order select,#k-order textarea{font:inherit;font-weight:400;color:var(--kt);background:var(--kb);border:1px solid var(--kl);border-radius:10px;padding:12px 14px;width:100%}
+#k-order input:focus,#k-order select:focus,#k-order textarea:focus{outline:2px solid var(--ka);outline-offset:1px;border-color:var(--ka)}
+#k-order .kf2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+#k-order button{font:inherit;font-weight:700;font-size:16px;background:var(--ka);color:var(--ko);border:0;border-radius:999px;padding:15px 24px;cursor:pointer;display:inline-flex;gap:10px;justify-content:center;align-items:center}
+#k-order button:active{transform:scale(.98)}
+#k-order .kn{color:var(--km);font-size:13px}
+#k-order .kbook{display:grid;gap:10px}
+#k-order .kbl{font-weight:600;font-size:15px}
+#k-order .kdays{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+#k-order .kslots{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+#k-order .kdays button,#k-order .kslots button{font:inherit;font-size:13px;font-weight:600;background:var(--kb);color:var(--kt);border:1px solid var(--kl);border-radius:10px;padding:8px 2px;cursor:pointer;display:block;line-height:1.25}
+#k-order .kdays button small{display:block;font-weight:400;color:var(--km);font-size:11px}
+#k-order .kdays button[aria-selected=true],#k-order .kslots button[aria-selected=true]{background:var(--ka);color:var(--ko);border-color:var(--ka)}
+#k-order .kdays button[aria-selected=true] small{color:var(--ko)}
+#k-order .kdays button:disabled{opacity:.35;cursor:not-allowed}
+#k-order .kslots p{grid-column:1/-1}
+#k-order .kerr{color:var(--ka);font-size:13px;font-weight:600;display:none}
+#k-order .kdone{display:none;color:var(--kt);font-weight:600}
+.kbar{display:none}
+@media (max-width:900px){
+  #k-order{padding:72px 0} #k-order .kw{grid-template-columns:1fr;gap:32px;padding:0 16px}
+  .kbar{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;position:fixed;top:auto;left:0;right:0;bottom:0;height:auto;z-index:50;background:#fafaf8;border-top:1px solid #e6e4df;padding:8px 8px calc(8px + env(safe-area-inset-bottom))}
+  .kbar a{display:flex;flex-direction:column;align-items:center;gap:2px;font-size:12px;font-weight:700;text-decoration:none;color:#191a1c;padding:6px 0}
+  .kbar a i{font-size:22px;color:#c2412d}
+  .kbar a.kmain{background:#c2412d;color:#ffffff;border-radius:12px}
+  .kbar a.kmain i{color:#ffffff}
+  body{padding-bottom:72px}
+}
+</style>
+<section id="k-order"><div class="kw">
+  <div>
+    <h2>Book your appointment</h2>
+    <p class="ks">Choose a service and a time. Your request goes straight to the salon&#x27;s phone, and we&#x27;ll text you to confirm.</p>
+    <ul>
+      <li><i class="ph-fill ph-lightning"></i>No app, no sign-up</li>
+      <li><i class="ph-fill ph-chat-circle-text"></i>Goes straight to Uzumaki Japanese Hair Salon</li>
+      <li><i class="ph-fill ph-check-circle"></i>We confirm with you by text</li>
+    </ul>
+  </div>
+  <form id="k-form" data-to="+639271410823" data-kind="sms" data-biz="Uzumaki Japanese Hair Salon" novalidate>
+    <label>Your name<input name="Name" required autocomplete="name"></label>
+    <label>Service<select name="Service" required><option>Rebond</option><option>Balayage</option><option>Hair color</option><option>Brazilian or repair treatment</option><option>Haircut</option><option>Hair test (before a chemical service)</option></select></label><div class="kbook" data-open='{"0": [540, 1080], "1": [540, 1080], "2": [540, 1080], "3": [540, 1080], "4": [540, 1080], "5": [540, 1080], "6": [540, 1080]}' data-slot="60"><span class="kbl">Pick a day</span><div class="kdays" role="listbox" aria-label="Day"></div><span class="kbl">Pick a time</span><div class="kslots" role="listbox" aria-label="Time"><p class="kn">Choose a day first.</p></div><input type="hidden" name="Date" required><input type="hidden" name="Time" required></div><label>Mobile number (so we can confirm)<input name="Mobile" type="tel" inputmode="tel" placeholder="09XX XXX XXXX"></label><label>Notes (optional)<textarea name="Notes" rows="2" placeholder="Anything we should know"></textarea></label>
+    <button type="submit"><i class="ph-fill ph-paper-plane-tilt"></i>Send by text message</button>
+    <p class="kn">Opens your phone's messaging app with your request already written.</p>
+    <p class="kdone" id="k-done">Copied. Paste it in the chat that just opened.</p>
+  </form>
+</div></section>
+<script>
+(()=>{const f=document.getElementById('k-form');if(!f)return;
+const bk=f.querySelector('.kbook');
+if(bk){const open=JSON.parse(bk.dataset.open||'{}'),slot=+bk.dataset.slot||60,dEl=bk.querySelector('.kdays'),sEl=bk.querySelector('.kslots');
+ const DN=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],MN=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+ const fmt=m=>{const h=Math.floor(m/60),mm=m%60,ap=h>=12?'pm':'am',h12=((h+11)%12)+1;return h12+(mm?':'+String(mm).padStart(2,'0'):'')+' '+ap};
+ const now=new Date();
+ for(let i=0;i<7;i++){const d=new Date(now.getFullYear(),now.getMonth(),now.getDate()+i),o=open[d.getDay()];
+  const b=document.createElement('button');b.type='button';b.innerHTML=(i===0?'Today':DN[d.getDay()])+'<small>'+MN[d.getMonth()]+' '+d.getDate()+'</small>';
+  if(!o)b.disabled=true;
+  b.onclick=()=>{dEl.querySelectorAll('button').forEach(x=>x.setAttribute('aria-selected','false'));b.setAttribute('aria-selected','true');
+   f.Date.value=DN[d.getDay()]+', '+MN[d.getMonth()]+' '+d.getDate();f.Time.value='';sEl.innerHTML='';
+   const [a,z]=o;let any=false;for(let m=a;m+slot<=z;m+=slot){if(i===0&&m<=now.getHours()*60+now.getMinutes()+30)continue;any=true;
+    const t=document.createElement('button');t.type='button';t.textContent=fmt(m);
+    t.onclick=()=>{sEl.querySelectorAll('button').forEach(x=>x.setAttribute('aria-selected','false'));t.setAttribute('aria-selected','true');f.Time.value=fmt(m)};sEl.appendChild(t)}
+   if(!any)sEl.innerHTML='<p class="kn">No more slots today. Pick another day.</p>'};dEl.appendChild(b)}
+ for(const b of dEl.querySelectorAll('button')){if(b.disabled)continue;b.click();if(sEl.querySelector('button'))break}}
+f.addEventListener('submit',async e=>{e.preventDefault();
+ if(bk&&(!f.Date.value||!f.Time.value)){alert('Please pick a day and a time.');return}
+ if(!f.checkValidity()){f.reportValidity();return}
+ const lines=['Hi '+f.dataset.biz+'! Request from your website:'];
+ new FormData(f).forEach((v,k)=>{if(String(v).trim())lines.push(k+': '+v)});
+ const msg=lines.join('\n');
+ if(f.dataset.kind==='sms'){location.href='sms:'+f.dataset.to+'?&body='+encodeURIComponent(msg);return}
+ try{await navigator.clipboard.writeText(msg)}catch(_){}
+ document.getElementById('k-done').style.display='block';window.open(f.dataset.to,'_blank','noopener');
+});})();
+</script>
+<!--/kit-->
+<section id="visit" style="padding-top:0">
+  <div class="wrap">
+    <div class="head reveal"><h2>Visit</h2></div>
+    <div class="visit">
+      <div class="vinfo reveal">
+        <div class="line"><i class="ph ph-map-pin"></i><div><h3>A.S. Fortuna St, Bakilid</h3><p>Mandaue City, Cebu</p></div></div>
+        <div class="line"><i class="ph ph-clock"></i><div><h3>Every day</h3><p>9:00 am to 6:00 pm</p></div></div>
+        <div class="line"><i class="ph ph-phone"></i><div><h3>Appointments</h3><a href="tel:+639271410823">0927 141 0823</a></div></div>
+        <a class="btn btn-line" style="justify-self:start" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=Uzumaki+Japanese+Hair+Salon+Mandaue+AS+Fortuna"><i class="ph ph-navigation-arrow"></i>Get directions</a>
+        <img src="img/p7.jpg" alt="The lit Uzumaki Japanese Hair Salon sign above the entrance">
+      </div>
+      <iframe class="map reveal" title="Map to Uzumaki Japanese Hair Salon" loading="lazy" src="https://maps.google.com/maps?q=Uzumaki%20Japanese%20Hair%20Salon%20Mandaue%20AS%20Fortuna&z=16&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>Uzumaki Japanese Hair Salon, A.S. Fortuna St, Bakilid, Mandaue City</span>
+    <span>Open daily, 9:00 am to 6:00 pm</span>
+  </div>
+</footer>
+
+<script>
+(()=>{const els=document.querySelectorAll('.reveal');
+if(!('IntersectionObserver' in window)){els.forEach(e=>e.classList.add('in'));return}
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+els.forEach(e=>io.observe(e))})();
+</script>
+
+
+
+
+<!--kitbar--><div class="kbar" role="navigation" aria-label="Quick actions"><a href="tel:+639271410823"><i class="ph-fill ph-phone"></i>Call</a><a target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=Uzumaki+Japanese+Hair+Salon+Mandaue"><i class="ph-fill ph-navigation-arrow"></i>Directions</a><a class="kmain" href="#k-order"><i class="ph-fill ph-paper-plane-tilt"></i>Book</a></div><!--/kitbar-->
+</body>
+</html>

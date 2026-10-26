@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Black Smokehaus | Texas-style BBQ in Mandaue</title>
+<meta name="description" content="Wagyu brisket smoked 17 to 20 hours, pork ribs, pulled pork and sizzling meals. Open daily 11am to 9pm on Marciano Quizon St, Mandaue City.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+<style>
+:root{
+  --bg:#141110;
+  --bg-2:#1c1816;
+  --line:#2e2724;
+  --text:#f1ebe3;
+  --muted:#b5aba1;
+  --ember:#e0492c;
+  --ember-dark:#b8361d;
+  --paper:#efe6d8;
+  --ink:#1d1815;
+  --radius:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:"Archivo",system-ui,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1240px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:"Big Shoulders Display",sans-serif;font-weight:800;line-height:.95;letter-spacing:.01em;text-transform:uppercase}
+
+/* preview bar */
+.preview{background:var(--ember);color:#fff;font-size:14px;text-align:center;padding:8px 16px}
+.preview a{font-weight:600}
+
+/* nav */
+nav{position:sticky;top:0;z-index:20;background:rgba(20,17,16,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+nav .logo img{height:46px;width:auto}
+nav ul{display:flex;gap:32px;list-style:none;align-items:center}
+nav ul a{text-decoration:none;color:var(--muted);font-weight:500;font-size:15px;transition:color .2s}
+nav ul a:hover{color:var(--text)}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:"Archivo",sans-serif;font-weight:600;font-size:16px;text-decoration:none;padding:14px 24px;border-radius:999px;white-space:nowrap;transition:transform .2s cubic-bezier(.16,1,.3,1),background .2s}
+.btn:active{transform:scale(.98)}
+.btn-ember{background:var(--ember);color:#fff}
+.btn-ember:hover{background:var(--ember-dark)}
+.btn-ghost{border:1px solid #5a4f49;color:var(--text)}
+.btn-ghost:hover{border-color:var(--text)}
+.btn-sm{padding:10px 18px;font-size:15px}
+
+/* hero */
+.hero{padding:64px 0 88px}
+.hero .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(56px,7.4vw,104px)}
+.hero h1 em{font-style:normal;color:var(--ember)}
+.hero p{color:var(--muted);font-size:19px;max-width:30ch;margin:24px 0 36px}
+.hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
+.hero-art{position:relative}
+.hero-art .main{border-radius:var(--radius);aspect-ratio:4/3.3;object-fit:cover;width:100%}
+.hero-art .inset{position:absolute;left:-48px;bottom:-40px;width:42%;aspect-ratio:1;object-fit:cover;border-radius:var(--radius);border:6px solid var(--bg)}
+
+/* proof */
+.proof{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.proof .wrap{display:grid;grid-template-columns:repeat(3,1fr)}
+.proof div{padding:28px 0;display:flex;gap:16px;align-items:center}
+.proof div+div{border-left:1px solid var(--line);padding-left:32px}
+.proof i{font-size:30px;color:var(--ember)}
+.proof b{display:block;font-family:"Big Shoulders Display",sans-serif;font-size:30px;font-weight:800;line-height:1}
+.proof span{color:var(--muted);font-size:15px}
+
+/* menu */
+section{padding:112px 0}
+.sec-head{max-width:640px;margin-bottom:56px}
+.sec-head h2{font-size:clamp(44px,5vw,72px)}
+.sec-head p{color:var(--muted);margin-top:18px;max-width:52ch}
+.menu-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:40px;align-items:start}
+.feature{background:var(--paper);color:var(--ink);border-radius:var(--radius);overflow:hidden}
+.feature img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.feature .body{padding:28px 32px 32px}
+.feature .row{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+.feature h3{font-size:44px}
+.feature .price{font-family:"Big Shoulders Display",sans-serif;font-weight:800;font-size:36px;color:var(--ember-dark)}
+.feature p{color:#4d433c;margin-top:10px}
+.tag{display:inline-block;margin-top:16px;background:var(--ink);color:var(--paper);font-size:13px;font-weight:600;padding:6px 12px;border-radius:999px}
+.items{display:grid;gap:4px}
+.item{padding:22px 0}
+.item+.item{border-top:1px dashed var(--line)}
+.item .row{display:flex;align-items:baseline;gap:12px}
+.item h3{font-size:30px;white-space:nowrap}
+.item .dots{flex:1;border-bottom:2px dotted #4a403b;transform:translateY(-6px)}
+.item .price{font-family:"Big Shoulders Display",sans-serif;font-weight:800;font-size:28px;color:var(--ember)}
+.item p{color:var(--muted);font-size:16px;margin-top:4px;max-width:46ch}
+.sizzle{margin-top:56px;display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:20px;align-items:stretch}
+.sizzle .intro{background:var(--bg-2);border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+.sizzle .intro h3{font-size:38px}
+.sizzle .intro p{color:var(--muted);font-size:15px;margin-top:10px}
+.sizzle .card{border:1px solid var(--line);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column;justify-content:space-between;gap:20px}
+.sizzle .card h3{font-size:28px}
+.sizzle .card p{color:var(--muted);font-size:15px;margin-top:6px}
+.sizzle .card .price{font-family:"Big Shoulders Display",sans-serif;font-weight:800;font-size:34px;color:var(--ember)}
+.note{color:var(--muted);font-size:13px;margin-top:28px}
+
+/* tray */
+.tray{padding:0}
+.tray figure{position:relative}
+.tray img{width:100%;height:min(78vh,720px);object-fit:cover}
+.tray figcaption{position:absolute;inset:auto 0 0 0;padding:120px 0 48px;background:linear-gradient(to top,rgba(14,11,10,.94) 30%,transparent)}
+.tray h2{font-size:clamp(40px,4.6vw,64px);max-width:16ch}
+.sides{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.sides span{display:inline-flex;align-items:center;gap:8px;border:1px solid #5a4f49;background:rgba(20,17,16,.6);border-radius:999px;padding:9px 16px;font-size:15px}
+.sides i{color:var(--ember)}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:1.4fr 1fr 1fr;grid-template-rows:280px 280px;gap:16px}
+.gallery img{width:100%;height:100%;object-fit:cover;border-radius:var(--radius)}
+.gallery .a{grid-row:span 2}
+.gallery .d{grid-column:span 2}
+
+/* barkada */
+.barkada{background:var(--ember);color:#fff;text-align:center}
+.barkada h2{font-size:clamp(48px,6vw,88px);max-width:14ch;margin:0 auto}
+.barkada p{max-width:46ch;margin:22px auto 34px;font-size:19px;color:#ffe7df}
+.barkada .btn{background:var(--ink);color:#fff}
+.barkada .btn:hover{background:#000000cc}
+
+/* visit */
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.visit-info{display:grid;gap:28px;align-content:start}
+.visit-info .line{display:flex;gap:16px}
+.visit-info i{font-size:26px;color:var(--ember);margin-top:2px}
+.visit-info h3{font-size:24px;margin-bottom:4px}
+.visit-info p,.visit-info a{color:var(--muted);text-decoration:none}
+.visit-info a:hover{color:var(--text)}
+.store{border-radius:var(--radius);aspect-ratio:16/10;object-fit:cover;width:100%;margin-top:8px}
+.map{border:0;width:100%;height:100%;min-height:520px;border-radius:var(--radius);filter:grayscale(.3) contrast(1.05)}
+
+footer{border-top:1px solid var(--line);padding:40px 0;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+footer img{height:38px;width:auto}
+
+/* motion */
+@media (prefers-reduced-motion:no-preference){
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+  .reveal.in{opacity:1;transform:none}
+  .hero-art .main{animation:rise 1s cubic-bezier(.16,1,.3,1) both}
+  .hero-art .inset{animation:rise 1s .18s cubic-bezier(.16,1,.3,1) both}
+  @keyframes rise{from{opacity:0;transform:translateY(28px)}}
+}
+
+/* mobile */
+@media (max-width:900px){
+  nav ul li:not(:last-child){display:none}
+  .hero{padding:40px 0 72px}
+  .hero .wrap,.menu-grid,.visit-grid{grid-template-columns:1fr}
+  .hero-art .inset{left:auto;right:16px;bottom:-32px;width:38%}
+  .proof .wrap{grid-template-columns:1fr}
+  .proof div+div{border-left:0;border-top:1px solid var(--line);padding-left:0}
+  section{padding:80px 0}
+  .sizzle{grid-template-columns:1fr}
+  .item h3{font-size:24px;white-space:normal}
+  .gallery{grid-template-columns:1fr 1fr;grid-template-rows:220px 220px 220px}
+  .gallery .a{grid-row:span 1;grid-column:span 2}
+  .gallery .d{grid-column:span 2}
+  .gallery .e{display:none}
+  .map{min-height:340px}
+  .wrap{padding:0 16px}
+}
+</style>
+
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BarbecueRestaurant", "name": "Black Smokehaus", "address": {"@type": "PostalAddress", "streetAddress": "P418-A P. Burgos St, Alang-Alang", "addressLocality": "Mandaue City", "addressRegion": "Cebu", "addressCountry": "PH"}, "openingHours": ["Mo-Su 11:00-21:00"], "telephone": "+639772835667", "servesCuisine": "Texas-style barbecue"}</script>
+</head>
+<body>
+
+<div class="preview">Sample website for Black Smokehaus by TechSocials. We can change anything you like. <a href="techsocials-websites-and-systems.pdf" target="_blank" rel="noopener">See pricing</a> or <a href="tel:+639989919318">message Matt, 0998 991 9318</a></div>
+
+<nav>
+  <div class="wrap">
+    <a href="#top" class="logo"><img src="img/logo.png" alt="Black Smokehaus, Est. 2020"></a>
+    <ul>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#platters">Platters</a></li>
+      <li><a href="#visit">Visit</a></li>
+      <li><a class="btn btn-ember btn-sm" href="tel:+639772835667"><i class="ph-fill ph-phone"></i>Call to reserve</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <h1>Smoked 17 to 20 hours. <em>No shortcuts.</em></h1>
+      <p>Texas-style wagyu brisket, ribs and pulled pork, smoked low and slow in Mandaue since 2020.</p>
+      <div class="ctas">
+        <a class="btn btn-ember" href="#menu">See the menu</a>
+        <a class="btn btn-ghost" href="tel:+639772835667"><i class="ph ph-phone"></i>Call to reserve</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <img class="main" src="img/p5.jpg" alt="Sliced wagyu brisket with a dark peppery bark">
+      <img class="inset" src="img/p4.jpg" alt="Brisket meal with corn muffin, corn and pickles">
+    </div>
+  </div>
+</header>
+
+<div class="proof">
+  <div class="wrap">
+    <div><i class="ph-fill ph-star"></i><p><b>4.6 on Google</b><span>from 530 diner reviews</span></p></div>
+    <div><i class="ph-fill ph-fire"></i><p><b>17 to 20 hours</b><span>on the smoker, every brisket</span></p></div>
+    <div><i class="ph-fill ph-clock"></i><p><b>Open daily</b><span>11:00 am to 9:00 pm</span></p></div>
+  </div>
+</div>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>The menu</h2>
+      <p>Every meal comes with plain rice, corncob, a corn muffin, pickles and our Signature BBQ Sauce.</p>
+    </div>
+    <div class="menu-grid">
+      <article class="feature reveal">
+        <img src="img/p8.jpg" alt="Brisket meal on butcher paper">
+        <div class="body">
+          <div class="row"><h3>Brisket Meal</h3><span class="price">₱1,150</span></div>
+          <p>Wagyu beef brisket, smoked low and slow for 17 to 20 hours.</p>
+          <span class="tag">Most talked about in our reviews</span>
+        </div>
+      </article>
+      <div class="items reveal">
+        <div class="item"><div class="row"><h3>Pork Ribs Meal</h3><span class="dots"></span><span class="price">₱935</span></div><p>Slowly smoked, then finished with a honey glaze.</p></div>
+        <div class="item"><div class="row"><h3>Beef Belly Meal</h3><span class="dots"></span><span class="price">₱850</span></div><p>Angus beef shortplate, seasoned the traditional way with salt and pepper.</p></div>
+        <div class="item"><div class="row"><h3>Pulled Pork Meal</h3><span class="dots"></span><span class="price">₱815</span></div><p>Heavy dark bark, best with a light dressing of our Carolina vinegar.</p></div>
+        <div class="item"><div class="row"><h3>Pork Belly Meal</h3><span class="dots"></span><span class="price">₱750</span></div><p>Rich smoky aroma, drizzled in BBQ sauce with a Pinoy side salad.</p></div>
+        <div class="item"><div class="row"><h3>Chicken Meal</h3><span class="dots"></span><span class="price">₱575</span></div><p>Smoked chicken wings paired with Filipino toyomansi sauce.</p></div>
+      </div>
+    </div>
+
+    <div class="sizzle reveal">
+      <div class="intro">
+        <h3>Sizzling meals</h3>
+        <p>Served on a hot plate with rice, egg, mushroom gravy and a raspberry iced tea or lemonade.</p>
+      </div>
+      <div class="card"><div><h3>Sizzling Burger Steak</h3><p>Wagyu beef patty</p></div><span class="price">₱590</span></div>
+      <div class="card"><div><h3>Sizzling Combo</h3><p>Wagyu patty and smoked classic sausage</p></div><span class="price">₱660</span></div>
+    </div>
+    <p class="note">Prices from our in-store menu, VAT inclusive. Prices may change without prior notice.</p>
+  </div>
+</section>
+
+<section class="tray">
+  <figure>
+    <img src="img/p9.jpg" alt="A full table of brisket, ribs, sausage, corn and muffins">
+    <figcaption>
+      <div class="wrap reveal">
+        <h2>Every tray comes loaded</h2>
+        <div class="sides">
+          <span><i class="ph-fill ph-check-circle"></i>Plain rice</span>
+          <span><i class="ph-fill ph-check-circle"></i>Corncob</span>
+          <span><i class="ph-fill ph-check-circle"></i>Corn muffin</span>
+          <span><i class="ph-fill ph-check-circle"></i>Pickles</span>
+          <span><i class="ph-fill ph-check-circle"></i>Signature BBQ Sauce</span>
+        </div>
+      </div>
+    </figcaption>
+  </figure>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal"><h2>From the smoker</h2></div>
+    <div class="gallery reveal">
+      <img class="a" src="img/p3.jpg" alt="Pork ribs sliced on a wooden board">
+      <img class="b" src="img/p7.jpg" alt="Brisket with sizzling plate, egg and rice">
+      <img class="c" src="img/p2.jpg" alt="Mixed smoked meats with three dipping sauces">
+      <img class="d" src="img/p6.jpg" alt="A family dining inside Black Smokehaus">
+    </div>
+  </div>
+</section>
+
+<section class="barkada" id="platters">
+  <div class="wrap reveal">
+    <h2>Bringing the barkada?</h2>
+    <p>Ask us about the Kumbira and Combinado platters, built for sharing. Call ahead and we will have the table ready.</p>
+    <a class="btn" href="tel:+639772835667"><i class="ph-fill ph-phone"></i>Call to reserve</a>
+  </div>
+</section>
+
+<!--kit-->
+<style>
+#k-order{--ka:#e0492c;--kb:#1c1816;--kp:#141110;--kt:#f1ebe3;--km:#b5aba1;--kl:#2e2724;--ko:#ffffff;background:var(--kb);color:var(--kt);padding:96px 0}
+#k-order .kw{max-width:1200px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:start}
+#k-order h2{font-size:clamp(34px,4vw,52px);line-height:1.08;color:var(--kt)}
+#k-order .ks{color:var(--km);margin-top:16px;max-width:44ch}
+#k-order ul{list-style:none;margin-top:26px;display:grid;gap:12px}
+#k-order li{display:flex;gap:12px;align-items:center;color:var(--kt)}
+#k-order li i{color:var(--ka);font-size:22px}
+#k-order form{background:var(--kp);border:1px solid var(--kl);border-radius:16px;padding:28px;display:grid;gap:16px}
+#k-order label{display:grid;gap:7px;font-weight:600;font-size:15px;color:var(--kt)}
+#k-order input,#k-order select,#k-order textarea{font:inherit;font-weight:400;color:var(--kt);background:var(--kb);border:1px solid var(--kl);border-radius:10px;padding:12px 14px;width:100%}
+#k-order input:focus,#k-order select:focus,#k-order textarea:focus{outline:2px solid var(--ka);outline-offset:1px;border-color:var(--ka)}
+#k-order .kf2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+#k-order button{font:inherit;font-weight:700;font-size:16px;background:var(--ka);color:var(--ko);border:0;border-radius:999px;padding:15px 24px;cursor:pointer;display:inline-flex;gap:10px;justify-content:center;align-items:center}
+#k-order button:active{transform:scale(.98)}
+#k-order .kn{color:var(--km);font-size:13px}
+#k-order .kdone{display:none;color:var(--kt);font-weight:600}
+.kbar{display:none}
+@media (max-width:900px){
+  #k-order{padding:72px 0} #k-order .kw{grid-template-columns:1fr;gap:32px;padding:0 16px}
+  .kbar{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;position:fixed;top:auto;left:0;right:0;bottom:0;height:auto;z-index:50;background:#141110;border-top:1px solid #2e2724;padding:8px 8px calc(8px + env(safe-area-inset-bottom))}
+  .kbar a{display:flex;flex-direction:column;align-items:center;gap:2px;font-size:12px;font-weight:700;text-decoration:none;color:#f1ebe3;padding:6px 0}
+  .kbar a i{font-size:22px;color:#e0492c}
+  .kbar a.kmain{background:#e0492c;color:#ffffff;border-radius:12px}
+  .kbar a.kmain i{color:#ffffff}
+  body{padding-bottom:72px}
+}
+</style>
+<section id="k-order"><div class="kw">
+  <div>
+    <h2>Reserve a table or order ahead</h2>
+    <p class="ks">Tell us when you&#x27;re coming and what you&#x27;d like. It goes straight to our phone, and we&#x27;ll text you back to confirm.</p>
+    <ul>
+      <li><i class="ph-fill ph-lightning"></i>No app, no sign-up</li>
+      <li><i class="ph-fill ph-chat-circle-text"></i>Goes straight to Black Smokehaus</li>
+      <li><i class="ph-fill ph-check-circle"></i>We confirm with you by text</li>
+    </ul>
+  </div>
+  <form id="k-form" data-to="+639772835667" data-kind="sms" data-biz="Black Smokehaus" novalidate>
+    <label>Your name<input name="Name" required autocomplete="name"></label>
+    <div class="kf2"><label>Date<input name="Date" type="date" required></label><label>Time<input name="Time" type="time" required></label></div><label>How many guests<input name="Guests" type="number" min="1" value="2" required></label><label>Anything to prepare ahead? (optional)<textarea name="Pre-order" rows="3" placeholder="e.g. one platter for 4, birthday"></textarea></label>
+    <button type="submit"><i class="ph-fill ph-paper-plane-tilt"></i>Send by text message</button>
+    <p class="kn">Opens your phone's messaging app with your request already written.</p>
+    <p class="kdone" id="k-done">Copied. Paste it in the chat that just opened.</p>
+  </form>
+</div></section>
+<script>
+(()=>{const f=document.getElementById('k-form');if(!f)return;
+f.addEventListener('submit',async e=>{e.preventDefault();
+ if(!f.checkValidity()){f.reportValidity();return}
+ const lines=['Hi '+f.dataset.biz+'! Request from your website:'];
+ new FormData(f).forEach((v,k)=>{if(String(v).trim())lines.push(k+': '+v)});
+ const msg=lines.join('\n');
+ if(f.dataset.kind==='sms'){location.href='sms:'+f.dataset.to+'?&body='+encodeURIComponent(msg);return}
+ try{await navigator.clipboard.writeText(msg)}catch(_){}
+ document.getElementById('k-done').style.display='block';window.open(f.dataset.to,'_blank','noopener');
+});})();
+</script>
+<!--/kit-->
+<section id="visit">
+  <div class="wrap">
+    <div class="sec-head reveal"><h2>Visit us</h2></div>
+    <div class="visit-grid">
+      <div class="visit-info reveal">
+        <div class="line"><i class="ph-fill ph-map-pin"></i><div><h3>Address</h3><p>P418-A P. Burgos St, Alang-Alang<br>Mandaue City, Cebu</p></div></div>
+        <div class="line"><i class="ph-fill ph-clock"></i><div><h3>Hours</h3><p>Open every day, 11:00 am to 9:00 pm</p></div></div>
+        <div class="line"><i class="ph-fill ph-phone"></i><div><h3>Reservations</h3><a href="tel:+639772835667">0977 283 5667</a></div></div>
+        <a class="btn btn-ghost" style="justify-self:start" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=Black+Smokehaus+Mandaue"><i class="ph ph-navigation-arrow"></i>Get directions</a>
+        <img class="store" src="img/p1.jpg" alt="The Black Smokehaus storefront at night">
+      </div>
+      <iframe class="map reveal" title="Map to Black Smokehaus" loading="lazy" src="https://maps.google.com/maps?q=Black%20Smokehaus%20Mandaue&z=16&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img src="img/logo.png" alt="Black Smokehaus">
+    <span>Low and slow, only the traditional way. Mandaue City, since 2020.</span>
+  </div>
+</footer>
+
+<script>
+(()=>{const els=document.querySelectorAll('.reveal');
+if(!('IntersectionObserver' in window)){els.forEach(e=>e.classList.add('in'));return}
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+els.forEach(e=>io.observe(e))})();
+</script>
+
+
+<!--kitbar--><div class="kbar" role="navigation" aria-label="Quick actions"><a href="tel:+639772835667"><i class="ph-fill ph-phone"></i>Call</a><a target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=Black+Smokehaus+Mandaue"><i class="ph-fill ph-navigation-arrow"></i>Directions</a><a class="kmain" href="#k-order"><i class="ph-fill ph-paper-plane-tilt"></i>Reserve</a></div><!--/kitbar-->
+</body>
+</html>

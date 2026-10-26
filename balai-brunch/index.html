@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Balai Brunch by Cafeplus Coffee | A.S. Fortuna, Mandaue</title>
+<meta name="description" content="All-day brunch, charcoal chicken and Cafeplus coffee in a garden off A.S. Fortuna, Banilad, Mandaue. Open daily from 6 am.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+<style>
+:root{
+  --bg:#f6f8f3;
+  --panel:#ffffff;
+  --line:#dfe6d8;
+  --text:#18201a;
+  --muted:#56614f;
+  --green:#4f8a2c;
+  --green-2:#3f7222;
+  --leaf:#7cc04a;
+  --night:#141914;
+  --radius:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:"DM Sans",system-ui,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1220px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;letter-spacing:-.025em;line-height:1.02}
+
+.preview{background:var(--night);color:#e9efe4;font-size:14px;text-align:center;padding:8px 16px}
+.preview a{font-weight:600;color:var(--leaf)}
+
+nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+nav .logo img{height:34px;width:auto}
+nav ul{display:flex;gap:30px;list-style:none;align-items:center}
+nav ul a{text-decoration:none;color:var(--muted);font-weight:500;font-size:15px}
+nav ul a:hover{color:var(--text)}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:16px;text-decoration:none;padding:14px 24px;border-radius:999px;white-space:nowrap;transition:background .2s,transform .2s cubic-bezier(.16,1,.3,1)}
+.btn:active{transform:scale(.98)}
+.btn-green{background:var(--green);color:#fff}
+.btn-green:hover{background:var(--green-2)}
+.btn-line{border:1px solid #b9c7ae;color:var(--text)}
+.btn-line:hover{border-color:var(--green)}
+.btn-sm{padding:10px 18px;font-size:15px}
+
+.hero{padding:48px 0 80px}
+.hero .wrap{display:grid;grid-template-columns:1fr 1.15fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(50px,6.4vw,92px)}
+.hero h1 span{color:var(--green)}
+.hero p{color:var(--muted);font-size:19px;max-width:32ch;margin:22px 0 34px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap}
+.hero-pics{display:grid;grid-template-columns:1.3fr 1fr;grid-template-rows:1fr 1fr;gap:14px;height:540px}
+.hero-pics img{width:100%;height:100%;object-fit:cover;border-radius:var(--radius)}
+.hero-pics .a{grid-row:span 2}
+
+.strip{background:var(--night);color:#e9efe4}
+.strip .wrap{display:grid;grid-template-columns:repeat(3,1fr)}
+.strip div{padding:26px 0;display:flex;gap:14px;align-items:center}
+.strip div+div{border-left:1px solid #2c362b;padding-left:32px}
+.strip i{font-size:28px;color:var(--leaf)}
+.strip b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:22px;color:#fff}
+.strip span{color:#a9b5a1;font-size:15px}
+
+section{padding:104px 0}
+.head{max-width:640px;margin-bottom:48px}
+.head h2{font-size:clamp(40px,4.8vw,64px)}
+.head p{color:var(--muted);margin-top:14px;max-width:52ch}
+
+/* breakfast */
+.bfast{display:grid;grid-template-columns:1fr 1.25fr;gap:40px;align-items:start}
+.bfast .photo{border-radius:var(--radius);overflow:hidden;position:sticky;top:96px}
+.bfast .photo img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.dishes{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.dish{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:22px;display:flex;flex-direction:column;gap:6px}
+.dish .row{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.dish h3{font-size:22px}
+.dish .price{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:22px;color:var(--green)}
+.dish p{color:var(--muted);font-size:15px}
+.dish.feat{grid-column:span 2;background:var(--leaf);border-color:var(--leaf)}
+.dish.feat h3{font-size:30px}
+.dish.feat .price{color:var(--text);font-size:30px}
+.dish.feat p{color:#24321c}
+.served{display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--green);margin-bottom:16px}
+
+.drinks{margin-top:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.dgroup{border-top:2px solid var(--text);padding-top:16px}
+.dgroup h3{font-size:22px;margin-bottom:10px}
+.dgroup li{list-style:none;display:flex;justify-content:space-between;gap:12px;padding:5px 0;color:var(--muted);font-size:16px}
+.dgroup li b{color:var(--text);font-weight:600}
+.note{color:var(--muted);font-size:13px;margin-top:24px}
+
+/* chicken */
+.chicken{background:var(--night);color:#e9efe4}
+.chicken .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center}
+.chicken h2{color:#fff;font-size:clamp(40px,4.8vw,64px)}
+.chicken p{color:#b9c4b1;margin-top:18px;max-width:42ch}
+.chicken .big{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;color:var(--leaf);font-size:clamp(64px,8vw,112px);line-height:1;margin-top:28px}
+.chicken .big small{display:block;font-family:"DM Sans",sans-serif;font-weight:500;font-size:16px;color:#a9b5a1;margin-top:6px}
+.chicken .pics{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.chicken .pics img{border-radius:var(--radius);width:100%;aspect-ratio:3/4;object-fit:cover}
+.chicken .pics img:last-child{margin-top:48px}
+
+/* garden */
+.garden{display:grid;grid-template-columns:1.6fr 1fr;grid-template-rows:380px;gap:14px}
+.garden img{width:100%;height:100%;object-fit:cover;border-radius:var(--radius)}
+.tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.tags span{background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:9px 16px;font-size:15px;display:inline-flex;gap:8px;align-items:center}
+.tags i{color:var(--green)}
+
+/* visit */
+.visit{display:grid;grid-template-columns:1fr 1.2fr;gap:32px}
+.vinfo{display:grid;gap:24px;align-content:start}
+.vinfo .line{display:flex;gap:14px}
+.vinfo i{font-size:24px;color:var(--green);margin-top:3px}
+.vinfo h3{font-size:20px}
+.vinfo p,.vinfo a{color:var(--muted);text-decoration:none}
+.hours{display:grid;grid-template-columns:auto auto;gap:2px 22px;color:var(--muted);font-size:16px}
+.map{border:0;width:100%;height:100%;min-height:480px;border-radius:var(--radius)}
+
+footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+footer img{height:26px;width:auto}
+
+@media (prefers-reduced-motion:no-preference){
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+  .reveal.in{opacity:1;transform:none}
+}
+@media (max-width:900px){
+  .wrap{padding:0 16px}
+  nav ul li:not(:last-child){display:none}
+  .hero{padding:32px 0 64px}
+  .hero .wrap,.bfast,.chicken .wrap,.visit{grid-template-columns:1fr;gap:40px}
+  .hero-pics{height:420px}
+  .strip .wrap{grid-template-columns:1fr}
+  .strip div+div{border-left:0;border-top:1px solid #2c362b;padding-left:0}
+  section{padding:72px 0}
+  .bfast .photo{position:static}
+  .bfast .photo img{aspect-ratio:4/3}
+  .dishes{grid-template-columns:1fr}
+  .dish.feat{grid-column:span 1}
+  .drinks{grid-template-columns:1fr}
+  .garden{grid-template-columns:1fr;grid-template-rows:240px 240px}
+  .map{min-height:340px}
+}
+</style>
+
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "Balai Brunch by Cafeplus Coffee", "address": {"@type": "PostalAddress", "streetAddress": "1 Floremer Subd, A.S. Fortuna St, Banilad", "addressLocality": "Mandaue City", "addressRegion": "Cebu", "addressCountry": "PH"}, "openingHours": ["Mo-Th 06:00-22:00", "Fr-Su 06:00-23:00"], "telephone": "+639175825009", "servesCuisine": "Filipino brunch, coffee"}</script>
+</head>
+<body>
+
+<div class="preview">Sample website for Balai Brunch by TechSocials. We can change anything you like. <a href="techsocials-websites-and-systems.pdf" target="_blank" rel="noopener">See pricing</a> or <a href="tel:+639989919318">message Matt, 0998 991 9318</a></div>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#top"><img src="img/logo-dark.png" alt="balai, Brunch by Cafeplus Coffee"></a>
+    <ul>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#chicken">Charcoal chicken</a></li>
+      <li><a href="#visit">Visit</a></li>
+      <li><a class="btn btn-green btn-sm" href="tel:+639175825009"><i class="ph ph-phone"></i>Reserve a table</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <h1>Where every day feels like <span>Sunday</span>.</h1>
+      <p>All-day brunch, charcoal chicken and Cafeplus coffee in a garden off A.S. Fortuna. Open daily from 6 am.</p>
+      <div class="ctas">
+        <a class="btn btn-green" href="#menu">See the menu</a>
+        <a class="btn btn-line" href="tel:+639175825009"><i class="ph ph-phone"></i>Reserve a table</a>
+      </div>
+    </div>
+    <div class="hero-pics">
+      <img class="a" src="img/p1.jpg" alt="The Balai storefront with its lit sign and garden seating">
+      <img src="img/p4.jpg" alt="Bangus with sunny side-up eggs and atchara">
+      <img src="img/p5.jpg" alt="Two iced Cafeplus drinks">
+    </div>
+  </div>
+</header>
+
+<div class="strip">
+  <div class="wrap">
+    <div><i class="ph-fill ph-star"></i><p><b>4.6 on Google</b><span>from 787 reviews</span></p></div>
+    <div><i class="ph-fill ph-sun-horizon"></i><p><b>Breakfast from 6 am</b><span>every single day</span></p></div>
+    <div><i class="ph-fill ph-bag"></i><p><b>Dine in or take out</b><span>delivery available too</span></p></div>
+  </div>
+</div>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="head reveal">
+      <h2>Breakfast, the Balai way</h2>
+      <p>Garlic rice, sunny side-up eggs and something good on the side. Served daily from 6 to 11 am.</p>
+    </div>
+    <div class="bfast">
+      <div class="photo reveal"><img src="img/p6.jpg" alt="A loaded plate with fries and sauce"></div>
+      <div class="reveal">
+        <span class="served"><i class="ph ph-clock"></i>Served 6:00 to 11:00 am</span>
+        <div class="dishes">
+          <div class="dish feat"><div class="row"><h3>Balai Plate</h3><span class="price">₱479</span></div><p>Hungarian sausage, spam, chorizo, bacon, garlic rice and sunny side-up eggs.</p></div>
+          <div class="dish"><div class="row"><h3>Spam</h3><span class="price">₱439</span></div><p>Garlic rice, sunny side-up eggs.</p></div>
+          <div class="dish"><div class="row"><h3>Tapa</h3><span class="price">₱399</span></div><p>Garlic rice, eggs and house-made pinakurat.</p></div>
+          <div class="dish"><div class="row"><h3>Tapa Cheese Steak</h3><span class="price">₱319</span></div><p>House-made pandesal, cheese, sunny side-up egg.</p></div>
+          <div class="dish"><div class="row"><h3>Bangus</h3><span class="price">₱299</span></div><p>Garlic rice, sunny side-up eggs, atchara.</p></div>
+          <div class="dish"><div class="row"><h3>Chorizo</h3><span class="price">₱299</span></div><p>Garlic rice, sunny side-up eggs, atchara.</p></div>
+          <div class="dish"><div class="row"><h3>Ube French Toast</h3><span class="price">₱299</span></div><p>Ube shokupan, ube cream cheese, ube ice cream.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="drinks reveal">
+      <div class="dgroup"><h3>Coffee</h3><ul>
+        <li><b>Brewed coffee</b>₱139</li><li><b>Cappuccino</b>₱139</li><li><b>Flat white</b>₱139</li><li><b>Dark mocha</b>₱169</li></ul></div>
+      <div class="dgroup"><h3>Tea</h3><ul>
+        <li><b>English breakfast</b>₱179</li><li><b>Earl grey</b>₱179</li><li><b>Chamomile, jasmine or mint</b>₱179</li></ul></div>
+      <div class="dgroup"><h3>Juices</h3><ul>
+        <li><b>Mango</b>₱199</li><li><b>Minty cucumber lemon</b>₱189</li><li><b>Sunrise fresh</b>₱179</li><li><b>Calamansi</b>₱159</li></ul></div>
+    </div>
+    <p class="note">Prices from our in-store breakfast menu, inclusive of 12% VAT. A 10% service charge is added to the bill.</p>
+  </div>
+</section>
+
+<section class="chicken" id="chicken">
+  <div class="wrap">
+    <div class="reveal">
+      <h2>The chicken people keep talking about</h2>
+      <p>Charcoal-grilled, juicy and served with our house sauces. It is the dish our guests mention most.</p>
+      <div class="big">70<small>Google reviews mention our chicken</small></div>
+    </div>
+    <div class="pics reveal">
+      <img src="img/p8.jpg" alt="Charcoal-grilled chicken with salad and sauces">
+      <img src="img/p2.jpg" alt="A platter of fried chicken with dips and lemon">
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head reveal">
+      <h2>Snug up indoors or out in the garden</h2>
+      <p>Bring the family or the barkada. Ambiance comes up in 70 of our Google reviews too.</p>
+    </div>
+    <div class="garden reveal">
+      <img src="img/p10.jpg" alt="The bright dining room with a large mural">
+      <img src="img/p3.jpg" alt="The Cafeplus coffee counter and pastry case">
+    </div>
+    <div class="tags reveal">
+      <span><i class="ph ph-tree"></i>Alfresco garden seating</span>
+      <span><i class="ph ph-armchair"></i>Air-conditioned dining room</span>
+      <span><i class="ph ph-users-three"></i>Good for groups</span>
+      <span><i class="ph ph-coffee"></i>Cafeplus coffee bar</span>
+    </div>
+  </div>
+</section>
+
+<!--kit-->
+<style>
+#k-order{--ka:#4f8a2c;--kb:#ffffff;--kp:#f6f8f3;--kt:#18201a;--km:#56614f;--kl:#dfe6d8;--ko:#ffffff;background:var(--kb);color:var(--kt);padding:96px 0}
+#k-order .kw{max-width:1200px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:start}
+#k-order h2{font-size:clamp(34px,4vw,52px);line-height:1.08;color:var(--kt)}
+#k-order .ks{color:var(--km);margin-top:16px;max-width:44ch}
+#k-order ul{list-style:none;margin-top:26px;display:grid;gap:12px}
+#k-order li{display:flex;gap:12px;align-items:center;color:var(--kt)}
+#k-order li i{color:var(--ka);font-size:22px}
+#k-order form{background:var(--kp);border:1px solid var(--kl);border-radius:16px;padding:28px;display:grid;gap:16px}
+#k-order label{display:grid;gap:7px;font-weight:600;font-size:15px;color:var(--kt)}
+#k-order input,#k-order select,#k-order textarea{font:inherit;font-weight:400;color:var(--kt);background:var(--kb);border:1px solid var(--kl);border-radius:10px;padding:12px 14px;width:100%}
+#k-order input:focus,#k-order select:focus,#k-order textarea:focus{outline:2px solid var(--ka);outline-offset:1px;border-color:var(--ka)}
+#k-order .kf2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+#k-order button{font:inherit;font-weight:700;font-size:16px;background:var(--ka);color:var(--ko);border:0;border-radius:999px;padding:15px 24px;cursor:pointer;display:inline-flex;gap:10px;justify-content:center;align-items:center}
+#k-order button:active{transform:scale(.98)}
+#k-order .kn{color:var(--km);font-size:13px}
+#k-order .kdone{display:none;color:var(--kt);font-weight:600}
+.kbar{display:none}
+@media (max-width:900px){
+  #k-order{padding:72px 0} #k-order .kw{grid-template-columns:1fr;gap:32px;padding:0 16px}
+  .kbar{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;position:fixed;top:auto;left:0;right:0;bottom:0;height:auto;z-index:50;background:#f6f8f3;border-top:1px solid #dfe6d8;padding:8px 8px calc(8px + env(safe-area-inset-bottom))}
+  .kbar a{display:flex;flex-direction:column;align-items:center;gap:2px;font-size:12px;font-weight:700;text-decoration:none;color:#18201a;padding:6px 0}
+  .kbar a i{font-size:22px;color:#4f8a2c}
+  .kbar a.kmain{background:#4f8a2c;color:#ffffff;border-radius:12px}
+  .kbar a.kmain i{color:#ffffff}
+  body{padding-bottom:72px}
+}
+</style>
+<section id="k-order"><div class="kw">
+  <div>
+    <h2>Reserve a table or order for pick-up</h2>
+    <p class="ks">Tell us when you&#x27;re coming and how many. It goes straight to our phone, and we&#x27;ll text you back to confirm.</p>
+    <ul>
+      <li><i class="ph-fill ph-lightning"></i>No app, no sign-up</li>
+      <li><i class="ph-fill ph-chat-circle-text"></i>Goes straight to Balai Brunch by Cafeplus Coffee</li>
+      <li><i class="ph-fill ph-check-circle"></i>We confirm with you by text</li>
+    </ul>
+  </div>
+  <form id="k-form" data-to="+639175825009" data-kind="sms" data-biz="Balai Brunch by Cafeplus Coffee" novalidate>
+    <label>Your name<input name="Name" required autocomplete="name"></label>
+    <div class="kf2"><label>Date<input name="Date" type="date" required></label><label>Time<input name="Time" type="time" required></label></div><label>How many guests<input name="Guests" type="number" min="1" value="2" required></label><label>Anything to prepare ahead? (optional)<textarea name="Pre-order" rows="3" placeholder="e.g. one platter for 4, birthday"></textarea></label>
+    <button type="submit"><i class="ph-fill ph-paper-plane-tilt"></i>Send by text message</button>
+    <p class="kn">Opens your phone's messaging app with your request already written.</p>
+    <p class="kdone" id="k-done">Copied. Paste it in the chat that just opened.</p>
+  </form>
+</div></section>
+<script>
+(()=>{const f=document.getElementById('k-form');if(!f)return;
+f.addEventListener('submit',async e=>{e.preventDefault();
+ if(!f.checkValidity()){f.reportValidity();return}
+ const lines=['Hi '+f.dataset.biz+'! Request from your website:'];
+ new FormData(f).forEach((v,k)=>{if(String(v).trim())lines.push(k+': '+v)});
+ const msg=lines.join('\n');
+ if(f.dataset.kind==='sms'){location.href='sms:'+f.dataset.to+'?&body='+encodeURIComponent(msg);return}
+ try{await navigator.clipboard.writeText(msg)}catch(_){}
+ document.getElementById('k-done').style.display='block';window.open(f.dataset.to,'_blank','noopener');
+});})();
+</script>
+<!--/kit-->
+<section id="visit" style="padding-top:0">
+  <div class="wrap">
+    <div class="head reveal"><h2>Visit Balai</h2></div>
+    <div class="visit">
+      <div class="vinfo reveal">
+        <div class="line"><i class="ph ph-map-pin"></i><div><h3>1 Floremer Subd, A.S. Fortuna St</h3><p>Banilad, Mandaue City, Cebu</p></div></div>
+        <div class="line"><i class="ph ph-clock"></i><div><h3>Open daily</h3>
+          <div class="hours"><span>Monday to Thursday</span><span>6:00 am to 10:00 pm</span><span>Friday to Sunday</span><span>6:00 am to 11:00 pm</span></div></div></div>
+        <div class="line"><i class="ph ph-phone"></i><div><h3>Reservations and take-out</h3><a href="tel:+639175825009">0917 582 5009</a></div></div>
+        <div class="line"><i class="ph ph-instagram-logo"></i><div><h3>Follow us</h3><p>@balaibrunchbycafeplus</p></div></div>
+        <a class="btn btn-line" style="justify-self:start" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=Balai+Brunch+by+Cafeplus+Coffee+Mandaue"><i class="ph ph-navigation-arrow"></i>Get directions</a>
+      </div>
+      <iframe class="map reveal" title="Map to Balai Brunch" loading="lazy" src="https://maps.google.com/maps?q=Balai%20Brunch%20by%20Cafeplus%20Coffee%20Mandaue&z=16&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img src="img/logo-dark.png" alt="balai">
+    <span>Brunch by Cafeplus Coffee. A.S. Fortuna St, Banilad, Mandaue City.</span>
+  </div>
+</footer>
+
+<script>
+(()=>{const els=document.querySelectorAll('.reveal');
+if(!('IntersectionObserver' in window)){els.forEach(e=>e.classList.add('in'));return}
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+els.forEach(e=>io.observe(e))})();
+</script>
+
+
+<!--kitbar--><div class="kbar" role="navigation" aria-label="Quick actions"><a href="tel:+639175825009"><i class="ph-fill ph-phone"></i>Call</a><a target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=Balai+Brunch+by+Cafeplus+Coffee+Mandaue"><i class="ph-fill ph-navigation-arrow"></i>Directions</a><a class="kmain" href="#k-order"><i class="ph-fill ph-paper-plane-tilt"></i>Reserve</a></div><!--/kitbar-->
+</body>
+</html>

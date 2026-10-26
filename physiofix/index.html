@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Physiofix PT Cebu · Physical Therapy in Jamestown, Mandaue</title>
+<meta name="description" content="Physical therapy for injuries, back and shoulder pain and sports recovery, on the 2nd floor of CrossFit Subtero HQ, Jamestown, Mandaue. Tap where it hurts and book your session.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#1460c4">
+<link rel="icon" href="img/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,700;1,800;1,900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#1460c4;--blue-d:#0d4594;--green:#5ccf55;--teal:#1aa39a;--grad:linear-gradient(120deg,#1460c4 0%,#1aa39a 55%,#5ccf55 100%);--ink:#0e1c2b;--mute:#5d6b7a;--bg:#f4f8f7;--paper:#fff;--line:#dfe8e6}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Barlow',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+button{font:inherit;cursor:pointer;color:inherit}
+a{color:inherit}
+.preview{background:var(--ink);color:#e6f0f5;font-size:14px;text-align:center;padding:8px 16px}
+.preview a{font-weight:700;color:var(--green)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.bc{font-family:'Barlow Condensed',sans-serif}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:70px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{width:46px;height:46px;border-radius:10px}
+.brand b{font-family:'Barlow Condensed';font-style:italic;font-weight:900;font-size:28px;letter-spacing:.01em;line-height:1}
+.brand b span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.brand small{display:block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute);font-weight:600}
+header nav{display:flex;gap:28px;font-weight:600;font-size:15px}
+header nav a{text-decoration:none}header nav a:hover{color:var(--blue)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:10px;padding:14px 24px;font-family:'Barlow Condensed';font-weight:800;font-size:19px;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;transition:transform .15s,box-shadow .15s,filter .15s}
+.btn:active{transform:scale(.97)}
+.btn-grad{background:var(--grad);color:#fff;box-shadow:0 10px 24px rgba(20,96,196,.25)}.btn-grad:hover{filter:brightness(1.08)}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-line{border:2px solid var(--ink)}.btn-line:hover{background:var(--ink);color:#fff}
+@media(max-width:820px){header nav,header .btn{display:none}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:var(--ink);color:#fff;padding:0}
+.hero .bg{position:absolute;inset:0;background:url(img/p1.jpg) center 40%/cover;opacity:.32}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--ink) 30%,rgba(14,28,43,.4)),linear-gradient(0deg,var(--ink),transparent 40%)}
+.bolt{position:absolute;right:-60px;top:-40px;width:520px;opacity:.9;z-index:1}
+.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;padding-top:72px;padding-bottom:90px}
+.kick{display:inline-flex;gap:10px;align-items:center;font-weight:700;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--green)}
+.kick:before{content:"";width:28px;height:3px;background:var(--grad)}
+.hero h1{font-family:'Barlow Condensed';font-style:italic;font-weight:900;font-size:clamp(56px,8vw,110px);line-height:.88;text-transform:uppercase;margin:16px 0 20px;letter-spacing:-.01em}
+.hero h1 span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.08em}
+.hero p{font-size:19px;color:#c9d6e0;max-width:30em}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.hero .btn-line{border-color:#fff;color:#fff}.hero .btn-line:hover{background:#fff;color:var(--ink)}
+.score{display:flex;gap:26px;margin-top:34px;flex-wrap:wrap}
+.score div{font-size:14px;color:#9fb1c0}
+.score b{display:block;font-family:'Barlow Condensed';font-style:italic;font-weight:800;font-size:44px;line-height:1;color:#fff}
+.card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(12px);border-radius:20px;padding:26px}
+.card h3{font-family:'Barlow Condensed';font-weight:800;font-size:26px;text-transform:uppercase;font-style:italic}
+.card ul{list-style:none;margin-top:14px;display:grid;gap:10px}
+.card li{display:flex;gap:12px;align-items:center;font-weight:600}
+.card li i{flex:none;width:30px;height:30px;border-radius:8px;background:var(--grad);display:grid;place-items:center;font-style:normal;font-family:'Barlow Condensed';font-weight:800}
+@media(max-width:900px){.hero .wrap{grid-template-columns:1fr;padding-top:44px}.bolt{width:320px;right:-80px;opacity:.5}}
+
+section{padding:90px 0}
+.sh{max-width:680px;margin-bottom:38px}
+.sh .kick{color:var(--teal)}
+.sh h2{font-family:'Barlow Condensed';font-style:italic;font-weight:900;font-size:clamp(42px,5.4vw,70px);line-height:.92;text-transform:uppercase;margin:12px 0}
+.sh p{color:var(--mute);font-size:18px}
+
+/* pain finder */
+.finder{display:grid;grid-template-columns:360px 1fr;gap:30px;align-items:start}
+.body{background:var(--paper);border-radius:24px;padding:20px;border:1px solid var(--line);position:sticky;top:90px}
+.body svg{width:100%;height:auto;display:block}
+.body .fig{fill:#e7efed;stroke:#cad9d5;stroke-width:2}
+.spot{cursor:pointer}
+.spot circle.ring{fill:rgba(26,163,154,.18);transition:r .2s}
+.spot circle.dot{fill:var(--teal);stroke:#fff;stroke-width:3;transition:fill .15s}
+.spot:hover circle.ring{r:20}
+.spot.on circle.dot{fill:var(--blue)}
+.spot.on circle.ring{fill:rgba(20,96,196,.25);animation:pulse 1.6s ease-out infinite}
+@keyframes pulse{0%{r:14}100%{r:26;opacity:0}}
+.spot:focus{outline:none}.spot:focus-visible circle.dot{stroke:var(--ink)}
+.side{display:grid;gap:16px}
+.box{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:22px}
+.box h3{font-family:'Barlow Condensed';font-weight:800;font-size:22px;text-transform:uppercase;letter-spacing:.02em;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.box h3 i{font-style:normal;width:28px;height:28px;border-radius:8px;background:var(--grad);color:#fff;display:grid;place-items:center;font-size:16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips button,.days button,.times button{border:1.5px solid var(--line);background:#fff;border-radius:10px;padding:10px 14px;font-weight:700;font-size:15px;transition:border-color .15s,background .15s}
+.chips button:hover,.days button:hover:not(:disabled),.times button:hover{border-color:var(--teal)}
+.chips button[aria-pressed=true],.days button[aria-pressed=true],.times button[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:#fff}
+.plan{border-radius:20px;padding:24px;background:var(--grad);color:#fff}
+.plan small{font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:12px;opacity:.85}
+.plan h3{font-family:'Barlow Condensed';font-style:italic;font-weight:900;font-size:36px;line-height:1;text-transform:uppercase;margin:6px 0 10px}
+.plan p{color:#eaf7f4}
+.plan ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.plan li{background:rgba(255,255,255,.2);border-radius:999px;padding:6px 12px;font-weight:700;font-size:14px}
+.pain{display:flex;align-items:center;gap:14px}
+.pain input{flex:1;accent-color:var(--blue);height:28px}
+.pain output{font-family:'Barlow Condensed';font-weight:800;font-size:30px;min-width:64px;text-align:right}
+.scale{display:flex;justify-content:space-between;font-size:12px;color:var(--mute);margin-top:2px}
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.days button{padding:9px 2px;text-align:center}
+.days span{display:block;font-size:14px}.days small{display:block;font-size:11px;opacity:.7}
+.days button:disabled{opacity:.3;cursor:not-allowed}
+.times{display:grid;grid-template-columns:repeat(auto-fill,minmax(88px,1fr));gap:6px;margin-top:12px}
+.noslot{grid-column:1/-1;color:var(--mute)}
+.fl{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fl label{font-size:13px;font-weight:700;color:var(--mute)}
+.fl input{display:block;width:100%;margin-top:6px;border:1.5px solid var(--line);border-radius:10px;padding:12px 14px;font:inherit;font-size:16px}
+.fl input:focus{outline:2px solid var(--teal);outline-offset:1px}
+.sendrow{display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:var(--ink);color:#fff;border-radius:20px;padding:18px 18px 18px 24px}
+.sendrow span{font-weight:600;color:#c9d6e0}
+.sendrow b{color:#fff}
+.sendrow .btn[disabled]{opacity:.45;cursor:not-allowed}
+@media(max-width:980px){.finder{grid-template-columns:1fr}.body{max-width:300px;margin:0 auto;width:100%;position:relative;top:0}}
+@media(max-width:560px){.days{grid-template-columns:repeat(4,1fr)}.fl{grid-template-columns:1fr}.box{padding:18px}}
+
+/* treatments */
+.tx{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.t{background:var(--paper);border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.t img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.t div{padding:18px}
+.t h3{font-family:'Barlow Condensed';font-weight:800;font-size:24px;text-transform:uppercase;font-style:italic;line-height:1.05}
+.t p{color:var(--mute);font-size:15px;margin-top:6px}
+.t .n{font-weight:700;color:var(--teal);font-size:13px;margin-top:10px}
+@media(max-width:960px){.tx{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.tx{grid-template-columns:1fr}}
+
+/* team */
+.team{background:var(--ink);color:#fff}
+.team .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:46px;align-items:center}
+.team img{border-radius:20px;width:100%;aspect-ratio:1;object-fit:cover}
+.team .sh h2{color:#fff}.team .sh p{color:#b7c6d2}
+.quote{border-left:4px solid var(--green);padding-left:18px;margin-top:20px;font-size:18px;color:#e2ecf2}
+@media(max-width:860px){.team .wrap{grid-template-columns:1fr}}
+
+/* visit */
+.visit{display:grid;grid-template-columns:1fr 1.2fr;gap:30px}
+.vc{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:32px}
+.vc dl{display:grid;gap:16px;margin-top:18px}
+.vc dt{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--teal)}
+.vc dd{font-size:17px}
+.vc .photos{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
+.vc .photos img{border-radius:12px;aspect-ratio:1;object-fit:cover;width:100%}
+.map{border-radius:22px;overflow:hidden;min-height:420px;border:1px solid var(--line)}
+.map iframe{width:100%;height:100%;min-height:420px;border:0}
+@media(max-width:860px){.visit{grid-template-columns:1fr}}
+footer{background:var(--ink);color:#9fb1c0;padding:40px 0 110px;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.mbar{display:none}
+@media(max-width:820px){.mbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:30;background:var(--ink);border-radius:14px;padding:7px;gap:6px;box-shadow:0 12px 30px rgba(0,0,0,.3)}
+.mbar a{flex:1;text-align:center;color:#fff;text-decoration:none;font-family:'Barlow Condensed';font-weight:800;font-size:17px;letter-spacing:.04em;text-transform:uppercase;padding:11px 6px;border-radius:10px}
+.mbar a.go{background:var(--grad)}}
+</style>
+</head>
+<body>
+<div class="preview">Sample website for Physiofix PT Cebu by TechSocials. We can change anything you like. <a href="techsocials-websites-and-systems.pdf" target="_blank" rel="noopener">See pricing</a> or <a href="tel:+639989919318">message Matt, 0998 991 9318</a></div>
+<header><div class="wrap">
+  <a class="brand" href="#top"><img src="img/logo.jpg" alt="Physiofix FX logo"><span><b>PHYSIO<span>FIX</span></b><small>PT Cebu · Jamestown</small></span></a>
+  <nav><a href="#finder">Where it hurts</a><a href="#treat">Treatments</a><a href="#team">Team</a><a href="#visit">Visit</a></nav>
+  <a class="btn btn-grad" href="#finder">Book a session</a>
+</div></header>
+
+<main id="top">
+<section class="hero">
+  <div class="bg" role="img" aria-label="The bright Physiofix treatment room"></div>
+  <svg class="bolt" viewBox="0 0 200 260" aria-hidden="true"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1460c4"/><stop offset=".6" stop-color="#1aa39a"/><stop offset="1" stop-color="#5ccf55"/></linearGradient></defs><path d="M120 0 30 150h60l-30 110 110-160h-62z" fill="url(#g)" opacity=".55"/></svg>
+  <div class="wrap">
+    <div>
+      <span class="kick">Physical therapy · Mandaue</span>
+      <h1>Move again. <span>Pain-free.</span></h1>
+      <p>Injury rehab, back and shoulder pain, dry needling, cupping and sports recovery. Upstairs at CrossFit Subtero HQ in Jamestown.</p>
+      <div class="ctas"><a class="btn btn-grad" href="#finder">Show us where it hurts</a><a class="btn btn-line" href="tel:+639457721081">Call 0945 772 1081</a></div>
+      <div class="score"><div><b>5.0 ★</b>Google rating</div><div><b>29</b>Google reviews</div><div><b>6 days</b>Mon to Sat</div></div>
+    </div>
+    <div class="card">
+      <h3>What patients come in for</h3>
+      <ul>
+        <li><i>6</i>Sports and work injuries</li>
+        <li><i>3</i>Back pain that keeps coming back</li>
+        <li><i>3</i>Shoulder pain and stiffness</li>
+        <li><i>3</i>Dry needling and cupping</li>
+      </ul>
+      <p style="font-size:13px;color:#9fb1c0;margin-top:14px">Mentions in Physiofix's Google reviews</p>
+    </div>
+  </div>
+</section>
+
+<section id="finder">
+  <div class="wrap">
+    <div class="sh"><span class="kick">Book in 1 minute</span><h2>Where does it hurt?</h2><p>Tap the spot. We'll show you how we usually treat it, then pick a time that works for you.</p></div>
+    <div class="finder">
+      <div class="body">
+        <svg viewBox="0 0 240 480" role="group" aria-label="Body map. Tap a body part.">
+          <g class="fig">
+            <circle cx="120" cy="48" r="30"/>
+            <rect x="108" y="76" width="24" height="18" rx="6"/>
+            <path d="M74 98c10-8 82-8 92 0l10 112c-6 22-104 22-112 0z"/>
+            <path d="M74 100c-18 4-26 18-28 34l-10 92c0 8 12 10 14 2l16-84z"/>
+            <path d="M166 100c18 4 26 18 28 34l10 92c0 8-12 10-14 2l-16-84z"/>
+            <path d="M80 214c10 14 70 14 80 0l-4 90-12 150c0 10-22 10-22 0l-2-140h-2l-2 140c0 10-22 10-22 0l-12-150z"/>
+          </g>
+          <g id="spots"></g>
+        </svg>
+      </div>
+      <div class="side">
+        <div class="box"><h3><i>1</i>Pain area</h3><div class="chips" id="areas"></div></div>
+        <div class="plan" id="plan"><small>How we usually help</small><h3 id="pTitle">Tap a spot on the body</h3><p id="pText">Every first visit starts with an assessment, so we treat the cause, not just the pain.</p><ul id="pList"></ul></div>
+        <div class="box"><h3><i>2</i>How did it start?</h3><div class="chips" id="cause"><button type="button" data-v="Sports or training">Sports or training</button><button type="button" data-v="Work or desk posture">Work or desk</button><button type="button" data-v="Accident or fall">Accident or fall</button><button type="button" data-v="Not sure">Not sure</button></div></div>
+        <div class="box"><h3><i>3</i>How bad is it today?</h3><div class="pain"><input type="range" id="lvl" min="1" max="10" value="5" aria-label="Pain level from 1 to 10"><output id="lvlo">5/10</output></div><div class="scale"><span>Mild</span><span>Can't sleep</span></div></div>
+        <div class="box"><h3><i>4</i>Pick a time</h3><div class="days" id="days"></div><div class="times" id="times"></div></div>
+        <div class="box"><h3><i>5</i>Your details</h3><div class="fl"><label>Name<input id="nm" autocomplete="name" placeholder="Your name"></label><label>Mobile<input id="mob" type="tel" autocomplete="tel" placeholder="0917 123 4567"></label></div></div>
+        <div class="sendrow"><span id="sumTx">Pick a pain area and a time</span><button class="btn btn-grad" id="send" disabled>Request session</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="treat" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sh"><span class="kick">Treatments</span><h2>Built around your body.</h2><p>Rates depend on your assessment and plan. Message us for current rates.</p></div>
+    <div class="tx">
+      <div class="t"><img src="img/p2.jpg" alt="Therapist assessing a patient's posture" loading="lazy"><div><h3>Assessment &amp; injury rehab</h3><p>We find the cause, then build a plan with hands-on work and exercises.</p><p class="n">Mentioned in 6 reviews</p></div></div>
+      <div class="t"><img src="img/p10.jpg" alt="Therapist treating a patient's neck and shoulder" loading="lazy"><div><h3>Back, neck &amp; shoulder</h3><p>For desk stiffness, old injuries and pain that keeps returning.</p><p class="n">Back and shoulder in 6 reviews</p></div></div>
+      <div class="t"><img src="img/p9.jpg" alt="Red light therapy on a patient's leg" loading="lazy"><div><h3>Recovery tech</h3><p>Light therapy and tools that help tissue recover faster between sessions.</p></div></div>
+      <div class="t"><img src="img/p3.jpg" alt="Treatment bed with exercise ball" loading="lazy"><div><h3>Dry needling &amp; cupping</h3><p>Targeted release for tight, painful muscles.</p><p class="n">Mentioned in 6 reviews</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="team" id="team">
+  <div class="wrap">
+    <img src="img/p8.jpg" alt="The Physiofix team giving a thumbs up in the clinic" loading="lazy">
+    <div>
+      <div class="sh" style="margin-bottom:0"><span class="kick">The team</span><h2>Train next door. Recover here.</h2><p>We're upstairs at CrossFit Subtero HQ, so athletes are right at home. But you don't need to be one. Office workers, parents and weekend players who just want to move without pain are welcome too.</p></div>
+      <p class="quote">Rated 5.0 on Google from 29 reviews.</p>
+      <div style="margin-top:26px"><a class="btn btn-grad" href="#finder">Book your first session</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap visit">
+    <div class="vc">
+      <span class="kick" style="color:var(--teal)">Visit</span>
+      <h2 class="bc" style="font-style:italic;font-weight:900;font-size:44px;text-transform:uppercase;line-height:.95;margin-top:10px">Jamestown, Mantawe</h2>
+      <dl>
+        <div><dt>Address</dt><dd>Unit 2, 2nd floor, CrossFit Subtero HQ, Jamestown, Mantawe Ave, Mandaue City</dd></div>
+        <div><dt>Hours</dt><dd>Mon to Fri 10 am to 4 pm · Sat 10 am to 3 pm · Sun closed</dd></div>
+        <div><dt>Call or text</dt><dd><a href="tel:+639457721081">0945 772 1081</a></dd></div>
+      </dl>
+      <div class="photos"><img src="img/p7.jpg" alt="The Physiofix sign at the entrance" loading="lazy"><img src="img/p6.jpg" alt="The entrance with parking out front" loading="lazy"></div>
+    </div>
+    <div class="map"><iframe title="Map to Physiofix PT Cebu" loading="lazy" src="https://www.google.com/maps?q=Physiofix+PT+Cebu+Jamestown+Mandaue&output=embed"></iframe></div>
+  </div>
+</section>
+</main>
+<footer><div class="wrap"><span class="bc" style="font-style:italic;font-weight:900;font-size:24px;color:#fff">PHYSIOFIX <span style="font-size:14px;color:#9fb1c0;font-style:normal;font-weight:600">PT CEBU</span></span><span>CrossFit Subtero HQ, Jamestown, Mandaue · 0945 772 1081</span></div></footer>
+<div class="mbar"><a class="go" href="#finder">Book</a><a href="tel:+639457721081">Call</a><a href="https://www.google.com/maps/dir/?api=1&destination=Physiofix+PT+Cebu+Mandaue" target="_blank" rel="noopener">Map</a></div>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"MedicalBusiness","name":"Physiofix PT Cebu","medicalSpecialty":"PhysicalTherapy","telephone":"+639457721081","address":{"@type":"PostalAddress","streetAddress":"Unit 2, 2nd floor, CrossFit Subtero HQ, Jamestown, Mantawe Ave","addressLocality":"Mandaue City","addressRegion":"Cebu","addressCountry":"PH"},"openingHours":["Mo-Fr 10:00-16:00","Sa 10:00-15:00"],"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"29"}}</script>
+<script src="tsk.js"></script>
+<script>
+const PHONE='+639457721081',$=id=>document.getElementById(id);
+const AREAS=[
+  {k:'Neck',x:120,y:86,t:'Neck pain and stiffness',d:'Common with long hours at a desk or on the phone. We loosen what is tight and strengthen what is weak.',l:['Posture check','Manual therapy','Dry needling','Home exercises']},
+  {k:'Shoulder',x:70,y:112,t:'Shoulder pain',d:'From lifting, sports or sleeping wrong. We find out which part of the shoulder is the problem first.',l:['Shoulder assessment','Mobility work','Cupping','Strength plan']},
+  {k:'Upper back',x:145,y:140,t:'Upper back tightness',d:'That knot between the shoulder blades. Usually posture, stress or training load.',l:['Soft tissue release','Cupping','Posture exercises']},
+  {k:'Lower back',x:120,y:196,t:'Lower back pain',d:"The pain that keeps coming back. We work on the cause so it stays away, not just this week's flare-up.",l:['Spine and hip assessment','Manual therapy','Dry needling','Core program']},
+  {k:'Elbow / wrist',x:46,y:200,t:'Elbow and wrist pain',d:'Tennis elbow, typing strain and gym grip issues.',l:['Assessment','Soft tissue work','Load management']},
+  {k:'Hip',x:150,y:232,t:'Hip pain',d:'Tight hips from sitting, or pain when running and squatting.',l:['Movement screen','Mobility work','Strength plan']},
+  {k:'Knee',x:96,y:330,t:'Knee pain',d:'Runner\'s knee, ligament sprains and post-surgery rehab.',l:['Knee assessment','Rehab exercises','Recovery tech']},
+  {k:'Ankle / foot',x:144,y:440,t:'Ankle and foot pain',d:'Sprains that never fully healed, heel pain and plantar fasciitis.',l:['Assessment','Balance training','Taping advice']}
+];
+const svgNS='http://www.w3.org/2000/svg';
+const B={area:null,cause:'',day:'',time:''};
+AREAS.forEach((a,i)=>{
+  const g=document.createElementNS(svgNS,'g');g.setAttribute('class','spot');g.setAttribute('tabindex','0');g.setAttribute('role','button');g.setAttribute('aria-label',a.k);g.dataset.i=i;
+  g.innerHTML=`<circle class="ring" cx="${a.x}" cy="${a.y}" r="14"/><circle class="dot" cx="${a.x}" cy="${a.y}" r="8"/>`;
+  $('spots').appendChild(g);
+});
+$('areas').innerHTML=AREAS.map((a,i)=>`<button type="button" data-i="${i}">${a.k}</button>`).join('');
+function pick(i){
+  B.area=AREAS[i];
+  document.querySelectorAll('.spot').forEach(s=>s.classList.toggle('on',+s.dataset.i===i));
+  $('areas').querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',+b.dataset.i===i));
+  $('pTitle').textContent=B.area.t;$('pText').textContent=B.area.d;$('pList').innerHTML=B.area.l.map(x=>`<li>${x}</li>`).join('');
+  upd();
+}
+$('spots').addEventListener('click',e=>{const g=e.target.closest('.spot');if(g)pick(+g.dataset.i);});
+$('spots').addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.closest('.spot')){e.preventDefault();pick(+e.target.closest('.spot').dataset.i);}});
+$('areas').addEventListener('click',e=>{const b=e.target.closest('button');if(b)pick(+b.dataset.i);});
+$('cause').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;$('cause').querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));B.cause=b.dataset.v;upd();});
+$('lvl').addEventListener('input',()=>{$('lvlo').textContent=$('lvl').value+'/10';});
+const OPEN={1:[600,960],2:[600,960],3:[600,960],4:[600,960],5:[600,960],6:[600,900]};
+TSK.slots({daysEl:$('days'),slotsEl:$('times'),open:OPEN,step:60,onPick:p=>{B.day=p.day;B.time=p.time;upd();}});
+function upd(){
+  const ok=B.area&&B.day&&B.time;
+  $('sumTx').innerHTML=ok?`<b>${B.area.k}</b> · ${B.day}, ${B.time}`:(B.area?`<b>${B.area.k}</b> · now pick a time`:'Pick a pain area and a time');
+  $('send').disabled=!ok;
+}
+$('send').onclick=()=>{
+  const L=['Hi Physiofix! Session request from your website:','','Pain area: '+B.area.k,'Pain level: '+$('lvl').value+'/10'];
+  if(B.cause)L.push('Started from: '+B.cause);
+  L.push('Preferred: '+B.day+', '+B.time);
+  if($('nm').value.trim())L.push('Name: '+$('nm').value.trim());
+  if($('mob').value.trim())L.push('Mobile: '+$('mob').value.trim());
+  TSK.sms(PHONE,L);
+};
+upd();
+</script>
+</body>
+</html>
