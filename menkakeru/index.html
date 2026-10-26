@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Menkakeru Inuno Hirameki 麺駆ける犬の閃き · Japanese Ramen in Banilad, Open till 5am</title>
+<meta name="description" content="Slow-simmered tonkotsu ramen, salt lemon ramen, tsukemen and mazemen on A.S. Fortuna, Banilad, Mandaue. Open until 5am. Punch your ramen ticket online and pick it up hot.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#16110e">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23c8102e'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-size='36' fill='%23fff' font-family='serif'%3E麺%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--char:#16110e;--char2:#211a15;--wood:#6b4426;--bamboo:#c9a86a;--red:#c8102e;--red-d:#9a0b22;--washi:#f3ead8;--paper:#fbf6ec;--ink:#1c1612;--mute:#7d6f62;--line:rgba(243,234,216,.14)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Zen Kaku Gothic New',system-ui,sans-serif;background:var(--char);color:var(--washi);line-height:1.65;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+button{font:inherit;cursor:pointer;color:inherit}
+a{color:inherit}
+.preview{background:#000;color:#e9e0d0;font-size:14px;text-align:center;padding:8px 16px}
+.preview a{font-weight:700;color:#ffb3a8}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.jp{font-family:'Noto Serif JP',serif}
+/* charred wood grain, like their tables */
+.grain{background-color:var(--char);background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.018) 0 2px,transparent 2px 9px),repeating-linear-gradient(90deg,rgba(0,0,0,.25) 0 1px,transparent 1px 23px)}
+.noren{display:flex;gap:6px;height:44px}
+.noren span{flex:1;background:var(--red);border-radius:0 0 4px 4px;position:relative}
+.noren span:nth-child(odd){height:40px}
+header{position:sticky;top:0;z-index:20;background:rgba(22,17,14,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:70px;gap:16px}
+.mark{display:flex;align-items:center;gap:12px;text-decoration:none}
+.mark .hanko{width:44px;height:44px;border-radius:8px;background:var(--red);display:grid;place-items:center;font-family:'Noto Serif JP';font-weight:900;font-size:24px;color:#fff}
+.mark b{font-family:'Noto Serif JP';font-weight:700;font-size:15px;letter-spacing:.18em;display:block;line-height:1.1}
+.mark small{font-size:12px;color:var(--bamboo);letter-spacing:.08em}
+header nav{display:flex;gap:26px;font-weight:500;font-size:15px}
+header nav a{text-decoration:none;color:#d9cfbf}header nav a:hover{color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:6px;padding:14px 22px;font-weight:700;font-size:15px;text-decoration:none;transition:transform .15s,background .15s}
+.btn:active{transform:scale(.97)}
+.btn-red{background:var(--red);color:#fff}.btn-red:hover{background:var(--red-d)}
+.btn-line{border:1.5px solid rgba(243,234,216,.5)}.btn-line:hover{background:rgba(243,234,216,.08)}
+@media(max-width:860px){header nav,header .btn{display:none}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:0}
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding-top:60px;padding-bottom:80px;position:relative}
+.vert{position:absolute;right:20px;top:60px;writing-mode:vertical-rl;font-family:'Noto Serif JP';font-weight:900;font-size:clamp(40px,5vw,70px);color:rgba(243,234,216,.08);letter-spacing:.1em;pointer-events:none}
+.hero .kicker{display:inline-flex;align-items:center;gap:10px;font-size:14px;font-weight:700;color:var(--bamboo);letter-spacing:.14em}
+.hero .kicker i{width:9px;height:9px;border-radius:50%;background:#777}
+.hero .kicker.on i{background:#3ddc84;box-shadow:0 0 0 4px rgba(61,220,132,.2)}
+.hero h1{font-family:'Noto Serif JP';font-weight:900;font-size:clamp(42px,6vw,78px);line-height:1.04;margin:16px 0 18px;letter-spacing:-.01em}
+.hero h1 em{font-style:normal;color:var(--red)}
+.hero .name{font-family:'Noto Serif JP';font-weight:700;font-size:20px;letter-spacing:.06em;color:#e8dcc6}
+.hero .name span{display:block;font-size:13px;letter-spacing:.3em;color:var(--bamboo);margin-top:4px}
+.hero p{font-size:18px;color:#cdbfa9;max-width:30em;margin-top:16px}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.bowl{position:relative;aspect-ratio:1;max-width:520px;margin-left:auto;width:100%}
+.bowl img{width:100%;height:100%;object-fit:cover;border-radius:50%;box-shadow:0 0 0 14px rgba(201,168,106,.12),0 40px 80px rgba(0,0,0,.6)}
+.steam{position:absolute;left:50%;top:-30px;transform:translateX(-50%);width:160px;height:120px;pointer-events:none}
+.steam path{fill:none;stroke:rgba(243,234,216,.35);stroke-width:4;stroke-linecap:round;animation:rise 3.5s ease-in-out infinite}
+.steam path:nth-child(2){animation-delay:.8s}.steam path:nth-child(3){animation-delay:1.6s}
+@keyframes rise{0%,100%{opacity:.15;transform:translateY(8px)}50%{opacity:.7;transform:translateY(-6px)}}
+@media(prefers-reduced-motion:reduce){.steam path{animation:none;opacity:.4}}
+.clock{position:absolute;left:-10px;bottom:30px;background:var(--paper);color:var(--ink);border-radius:10px;padding:14px 18px;box-shadow:0 20px 40px rgba(0,0,0,.5);transform:rotate(-4deg)}
+.clock small{display:block;font-size:11px;font-weight:700;letter-spacing:.16em;color:var(--red)}
+.clock b{font-family:'Noto Serif JP';font-weight:900;font-size:30px;line-height:1.1}
+@media(max-width:900px){.hero .wrap{grid-template-columns:1fr;padding-top:36px}.bowl{max-width:380px;margin:20px auto 0;order:-1}.clock{left:0}}
+
+section{padding:90px 0}
+.sh{max-width:680px;margin-bottom:34px}
+.sh .jp{color:var(--red);font-weight:700;font-size:15px;letter-spacing:.2em}
+.sh h2{font-family:'Noto Serif JP';font-weight:900;font-size:clamp(34px,4.6vw,56px);line-height:1.1;margin:8px 0 12px}
+.sh p{color:#cdbfa9;font-size:17px}
+
+/* ticket machine (券売機) */
+#order{background:var(--char2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.machine{display:grid;grid-template-columns:1fr 360px;gap:26px;align-items:start}
+.panel{background:linear-gradient(180deg,#e9e2d4,#d8cfbe);border-radius:18px;padding:22px;box-shadow:inset 0 2px 0 rgba(255,255,255,.6),0 30px 60px rgba(0,0,0,.45);color:var(--ink)}
+.panel h3{font-size:13px;font-weight:900;letter-spacing:.2em;color:var(--mute);margin:6px 2px 10px}
+.keys{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:16px}
+.key{position:relative;border:0;border-radius:10px;background:#fff;padding:12px 10px 12px;text-align:left;box-shadow:0 4px 0 #b9ad98,0 6px 12px rgba(0,0,0,.12);transition:transform .08s,box-shadow .08s;min-height:92px;display:flex;flex-direction:column;justify-content:space-between}
+.key:active{transform:translateY(3px);box-shadow:0 1px 0 #b9ad98}
+.key b{font-size:15px;font-weight:900;line-height:1.2}
+.key .ja{font-family:'Noto Serif JP';font-size:12px;color:var(--mute)}
+.key .pr{font-weight:900;color:var(--red);font-size:16px}
+.key .q{position:absolute;top:8px;right:8px;min-width:24px;height:24px;border-radius:999px;background:var(--red);color:#fff;font-size:13px;font-weight:900;display:none;place-items:center;padding:0 6px}
+.key.on .q{display:grid}
+.key.red{background:#fff2f0}
+.key.hot b:after{content:" 🌶";font-size:13px}
+.toggles{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:6px}
+.tg{background:#fff;border-radius:12px;padding:12px}
+.tg span{font-size:12px;font-weight:900;letter-spacing:.14em;color:var(--mute)}
+.tg div{display:flex;gap:6px;margin-top:8px}
+.tg button{flex:1;border:2px solid #d6cdbb;background:#fff;border-radius:8px;padding:9px 6px;font-weight:700;font-size:14px}
+.tg button[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:#fff}
+@media(max-width:700px){.keys{grid-template-columns:1fr 1fr}.toggles{grid-template-columns:1fr}}
+/* printed ticket */
+.tk{position:sticky;top:90px}
+.slot{height:16px;background:#0b0806;border-radius:8px;box-shadow:inset 0 3px 6px rgba(0,0,0,.8);margin:0 10px}
+.paper{background:var(--paper);color:var(--ink);margin:-8px 22px 0;padding:22px 20px 26px;font-family:'Zen Kaku Gothic New';box-shadow:0 20px 40px rgba(0,0,0,.4);position:relative}
+.paper:after{content:"";position:absolute;left:0;right:0;bottom:-10px;height:10px;background:linear-gradient(-45deg,transparent 6px,var(--paper) 6px) 0 0/12px 10px repeat-x,linear-gradient(45deg,transparent 6px,var(--paper) 6px) 0 0/12px 10px repeat-x}
+.paper .hd{text-align:center;border-bottom:1.5px dashed #c9bda8;padding-bottom:10px;margin-bottom:10px}
+.paper .hd b{font-family:'Noto Serif JP';font-weight:900;font-size:22px;letter-spacing:.2em;display:block}
+.paper .hd small{font-size:11px;letter-spacing:.2em;color:var(--mute)}
+.lines{min-height:70px;font-size:14px;font-variant-numeric:tabular-nums}
+.lines div{display:flex;justify-content:space-between;gap:8px;padding:3px 0}
+.lines .empty{color:var(--mute);text-align:center;display:block;padding:16px 0}
+.lines .opt{color:var(--mute);font-size:12px}
+.sum{display:flex;justify-content:space-between;align-items:baseline;border-top:1.5px dashed #c9bda8;margin-top:8px;padding-top:10px}
+.sum b{font-family:'Noto Serif JP';font-weight:900;font-size:32px;color:var(--red)}
+.paper input{width:100%;margin-top:12px;border:1.5px solid #d6cdbb;border-radius:8px;padding:11px 12px;font:inherit;font-size:16px;background:#fff}
+.paper .seg{display:flex;gap:6px;margin-top:10px}
+.paper .seg button{flex:1;border:1.5px solid #d6cdbb;background:#fff;border-radius:8px;padding:9px 4px;font-weight:700;font-size:13px}
+.paper .seg button[aria-pressed=true]{background:var(--red);border-color:var(--red);color:#fff}
+.paper .btn{width:100%;margin-top:14px}
+.paper .btn[disabled]{opacity:.45;cursor:not-allowed}
+.paper p{font-size:11.5px;color:var(--mute);text-align:center;margin-top:8px}
+@media(max-width:1000px){.machine{grid-template-columns:1fr}.tk{position:relative;top:0}}
+
+/* late night */
+.late{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.late h2{font-family:'Noto Serif JP';font-weight:900;font-size:clamp(36px,5vw,62px);line-height:1.05}
+.late h2 span{color:var(--red)}
+.late p{color:#cdbfa9;font-size:17px;margin-top:14px}
+.hours{margin-top:24px;display:grid;gap:8px;max-width:420px}
+.hours div{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:8px 0;font-weight:500}
+.hours b{color:var(--bamboo)}
+.late .pics{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.late .pics img{border-radius:10px;width:100%;aspect-ratio:3/4;object-fit:cover}
+.late .pics img:nth-child(2){transform:translateY(40px)}
+@media(max-width:860px){.late{grid-template-columns:1fr}}
+.dishes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:90px}
+.dishes figure{background:var(--char2);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.dishes img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.dishes figcaption{padding:14px 16px}
+.dishes b{font-family:'Noto Serif JP';font-size:18px;display:block}
+.dishes span{color:#bfb19b;font-size:14px}
+@media(max-width:760px){.dishes{grid-template-columns:1fr}}
+/* visit */
+#visit{background:var(--washi);color:var(--ink)}
+.visit{display:grid;grid-template-columns:1fr 1.2fr;gap:30px}
+.visit h2{font-family:'Noto Serif JP';font-weight:900;font-size:42px;line-height:1.1}
+.visit dl{display:grid;gap:16px;margin-top:22px}
+.visit dt{font-size:12px;font-weight:900;letter-spacing:.16em;color:var(--red)}
+.visit dd{font-size:17px}
+.map{border-radius:12px;overflow:hidden;min-height:400px}
+.map iframe{width:100%;height:100%;min-height:400px;border:0}
+@media(max-width:860px){.visit{grid-template-columns:1fr}}
+footer{padding:36px 0 110px;color:#a8998a;font-size:14px;border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.mbar{display:none}
+@media(max-width:860px){.mbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:30;background:#0d0a08;border:1px solid var(--line);border-radius:12px;padding:7px;gap:6px;box-shadow:0 12px 30px rgba(0,0,0,.5)}
+.mbar a{flex:1;text-align:center;color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:12px 6px;border-radius:8px}
+.mbar a.go{background:var(--red)}.mbar a span{background:#fff;color:var(--red);border-radius:999px;padding:0 7px;margin-left:4px;font-size:12px}}
+</style>
+</head>
+<body>
+<div class="preview">Sample website for Menkakeru Inuno Hirameki by TechSocials. We can change anything you like. <a href="techsocials-websites-and-systems.pdf" target="_blank" rel="noopener">See pricing</a> or <a href="tel:+639989919318">message Matt, 0998 991 9318</a></div>
+<header><div class="wrap">
+  <a class="mark" href="#top"><span class="hanko">麺</span><span><b>MENKAKERU</b><small>麺駆ける犬の閃き</small></span></a>
+  <nav><a href="#order">Order</a><a href="#late">Hours</a><a href="#visit">Find us</a></nav>
+  <a class="btn btn-red" href="#order">Punch your ticket</a>
+</div></header>
+<div class="noren" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+
+<main id="top">
+<section class="hero grain">
+  <div class="vert" aria-hidden="true">豚骨らーめん</div>
+  <div class="wrap">
+    <div>
+      <span class="kicker" id="live"><i></i><span>OPEN UNTIL 5AM</span></span>
+      <h1>Pork bones, simmered <em>slow.</em> Ramen, served late.</h1>
+      <div class="name">Menkakeru Inuno Hirameki<span>麺駆ける犬の閃き · BANILAD</span></div>
+      <p>Creamy tonkotsu, bright salt lemon ramen, tsukemen and mazemen, with thin or thick noodles your way. On A.S. Fortuna, right up to 5 in the morning.</p>
+      <div class="ctas"><a class="btn btn-red" href="#order">Punch your ramen ticket</a><a class="btn btn-line" href="tel:+639452552489">Call 0945 255 2489</a></div>
+    </div>
+    <div class="bowl">
+      <svg class="steam" viewBox="0 0 160 120" aria-hidden="true"><path d="M50 110c-14-18 14-30 0-50s10-32 0-52"/><path d="M80 110c-14-18 14-30 0-50s10-32 0-52"/><path d="M110 110c-14-18 14-30 0-50s10-32 0-52"/></svg>
+      <img src="img/p3.jpg" alt="A bowl of creamy tonkotsu ramen with chashu and green onion" fetchpriority="high">
+      <div class="clock"><small>MANDAUE TIME NOW</small><b id="clock">--:--</b></div>
+    </div>
+  </div>
+</section>
+
+<section id="order">
+  <div class="wrap">
+    <div class="sh"><span class="jp">券売機 · TICKET MACHINE</span><h2>Punch your ramen ticket.</h2><p>Just like the ticket machines in Japan. Tap your bowl, choose spicy and noodles, add extras, and send your ticket. It's hot and waiting when you walk in.</p></div>
+    <div class="machine">
+      <div class="panel">
+        <h3>RAMEN · らーめん</h3>
+        <div class="keys" id="ramen"></div>
+        <div class="toggles">
+          <div class="tg"><span>SPICY? (+₱20)</span><div id="spicy"><button type="button" aria-pressed="true" data-v="0">Regular</button><button type="button" aria-pressed="false" data-v="1">Spicy 🌶</button></div></div>
+          <div class="tg"><span>NOODLES</span><div id="noodle"><button type="button" aria-pressed="true" data-v="Thin">Thin</button><button type="button" aria-pressed="false" data-v="Thick">Thick</button></div></div>
+        </div>
+        <h3>ADD-ONS · トッピング</h3>
+        <div class="keys" id="adds"></div>
+      </div>
+      <aside class="tk" id="slip" aria-live="polite">
+        <div class="slot"></div>
+        <div class="paper">
+          <div class="hd"><b>食券</b><small>MENKAKERU · MEAL TICKET</small></div>
+          <div class="lines" id="lines"><span class="empty">Tap a bowl to punch your ticket.</span></div>
+          <div class="sum"><span>TOTAL</span><b id="tot">₱0</b></div>
+          <div class="seg" id="mode"><button type="button" aria-pressed="true" data-v="Dine in">Dine in</button><button type="button" aria-pressed="false" data-v="Pick up">Pick up</button></div>
+          <input id="nm" placeholder="Name for the ticket" aria-label="Name" autocomplete="given-name">
+          <input id="eta" placeholder="Arriving at (e.g. 1:30 am)" aria-label="Arrival time">
+          <button class="btn btn-red" id="send" disabled>Send my ticket</button>
+          <p>Sent to Menkakeru by text. Pay at the counter.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="late" class="grain">
+  <div class="wrap">
+    <div class="late">
+      <div>
+        <span class="jp" style="color:var(--red);font-weight:700;letter-spacing:.2em">深夜営業 · LATE NIGHT</span>
+        <h2>Still open after the <span>bars close.</span></h2>
+        <p>Overtime at the office, a night out on A.S. Fortuna, or a 3am craving. Tatami seating, Japanese whisky on the shelf, and a hot bowl until 5am.</p>
+        <div class="hours"><div><span>Monday</span><b>5 PM to 5 AM</b></div><div><span>Tuesday to Sunday</span><b>11 AM to 5 AM</b></div></div>
+      </div>
+      <div class="pics"><img src="img/p7.jpg" alt="Bamboo walls and lantern light inside" loading="lazy"><img src="img/p6.jpg" alt="Japanese whisky on the bar shelf" loading="lazy"></div>
+    </div>
+    <div class="dishes">
+      <figure><img src="img/p4.jpg" alt="Pan-fried gyoza with dipping sauce" loading="lazy"><figcaption><b>Gyoza</b><span>Crisp-bottomed, the classic partner to a bowl.</span></figcaption></figure>
+      <figure><img src="img/p1.jpg" alt="The Menkakeru storefront on A.S. Fortuna" loading="lazy"><figcaption><b>Find the noren</b><span>Chatswood Drive Building, ground floor.</span></figcaption></figure>
+      <figure><img src="img/p5.jpg" alt="A small shrine shelf with plants" loading="lazy"><figcaption><b>A little Japan in Banilad</b><span>Wood, bamboo and quiet corners.</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap visit">
+    <div>
+      <span class="jp" style="color:var(--red);font-weight:700;letter-spacing:.2em">アクセス · FIND US</span>
+      <h2>A.S. Fortuna, Banilad</h2>
+      <dl>
+        <div><dt>ADDRESS</dt><dd>GF04 Chatswood Drive Building, A.S. Fortuna St, Banilad, Mandaue City</dd></div>
+        <div><dt>HOURS</dt><dd>Mon 5 PM to 5 AM · Tue to Sun 11 AM to 5 AM</dd></div>
+        <div><dt>CALL OR TEXT</dt><dd><a href="tel:+639452552489">0945 255 2489</a></dd></div>
+        <div><dt>ALSO ON</dt><dd>GrabFood, for delivery</dd></div>
+      </dl>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:24px"><a class="btn btn-red" href="#order">Order ahead</a><a class="btn" style="border:1.5px solid var(--ink)" href="https://www.google.com/maps/dir/?api=1&destination=Menkakeru+Inuno+Hirameki+Mandaue" target="_blank" rel="noopener">Directions</a></div>
+    </div>
+    <div class="map"><iframe title="Map to Menkakeru Inuno Hirameki" loading="lazy" src="https://www.google.com/maps?q=Menkakeru+Inuno+Hirameki+Chatswood+A.S.+Fortuna+Mandaue&output=embed"></iframe></div>
+  </div>
+</section>
+</main>
+<footer class="grain"><div class="wrap"><span class="jp" style="color:#fff">麺駆ける犬の閃き · Menkakeru Inuno Hirameki</span><span>4.7 ★ from 323 Google reviews</span></div></footer>
+<div class="mbar"><a class="go" id="mgo" href="#order">Ticket <span id="mc">0</span></a><a href="tel:+639452552489">Call</a><a href="https://www.google.com/maps/dir/?api=1&destination=Menkakeru+Inuno+Hirameki+Mandaue" target="_blank" rel="noopener">Map</a></div>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","name":"Menkakeru Inuno Hirameki","servesCuisine":"Japanese, Ramen","telephone":"+639452552489","address":{"@type":"PostalAddress","streetAddress":"GF04 Chatswood Drive Bldg, A.S. Fortuna St, Banilad","addressLocality":"Mandaue City","addressRegion":"Cebu","addressCountry":"PH"},"openingHours":["Mo 17:00-05:00","Tu-Su 11:00-05:00"],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.7","reviewCount":"323"}}</script>
+<script src="tsk.js"></script>
+<script>
+const PHONE='+639452552489',$=id=>document.getElementById(id),P=TSK.peso;
+const OPEN={0:[660,1740],1:[1020,1740],2:[660,1740],3:[660,1740],4:[660,1740],5:[660,1740],6:[660,1740]};
+const st=TSK.status(OPEN);$('live').classList.toggle('on',st.open);$('live').querySelector('span').textContent=(st.open?'OPEN NOW · UNTIL 5AM':st.text.toUpperCase());
+const tick=()=>$('clock').textContent=new Date().toLocaleTimeString('en-US',{timeZone:'Asia/Manila',hour:'numeric',minute:'2-digit'});tick();setInterval(tick,15000);
+const RAMEN=[
+  {n:'Special Tonkotsu',ja:'スペシャル豚骨',p:808,sp:1},{n:'Chasyu Tonkotsu',ja:'チャーシュー豚骨',p:725,sp:1},
+  {n:'Ajitama Tonkotsu',ja:'味玉豚骨',p:595,sp:1},{n:'Tonkotsu',ja:'豚骨',p:508,sp:1},
+  {n:'Salt Lemon Ramen',ja:'塩レモンラーメン',p:330,red:1},{n:'Tsukemen',ja:'つけ麺',p:498},
+  {n:'Mazemen',ja:'まぜ麺',p:408,sp:1,spAdd:40}
+];
+const ADDS=[{n:'Kaedama (extra noodles)',ja:'替え玉',p:98},{n:'Ajitama egg',ja:'味玉',p:98},{n:'Extra chasyu',ja:'チャーシュー',p:218},{n:'Spicy paste',ja:'辛味噌',p:38}];
+let spicy=0,noodle='Thin',mode='Dine in';
+const c=TSK.cart(render);
+const keyHtml=(k,grp)=>`<button type="button" class="key${k.red?' red':''}" data-g="${grp}" data-n="${k.n}"><span class="q">0</span><span><b>${k.n}</b><br><span class="ja">${k.ja}</span></span><span class="pr">${P(k.p)}</span></button>`;
+$('ramen').innerHTML=RAMEN.map(k=>keyHtml(k,'r')).join('');
+$('adds').innerHTML=ADDS.map(k=>keyHtml(k,'a')).join('');
+function label(k){return k.n+(spicy&&k.sp?' (Spicy)':'')+', '+noodle+' noodles';}
+function price(k){return k.p+(spicy&&k.sp?(k.spAdd||20):0);}
+document.addEventListener('click',e=>{
+  const b=e.target.closest('.key');if(b){const list=b.dataset.g==='r'?RAMEN:ADDS,k=list.find(x=>x.n===b.dataset.n);if(b.dataset.g==='r')c.add(label(k),price(k));else c.add(k.n,k.p);return;}
+  const rm=e.target.closest('[data-rm]');if(rm){const q=c.items.get(rm.dataset.rm).q;c.set(rm.dataset.rm,q-1);}
+});
+function seg(id,fn){$(id).addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;$(id).querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));fn(b.dataset.v);});}
+seg('spicy',v=>spicy=+v);seg('noodle',v=>noodle=v);seg('mode',v=>mode=v);
+function render(api){
+  document.querySelectorAll('.key').forEach(b=>{let q=0;api.each((k,v)=>{if(k===b.dataset.n||k.startsWith(b.dataset.n+','))q+=v.q;if(k.startsWith(b.dataset.n+' (Spicy)'))q+=0;});if(b.dataset.g==='r'){q=0;api.each((k,v)=>{if(k.split(' (Spicy)')[0].split(',')[0]===b.dataset.n)q+=v.q;});}b.querySelector('.q').textContent=q;b.classList.toggle('on',q>0);});
+  const L=$('lines');
+  if(!api.count())L.innerHTML='<span class="empty">Tap a bowl to punch your ticket.</span>';
+  else{let h='';api.each((k,v)=>h+=`<div><span>${v.q}× ${k}</span><span>${P(v.p*v.q)} <button type="button" data-rm="${k}" aria-label="Remove one" style="border:0;background:none;color:#7d6f62">−</button></span></div>`);L.innerHTML=h;}
+  $('tot').textContent=P(api.total());$('send').disabled=!api.count();$('mc').textContent=api.count();$('mgo').href=api.count()?'#slip':'#order';
+}
+$('send').onclick=()=>{
+  const Lx=['Hi Menkakeru! Ticket from your website:','',...c.lines(),'','Total: '+P(c.total()),mode];
+  if($('eta').value.trim())Lx.push('Arriving: '+$('eta').value.trim());
+  if($('nm').value.trim())Lx.push('Name: '+$('nm').value.trim());
+  TSK.sms(PHONE,Lx);
+};
+render(c);
+</script>
+</body>
+</html>
