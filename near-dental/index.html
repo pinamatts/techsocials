@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Near Dental Clinic · SM J Mall, Pusok and Talisay · Book Online</title>
+<meta name="description" content="Gentle, modern dental care at three branches: SM City J Mall Mandaue, Pusok Lapu-Lapu and Tabunok Talisay. Open every day. Find your nearest branch and book your slot online.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0a1238">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a1238'/%3E%3Cpath d='M16 48V16l32 32V16' fill='none' stroke='%2374a8ff' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--night:#0a1238;--navy:#141f6b;--navy2:#1c2a8c;--glow:#5b93ff;--ice:#a9c8ff;--cyan:#38d6ff;--white:#fff;--bg:#f4f7fc;--ink:#0d1533;--mute:#5a6585;--line:#e1e7f3}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Lexend',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+button{font:inherit;cursor:pointer;color:inherit}
+a{color:inherit}
+.preview{background:#000;color:#dfe7ff;font-size:14px;text-align:center;padding:8px 16px}
+.preview a{font-weight:700;color:var(--ice)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+/* logo, redrawn from the lit sign in their clinics */
+.logo{display:inline-flex;flex-direction:column;align-items:center;gap:2px;text-decoration:none}
+.logo svg{display:block;height:34px;width:auto;overflow:visible}
+.logo svg{color:var(--ice);filter:drop-shadow(0 0 6px rgba(91,147,255,.9))}
+.logo small{font-weight:700;font-size:9.5px;letter-spacing:.42em;color:#fff;padding-left:.42em}
+.logo.dark svg{color:var(--navy2);filter:none}
+.logo.dark small{color:var(--navy)}
+header{position:sticky;top:0;z-index:20;background:rgba(10,18,56,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(169,200,255,.15)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:70px}
+header nav{display:flex;gap:28px;font-size:14px;font-weight:500;color:#cbd8ff}
+header nav a{text-decoration:none}header nav a:hover{color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:14px;padding:14px 22px;font-weight:600;font-size:15px;text-decoration:none;transition:transform .15s,box-shadow .2s,background .15s}
+.btn:active{transform:scale(.97)}
+.btn-glow{background:linear-gradient(135deg,#3d7bff,#5b93ff);color:#fff;box-shadow:0 10px 30px rgba(61,123,255,.45)}
+.btn-glow:hover{box-shadow:0 12px 38px rgba(61,123,255,.65)}
+.btn-ghost{border:1.5px solid rgba(169,200,255,.5);color:#fff}.btn-ghost:hover{background:rgba(169,200,255,.1)}
+.btn-navy{background:var(--navy);color:#fff}.btn-navy:hover{background:var(--navy2)}
+@media(max-width:860px){header nav,header .btn{display:none}}
+
+/* hero with the ceiling-slat light streaks from their clinics */
+.hero{background:var(--night);color:#fff;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:-40% -10% auto -10%;height:120%;background:repeating-linear-gradient(115deg,transparent 0 46px,rgba(169,200,255,.09) 46px 49px,transparent 49px 120px);transform:skewY(-6deg)}
+.hero:after{content:"";position:absolute;width:640px;height:640px;right:-200px;top:-120px;background:radial-gradient(circle,rgba(61,123,255,.35),transparent 60%)}
+.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-top:70px;padding-bottom:84px}
+.hero .logo svg{height:64px}.hero .logo small{font-size:15px}
+.hero h1{font-weight:700;font-size:clamp(38px,5.2vw,66px);line-height:1.04;letter-spacing:-.02em;margin:30px 0 16px}
+.hero h1 span{color:var(--ice);text-shadow:0 0 24px rgba(91,147,255,.6)}
+.hero p{font-size:18px;color:#c4d0f2;max-width:30em;font-weight:300}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.chip{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.06);border:1px solid rgba(169,200,255,.18);border-radius:999px;padding:7px 14px 7px 10px;font-size:13px;font-weight:500}
+.chip i{width:8px;height:8px;border-radius:50%;background:#8792b3}
+.chip.on i{background:#3ee59a;box-shadow:0 0 0 4px rgba(62,229,154,.18)}
+.shot{position:relative}
+.shot img{width:100%;max-width:430px;margin-left:auto;aspect-ratio:3/4;object-fit:cover;border-radius:28px;border:1px solid rgba(169,200,255,.3);box-shadow:0 0 0 8px rgba(91,147,255,.08),0 40px 80px rgba(0,0,0,.45)}
+.stat{position:absolute;left:0;bottom:36px;background:#fff;color:var(--ink);border-radius:20px;padding:16px 20px;box-shadow:0 20px 40px rgba(0,0,0,.35)}
+.stat b{display:block;font-size:34px;font-weight:700;line-height:1;color:var(--navy)}
+.stat span{font-size:13px;color:var(--mute)}
+.stat .st{color:#f5b301;letter-spacing:2px}
+@media(max-width:920px){.hero .wrap{grid-template-columns:1fr;padding-top:44px}.shot img{margin:0 auto;max-width:360px}.stat{left:4px}.hero .logo svg{height:50px}}
+
+section{padding:90px 0}
+.sh{max-width:680px;margin-bottom:36px}
+.sh .over{font-size:13px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--glow)}
+.sh h2{font-weight:700;font-size:clamp(32px,4.2vw,50px);line-height:1.08;letter-spacing:-.02em;margin:10px 0 12px;color:var(--night)}
+.sh p{color:var(--mute);font-size:17px;font-weight:300}
+
+/* branches */
+.branches{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.br{background:#fff;border:1.5px solid var(--line);border-radius:24px;padding:26px;position:relative;transition:border-color .2s,box-shadow .2s,transform .2s}
+.br.near{border-color:var(--glow);box-shadow:0 0 0 4px rgba(91,147,255,.15),0 20px 40px rgba(20,31,107,.12);transform:translateY(-4px)}
+.br .tag{position:absolute;top:18px;right:18px;font-size:12px;font-weight:600;background:var(--night);color:var(--ice);border-radius:999px;padding:4px 10px;display:none}
+.br.near .tag{display:block}
+.br h3{font-size:24px;font-weight:700;color:var(--night)}
+.br .city{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--glow);font-weight:600}
+.br .addr{color:var(--mute);font-size:14px;margin:10px 0 14px;min-height:44px}
+.br .rate{font-size:14px;font-weight:500}.br .rate b{font-size:20px;color:var(--navy)}
+.br .open{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:500;margin-top:10px}
+.br .open i{width:8px;height:8px;border-radius:50%;background:#aab}
+.br .open.on i{background:#22c37d;box-shadow:0 0 0 4px rgba(34,195,125,.18)}
+.br .hrs{font-size:13px;color:var(--mute);margin-top:4px}
+.br .acts{display:flex;gap:8px;margin-top:18px}
+.br .acts a,.br .acts button{flex:1;border:1.5px solid var(--line);border-radius:12px;padding:10px;font-size:14px;font-weight:600;text-align:center;text-decoration:none;background:#fff}
+.br .acts button{background:var(--navy);border-color:var(--navy);color:#fff}
+.finder{display:flex;align-items:center;gap:14px;margin-bottom:20px;flex-wrap:wrap}
+.finder span{color:var(--mute);font-size:14px}
+@media(max-width:900px){.branches{grid-template-columns:1fr}}
+
+/* services */
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.sv{background:#fff;border:1.5px solid var(--line);border-radius:20px;padding:22px;display:flex;gap:16px;align-items:flex-start}
+.sv svg{flex:none;width:46px;height:46px;border-radius:14px;background:var(--night);padding:10px;stroke:var(--ice);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.sv h3{font-size:18px;font-weight:600;color:var(--night)}
+.sv p{font-size:14px;color:var(--mute);font-weight:300}
+.walk{margin-top:18px;background:var(--night);color:#dfe7ff;border-radius:20px;padding:18px 22px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.walk b{color:#fff}
+@media(max-width:900px){.svc{grid-template-columns:1fr 1fr}}@media(max-width:560px){.svc{grid-template-columns:1fr}}
+
+/* booking */
+#book{background:var(--night);color:#fff;position:relative;overflow:hidden}
+#book:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(115deg,transparent 0 60px,rgba(169,200,255,.05) 60px 62px,transparent 62px 140px)}
+#book .wrap{position:relative}
+#book .sh h2{color:#fff}#book .sh p{color:#c4d0f2}
+.bk{display:grid;grid-template-columns:1fr 360px;gap:24px;align-items:start}
+.step{background:rgba(255,255,255,.05);border:1px solid rgba(169,200,255,.16);border-radius:22px;padding:22px;margin-bottom:14px}
+.step h3{font-size:17px;font-weight:600;margin-bottom:14px;display:flex;gap:10px;align-items:center}
+.step h3 i{font-style:normal;width:28px;height:28px;border-radius:9px;background:var(--glow);display:grid;place-items:center;font-size:14px}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opts button,.days button,.times button{border:1px solid rgba(169,200,255,.25);background:transparent;color:#e2e9ff;border-radius:12px;padding:11px 14px;font-weight:500;font-size:14px;transition:border-color .15s,background .15s}
+.opts button:hover,.days button:hover:not(:disabled),.times button:hover{border-color:var(--ice)}
+.opts button[aria-pressed=true],.days button[aria-pressed=true],.times button[aria-pressed=true]{background:#fff;color:var(--night);border-color:#fff}
+.opts button small{display:block;font-size:12px;opacity:.7}
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.days button{padding:9px 2px;text-align:center}
+.days span{display:block}.days small{display:block;font-size:11px;opacity:.7}
+.days button:disabled{opacity:.3}
+.times{display:grid;grid-template-columns:repeat(auto-fill,minmax(90px,1fr));gap:6px;margin-top:12px}
+.noslot{grid-column:1/-1;color:#9fb0dd}
+.fl{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fl label{font-size:13px;color:#9fb0dd;font-weight:500}
+.fl input{display:block;width:100%;margin-top:6px;background:rgba(255,255,255,.08);border:1px solid rgba(169,200,255,.25);border-radius:12px;padding:12px 14px;font:inherit;font-size:16px;color:#fff}
+.fl input::placeholder{color:#7e8db8}
+.fl input:focus{outline:2px solid var(--glow);outline-offset:1px}
+.ticket{position:sticky;top:92px;background:#fff;color:var(--ink);border-radius:24px;padding:26px;box-shadow:0 30px 60px rgba(0,0,0,.4)}
+.ticket .logo{margin-bottom:14px}
+.ticket ul{list-style:none;display:grid;gap:10px;border-top:1px solid var(--line);padding-top:14px}
+.ticket li{display:flex;justify-content:space-between;gap:10px;font-size:14px}
+.ticket li span{color:var(--mute)}.ticket li b{text-align:right;font-weight:600}
+.ticket .btn{width:100%;margin-top:18px}
+.ticket .btn[disabled]{opacity:.45;cursor:not-allowed;box-shadow:none}
+.ticket p{font-size:12px;color:var(--mute);text-align:center;margin-top:10px}
+@media(max-width:980px){.bk{grid-template-columns:1fr}.ticket{position:relative;top:0}}
+@media(max-width:560px){.days{grid-template-columns:repeat(4,1fr)}.fl{grid-template-columns:1fr}.step{padding:18px}}
+
+/* proof */
+.proof{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:center}
+.big{font-size:clamp(64px,9vw,120px);font-weight:800;letter-spacing:-.04em;line-height:.9;color:var(--night)}
+.big small{display:block;font-size:18px;line-height:1.5;font-weight:400;letter-spacing:0;color:var(--mute);margin-top:12px}
+.quotes{display:grid;gap:12px}
+.quotes blockquote{background:#fff;border:1.5px solid var(--line);border-left:4px solid var(--glow);border-radius:16px;padding:16px 20px;font-size:16px}
+.quotes cite{display:block;font-style:normal;font-size:13px;color:var(--mute);margin-top:4px}
+@media(max-width:860px){.proof{grid-template-columns:1fr}}
+.gal{display:grid;grid-template-columns:1.2fr 1fr 1fr;grid-template-rows:230px 230px;gap:14px;margin-top:50px}
+.gal img{width:100%;height:100%;object-fit:cover;border-radius:20px}
+.gal img:first-child{grid-row:span 2}
+@media(max-width:760px){.gal{grid-template-columns:1fr 1fr;grid-template-rows:220px 160px 160px}.gal img:first-child{grid-column:span 2;grid-row:auto}}
+footer{background:var(--night);color:#9fb0dd;padding:50px 0 110px;font-size:14px}
+footer .wrap{display:grid;grid-template-columns:1.2fr repeat(3,1fr);gap:24px}
+footer b{color:#fff;font-weight:600}
+@media(max-width:760px){footer .wrap{grid-template-columns:1fr 1fr}}
+.mbar{display:none}
+@media(max-width:860px){.mbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:30;background:var(--night);border:1px solid rgba(169,200,255,.2);border-radius:16px;padding:7px;gap:6px;box-shadow:0 12px 30px rgba(0,0,0,.4)}
+.mbar a{flex:1;text-align:center;color:#fff;text-decoration:none;font-weight:600;font-size:14px;padding:12px 6px;border-radius:11px}
+.mbar a.go{background:linear-gradient(135deg,#3d7bff,#5b93ff)}}
+</style>
+</head>
+<body>
+<div class="preview">Sample website for Near Dental Clinic by TechSocials. We can change anything you like. <a href="techsocials-websites-and-systems.pdf" target="_blank" rel="noopener">See pricing</a> or <a href="tel:+639989919318">message Matt, 0998 991 9318</a></div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="near" viewBox="0 0 252 80"><path fill="none" stroke="currentColor" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" d="M8 72V8l42 64V8M98 8H62v64h36M74 40h16M112 72V38a25 25 0 0 1 50 0v34M138 50l24 22M176 72V38a25 25 0 0 1 50 0v6M204 50l26 22"/></symbol>
+</defs></svg>
+
+<header><div class="wrap">
+  <a class="logo" href="#top" aria-label="Near Dental Clinic"><svg viewBox="0 0 252 80"><use href="#near"/></svg><small>DENTAL CLINIC</small></a>
+  <nav><a href="#branches">Branches</a><a href="#services">Services</a><a href="#book">Book</a><a href="#reviews">Reviews</a></nav>
+  <a class="btn btn-glow" href="#book">Book a visit</a>
+</div></header>
+
+<main id="top">
+<section class="hero" style="padding:0">
+  <div class="wrap">
+    <div>
+      <span class="logo"><svg viewBox="0 0 252 80" role="img" aria-label="NEAR"><use href="#near"/></svg><small>DENTAL CLINIC</small></span>
+      <h1>There's always a <span>Near</span> near you.</h1>
+      <p>Gentle, modern dental care at SM City J Mall, Pusok and Talisay. Cleaning, fillings, braces and more, open every day of the week.</p>
+      <div class="ctas"><a class="btn btn-glow" href="#book">Book your slot</a><a class="btn btn-ghost" href="#branches">Find my nearest branch</a></div>
+      <div class="chips" id="chips"></div>
+    </div>
+    <div class="shot">
+      <img src="img/p8.jpg" alt="The glowing Near Dental Clinic sign at the front desk" fetchpriority="high">
+      <div class="stat"><b>2,881</b><span><span class="st">★★★★★</span> Google reviews across 3 branches</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="branches">
+  <div class="wrap">
+    <div class="sh"><span class="over">Three branches</span><h2>Pick the Near nearest you.</h2><p>Same team standards, same gentle hands, in Mandaue, Lapu-Lapu and Talisay.</p></div>
+    <div class="finder"><button class="btn btn-navy" id="locate" type="button">📍 Find my nearest branch</button><span id="locMsg">Uses your phone's location. Nothing is saved.</span></div>
+    <div class="branches" id="brs"></div>
+  </div>
+</section>
+
+<section id="services" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sh"><span class="over">Services</span><h2>Everything for a healthy smile.</h2><p>Not sure what you need? Start with a consultation. The dentist will explain every step before anything happens.</p></div>
+    <div class="svc">
+      <div class="sv"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM12 8v4l3 2"/></svg><div><h3>Consultation</h3><p>Check-up and an honest plan, with costs explained up front.</p></div></div>
+      <div class="sv"><svg viewBox="0 0 24 24"><path d="M7 3c-3 0-4 3-3 6l2 9c.4 2 2.6 2 3 0l1-4h4l1 4c.4 2 2.6 2 3 0l2-9c1-3 0-6-3-6-2 0-3 1-5 1S9 3 7 3z"/></svg><div><h3>Cleaning</h3><p>Gentle cleaning that patients say they barely feel.</p></div></div>
+      <div class="sv"><svg viewBox="0 0 24 24"><path d="M4 12h16M12 4v16M7 7l10 10M17 7 7 17"/></svg><div><h3>Fillings (pasta)</h3><p>Tooth-coloured fillings that blend right in.</p></div></div>
+      <div class="sv"><svg viewBox="0 0 24 24"><path d="M3 10h18M3 14h18M6 8v8M10 8v8M14 8v8M18 8v8"/></svg><div><h3>Braces and adjustments</h3><p>Installation and monthly adjustments at any branch.</p></div></div>
+      <div class="sv"><svg viewBox="0 0 24 24"><path d="M8 3h8l-1 7H9zM9 10l-2 11M15 10l2 11"/></svg><div><h3>Extraction</h3><p>Careful and calm, with clear aftercare.</p></div></div>
+      <div class="sv"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 5.6L20 8l-4.4 4 1.2 6L12 15l-4.8 3 1.2-6L4 8l5.6-.4z"/></svg><div><h3>Whitening</h3><p>A brighter smile for the big day, or every day.</p></div></div>
+    </div>
+    <div class="walk"><b>Walk-ins welcome.</b> No appointment? Drop by any branch. Booking ahead just means no waiting.</div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap">
+    <div class="sh"><span class="over">Book online</span><h2>Your slot, in 30 seconds.</h2><p>Choose a branch, a service and a time. It goes straight to that branch's phone, and they'll text you to confirm.</p></div>
+    <div class="bk">
+      <div>
+        <div class="step"><h3><i>1</i>Branch</h3><div class="opts" id="bBr"></div></div>
+        <div class="step"><h3><i>2</i>Service</h3><div class="opts" id="bSv"></div></div>
+        <div class="step"><h3><i>3</i>Day and time</h3><div class="days" id="days"></div><div class="times" id="times"></div></div>
+        <div class="step"><h3><i>4</i>Your details</h3><div class="fl"><label>Name<input id="nm" autocomplete="name" placeholder="Your name"></label><label>Mobile<input id="mob" type="tel" autocomplete="tel" placeholder="0917 123 4567"></label></div></div>
+      </div>
+      <aside class="ticket" aria-live="polite">
+        <span class="logo dark"><svg viewBox="0 0 252 80"><use href="#near"/></svg><small>DENTAL CLINIC</small></span>
+        <ul>
+          <li><span>Branch</span><b id="sBr">-</b></li>
+          <li><span>Service</span><b id="sSv">-</b></li>
+          <li><span>Date</span><b id="sDay">-</b></li>
+          <li><span>Time</span><b id="sTime">-</b></li>
+        </ul>
+        <button class="btn btn-glow" id="send" disabled>Request this slot</button>
+        <p>Sent by text to the branch you picked. No app, no account.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <div class="proof">
+      <div class="big">4.9 to 5.0<small>across 2,881 Google reviews at SM J Mall (1,403), Pusok (1,140) and Talisay (338).</small></div>
+      <div class="quotes">
+        <blockquote>"Doctors are gentle, friendly, and explained every step."<cite>Google review, Talisay branch</cite></blockquote>
+        <blockquote>"The dentist handled my monthly adjustment very well."<cite>Google review, SM J Mall branch</cite></blockquote>
+        <blockquote>"Plenty of staff and dentists who will warmly welcome and accommodate you."<cite>Google review, Pusok branch</cite></blockquote>
+      </div>
+    </div>
+    <div class="gal">
+      <img src="img/p14.jpg" alt="Bright waiting area with the lit Near sign" loading="lazy">
+      <img src="img/p6.jpg" alt="A private treatment room" loading="lazy">
+      <img src="img/p1.jpg" alt="Reception with the Near logo on screen" loading="lazy">
+      <img src="img/p16.jpg" alt="The Talisay branch at dusk" loading="lazy">
+      <img src="img/p5.jpg" alt="Ceiling slats and clean white interiors" loading="lazy">
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">
+  <div><span class="logo"><svg viewBox="0 0 252 80"><use href="#near"/></svg><small>DENTAL CLINIC</small></span><p style="margin-top:14px">Open every day. <a href="https://www.facebook.com/neardentalclinics" target="_blank" rel="noopener">Facebook</a></p></div>
+  <div><b>SM J Mall</b><br>3rd Flr, Wellness Space, SM City J Mall, Mandaue<br><a href="tel:+639455272888">0945 527 2888</a></div>
+  <div><b>Pusok</b><br>M.L. Quezon National Hwy, Pusok, Lapu-Lapu<br><a href="tel:+639452509888">0945 250 9888</a></div>
+  <div><b>Talisay</b><br>2nd flr, One Stop-Lagtang Bldg, Tabunok<br><a href="tel:+639544257888">0954 425 7888</a></div>
+</div></footer>
+<div class="mbar"><a class="go" href="#book">Book</a><a href="#branches">Branches</a><a href="tel:+639455272888">Call</a></div>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Dentist","name":"Near Dental Clinic","sameAs":["https://www.facebook.com/neardentalclinics"],"department":[{"@type":"Dentist","name":"Near Dental Clinic - SM J Mall","telephone":"+639455272888","address":{"@type":"PostalAddress","streetAddress":"3rd Flr, Wellness Space, SM City J Mall, A.S. Fortuna St","addressLocality":"Mandaue City","addressCountry":"PH"}},{"@type":"Dentist","name":"Near Dental Clinic - Pusok","telephone":"+639452509888","address":{"@type":"PostalAddress","streetAddress":"M.L. Quezon National Highway, Pusok","addressLocality":"Lapu-Lapu City","addressCountry":"PH"}},{"@type":"Dentist","name":"Near Dental Clinic - Talisay","telephone":"+639544257888","address":{"@type":"PostalAddress","streetAddress":"One Stop-Lagtang Building, Tabunok","addressLocality":"Talisay City","addressCountry":"PH"}}]}</script>
+<script src="tsk.js"></script>
+<script>
+const $=id=>document.getElementById(id);
+const all=(a,b)=>({0:b,1:a,2:a,3:a,4:a,5:a,6:b});
+const BR=[
+  {k:'SM J Mall',city:'Mandaue',addr:'3rd Flr, Wellness Space, SM City J Mall, A.S. Fortuna St',phone:'+639455272888',disp:'0945 527 2888',rate:'4.9',n:'1,403',lat:10.335272,lng:123.9338689,open:all([660,1260],[600,1320]),hrs:'Mon to Fri 11am to 9pm · Sat and Sun 10am to 10pm'},
+  {k:'Pusok',city:'Lapu-Lapu',addr:'M.L. Quezon National Highway, Pusok',phone:'+639452509888',disp:'0945 250 9888',rate:'5.0',n:'1,140',lat:10.3240228,lng:123.9734554,open:all([630,1170],[630,1170]),hrs:'Daily 10:30am to 7:30pm'},
+  {k:'Talisay',city:'Talisay',addr:'2nd floor, One Stop-Lagtang Building, Tabunok',phone:'+639544257888',disp:'0954 425 7888',rate:'5.0',n:'338',lat:10.2655013,lng:123.8366006,open:all([630,1170],[630,1170]),hrs:'Daily 10:30am to 7:30pm'}
+];
+const SV=['Consultation','Cleaning','Fillings (pasta)','Braces installation','Braces adjustment','Extraction','Whitening'];
+$('chips').innerHTML=BR.map(b=>{const s=TSK.status(b.open);return `<span class="chip${s.open?' on':''}"><i></i>${b.k} · ${s.open?'Open now':s.text}</span>`}).join('');
+$('brs').innerHTML=BR.map((b,i)=>{const s=TSK.status(b.open);return `<div class="br" data-i="${i}"><span class="tag" id="d${i}">Nearest</span><span class="city">${b.city}</span><h3>${b.k}</h3><p class="addr">${b.addr}</p><div class="rate"><b>${b.rate}</b> ★ · ${b.n} reviews</div><div class="open${s.open?' on':''}"><i></i>${s.text}</div><div class="hrs">${b.hrs}</div><div class="acts"><a href="tel:${b.phone}">Call</a><a href="https://www.google.com/maps/dir/?api=1&destination=${b.lat},${b.lng}" target="_blank" rel="noopener">Directions</a><button type="button" data-pick="${i}">Book here</button></div></div>`}).join('');
+$('locate').onclick=()=>{
+  if(!navigator.geolocation){$('locMsg').textContent='Location is not available on this device.';return;}
+  $('locMsg').textContent='Finding you...';
+  navigator.geolocation.getCurrentPosition(p=>{
+    const R=6371,rad=x=>x*Math.PI/180,{latitude:la,longitude:lo}=p.coords;
+    const d=BR.map(b=>{const dl=rad(b.lat-la),dn=rad(b.lng-lo),a=Math.sin(dl/2)**2+Math.cos(rad(la))*Math.cos(rad(b.lat))*Math.sin(dn/2)**2;return 2*R*Math.asin(Math.sqrt(a));});
+    const i=d.indexOf(Math.min(...d));
+    document.querySelectorAll('.br').forEach(e=>e.classList.toggle('near',+e.dataset.i===i));
+    $('d'+i).textContent='Nearest · '+d[i].toFixed(1)+' km';
+    $('locMsg').textContent='Your nearest is '+BR[i].k+', about '+d[i].toFixed(1)+' km away.';
+    pickBr(i);
+  },()=>{$('locMsg').textContent='Couldn\'t get your location. Pick a branch below.';},{timeout:8000});
+};
+const B={br:-1,sv:'',day:'',time:''};
+$('bBr').innerHTML=BR.map((b,i)=>`<button type="button" data-i="${i}">${b.k}<small>${b.city}</small></button>`).join('');
+$('bSv').innerHTML=SV.map(s=>`<button type="button" data-v="${s}">${s}</button>`).join('');
+function pickBr(i){
+  B.br=i;B.day='';B.time='';
+  $('bBr').querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',+b.dataset.i===i));
+  $('days').innerHTML='';$('times').innerHTML='';
+  TSK.slots({daysEl:$('days'),slotsEl:$('times'),open:BR[i].open,step:30,onPick:p=>{B.day=p.day;B.time=p.time;upd();}});
+  upd();
+}
+$('bBr').addEventListener('click',e=>{const b=e.target.closest('button');if(b)pickBr(+b.dataset.i);});
+$('brs').addEventListener('click',e=>{const b=e.target.closest('[data-pick]');if(!b)return;pickBr(+b.dataset.pick);$('book').scrollIntoView({behavior:'smooth'});});
+$('bSv').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;$('bSv').querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));B.sv=b.dataset.v;upd();});
+function upd(){
+  $('sBr').textContent=B.br<0?'-':BR[B.br].k;$('sSv').textContent=B.sv||'-';$('sDay').textContent=B.day||'-';$('sTime').textContent=B.time||'-';
+  $('send').disabled=!(B.br>=0&&B.sv&&B.day&&B.time);
+}
+$('send').onclick=()=>{
+  const b=BR[B.br],L=['Hi Near Dental '+b.k+'! Booking request from your website:','','Service: '+B.sv,'When: '+B.day+', '+B.time];
+  if($('nm').value.trim())L.push('Name: '+$('nm').value.trim());
+  if($('mob').value.trim())L.push('Mobile: '+$('mob').value.trim());
+  TSK.sms(b.phone,L);
+};
+pickBr(0);
+</script>
+</body>
+</html>
