@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ChefHaus 厨师屋 · Authentic Chinese Seafood Restaurant in Mandaue</title>
+<meta name="description" content="Cantonese seafood, roast meats, abalone and dim sum in Subangdaku, Mandaue. Plan your family lauriat or celebration, pick the dishes, and reserve your round table online.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#8e0f1e">
+<link rel="icon" href="img/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700;900&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+<style>
+:root{--red:#8e0f1e;--red2:#b0162a;--gold:#d9a441;--gold-l:#f1cf7f;--jade:#1f5c4b;--cream:#fbf5ea;--paper:#fff;--ink:#2a1414;--mute:#7a5f5a;--line:#eedfcd}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+button{font:inherit;cursor:pointer;color:inherit}
+a{color:inherit}
+.preview{background:#1b0a0b;color:#f4e6d8;font-size:14px;text-align:center;padding:8px 16px}
+.preview a{font-weight:700;color:var(--gold-l)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.zh{font-family:'Noto Serif SC',serif}
+/* cloud pattern */
+.clouds{background-color:var(--red);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='70' viewBox='0 0 120 70'%3E%3Cpath d='M10 50c0-8 8-12 14-8 2-8 14-10 18-2 6-4 14 0 12 8h-44zM70 22c0-6 6-9 11-6 2-6 11-8 14-2 5-3 11 0 9 6H70z' fill='none' stroke='%23a8192b' stroke-width='2'/%3E%3C/svg%3E")}
+header{position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:3px solid var(--gold)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:70px}
+header .lg{display:flex;align-items:center;gap:10px;text-decoration:none}
+header .lg img{height:50px;width:auto;border-radius:6px}
+header nav{display:flex;gap:26px;font-weight:500;font-size:15px}
+header nav a{text-decoration:none}header nav a:hover{color:var(--red)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:999px;padding:14px 24px;font-weight:700;font-size:15px;text-decoration:none;transition:transform .15s,background .15s}
+.btn:active{transform:scale(.97)}
+.btn-red{background:var(--red);color:#fff}.btn-red:hover{background:var(--red2)}
+.btn-gold{background:linear-gradient(180deg,var(--gold-l),var(--gold));color:#3a1a05}
+.btn-line{border:1.5px solid rgba(255,255,255,.6);color:#fff}.btn-line:hover{background:rgba(255,255,255,.1)}
+@media(max-width:860px){header nav,header .btn{display:none}}
+
+/* hero */
+.hero{color:#fff;overflow:hidden;padding:0}
+.hero .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:40px;align-items:center;padding-top:60px;padding-bottom:70px}
+.hero .logo{width:280px;border-radius:12px;box-shadow:0 20px 40px rgba(0,0,0,.3)}
+.hero h1{font-family:'Noto Serif SC';font-weight:900;font-size:clamp(38px,5.2vw,64px);line-height:1.1;margin:26px 0 14px}
+.hero h1 span{color:var(--gold-l)}
+.hero p{font-size:18px;color:#f6dccf;max-width:30em}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.hero .meta{display:flex;gap:22px;margin-top:26px;font-size:14px;color:#f1c9bd;flex-wrap:wrap}
+.hero .meta b{display:block;font-family:'Noto Serif SC';font-size:28px;color:#fff;line-height:1.1}
+.plate{position:relative;height:540px}
+.plate img{position:absolute;border-radius:50%;object-fit:cover;border:8px solid var(--gold);box-shadow:0 30px 60px rgba(0,0,0,.4)}
+.plate .p1{width:380px;height:380px;right:30px;top:0}
+.plate .p2{width:220px;height:220px;left:0;bottom:20px}
+.plate .p3{width:190px;height:190px;right:0;bottom:0}
+.plate .seal{position:absolute;left:40px;top:40px;width:92px;height:92px;border-radius:14px;background:var(--gold);color:var(--red);font-family:'Noto Serif SC';font-weight:900;font-size:34px;display:grid;place-items:center;transform:rotate(-8deg);box-shadow:0 10px 20px rgba(0,0,0,.25);line-height:1;text-align:center}
+.plate .seal small{display:block;font-size:11px;font-family:'DM Sans';letter-spacing:.1em;margin-top:4px}
+@media(max-width:920px){.hero .wrap{grid-template-columns:1fr;padding-top:36px}.plate{height:420px;max-width:440px;width:100%;margin:0 auto}.plate .p1{width:280px;height:280px;right:10px}.plate .p2{width:170px;height:170px}.plate .p3{width:140px;height:140px}.plate .seal{left:0;top:0;width:76px;height:76px;font-size:28px}.hero .logo{width:220px}}
+
+section{padding:90px 0}
+.sh{max-width:680px;margin-bottom:36px}
+.sh .zh{color:var(--red);font-weight:700;letter-spacing:.2em;font-size:15px}
+.sh h2{font-family:'Noto Serif SC';font-weight:900;font-size:clamp(32px,4.4vw,52px);line-height:1.12;margin:8px 0 12px}
+.sh p{color:var(--mute);font-size:17px}
+
+/* signatures */
+.sig{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.dish{background:var(--paper);border:1px solid var(--line);border-radius:20px;overflow:hidden;position:relative;transition:transform .2s,box-shadow .2s}
+.dish:hover{transform:translateY(-4px);box-shadow:0 16px 30px rgba(90,20,20,.12)}
+.dish img{width:100%;aspect-ratio:1;object-fit:cover}
+.dish div{padding:14px 16px 16px}
+.dish b{font-size:17px;display:block}
+.dish span{font-size:13px;color:var(--mute)}
+.dish label{position:absolute;top:10px;right:10px;background:rgba(255,255,255,.94);border-radius:999px;padding:6px 12px 6px 9px;font-size:13px;font-weight:700;display:flex;gap:6px;align-items:center;cursor:pointer;box-shadow:0 4px 10px rgba(0,0,0,.12)}
+.dish input{accent-color:var(--red);width:16px;height:16px}
+.dish.big{grid-column:span 2;grid-row:span 2}
+.dish.big img{aspect-ratio:auto;height:calc(100% - 70px)}
+@media(max-width:960px){.sig{grid-template-columns:1fr 1fr}.dish.big{grid-column:span 2;grid-row:auto}.dish.big img{aspect-ratio:16/10;height:auto}}
+
+/* lauriat planner */
+#plan{background:var(--jade);color:#fff;position:relative}
+#plan .sh h2{color:#fff}#plan .sh p{color:#cfe3dc}#plan .sh .zh{color:var(--gold-l)}
+.planner{display:grid;grid-template-columns:1fr 380px;gap:26px;align-items:start}
+.q{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:20px;padding:22px;margin-bottom:14px}
+.q h3{font-size:17px;font-weight:700;margin-bottom:14px}
+.table{display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+.rt{position:relative;width:170px;height:170px;flex:none}
+.rt .top{position:absolute;inset:34px;border-radius:50%;background:var(--red);box-shadow:inset 0 0 0 6px rgba(255,255,255,.12)}
+.rt .lazy{position:absolute;inset:66px;border-radius:50%;background:rgba(255,255,255,.18)}
+.rt i{position:absolute;width:22px;height:22px;border-radius:50%;background:var(--gold-l);left:50%;top:50%;margin:-11px;transition:transform .3s,opacity .3s}
+.pax{display:flex;align-items:center;gap:12px}
+.pax button{width:46px;height:46px;border-radius:50%;border:0;background:#fff;color:var(--jade);font-size:24px;font-weight:700}
+.pax output{font-family:'Noto Serif SC';font-weight:900;font-size:44px;min-width:64px;text-align:center}
+.pax small{display:block;color:#cfe3dc;font-size:13px}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opts button,.days button,.times button{border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;border-radius:12px;padding:10px 14px;font-weight:500;font-size:14px}
+.opts button[aria-pressed=true],.days button[aria-pressed=true],.times button[aria-pressed=true]{background:var(--gold-l);border-color:var(--gold-l);color:#3a1a05}
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.days button{padding:9px 2px;text-align:center}
+.days span{display:block}.days small{display:block;font-size:11px;opacity:.75}
+.days button:disabled{opacity:.3}
+.times{display:grid;grid-template-columns:repeat(auto-fill,minmax(90px,1fr));gap:6px;margin-top:12px}
+.noslot{grid-column:1/-1;color:#cfe3dc}
+.fl{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fl label{font-size:13px;color:#cfe3dc}
+.fl input{display:block;width:100%;margin-top:6px;border:0;border-radius:12px;padding:12px 14px;font:inherit;font-size:16px}
+.card{position:sticky;top:90px;background:var(--cream);color:var(--ink);border-radius:20px;padding:24px;box-shadow:0 30px 60px rgba(0,0,0,.3);border-top:8px solid var(--red)}
+.card h3{font-family:'Noto Serif SC';font-weight:900;font-size:24px}
+.card ul{list-style:none;display:grid;gap:10px;margin:14px 0;border-top:1px dashed #d8c4ad;padding-top:14px}
+.card li{display:flex;justify-content:space-between;gap:12px;font-size:14px}
+.card li span{color:var(--mute)}.card li b{text-align:right}
+.card .btn{width:100%}
+.card .btn[disabled]{opacity:.45;cursor:not-allowed}
+.card p{font-size:12px;color:var(--mute);text-align:center;margin-top:10px}
+@media(max-width:1000px){.planner{grid-template-columns:1fr}.card{position:relative;top:0}}
+@media(max-width:560px){.days{grid-template-columns:repeat(4,1fr)}.fl{grid-template-columns:1fr}.q{padding:18px}.rt{width:130px;height:130px}.rt .top{inset:26px}.rt .lazy{inset:50px}}
+
+/* room */
+.room{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.room .pics{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.room .pics img{border-radius:16px;width:100%;aspect-ratio:4/5;object-fit:cover}
+.room h2{font-family:'Noto Serif SC';font-weight:900;font-size:clamp(30px,4vw,46px);line-height:1.15}
+.room p{color:var(--mute);font-size:17px;margin-top:12px}
+.quote{margin-top:20px;border-left:4px solid var(--gold);padding:6px 0 6px 18px;font-size:17px}
+.quote cite{display:block;font-style:normal;font-size:13px;color:var(--mute);margin-top:4px}
+@media(max-width:860px){.room{grid-template-columns:1fr}}
+/* visit */
+#visit{background:var(--paper)}
+.visit{display:grid;grid-template-columns:1fr 1.2fr;gap:30px}
+.visit dl{display:grid;gap:16px;margin-top:20px}
+.visit dt{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--red)}
+.visit dd{font-size:17px}
+.map{border-radius:20px;overflow:hidden;min-height:400px}
+.map iframe{width:100%;height:100%;min-height:400px;border:0}
+@media(max-width:860px){.visit{grid-template-columns:1fr}}
+footer{color:#f1c9bd;padding:36px 0 110px;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+footer img{height:56px;border-radius:6px}
+.mbar{display:none}
+@media(max-width:860px){.mbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:30;background:#fff;border-radius:999px;padding:6px;gap:6px;box-shadow:0 12px 30px rgba(0,0,0,.25)}
+.mbar a{flex:1;text-align:center;text-decoration:none;font-weight:700;font-size:14px;padding:12px 6px;border-radius:999px;color:var(--ink)}
+.mbar a.go{background:var(--red);color:#fff}}
+</style>
+</head>
+<body>
+<div class="preview">Sample website for ChefHaus by TechSocials. We can change anything you like. <a href="techsocials-websites-and-systems.pdf" target="_blank" rel="noopener">See pricing</a> or <a href="tel:+639989919318">message Matt, 0998 991 9318</a></div>
+<header><div class="wrap">
+  <a class="lg" href="#top"><img src="img/logo.jpg" alt="ChefHaus 厨师屋 Authentic Chinese Seafood Restaurant"></a>
+  <nav><a href="#signatures">Signatures</a><a href="#plan">Plan a lauriat</a><a href="#visit">Visit</a></nav>
+  <a class="btn btn-red" href="#plan">Reserve a table</a>
+</div></header>
+
+<main id="top">
+<section class="hero clouds">
+  <div class="wrap">
+    <div>
+      <img class="logo" src="img/logo.jpg" alt="ChefHaus logo">
+      <h1>Cantonese seafood for the <span>whole family table.</span></h1>
+      <p>Roast pork, steamed pompano, abalone, xiao long bao and yang chow fried rice, served warm and generous in Subangdaku, Mandaue.</p>
+      <div class="ctas"><a class="btn btn-gold" href="#plan">Plan your lauriat</a><a class="btn btn-line" href="tel:+639983080501">Call 0998 308 0501</a></div>
+      <div class="meta"><div><b>4.6 ★</b>140 Google reviews</div><div><b>Lunch</b>11am to 2:30pm</div><div><b>Dinner</b>5:30 to 10:30pm</div></div>
+    </div>
+    <div class="plate">
+      <img class="p1" src="img/p11.jpg" alt="Braised abalone in a claypot" fetchpriority="high">
+      <img class="p2" src="img/p9.jpg" alt="Xiao long bao in a steamer">
+      <img class="p3" src="img/p3.jpg" alt="Roast pork with glaze">
+      <div class="seal"><div>厨师<small>CHEF'S PICK</small></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="signatures">
+  <div class="wrap">
+    <div class="sh"><span class="zh">招牌菜 · SIGNATURES</span><h2>What our guests come back for.</h2><p>Tick the dishes you want ready when you sit down. They go straight into your reservation.</p></div>
+    <div class="sig" id="sig">
+      <div class="dish big"><img style="object-position:center 75%" src="img/p4.jpg" alt="Steamed pompano in soy and scallion" loading="lazy"><label><input type="checkbox" value="Steamed pompano">Add</label><div><b>Steamed pompano</b><span>Fresh fish, soy, scallion and ginger.</span></div></div>
+      <div class="dish"><img src="img/p3.jpg" alt="Roast pork" loading="lazy"><label><input type="checkbox" value="Roast pork">Add</label><div><b>Roast pork</b><span>Glazed and sliced.</span></div></div>
+      <div class="dish"><img src="img/p8.jpg" alt="Roast duck with steamed buns" loading="lazy"><label><input type="checkbox" value="Roast duck with buns">Add</label><div><b>Roast duck</b><span>With soft steamed buns.</span></div></div>
+      <div class="dish"><img src="img/p11.jpg" alt="Abalone claypot" loading="lazy"><label><input type="checkbox" value="Abalone claypot">Add</label><div><b>Abalone claypot</b><span>For the big occasions.</span></div></div>
+      <div class="dish"><img src="img/p9.jpg" alt="Xiao long bao" loading="lazy"><label><input type="checkbox" value="Xiao long bao">Add</label><div><b>Xiao long bao</b><span>Soup dumplings, steamed to order.</span></div></div>
+      <div class="dish"><img src="img/p5.jpg" alt="Wok-tossed shrimp" loading="lazy"><label><input type="checkbox" value="Shrimp">Add</label><div><b>Shrimp</b><span>Wok-tossed, a table favourite.</span></div></div>
+      <div class="dish"><img src="img/p13.jpg" alt="Kung pao chicken" loading="lazy"><label><input type="checkbox" value="Kung pao chicken">Add</label><div><b>Kung pao chicken</b><span>With peanuts and dried chili.</span></div></div>
+      <div class="dish"><img src="img/p6.jpg" alt="Yang chow fried rice" loading="lazy"><label><input type="checkbox" value="Yang chow fried rice">Add</label><div><b>Yang chow fried rice</b><span>The table's must-have.</span></div></div>
+      <div class="dish"><img src="img/p7.jpg" alt="Birthday noodles with egg" loading="lazy"><label><input type="checkbox" value="Noodles">Add</label><div><b>Noodles</b><span>Long life, for birthdays.</span></div></div>
+      <div class="dish"><img src="img/p14.jpg" alt="Fried shrimp balls" loading="lazy"><label><input type="checkbox" value="Shrimp balls">Add</label><div><b>Shrimp balls</b><span>Golden and crunchy.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="plan">
+  <div class="wrap">
+    <div class="sh"><span class="zh">订座 · RESERVE</span><h2>Plan your lauriat in one minute.</h2><p>Set your table size, the occasion and the time. Add your dishes above. We'll have the round table ready.</p></div>
+    <div class="planner">
+      <div>
+        <div class="q"><h3>1. How many at the table?</h3>
+          <div class="table"><div class="rt" id="rt"><div class="top"></div><div class="lazy"></div></div>
+          <div><div class="pax"><button type="button" id="minus" aria-label="Fewer guests">−</button><output id="pax">8</output><button type="button" id="plus" aria-label="More guests">+</button></div><small id="paxNote">One round table</small></div></div>
+        </div>
+        <div class="q"><h3>2. The occasion</h3><div class="opts" id="occ"><button type="button" aria-pressed="true">Family lunch</button><button type="button">Birthday</button><button type="button">Anniversary</button><button type="button">Business dinner</button><button type="button">Reunion</button><button type="button">Just because</button></div></div>
+        <div class="q"><h3>3. Day and time</h3><div class="days" id="days"></div><div class="times" id="times"></div></div>
+        <div class="q"><h3>4. Your details</h3><div class="fl"><label>Name<input id="nm" autocomplete="name" placeholder="Your name"></label><label>Mobile<input id="mob" type="tel" autocomplete="tel" placeholder="0917 123 4567"></label></div></div>
+      </div>
+      <aside class="card" aria-live="polite">
+        <h3>Your reservation</h3>
+        <ul>
+          <li><span>Guests</span><b id="sPax">8</b></li>
+          <li><span>Occasion</span><b id="sOcc">Family lunch</b></li>
+          <li><span>Date</span><b id="sDay">-</b></li>
+          <li><span>Time</span><b id="sTime">-</b></li>
+          <li><span>Pre-order</span><b id="sDish">None yet</b></li>
+        </ul>
+        <button class="btn btn-red" id="send" disabled>Send reservation</button>
+        <p>Goes straight to ChefHaus by text. They'll confirm your table.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap room">
+    <div class="pics"><img src="img/p10.jpg" alt="Round red tables ready for a banquet" loading="lazy"><img src="img/p2.jpg" alt="The decorated entrance with red lanterns" loading="lazy" style="transform:translateY(36px)"></div>
+    <div>
+      <span class="zh" style="color:var(--red);font-weight:700;letter-spacing:.2em">宴会 · CELEBRATIONS</span>
+      <h2>Round tables, lazy susans, and room for everyone.</h2>
+      <p>Clean, spacious and quick to serve. Bring the lolo and lola, the titas and the kids.</p>
+      <div class="quote">"Reservation was very smooth... Place is very clean and spacious."<cite>Google review</cite></div>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap visit">
+    <div>
+      <span class="zh" style="color:var(--red);font-weight:700;letter-spacing:.2em">地址 · VISIT</span>
+      <h2 class="zh" style="font-weight:900;font-size:40px;line-height:1.1;margin-top:8px">Subangdaku, Mandaue</h2>
+      <dl>
+        <div><dt>Hours</dt><dd>Tue to Sun: 11am to 2:30pm, 5:30 to 10:30pm<br><span style="color:var(--mute)">Closed Mondays</span></dd></div>
+        <div><dt>Call or text</dt><dd><a href="tel:+639983080501">0998 308 0501</a></dd></div>
+        <div><dt>Facebook</dt><dd><a href="https://www.facebook.com/chefhaus" target="_blank" rel="noopener">facebook.com/chefhaus</a></dd></div>
+      </dl>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:24px"><a class="btn btn-red" href="#plan">Reserve a table</a><a class="btn" style="border:1.5px solid var(--ink)" href="https://www.google.com/maps/dir/?api=1&destination=ChefHaus+Mandaue" target="_blank" rel="noopener">Directions</a></div>
+    </div>
+    <div class="map"><iframe title="Map to ChefHaus" loading="lazy" src="https://www.google.com/maps?q=Chef+Haus+Subangdaku+Mandaue&output=embed"></iframe></div>
+  </div>
+</section>
+</main>
+<footer class="clouds"><div class="wrap"><img src="img/logo.jpg" alt="ChefHaus"><span>Authentic Chinese Seafood Restaurant · Cantonese cuisine · Mandaue City</span></div></footer>
+<div class="mbar"><a class="go" href="#plan">Reserve</a><a href="tel:+639983080501">Call</a><a href="https://www.google.com/maps/dir/?api=1&destination=ChefHaus+Mandaue" target="_blank" rel="noopener">Map</a></div>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","name":"ChefHaus","servesCuisine":"Cantonese, Chinese seafood","telephone":"+639983080501","acceptsReservations":true,"sameAs":["https://www.facebook.com/chefhaus"],"address":{"@type":"PostalAddress","addressLocality":"Subangdaku, Mandaue City","addressRegion":"Cebu","addressCountry":"PH"},"openingHours":["Tu-Su 11:00-14:30","Tu-Su 17:30-22:30"],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.6","reviewCount":"140"}}</script>
+<script src="tsk.js"></script>
+<script>
+const PHONE='+639983080501',$=id=>document.getElementById(id);
+// lunch and dinner are separate services; the slot picker covers 11:00-22:30 and skips the afternoon break below
+const OPEN={0:[660,1350],2:[660,1350],3:[660,1350],4:[660,1350],5:[660,1350],6:[660,1350]};
+const R={pax:8,occ:'Family lunch',day:'',time:''};
+function seats(){const rt=$('rt');rt.querySelectorAll('i').forEach(i=>i.remove());const n=Math.min(R.pax,12),r=rt.offsetWidth/2-12;for(let k=0;k<n;k++){const a=k/n*2*Math.PI-Math.PI/2,i=document.createElement('i');i.style.transform=`translate(${Math.cos(a)*r}px,${Math.sin(a)*r}px)`;rt.appendChild(i);}
+  $('pax').textContent=R.pax;$('paxNote').textContent=R.pax<=12?'One round table':Math.ceil(R.pax/10)+' round tables';$('sPax').textContent=R.pax;}
+$('minus').onclick=()=>{R.pax=Math.max(2,R.pax-1);seats();};
+$('plus').onclick=()=>{R.pax=Math.min(60,R.pax+1);seats();};
+$('occ').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;$('occ').querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));R.occ=b.textContent;upd();});
+TSK.slots({daysEl:$('days'),slotsEl:$('times'),open:OPEN,step:30,onPick:p=>{R.day=p.day;R.time=p.time;upd();}});
+// remove slots during the afternoon break (2:30 to 5:30pm)
+const brk=()=>$('times').querySelectorAll('button').forEach(b=>{const m=b.textContent.match(/(\d+)(?::(\d+))? (am|pm)/);if(!m)return;let h=+m[1]%12+(m[3]==='pm'?12:0),t=h*60+(+m[2]||0);if(t>=870&&t<1050||t>1320)b.remove();});
+new MutationObserver(brk).observe($('times'),{childList:true});brk();
+$('sig').addEventListener('change',upd);
+const dishes=()=>[...document.querySelectorAll('#sig input:checked')].map(i=>i.value);
+function upd(){$('sOcc').textContent=R.occ;$('sDay').textContent=R.day||'-';$('sTime').textContent=R.time||'-';const d=dishes();$('sDish').textContent=d.length?d.join(', '):'None yet';$('send').disabled=!(R.day&&R.time);}
+$('send').onclick=()=>{
+  const L=['Hi ChefHaus! Table reservation from your website:','','Guests: '+R.pax,'Occasion: '+R.occ,'When: '+R.day+', '+R.time];
+  const d=dishes();if(d.length)L.push('Pre-order: '+d.join(', '));
+  if($('nm').value.trim())L.push('Name: '+$('nm').value.trim());
+  if($('mob').value.trim())L.push('Mobile: '+$('mob').value.trim());
+  TSK.sms(PHONE,L);
+};
+seats();upd();addEventListener('resize',seats);
+</script>
+</body>
+</html>
