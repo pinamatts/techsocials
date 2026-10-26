@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Brad's Barbers · Barbershop in Lapu-Lapu · Book Your Chair</title>
+<meta name="description" content="A customer-centric barbershop with premium cuts at a comfortable price. Gold Mountain Center, beside MECO, Lapu-Lapu. Book your chair online and keep your loyalty card on your phone.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#111">
+<link rel="icon" href="img/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Work+Sans:wght@400;500;600;700;800&family=Caveat+Brush&display=swap" rel="stylesheet">
+<style>
+:root{--blk:#0f0f0f;--blk2:#1a1a1a;--red:#c4262e;--red-d:#9b1a20;--cream:#f4eee3;--paper:#fffaf2;--ink:#151515;--mute:#7a7268;--line:rgba(255,255,255,.12)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Work Sans',system-ui,sans-serif;background:var(--blk);color:#f1ece4;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+button{font:inherit;cursor:pointer;color:inherit}
+a{color:inherit}
+.preview{background:#000;color:#ddd;font-size:14px;text-align:center;padding:8px 16px}
+.preview a{font-weight:700;color:#ff8b8f}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.an{font-family:'Anton',Impact,sans-serif;font-weight:400;letter-spacing:.01em}
+/* the striped cape */
+.cape{background:repeating-linear-gradient(90deg,#111 0 18px,#e9e4da 18px 30px)}
+.pole{height:10px;background:repeating-linear-gradient(135deg,var(--red) 0 14px,#fff 14px 28px,#1c3f94 28px 42px,#fff 42px 56px)}
+header{position:sticky;top:0;z-index:20;background:rgba(15,15,15,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+header .lg img{height:40px;width:auto}
+header nav{display:flex;gap:28px;font-weight:600;font-size:15px}
+header nav a{text-decoration:none;color:#cfc8bd}header nav a:hover{color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:6px;padding:15px 24px;font-weight:800;font-size:15px;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;transition:transform .15s,background .15s}
+.btn:active{transform:scale(.97)}
+.btn-red{background:var(--red);color:#fff}.btn-red:hover{background:var(--red-d)}
+.btn-line{border:2px solid #fff;color:#fff}.btn-line:hover{background:#fff;color:#111}
+@media(max-width:860px){header nav,header .btn{display:none}header .lg img{height:46px}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:0}
+.hero .bg{position:absolute;inset:0;background:url(img/p2.jpg) center/cover;opacity:.28}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0f0f0f 32%,rgba(15,15,15,.5) 70%,rgba(15,15,15,.8))}
+.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-top:60px;padding-bottom:80px}
+.hero .logo{width:min(340px,80%)}
+.hero h1{font-family:'Anton';font-weight:400;font-size:clamp(48px,7vw,96px);line-height:.95;text-transform:uppercase;margin:26px 0 14px}
+.hero h1 span{color:var(--red)}
+.hero p{font-size:18px;color:#cfc8bd;max-width:30em}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.hero .meta{display:flex;gap:26px;margin-top:28px;flex-wrap:wrap;font-size:14px;color:#a9a196}
+.hero .meta b{display:block;font-family:'Anton';font-size:32px;color:#fff;line-height:1.1}
+.hero .meta .st{color:#f5b400}
+.frame{position:relative}
+.frame img{width:100%;max-width:420px;margin-left:auto;aspect-ratio:4/5;object-fit:cover;border:10px solid var(--cream);box-shadow:0 30px 60px rgba(0,0,0,.6);transform:rotate(2deg)}
+.frame .tape{position:absolute;top:-14px;left:50%;width:120px;height:30px;background:rgba(244,238,227,.75);transform:translateX(-20%) rotate(-4deg)}
+@media(max-width:900px){.hero .wrap{grid-template-columns:1fr;padding-top:36px}.frame img{margin:20px auto 0;max-width:340px}}
+
+section{padding:90px 0}
+.sh{max-width:680px;margin-bottom:34px}
+.sh .hand{font-family:'Caveat Brush';color:var(--red);font-size:26px}
+.sh h2{font-family:'Anton';font-weight:400;font-size:clamp(40px,5.4vw,70px);line-height:.98;text-transform:uppercase;margin:4px 0 12px}
+.sh p{color:#cfc8bd;font-size:17px}
+
+/* services */
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.s{background:var(--blk2);border:1px solid var(--line);border-radius:10px;padding:24px;position:relative;overflow:hidden}
+.s:before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:repeating-linear-gradient(180deg,var(--red) 0 10px,#fff 10px 20px,#1c3f94 20px 30px,#fff 30px 40px)}
+.s h3{font-family:'Anton';font-weight:400;font-size:28px;text-transform:uppercase;line-height:1.05}
+.s p{color:#b8b0a4;font-size:15px;margin-top:6px}
+@media(max-width:860px){.svc{grid-template-columns:1fr 1fr}}@media(max-width:520px){.svc{grid-template-columns:1fr}}
+
+/* booking */
+#book{background:var(--cream);color:var(--ink)}
+#book .sh p{color:var(--mute)}
+.bk{display:grid;grid-template-columns:1fr 380px;gap:26px;align-items:start}
+.step{background:#fff;border:2px solid #e4dccd;border-radius:12px;padding:22px;margin-bottom:14px}
+.step h3{font-family:'Anton';font-weight:400;font-size:22px;text-transform:uppercase;margin-bottom:12px;display:flex;gap:10px;align-items:center}
+.step h3 i{font-style:normal;font-family:'Work Sans';font-weight:800;width:30px;height:30px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;font-size:14px}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opts button,.days button,.times button{border:2px solid #e4dccd;background:#fff;border-radius:8px;padding:11px 14px;font-weight:700;font-size:14px}
+.opts button[aria-pressed=true],.days button[aria-pressed=true],.times button[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:#fff}
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.days button{padding:9px 2px;text-align:center}
+.days span{display:block}.days small{display:block;font-size:11px;opacity:.7;font-weight:600}
+.days button:disabled{opacity:.3}
+.times{display:grid;grid-template-columns:repeat(auto-fill,minmax(90px,1fr));gap:6px;margin-top:12px}
+.noslot{grid-column:1/-1;color:var(--mute)}
+.fl{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fl label{font-size:13px;font-weight:700;color:var(--mute)}
+.fl input{display:block;width:100%;margin-top:6px;border:2px solid #e4dccd;border-radius:8px;padding:12px 14px;font:inherit;font-size:16px}
+.fl input:focus{outline:2px solid var(--red);outline-offset:1px}
+.fl .full{grid-column:1/-1}
+.tix{position:sticky;top:92px;background:var(--ink);color:#fff;border-radius:12px;padding:24px;overflow:hidden}
+.tix .cape{height:16px;margin:-24px -24px 18px}
+.tix h3{font-family:'Anton';font-weight:400;font-size:28px;text-transform:uppercase}
+.tix ul{list-style:none;display:grid;gap:10px;margin:14px 0;border-top:1px dashed rgba(255,255,255,.25);padding-top:14px}
+.tix li{display:flex;justify-content:space-between;gap:10px;font-size:14px}
+.tix li span{color:#a9a196}.tix li b{text-align:right}
+.tix .btn{width:100%}
+.tix .btn[disabled]{opacity:.45;cursor:not-allowed}
+.tix p{font-size:12px;color:#a9a196;text-align:center;margin-top:10px}
+@media(max-width:1000px){.bk{grid-template-columns:1fr}.tix{position:relative;top:0}}
+@media(max-width:560px){.days{grid-template-columns:repeat(4,1fr)}.fl{grid-template-columns:1fr}.step{padding:18px}}
+
+/* loyalty */
+.loy{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.card{background:var(--paper);color:var(--ink);border-radius:14px;padding:22px 22px 18px;box-shadow:0 30px 60px rgba(0,0,0,.5);transform:rotate(-2deg);max-width:500px}
+.card .top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.card .top img{height:64px;width:auto}
+.card .top div{text-align:right}
+.card .top b{font-family:'Anton';font-weight:400;font-size:30px;line-height:1;display:block}
+.card .top small{font-weight:800;font-size:12px;letter-spacing:.06em}
+.grid{display:grid;grid-template-columns:repeat(5,1fr);border:2px solid var(--ink);margin-top:14px}
+.grid button{aspect-ratio:1.2;border:0;border-right:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink);background:transparent;position:relative;display:grid;place-items:center}
+.grid button:nth-child(5n){border-right:0}.grid button:nth-child(n+6){border-bottom:0}
+.grid svg{width:38%;height:38%;stroke:#c9c1b3;fill:none;stroke-width:2}
+.grid button.on svg{stroke:var(--ink)}
+.grid button.on:after{content:attr(data-d);position:absolute;font-family:'Caveat Brush';color:var(--red);font-size:20px;transform:rotate(-14deg);opacity:.9}
+.grid button.free{background:#fdeceb}
+.grid button.free:before{content:"FREE";position:absolute;bottom:4px;font-size:10px;font-weight:800;color:var(--red);letter-spacing:.1em}
+.card .foot{display:flex;justify-content:space-between;align-items:center;margin-top:12px;font-size:13px;font-weight:600}
+.card .foot button{border:0;background:none;color:var(--mute);text-decoration:underline;font-size:12px}
+.loy h3{font-family:'Anton';font-weight:400;font-size:clamp(34px,4.4vw,54px);line-height:1;text-transform:uppercase}
+.loy p{color:#cfc8bd;font-size:17px;margin-top:14px}
+.loy ul{margin-top:18px;list-style:none;display:grid;gap:10px}
+.loy li{display:flex;gap:12px;align-items:flex-start}
+.loy li b{flex:none;width:28px;height:28px;border-radius:50%;background:var(--red);display:grid;place-items:center;font-size:13px}
+.prog{font-family:'Anton';font-size:22px;color:var(--red)}
+@media(max-width:860px){.loy{grid-template-columns:1fr}.card{transform:none;margin:0 auto}}
+
+/* shop */
+.shop{display:grid;grid-template-columns:1.2fr 1fr 1fr;grid-template-rows:240px 240px;gap:12px}
+.shop img{width:100%;height:100%;object-fit:cover;border-radius:8px}
+.shop img:first-child{grid-row:span 2}
+.shop .rv{background:var(--red);border-radius:8px;padding:22px;display:flex;flex-direction:column;justify-content:center}
+.shop .rv q{font-size:18px;font-weight:600;line-height:1.4}
+.shop .rv cite{display:block;font-style:normal;font-size:13px;margin-top:8px;color:#ffd3d4}
+@media(max-width:760px){.shop{grid-template-columns:1fr 1fr;grid-template-rows:240px 180px 180px}.shop img:first-child{grid-column:span 2;grid-row:auto}}
+/* visit */
+.visit{display:grid;grid-template-columns:1fr 1.2fr;gap:30px}
+.visit dl{display:grid;gap:16px;margin-top:20px}
+.visit dt{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--red)}
+.visit dd{font-size:17px}
+.map{border-radius:10px;overflow:hidden;min-height:400px}
+.map iframe{width:100%;height:100%;min-height:400px;border:0;filter:grayscale(.5)}
+@media(max-width:860px){.visit{grid-template-columns:1fr}}
+footer{padding:36px 0 110px;color:#8f877c;font-size:14px;border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+footer img{height:40px}
+.mbar{display:none}
+@media(max-width:860px){.mbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:30;background:#000;border:1px solid var(--line);border-radius:10px;padding:7px;gap:6px;box-shadow:0 12px 30px rgba(0,0,0,.5)}
+.mbar a{flex:1;text-align:center;color:#fff;text-decoration:none;font-weight:800;font-size:14px;padding:12px 6px;border-radius:6px;text-transform:uppercase;letter-spacing:.04em}
+.mbar a.go{background:var(--red)}}
+</style>
+</head>
+<body>
+<div class="preview">Sample website for Brad's Barbers by TechSocials. We can change anything you like. <a href="techsocials-websites-and-systems.pdf" target="_blank" rel="noopener">See pricing</a> or <a href="tel:+639989919318">message Matt, 0998 991 9318</a></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="sc" viewBox="0 0 24 24"><circle cx="6" cy="18" r="3"/><circle cx="18" cy="18" r="3"/><path d="M8 16 19 3M16 16 5 3"/></symbol></defs></svg>
+<header><div class="wrap">
+  <a class="lg" href="#top"><img src="img/logo-white.png" alt="Brad's Barbers"></a>
+  <nav><a href="#services">Services</a><a href="#book">Book</a><a href="#loyalty">Loyalty card</a><a href="#visit">Visit</a></nav>
+  <a class="btn btn-red" href="#book">Book a chair</a>
+</div></header>
+<div class="pole" aria-hidden="true"></div>
+
+<main id="top">
+<section class="hero">
+  <div class="bg" role="img" aria-label="Inside Brad's Barbers, a long row of barber chairs"></div>
+  <div class="wrap">
+    <div>
+      <img class="logo" src="img/logo-white.png" alt="Brad's Barbers logo">
+      <h1>Barbers you can <span>trust.</span></h1>
+      <p>Premium cuts at a comfortable price, at Gold Mountain Center beside MECO, Lapu-Lapu. Book your chair, skip the wait, and keep your loyalty card on your phone.</p>
+      <div class="ctas"><a class="btn btn-red" href="#book">Book your chair</a><a class="btn btn-line" href="tel:+639694444493">Call 0969 444 4493</a></div>
+      <div class="meta"><div><b>4.8 <span class="st">★</span></b>182 Google reviews</div><div><b>Daily</b>10am to 7:30pm</div><div><b>10 = 1</b>free haircut</div></div>
+    </div>
+    <div class="frame"><span class="tape"></span><img src="img/p1.jpg" alt="Brad's Barbers storefront with the logo on the glass" fetchpriority="high"></div>
+  </div>
+</section>
+<div class="cape" style="height:22px" aria-hidden="true"></div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sh"><span class="hand">What we do</span><h2>Clean cuts. Sharp lines.</h2><p>Every cut is done by a barber who listens first. Tell us what you want, or let us suggest what suits your face.</p></div>
+    <div class="svc">
+      <div class="s"><h3>Haircut</h3><p>Classic, modern or textured. Washed, cut and styled.</p></div>
+      <div class="s"><h3>Skin fade</h3><p>Smooth blends from zero, finished with a clean line-up.</p></div>
+      <div class="s"><h3>Beard trim</h3><p>Shaped, lined and balanced to your cut.</p></div>
+      <div class="s"><h3>Hot towel shave</h3><p>The full old-school treatment.</p></div>
+      <div class="s"><h3>Kids' cut</h3><p>Patient barbers for the little ones.</p></div>
+      <div class="s"><h3>Hairdressing</h3><p>Longer styles and trims, for everyone.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap">
+    <div class="sh"><span class="hand">Skip the wait</span><h2>Book your chair.</h2><p>Pick a service and time. It goes straight to the shop's phone, and you walk in to a ready chair.</p></div>
+    <div class="bk">
+      <div>
+        <div class="step"><h3><i>1</i>Service</h3><div class="opts" id="svc"><button type="button">Haircut</button><button type="button">Skin fade</button><button type="button">Haircut + beard</button><button type="button">Hot towel shave</button><button type="button">Kids' cut</button></div></div>
+        <div class="step"><h3><i>2</i>Barber</h3><div class="opts" id="barber"><button type="button" aria-pressed="true">Any available</button><button type="button">My usual barber</button></div></div>
+        <div class="step"><h3><i>3</i>Day and time</h3><div class="days" id="days"></div><div class="times" id="times"></div></div>
+        <div class="step"><h3><i>4</i>Your details</h3><div class="fl"><label>Name<input id="nm" autocomplete="name" placeholder="Your name"></label><label>Mobile<input id="mob" type="tel" autocomplete="tel" placeholder="0917 123 4567"></label><label class="full">Barber's name or notes (optional)<input id="nt" placeholder="e.g. Same cut as last time"></label></div></div>
+      </div>
+      <aside class="tix" aria-live="polite">
+        <div class="cape"></div>
+        <h3>Your chair</h3>
+        <ul><li><span>Service</span><b id="sSv">-</b></li><li><span>Barber</span><b id="sBb">Any available</b></li><li><span>Date</span><b id="sDay">-</b></li><li><span>Time</span><b id="sTime">-</b></li></ul>
+        <button class="btn btn-red" id="send" disabled>Book this chair</button>
+        <p>Sent to Brad's Barbers by text. They'll confirm.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="loyalty">
+  <div class="wrap loy">
+    <div class="card" aria-label="Digital loyalty card">
+      <div class="top"><img src="img/logo-red.png" alt=""><div><b>LOYALTY CARD</b><small>10 HAIRCUTS = 1 FREE HAIRCUT</small></div></div>
+      <div class="grid" id="grid"></div>
+      <div class="foot"><span class="prog" id="prog">0 of 10</span><button type="button" id="reset">Reset demo</button></div>
+    </div>
+    <div>
+      <span class="sh"><span class="hand">Never lose your card again</span></span>
+      <h3>Your loyalty card, now on your phone.</h3>
+      <p>Same deal as the paper card: 10 haircuts, the next one is free. But it lives on the customer's phone, so it never gets washed with the pants.</p>
+      <ul>
+        <li><b>1</b><span>Tap a box on the card to try it. That's how a stamp lands after each cut.</span></li>
+        <li><b>2</b><span>The barber can stamp it from their phone at the counter.</span></li>
+        <li><b>3</b><span>Customers who are close to a free cut come back sooner.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:20px">
+  <div class="wrap shop">
+    <img src="img/p2.jpg" alt="The long row of chairs inside Brad's Barbers" loading="lazy">
+    <img src="img/p6.jpg" alt="Barbers at work with striped capes" loading="lazy">
+    <img src="img/p4.jpg" alt="A clean low fade" loading="lazy">
+    <div class="rv"><q>One of the best haircuts I've ever gotten.</q><cite>Google review</cite></div>
+    <img src="img/p5.jpg" alt="Mirror station at Brad's Barbers" loading="lazy">
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap visit">
+    <div>
+      <div class="sh" style="margin-bottom:0"><span class="hand">Drop by</span><h2>Beside MECO.</h2></div>
+      <dl>
+        <div><dt>Address</dt><dd>Gold Mountain Center, 1007 Opon-Airport-Sangi Rd, Lapu-Lapu City</dd></div>
+        <div><dt>Hours</dt><dd>Every day, 10:00 am to 7:30 pm</dd></div>
+        <div><dt>Call or text</dt><dd><a href="tel:+639694444493">0969 444 4493</a></dd></div>
+        <div><dt>Follow</dt><dd><a href="https://www.facebook.com/bradsbarberscebu" target="_blank" rel="noopener">@bradsbarbers</a> on Facebook and Instagram</dd></div>
+      </dl>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:24px"><a class="btn btn-red" href="#book">Book a chair</a><a class="btn btn-line" href="https://www.google.com/maps/dir/?api=1&destination=Brad%27s+Barbers+Gold+Mountain+Center+Lapu-Lapu" target="_blank" rel="noopener">Directions</a></div>
+    </div>
+    <div class="map"><iframe title="Map to Brad's Barbers" loading="lazy" src="https://www.google.com/maps?q=Brad%27s+Barbers+Gold+Mountain+Center+Lapu-Lapu&output=embed"></iframe></div>
+  </div>
+</section>
+</main>
+<footer><div class="wrap"><img src="img/logo-white.png" alt="Brad's Barbers"><span>A shop full of barbers you can trust · Lapu-Lapu City</span></div></footer>
+<div class="mbar"><a class="go" href="#book">Book</a><a href="#loyalty">Card</a><a href="tel:+639694444493">Call</a></div>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BarberShop","name":"Brad's Barbers","telephone":"+639694444493","sameAs":["https://www.facebook.com/bradsbarberscebu"],"address":{"@type":"PostalAddress","streetAddress":"Gold Mountain Center, 1007 Opon-Airport-Sangi Rd","addressLocality":"Lapu-Lapu City","addressRegion":"Cebu","addressCountry":"PH"},"openingHours":"Mo-Su 10:00-19:30","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"182"}}</script>
+<script src="tsk.js"></script>
+<script>
+const PHONE='+639694444493',$=id=>document.getElementById(id);
+const OPEN={0:[600,1170],1:[600,1170],2:[600,1170],3:[600,1170],4:[600,1170],5:[600,1170],6:[600,1170]};
+const B={sv:'',bb:'Any available',day:'',time:''};
+function seg(id,k){$(id).addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;$(id).querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));B[k]=b.textContent;upd();});}
+seg('svc','sv');seg('barber','bb');
+TSK.slots({daysEl:$('days'),slotsEl:$('times'),open:OPEN,step:30,onPick:p=>{B.day=p.day;B.time=p.time;upd();}});
+function upd(){$('sSv').textContent=B.sv||'-';$('sBb').textContent=B.bb;$('sDay').textContent=B.day||'-';$('sTime').textContent=B.time||'-';$('send').disabled=!(B.sv&&B.day&&B.time);}
+$('send').onclick=()=>{
+  const L=["Hi Brad's Barbers! Booking from your website:",'','Service: '+B.sv,'Barber: '+B.bb,'When: '+B.day+', '+B.time];
+  if($('nt').value.trim())L.push('Notes: '+$('nt').value.trim());
+  if($('nm').value.trim())L.push('Name: '+$('nm').value.trim());
+  if($('mob').value.trim())L.push('Mobile: '+$('mob').value.trim());
+  TSK.sms(PHONE,L);
+};
+upd();
+// demo loyalty card: stamps stay on this phone only
+const KEY='brads-demo-stamps';let n=0;try{n=+localStorage.getItem(KEY)||0;}catch(e){}
+const g=$('grid');
+for(let i=0;i<10;i++){const b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Haircut '+(i+1));b.innerHTML='<svg><use href="#sc"/></svg>';if(i===9)b.classList.add('free');b.onclick=()=>{n=i<n?i:i+1;save();};g.appendChild(b);}
+const MN=['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+function save(){try{localStorage.setItem(KEY,n);}catch(e){}draw();}
+function draw(){const d=new Date();[...g.children].forEach((b,i)=>{b.classList.toggle('on',i<n);b.dataset.d=i===9?'FREE!':(d.getMonth()+1)+'/'+d.getDate();});$('prog').textContent=n>=10?'Free haircut unlocked!':n+' of 10';}
+$('reset').onclick=()=>{n=0;save();};
+draw();
+</script>
+</body>
+</html>
