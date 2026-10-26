@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rinoa Japanese Beauty Studio · Japanese Hair Salon in Cebu City</title>
+<meta name="description" content="Premier Japanese hair salon in Cebu City with an all-Japanese team. Cuts, straightening, color and hair treatments. Book your stylist directly, no app needed.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#f6f2ec">
+<link rel="icon" href="img/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f2ec;--paper:#fff;--sand:#ebe3d7;--gold:#a8893f;--gold-l:#c9ad6a;--ink:#26221d;--mute:#857b6e;--line:#e3dace}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans JP',system-ui,sans-serif;font-weight:300;background:var(--bg);color:var(--ink);line-height:1.8;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+button{font:inherit;cursor:pointer;color:inherit}
+a{color:inherit}
+.preview{background:var(--ink);color:#eee;font-size:13px;text-align:center;padding:8px 16px}
+.preview a{font-weight:500;color:var(--gold-l)}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.mi{font-family:'Shippori Mincho',serif}
+.wm{display:inline-flex;flex-direction:column;align-items:center;text-decoration:none;line-height:1}
+.wm b{font-family:'Shippori Mincho';font-weight:700;font-size:30px;letter-spacing:.32em;color:var(--gold);padding-left:.32em}
+.wm i{display:block;width:100%;height:1.5px;background:var(--gold);margin:6px 0 5px}
+.wm small{font-family:'Shippori Mincho';font-size:10.5px;letter-spacing:.14em;color:var(--gold)}
+header{position:sticky;top:0;z-index:20;background:rgba(246,242,236,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:78px}
+header nav{display:flex;gap:34px;font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:400}
+header nav a{text-decoration:none;color:var(--mute)}header nav a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;border-radius:0;padding:16px 28px;font-size:13px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;text-decoration:none;transition:background .2s,color .2s}
+.btn-ink{background:var(--ink);color:#fff}.btn-ink:hover{background:#000}
+.btn-line{border:1px solid var(--ink)}.btn-line:hover{background:var(--ink);color:#fff}
+@media(max-width:860px){header nav,header .btn{display:none}}
+
+/* hero */
+.hero{padding:0}
+.hero .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center;padding-top:70px;padding-bottom:90px;position:relative}
+.vert{writing-mode:vertical-rl;font-family:'Shippori Mincho';font-size:15px;letter-spacing:.5em;color:var(--gold);position:absolute;left:0;top:76px}
+.hero .txt{padding-left:40px}
+.hero .over{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--mute)}
+.hero h1{font-family:'Shippori Mincho';font-weight:600;font-size:clamp(38px,5vw,64px);line-height:1.25;margin:20px 0 22px;letter-spacing:.02em}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p{font-size:16px;color:var(--mute);max-width:28em}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.hero .note{display:flex;gap:30px;margin-top:40px;border-top:1px solid var(--line);padding-top:22px;flex-wrap:wrap}
+.hero .note div{font-size:12px;letter-spacing:.12em;color:var(--mute);text-transform:uppercase}
+.hero .note b{display:block;font-family:'Shippori Mincho';font-size:28px;font-weight:600;color:var(--ink);letter-spacing:0;text-transform:none;line-height:1.3}
+.pic{position:relative}
+.pic img{width:100%;aspect-ratio:4/3.4;object-fit:cover}
+.pic .sq{position:absolute;right:-18px;bottom:-30px;width:42%;aspect-ratio:3/4;object-fit:cover;border:10px solid var(--bg)}
+@media(max-width:900px){.hero .wrap{grid-template-columns:1fr;padding-top:40px}.hero .txt{padding-left:0}.vert{display:none}.pic .sq{right:0}}
+
+section{padding:100px 0}
+.sh{text-align:center;max-width:620px;margin:0 auto 50px}
+.sh .ja{font-family:'Shippori Mincho';color:var(--gold);letter-spacing:.3em;font-size:14px}
+.sh h2{font-family:'Shippori Mincho';font-weight:600;font-size:clamp(30px,4vw,46px);line-height:1.3;margin:10px 0 14px}
+.sh p{color:var(--mute)}
+
+/* menu */
+.menu{max-width:860px;margin:0 auto;background:var(--paper);padding:40px 48px;border:1px solid var(--line)}
+.row{display:grid;grid-template-columns:1fr auto auto;gap:18px;align-items:baseline;padding:18px 0;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:0}
+.row b{font-family:'Shippori Mincho';font-size:20px;font-weight:600}
+.row b small{display:block;font-family:'Noto Sans JP';font-weight:300;font-size:13px;color:var(--mute);margin-top:2px}
+.row .t{font-size:13px;color:var(--mute);white-space:nowrap}
+.row .p{font-family:'Shippori Mincho';font-size:20px;color:var(--gold);white-space:nowrap}
+.menu .fine{font-size:12px;color:var(--mute);margin-top:18px}
+@media(max-width:600px){.menu{padding:24px 20px}.row{grid-template-columns:1fr auto}.row .t{grid-column:1;grid-row:2;margin-top:-10px}}
+
+/* stylists + booking */
+#book{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.bk{display:grid;grid-template-columns:1fr 360px;gap:36px;align-items:start}
+.step{margin-bottom:34px}
+.step h3{font-family:'Shippori Mincho';font-weight:600;font-size:20px;margin-bottom:16px;display:flex;align-items:baseline;gap:14px}
+.step h3 span{font-size:12px;letter-spacing:.2em;color:var(--gold);font-family:'Noto Sans JP'}
+.sty{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.sty button{border:1px solid var(--line);background:var(--bg);padding:18px 12px;text-align:center;transition:border-color .2s,background .2s}
+.sty button .av{width:56px;height:56px;border-radius:50%;margin:0 auto 10px;background:var(--sand);display:grid;place-items:center;font-family:'Shippori Mincho';font-size:22px;color:var(--gold)}
+.sty button b{font-family:'Shippori Mincho';font-weight:600;font-size:16px;display:block}
+.sty button small{font-size:11px;color:var(--mute);letter-spacing:.08em}
+.sty button[aria-pressed=true]{border-color:var(--ink);background:#fff}
+.sty button[aria-pressed=true] .av{background:var(--ink);color:#fff}
+.svl{display:grid;gap:8px}
+.svl button{display:flex;justify-content:space-between;align-items:center;gap:12px;border:1px solid var(--line);background:#fff;padding:14px 16px;text-align:left}
+.svl button span{font-family:'Shippori Mincho';font-weight:600;font-size:16px}
+.svl button small{font-size:12px;color:var(--mute);white-space:nowrap}
+.svl button[aria-pressed=true]{border-color:var(--ink);box-shadow:inset 3px 0 0 var(--gold)}
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.days button,.times button{border:1px solid var(--line);background:#fff;padding:10px 4px;font-size:13px;text-align:center}
+.days span{display:block;font-weight:500}.days small{display:block;font-size:11px;color:var(--mute)}
+.days button[aria-pressed=true],.times button[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:#fff}
+.days button[aria-pressed=true] small{color:#ccc}
+.days button:disabled{opacity:.3}
+.times{display:grid;grid-template-columns:repeat(auto-fill,minmax(86px,1fr));gap:6px;margin-top:12px}
+.noslot{grid-column:1/-1;color:var(--mute);font-size:14px}
+.fl{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fl label{font-size:12px;letter-spacing:.1em;color:var(--mute)}
+.fl input,.fl select{display:block;width:100%;margin-top:6px;border:1px solid var(--line);background:#fff;padding:12px 14px;font:inherit;font-size:16px}
+.fl .full{grid-column:1/-1}
+.conc{display:flex;flex-wrap:wrap;gap:8px}
+.conc button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 16px;font-size:13px}
+.conc button[aria-pressed=true]{background:var(--sand);border-color:var(--gold)}
+.card{position:sticky;top:100px;background:var(--bg);border:1px solid var(--line);padding:30px}
+.card .wm{margin:0 auto 20px;display:flex}
+.card ul{list-style:none;display:grid;gap:12px;border-top:1px solid var(--line);padding-top:18px}
+.card li{display:flex;justify-content:space-between;gap:12px;font-size:14px}
+.card li span{color:var(--mute)}.card li b{font-weight:500;text-align:right}
+.card .btn{width:100%;margin-top:22px}
+.card .btn[disabled]{opacity:.4;cursor:not-allowed}
+.card p{font-size:12px;color:var(--mute);text-align:center;margin-top:12px;line-height:1.6}
+@media(max-width:1000px){.bk{grid-template-columns:1fr}.card{position:relative;top:0}}
+@media(max-width:600px){.sty{grid-template-columns:1fr 1fr}.days{grid-template-columns:repeat(4,1fr)}.fl{grid-template-columns:1fr}}
+
+/* results */
+.res{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.res figure img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.res figcaption{font-family:'Shippori Mincho';font-size:15px;margin-top:10px;text-align:center}
+.res figure:nth-child(even){margin-top:50px}
+@media(max-width:760px){.res{grid-template-columns:1fr 1fr}}
+.voice{max-width:760px;margin:70px auto 0;text-align:center}
+.voice q{font-family:'Shippori Mincho';font-size:clamp(20px,2.4vw,28px);line-height:1.6}
+.voice cite{display:block;font-style:normal;font-size:13px;color:var(--mute);margin-top:12px;letter-spacing:.1em}
+/* visit */
+.visit{display:grid;grid-template-columns:1fr 1.2fr;gap:40px}
+.visit dl{display:grid;gap:20px;margin-top:10px}
+.visit dt{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+.visit dd{font-size:16px;margin-top:2px}
+.map{min-height:420px;border:1px solid var(--line)}
+.map iframe{width:100%;height:100%;min-height:420px;border:0;filter:grayscale(.7) contrast(.95)}
+@media(max-width:860px){.visit{grid-template-columns:1fr}}
+footer{border-top:1px solid var(--line);padding:46px 0 110px;text-align:center;color:var(--mute);font-size:13px}
+footer .wm{margin-bottom:16px}
+.mbar{display:none}
+@media(max-width:860px){.mbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:30;background:var(--ink);padding:6px;gap:6px;box-shadow:0 12px 30px rgba(0,0,0,.25)}
+.mbar a{flex:1;text-align:center;color:#fff;text-decoration:none;font-size:12px;letter-spacing:.16em;text-transform:uppercase;padding:13px 6px}
+.mbar a.go{background:var(--gold)}}
+</style>
+</head>
+<body>
+<div class="preview">Sample website for Rinoa Japanese Hair Salon by TechSocials. We can change anything you like. <a href="techsocials-websites-and-systems.pdf" target="_blank" rel="noopener">See pricing</a> or <a href="tel:+639989919318">message Matt, 0998 991 9318</a></div>
+<header><div class="wrap">
+  <a class="wm" href="#top"><b>Rinoa</b><i></i><small>Japanese Beauty Studio</small></a>
+  <nav><a href="#menu">Menu</a><a href="#book">Reserve</a><a href="#results">Results</a><a href="#visit">Access</a></nav>
+  <a class="btn btn-ink" href="#book">Reserve</a>
+</div></header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div class="vert" aria-hidden="true">日本の美容室 · セブ</div>
+    <div class="txt">
+      <span class="over">Japanese hair salon · Cebu City</span>
+      <h1>The Japanese salon experience, <em>here in Cebu.</em></h1>
+      <p>An all-Japanese team of stylists and colorists. Precise cuts, gentle straightening and treatments that bring tired, sun-dried hair back to life.</p>
+      <div class="ctas"><a class="btn btn-ink" href="#book">Reserve your stylist</a><a class="btn btn-line" href="#menu">See the menu</a></div>
+      <div class="note"><div><b>4.9 ★</b>374 Google reviews</div><div><b>100%</b>Japanese stylists</div><div><b>Daily</b>10am to 8pm</div></div>
+    </div>
+    <div class="pic"><img src="img/p1.jpg" alt="The bright, minimal Rinoa salon floor" fetchpriority="high"><img class="sq" src="img/p7.jpg" alt="Glossy straight hair after treatment"></div>
+  </div>
+</section>
+
+<section id="menu" style="padding-top:40px">
+  <div class="wrap">
+    <div class="sh"><span class="ja">メニュー · MENU</span><h2>Treatments, done the Japanese way.</h2><p>Every service starts with a consultation. Your stylist will look at your hair first and tell you honestly what it needs.</p></div>
+    <div class="menu" id="mlist"></div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap">
+    <div class="sh"><span class="ja">ご予約 · RESERVE</span><h2>Book your stylist, directly.</h2><p>Pick the stylist you trust and a time that fits the service. The request goes straight to the salon.</p></div>
+    <div class="bk">
+      <div>
+        <div class="step"><h3>Stylist <span>01</span></h3><div class="sty" id="sty"></div></div>
+        <div class="step"><h3>Service <span>02</span></h3><div class="svl" id="svl"></div></div>
+        <div class="step"><h3>Your hair today <span>03</span></h3><div class="conc" id="conc"><button type="button">Frizzy</button><button type="button">Dry or damaged</button><button type="button">Colored before</button><button type="button">Rebonded before</button><button type="button">Thick</button><button type="button">Fine</button></div></div>
+        <div class="step"><h3>Date and time <span>04</span></h3><div class="days" id="days"></div><div class="times" id="times"></div></div>
+        <div class="step"><h3>Your details <span>05</span></h3><div class="fl"><label>Name<input id="nm" autocomplete="name" placeholder="Your name"></label><label>Mobile<input id="mob" type="tel" autocomplete="tel" placeholder="0917 123 4567"></label><label class="full">Anything else? (optional)<input id="nt" placeholder="e.g. I'd like the style in this photo"></label></div></div>
+      </div>
+      <aside class="card" aria-live="polite">
+        <span class="wm"><b>Rinoa</b><i></i><small>Japanese Beauty Studio</small></span>
+        <ul>
+          <li><span>Stylist</span><b id="sSt">Any stylist</b></li>
+          <li><span>Service</span><b id="sSv">-</b></li>
+          <li><span>Time needed</span><b id="sDur">-</b></li>
+          <li><span>Date</span><b id="sDay">-</b></li>
+          <li><span>Time</span><b id="sTime">-</b></li>
+          <li><span>From</span><b id="sPr">-</b></li>
+        </ul>
+        <button class="btn btn-ink" id="send" disabled>Request reservation</button>
+        <p>Sent to Rinoa by text. Your stylist confirms the time and the final price after a quick look at your hair.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="results">
+  <div class="wrap">
+    <div class="sh"><span class="ja">スタイル · RESULTS</span><h2>Healthier hair, every visit.</h2></div>
+    <div class="res">
+      <figure><img src="img/p10.jpg" alt="A soft brown bob" loading="lazy"><figcaption>Soft bob, ash brown</figcaption></figure>
+      <figure><img src="img/p3.jpg" alt="Layered cut and color, before and after" loading="lazy"><figcaption>Layers and color</figcaption></figure>
+      <figure><img src="img/p8.jpg" alt="Bright blonde with a happy client" loading="lazy"><figcaption>Blonde</figcaption></figure>
+      <figure><img src="img/p2.jpg" alt="Shampoo station with head massage" loading="lazy"><figcaption>Private shampoo room</figcaption></figure>
+    </div>
+    <div class="voice"><q>She gave me the style I wanted, and my hair became so much healthier.</q><cite>GOOGLE REVIEW</cite></div>
+  </div>
+</section>
+
+<section id="visit" style="padding-top:20px">
+  <div class="wrap visit">
+    <div>
+      <div class="sh" style="text-align:left;margin:0 0 20px"><span class="ja">アクセス · ACCESS</span><h2>Find us on Gov. M. Cuenco.</h2></div>
+      <dl>
+        <div><dt>Address</dt><dd>88th Avenue, 686 Gov. M. Cuenco Avenue, Cebu City</dd></div>
+        <div><dt>Hours</dt><dd>Open daily, 10:00 am to 8:00 pm</dd></div>
+        <div><dt>Call or text</dt><dd><a href="tel:+639951002176">0995 100 2176</a></dd></div>
+        <div><dt>Facebook</dt><dd><a href="https://www.facebook.com/rinoahairsalon" target="_blank" rel="noopener">facebook.com/rinoahairsalon</a></dd></div>
+      </dl>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:30px"><a class="btn btn-ink" href="#book">Reserve</a><a class="btn btn-line" href="https://www.google.com/maps/dir/?api=1&destination=Rinoa+Japanese+Hair+Salon+Cebu" target="_blank" rel="noopener">Directions</a></div>
+    </div>
+    <div class="map"><iframe title="Map to Rinoa Japanese Hair Salon" loading="lazy" src="https://www.google.com/maps?q=Rinoa+Japanese+Hair+Salon+Cebu+City&output=embed"></iframe></div>
+  </div>
+</section>
+</main>
+<footer><span class="wm"><b>Rinoa</b><i></i><small>Japanese Beauty Studio</small></span><div>88th Avenue, Gov. M. Cuenco Ave, Cebu City · Open daily 10am to 8pm</div></footer>
+<div class="mbar"><a class="go" href="#book">Reserve</a><a href="#menu">Menu</a><a href="tel:+639951002176">Call</a></div>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HairSalon","name":"Rinoa Japanese Hair Salon","telephone":"+639951002176","sameAs":["https://www.facebook.com/rinoahairsalon"],"address":{"@type":"PostalAddress","streetAddress":"88th Avenue, 686 Gov. M. Cuenco Avenue","addressLocality":"Cebu City","addressRegion":"Cebu","addressCountry":"PH"},"openingHours":"Mo-Su 10:00-20:00","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"374"}}</script>
+<script src="tsk.js"></script>
+<script>
+const PHONE='+639951002176',$=id=>document.getElementById(id);
+const SV=[
+  {n:'Japanese cut',d:'Consultation, shampoo with head massage, cut and blow-dry',m:60,p:'Ask the salon'},
+  {n:'Rinoa straightening',d:'Smooth, natural-looking straight hair, gentle on the hair',m:150,p:'₱5,000'},
+  {n:'Color with highlights',d:'Dimension and brightness, planned around your hair health',m:150,p:'₱8,000'},
+  {n:'Perm',d:'Soft, Japanese-style waves',m:120,p:'from ₱2,000'},
+  {n:'Revive treatment (SAMMY)',d:'Deep repair for dry, sun-damaged or over-processed hair',m:90,p:'₱11,250'}
+];
+const ST=[{n:'Any stylist',k:'✦',s:'First available'},{n:'Yuka',k:'Y',s:'Stylist'},{n:'Nanako',k:'N',s:'Stylist'},{n:'Hikaru',k:'H',s:'Stylist'}];
+const dur=m=>m>=60?(Math.floor(m/60)+'h'+(m%60?' '+m%60+'m':'')):m+'m';
+$('mlist').innerHTML=SV.map(s=>`<div class="row"><b>${s.n}<small>${s.d}</small></b><span class="t">${dur(s.m)}</span><span class="p">${s.p}</span></div>`).join('')+'<p class="fine">Prices are a guide and depend on hair length and condition. Your stylist confirms before starting.</p>';
+$('sty').innerHTML=ST.map((s,i)=>`<button type="button" data-i="${i}" aria-pressed="${i===0}"><div class="av">${s.k}</div><b>${s.n}</b><small>${s.s}</small></button>`).join('');
+$('svl').innerHTML=SV.map((s,i)=>`<button type="button" data-i="${i}"><span>${s.n}</span><small>${dur(s.m)} · ${s.p}</small></button>`).join('');
+const B={st:0,sv:-1,day:'',time:''};
+$('sty').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;B.st=+b.dataset.i;$('sty').querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));upd();});
+$('conc').addEventListener('click',e=>{const b=e.target.closest('button');if(b)b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')!=='true');});
+function slotsFor(m){
+  // only offer start times that let the service finish before closing (8pm)
+  const close=1200-m+30,open={};for(let d=0;d<7;d++)open[d]=[600,close];
+  $('days').innerHTML='';$('times').innerHTML='';B.day='';B.time='';
+  TSK.slots({daysEl:$('days'),slotsEl:$('times'),open,step:30,onPick:p=>{B.day=p.day;B.time=p.time;upd();}});
+}
+$('svl').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;B.sv=+b.dataset.i;$('svl').querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));slotsFor(SV[B.sv].m);upd();});
+function upd(){const s=SV[B.sv];$('sSt').textContent=ST[B.st].n;$('sSv').textContent=s?s.n:'-';$('sDur').textContent=s?dur(s.m):'-';$('sPr').textContent=s?s.p:'-';$('sDay').textContent=B.day||'-';$('sTime').textContent=B.time||'-';$('send').disabled=!(s&&B.day&&B.time);}
+$('send').onclick=()=>{
+  const s=SV[B.sv],c=[...document.querySelectorAll('#conc [aria-pressed=true]')].map(b=>b.textContent);
+  const L=['Hi Rinoa! Reservation request from your website:','','Stylist: '+ST[B.st].n,'Service: '+s.n+' ('+dur(s.m)+')','When: '+B.day+', '+B.time];
+  if(c.length)L.push('My hair: '+c.join(', '));
+  if($('nt').value.trim())L.push('Note: '+$('nt').value.trim());
+  if($('nm').value.trim())L.push('Name: '+$('nm').value.trim());
+  if($('mob').value.trim())L.push('Mobile: '+$('mob').value.trim());
+  TSK.sms(PHONE,L);
+};
+slotsFor(60);upd();
+</script>
+</body>
+</html>
