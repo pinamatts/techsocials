@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>Marick Beach Resort · Luyang, Carmen, Cebu</title>
+<title>Marick Beach Resort, Carmen Cebu · Beach and pool resort with overnight rooms</title>
 <meta name="description" content="Beach, pools and overnight stays in Luyang, Carmen. Plan your day trip or overnight and book direct with Marick Beach Resort.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -172,8 +172,25 @@ footer{background:var(--tx);color:#86a8af;font-size:14px;padding:0 0 110px}
 footer .wrap{border-top:1px solid rgba(255,255,255,.12);padding-top:26px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 .mbar{display:none}
 @media(max-width:880px){.mbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:45;gap:8px;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:7px;box-shadow:0 14px 34px rgba(16,50,59,.25)}.mbar a{flex:1;justify-content:center}}
+.receipt .sent{position:absolute;inset:0;background:var(--tx);padding:28px;display:flex;flex-direction:column;justify-content:center;gap:12px;text-align:left}
+.receipt .sent[hidden]{display:none}
+.receipt .sent>i{font-size:46px;color:#7fe0b0}
+.receipt .sent b{font-size:30px;font-weight:800;color:#fff;letter-spacing:-.5px}
+.receipt .sent p{color:#c9dfe3;font-size:15px;max-width:34ch}
+.receipt .sent .btn{align-self:flex-start;margin-top:6px}
+.linkish{background:none;border:0;color:#a9c7cd;text-decoration:underline;font-size:14px;align-self:flex-start;padding:4px 0}
+@media(max-width:940px){.receipt .sent{position:relative;inset:auto;padding:8px 0 0}.receipt:has(.sent:not([hidden])) .tot,.receipt:has(.sent:not([hidden])) ul,.receipt:has(.sent:not([hidden])) .direct,.receipt:has(.sent:not([hidden])) .sends,.receipt:has(.sent:not([hidden])) .note,.receipt:has(.sent:not([hidden])) h3{display:none}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.reveal{opacity:1;transform:none}}
 </style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Resort","name":"Marick Beach Resort","image":"img/hero.jpg","telephone":"+63 905 547 0939","email":"marickbeachresort@gmail.com",
+"address":{"@type":"PostalAddress","streetAddress":"3G Bantigue Street, Luyang","addressLocality":"Carmen","addressRegion":"Cebu","postalCode":"6005","addressCountry":"PH"},
+"geo":{"@type":"GeoCoordinates","latitude":10.6002,"longitude":124.0276},
+"amenityFeature":[{"@type":"LocationFeatureSpecification","name":"Outdoor pool","value":true},{"@type":"LocationFeatureSpecification","name":"Beach access","value":true},{"@type":"LocationFeatureSpecification","name":"Free parking","value":true},{"@type":"LocationFeatureSpecification","name":"Restaurant","value":true}],
+"checkinTime":"14:00","checkoutTime":"12:00","priceRange":"₱₱",
+"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.3","reviewCount":"595"},
+"sameAs":["https://www.facebook.com/profile.php?id=100069793910101"]}
+</script>
 </head>
 <body>
 <div class="preview">Sample website for Marick Beach Resort by TechSocials. We can change anything you like. <a href="techsocials-websites-and-systems.pdf" target="_blank" rel="noopener">See pricing</a> or <a href="tel:+639989919318">message Matt, 0998 991 9318</a></div>
@@ -245,6 +262,13 @@ footer .wrap{border-top:1px solid rgba(255,255,255,.12);padding-top:26px;display
           <button type="button" class="btn btn-ghost" id="sendSms"><i class="ph-bold ph-chat-text"></i>Send by text</button>
         </div>
         <p class="note" style="margin-top:14px">Estimate only. The front desk confirms the final amount and room type.</p>
+        <div class="sent" id="sent" hidden>
+          <i class="ph-bold ph-check-circle"></i>
+          <b id="sentRef">MBR-1041</b>
+          <p>Request sent. The front desk sees it right away and confirms on Messenger or text.</p>
+          <a class="btn btn-ghost" href="owner/" target="_blank" rel="noopener"><i class="ph-bold ph-squares-four"></i>See what the owner sees</a>
+          <button type="button" class="linkish" id="again">Plan another visit</button>
+        </div>
       </aside>
     </div>
   </div>
@@ -324,10 +348,11 @@ footer .wrap{border-top:1px solid rgba(255,255,255,.12);padding-top:26px;display
   </div>
 </section>
 </main>
-<footer><div class="wrap"><span>Marick Beach Resort · Luyang, Carmen, Cebu</span><span>DOT Region 7 accredited</span></div></footer>
+<footer><div class="wrap"><span>Marick Beach Resort · Luyang, Carmen, Cebu</span><span>DOT Region 7 accredited · <a href="owner/">Owner dashboard</a></span></div></footer>
 <div class="mbar"><a class="btn btn-ghost" href="tel:+639055470939"><i class="ph-bold ph-phone"></i>Call</a><a class="btn btn-sun" href="#plan"><i class="ph-bold ph-calculator"></i>Plan your visit</a></div>
 
 <script src="tsk.js"></script>
+<script src="desk.js"></script>
 <script>
 (() => {
   const PHONE = '+639055470939', FB = 'https://m.me/100069793910101';
@@ -405,8 +430,17 @@ footer .wrap{border-top:1px solid rgba(255,255,255,.12);padding-top:26px;display
     if (!v) $('#nm').closest('.card').scrollIntoView({ behavior: 'smooth', block: 'end' });
     return v;
   }
-  $('#sendFb').onclick = () => ok() && TSK.copyOpen(FB, msg());
-  $('#sendSms').onclick = () => ok() && TSK.sms(PHONE, msg());
+  // every request is also recorded for the owner dashboard, with where the guest came from
+  function record(channel) {
+    const c = calc();
+    const bk = TSKDesk.add('marick', 'MBR', { type: S.mode === 'day' ? 'Day trip' : 'Overnight', date: TSKDesk.ymd(S.date), adults: S.adults, kids: S.kids, rooms: S.mode === 'night' ? S.rooms : 0, nights: S.mode === 'night' ? S.nights : 0, birthday: $('#bday').checked, cottage: $('#cottage').checked, total: c.total, name: $('#nm').value.trim(), mobile: $('#mb').value.trim(), channel });
+    $('#sentRef').textContent = bk.id; $('#sent').hidden = false;
+    return [bk.id].concat(msg());
+  }
+  $('#sendFb').onclick = () => { if (ok()) { const L = record('Messenger'); TSK.copyOpen(FB, ['Booking ' + L[0]].concat(L.slice(1))); } };
+  $('#sendSms').onclick = () => { if (ok()) { const L = record('Text'); TSK.sms(PHONE, ['Booking ' + L[0]].concat(L.slice(1))); } };
+  $('#again').onclick = () => { $('#sent').hidden = true; };
+  TSKDesk.visit('marick');
   $('#groupBtn').onclick = () => TSK.copyOpen(FB, ['Hi Marick Beach Resort! We would like a group quote.', 'Event: (reunion, outing, seminar)', 'Date:', 'Number of guests:', 'Need: function hall / rooms / meals']);
   TSK.reveal();
 })();

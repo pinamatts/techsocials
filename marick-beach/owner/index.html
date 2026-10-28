@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Front desk · Marick Beach Resort</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+:root{--bg:#f2f7f8;--paper:#fff;--aqua:#e3f2f4;--tx:#10323b;--mute:#4f6b72;--line:#d6e5e8;--sun:#d9452a;--ok:#1d8c5a;--r:16px}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--tx);font:400 15px/1.55 "Plus Jakarta Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+button{font:inherit;color:inherit;cursor:pointer}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 18px}
+.demo{background:var(--tx);color:#cfe4e8;font-size:13px;text-align:center;padding:8px 14px}
+.demo b{color:#fff}
+.demo button{background:none;border:0;color:#fff;text-decoration:underline;font-size:13px}
+header{background:var(--paper);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;gap:12px}
+.logo{display:flex;align-items:baseline;gap:10px;text-decoration:none}
+.logo b{font:400 28px/1 "Kaushan Script",cursive;color:var(--sun)}
+.logo span{font-weight:700;font-size:13px;color:var(--mute);letter-spacing:.4px}
+.month{font-weight:600;color:var(--mute);font-size:14px}
+main{padding:22px 0 60px}
+h2{font-size:17px;font-weight:800;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+h2 small{font-weight:600;color:var(--mute);font-size:13px}
+
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.kpi{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px}
+.kpi small{color:var(--mute);font-weight:600;font-size:13px;display:flex;gap:6px;align-items:center}
+.kpi b{display:block;font-size:30px;font-weight:800;letter-spacing:-.8px;margin-top:4px;line-height:1.1}
+.kpi span{font-size:12.5px;color:var(--mute)}
+.kpi.hot{background:var(--tx);border-color:var(--tx);color:#fff}
+.kpi.hot small,.kpi.hot span{color:#a9c7cd}
+@media(max-width:820px){.kpis{grid-template-columns:1fr 1fr}}
+
+.grid{display:grid;grid-template-columns:1.55fr 1fr;gap:18px;margin-top:22px;align-items:start}
+@media(max-width:900px){.grid{grid-template-columns:1fr}}
+.panel{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:18px}
+.tabs{display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap}
+.tabs button{border:1px solid var(--line);background:var(--bg);border-radius:999px;padding:7px 13px;font-weight:600;font-size:13.5px}
+.tabs button[aria-pressed=true]{background:var(--tx);border-color:var(--tx);color:#fff}
+.tabs i{font-style:normal;background:var(--sun);color:#fff;border-radius:999px;padding:0 7px;margin-left:4px;font-size:12px}
+.list{display:grid;gap:10px}
+.bk{border:1px solid var(--line);border-radius:14px;padding:14px;display:grid;gap:8px}
+.bk.live{border-color:var(--sun);box-shadow:0 0 0 3px rgba(217,69,42,.1)}
+.bk .top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.bk .who b{font-size:15.5px}
+.bk .who small{display:block;color:var(--mute);font-size:13px}
+.bk .amt{text-align:right;font-weight:800;font-size:16px;white-space:nowrap}
+.bk .amt small{display:block;font-weight:600;color:var(--mute);font-size:12px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:12px;font-weight:700;border-radius:999px;padding:3px 9px;background:var(--aqua);color:var(--tx)}
+.chip.new{background:#fde7e1;color:var(--sun)}
+.chip.confirmed{background:#e0f3ea;color:var(--ok)}
+.chip.declined{background:#eceff0;color:#6b7b80}
+.chip.sample{background:transparent;border:1px dashed #a9bfc4;color:var(--mute)}
+.acts{display:flex;gap:8px;flex-wrap:wrap}
+.act{border:1px solid var(--line);background:var(--paper);border-radius:10px;padding:8px 12px;font-weight:700;font-size:13.5px;display:inline-flex;gap:6px;align-items:center;text-decoration:none}
+.act.go{background:var(--ok);border-color:var(--ok);color:#fff}
+.act:active{transform:translateY(1px)}
+.empty{color:var(--mute);text-align:center;padding:26px 10px;font-size:14px}
+.empty i{font-size:30px;display:block;margin-bottom:6px}
+
+.src{display:grid;gap:12px}
+.src div{display:grid;grid-template-columns:110px 1fr auto;gap:10px;align-items:center;font-size:13.5px}
+.src .bar{height:10px;border-radius:999px;background:var(--sun);min-width:4px}
+.src .n{font-weight:700;white-space:nowrap}
+.src small{color:var(--mute);font-weight:500}
+.side{display:grid;gap:18px}
+.qrbox{display:flex;gap:16px;align-items:center}
+#qr{background:#fff;padding:8px;border:1px solid var(--line);border-radius:12px;flex:none}
+#qr img,#qr canvas{display:block;width:112px;height:112px}
+.qrbox p{color:var(--mute);font-size:13.5px}
+.links{display:grid;gap:8px;margin-top:14px}
+.links button{display:flex;justify-content:space-between;align-items:center;border:1px solid var(--line);background:var(--bg);border-radius:10px;padding:10px 12px;font-size:13.5px;font-weight:600;text-align:left}
+.links button span{color:var(--mute);font-weight:500;font-size:12.5px}
+.report{background:var(--aqua);border:0}
+.report p{color:var(--mute);font-size:13.5px}
+.report ul{margin:10px 0 0;padding-left:18px;font-size:13.5px}
+.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%) translateY(20px);opacity:0;background:var(--tx);color:#fff;border-radius:12px;padding:12px 16px;font-weight:600;font-size:14px;transition:.3s cubic-bezier(.16,1,.3,1);pointer-events:none}
+.toast.on{opacity:1;transform:translateX(-50%)}
+@media(prefers-reduced-motion:reduce){.toast{transition:none}}
+</style>
+</head>
+<body>
+<div class="demo"><b>Demo of your front desk.</b> Bookings you make on the sample site appear here on this phone. Items marked sample are made up. <button type="button" id="reset">Reset demo</button></div>
+<header><div class="wrap">
+  <a class="logo" href="../"><b>Marick</b><span>FRONT DESK</span></a>
+  <span class="month" id="month"></span>
+</div></header>
+
+<main><div class="wrap">
+  <div class="kpis">
+    <div class="kpi hot"><small><i class="ph-bold ph-bell-ringing"></i>New requests</small><b id="kNew">0</b><span>Waiting for your reply</span></div>
+    <div class="kpi"><small><i class="ph-bold ph-users-three"></i>Guests booked</small><b id="kGuests">0</b><span id="kGuestsSub">This month</span></div>
+    <div class="kpi"><small><i class="ph-bold ph-coins"></i>Booked sales</small><b id="kSales">₱0</b><span>Confirmed, this month</span></div>
+    <div class="kpi"><small><i class="ph-bold ph-piggy-bank"></i>Commission saved</small><b id="kSaved">₱0</b><span>vs a 15% booking-site fee</span></div>
+  </div>
+
+  <div class="grid">
+    <section class="panel">
+      <div class="tabs" role="tablist">
+        <button type="button" data-t="new" aria-pressed="true">New<i id="tNew">0</i></button>
+        <button type="button" data-t="upcoming" aria-pressed="false">Coming up</button>
+        <button type="button" data-t="past" aria-pressed="false">Done</button>
+        <button type="button" data-t="all" aria-pressed="false">All</button>
+      </div>
+      <div class="list" id="list"></div>
+    </section>
+
+    <div class="side">
+      <section class="panel">
+        <h2>Where guests found you <small>this month</small></h2>
+        <div class="src" id="src"></div>
+      </section>
+      <section class="panel">
+        <h2>Bring in more</h2>
+        <div class="qrbox"><div id="qr"></div><p>Print this at the gate, the cottages and the front desk. Every scan lands on your booking page and shows up above as QR.</p></div>
+        <div class="links">
+          <button type="button" data-copy="fb">Link for Facebook posts <span>Copy</span></button>
+          <button type="button" data-copy="ig">Link for your Instagram bio <span>Copy</span></button>
+          <button type="button" data-copy="google">Link for your Google profile <span>Copy</span></button>
+        </div>
+      </section>
+      <section class="panel report">
+        <h2>Your monthly report</h2>
+        <p>On the 1st of each month, TechSocials sends you one page:</p>
+        <ul><li>Visits and where they came from</li><li>Booking requests, confirmed sales, no-shows</li><li>New Google reviews and your rating</li><li>One thing to try next month</li></ul>
+      </section>
+    </div>
+  </div>
+</div></main>
+<div class="toast" id="toast"></div>
+
+<script src="../desk.js"></script>
+<script>
+(() => {
+  const SITE = 'marick', NAME = 'Marick Beach Resort', OTA_RATE = 2600, FEE = 0.15;
+  const REVIEW = 'https://www.google.com/maps/search/?api=1&query=Marick+Beach+Resort+Carmen+Cebu';
+  const BASE = location.href.replace(/owner\/.*$/, '');
+  const $ = s => document.querySelector(s);
+  const peso = n => '₱' + Math.round(n).toLocaleString('en-PH');
+  const MN = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'], DN = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  const now = new Date(), iso = d => TSKDesk.ymd(d), addD = n => { const d = new Date(now); d.setDate(d.getDate() + n); return iso(d); };
+  const fmtD = s => { const d = new Date(s + 'T00:00'); return DN[d.getDay()] + ', ' + MN[d.getMonth()] + ' ' + d.getDate(); };
+  $('#month').textContent = MN[now.getMonth()] + ' ' + now.getFullYear();
+
+  // made-up bookings so the desk never looks empty in a demo
+  const SAMPLE = [
+    { id: 'MBR-1036', name: 'Rhea V.', mobile: '0917 555 0142', type: 'Overnight', date: addD(3), adults: 4, kids: 2, rooms: 2, nights: 1, total: 3600, source: 'Facebook', channel: 'Messenger', status: 'new' },
+    { id: 'MBR-1035', name: 'Jun A.', mobile: '0928 555 0197', type: 'Day trip', date: addD(4), adults: 12, kids: 6, total: 1800, source: 'Google', channel: 'Text', status: 'new', birthday: true },
+    { id: 'MBR-1034', name: 'Ma. Cristina L.', mobile: '0905 555 0110', type: 'Overnight', date: addD(9), adults: 2, kids: 1, rooms: 1, nights: 2, total: 3600, source: 'QR at the gate', channel: 'Messenger', status: 'confirmed' },
+    { id: 'MBR-1033', name: 'Dennis Y.', mobile: '0918 555 0163', type: 'Day trip', date: addD(5), adults: 6, kids: 4, total: 800, source: 'Facebook', channel: 'Messenger', status: 'confirmed', cottage: true },
+    { id: 'MBR-1032', name: 'Grace T.', mobile: '0966 555 0121', type: 'Overnight', date: addD(-2), adults: 6, kids: 3, rooms: 3, nights: 1, total: 5400, source: 'Google', channel: 'Text', status: 'confirmed' },
+    { id: 'MBR-1031', name: 'Ramil C.', mobile: '0927 555 0188', type: 'Day trip', date: addD(-4), adults: 20, kids: 8, total: 2400, source: 'Instagram', channel: 'Messenger', status: 'confirmed' },
+    { id: 'MBR-1030', name: 'Joy P.', mobile: '0915 555 0134', type: 'Overnight', date: addD(-6), adults: 2, kids: 0, rooms: 1, nights: 1, total: 1800, source: 'Direct', channel: 'Text', status: 'declined' }
+  ].map(b => Object.assign({ sample: true }, b));
+  const SAMPLE_VISITS = { Facebook: 241, Google: 182, 'QR at the gate': 54, Instagram: 37, Direct: 66 };
+
+  let TAB = 'new';
+  const all = () => TSKDesk.list(SITE).concat(SAMPLE);
+  const guests = b => (b.adults || 0) + (b.kids || 0);
+  const saved = b => b.type === 'Overnight' ? (b.rooms || 0) * (b.nights || 0) * OTA_RATE * FEE : 0;
+  const thisMonth = b => { const d = new Date(b.date + 'T00:00'); return d.getMonth() === now.getMonth() || Math.abs(d - now) < 20 * 864e5; };
+
+  function toast(t) { const el = $('#toast'); el.textContent = t; el.classList.add('on'); clearTimeout(el._t); el._t = setTimeout(() => el.classList.remove('on'), 2200); }
+  const sms = (to, text) => 'sms:' + to.replace(/\s/g, '') + '?&body=' + encodeURIComponent(text);
+
+  function card(b) {
+    const past = b.date < iso(now), party = `${b.adults} adult${b.adults === 1 ? '' : 's'}${b.kids ? ', ' + b.kids + ' kid' + (b.kids === 1 ? '' : 's') : ''}`;
+    const what = b.type === 'Overnight' ? `${b.rooms} room${b.rooms === 1 ? '' : 's'}, ${b.nights} night${b.nights === 1 ? '' : 's'}` : 'Day trip';
+    const first = b.name.split(' ')[0];
+    const confirmTxt = `Hi ${first}! This is ${NAME}. Your ${b.type.toLowerCase()} on ${fmtD(b.date)} for ${guests(b)} is confirmed (${b.id}). See you! Reply here if plans change.`;
+    const fullTxt = `Hi ${first}! This is ${NAME}. Sorry, we're fully booked on ${fmtD(b.date)}. Can we offer you another date? Reply with what works and we'll hold it for you.`;
+    const reviewTxt = `Hi ${first}! Thank you for staying with ${NAME}. If you enjoyed it, a quick Google review helps other families find us: ${REVIEW}`;
+    let acts = '';
+    if (b.status === 'new') acts = `<a class="act go" href="${sms(b.mobile, confirmTxt)}" data-set="confirmed" data-id="${b.id}"><i class="ph-bold ph-check"></i>Confirm</a><a class="act" href="${sms(b.mobile, fullTxt)}" data-set="declined" data-id="${b.id}"><i class="ph-bold ph-calendar-x"></i>Offer another date</a>`;
+    else if (b.status === 'confirmed' && past) acts = `<a class="act" href="${sms(b.mobile, reviewTxt)}" data-toast="Review request ready to send"><i class="ph-bold ph-star"></i>Ask for a Google review</a>`;
+    acts += `<a class="act" href="tel:${b.mobile.replace(/\s/g, '')}"><i class="ph-bold ph-phone"></i>Call</a>`;
+    return `<article class="bk${b.live ? ' live' : ''}">
+      <div class="top"><div class="who"><b>${b.name}</b><small>${b.id} · ${fmtD(b.date)} · ${what}</small><small>${party}</small></div>
+      <div class="amt">${peso(b.total)}${b.type === 'Overnight' ? '+' : ''}<small>${b.status === 'confirmed' ? 'booked' : 'estimate'}</small></div></div>
+      <div class="chips"><span class="chip ${b.status}">${b.status === 'new' ? 'New' : b.status === 'confirmed' ? 'Confirmed' : 'Not available'}</span><span class="chip">${b.source}</span><span class="chip">via ${b.channel}</span>${b.birthday ? '<span class="chip">Birthday</span>' : ''}${b.cottage ? '<span class="chip">Cottage</span>' : ''}${b.sample ? '<span class="chip sample">sample</span>' : ''}</div>
+      <div class="acts">${acts}</div></article>`;
+  }
+
+  function render() {
+    const A = all(), d = iso(now);
+    const pick = { new: A.filter(b => b.status === 'new'), upcoming: A.filter(b => b.status === 'confirmed' && b.date >= d).sort((a, b) => a.date.localeCompare(b.date)), past: A.filter(b => b.date < d && b.status !== 'new'), all: A }[TAB];
+    $('#list').innerHTML = pick.length ? pick.map(card).join('') : '<div class="empty"><i class="ph ph-tray"></i>Nothing here yet. New booking requests from your website show up here.</div>';
+    const M = A.filter(thisMonth), C = M.filter(b => b.status === 'confirmed');
+    $('#kNew').textContent = A.filter(b => b.status === 'new').length; $('#tNew').textContent = $('#kNew').textContent;
+    $('#kGuests').textContent = C.reduce((s, b) => s + guests(b), 0);
+    $('#kSales').textContent = peso(C.reduce((s, b) => s + b.total, 0));
+    $('#kSaved').textContent = peso(C.reduce((s, b) => s + saved(b), 0));
+
+    const V = Object.assign({}, SAMPLE_VISITS); const live = TSKDesk.visits(SITE);
+    Object.values(live).forEach(day => Object.entries(day).forEach(([k, n]) => V[k] = (V[k] || 0) + n));
+    const B = {}; M.forEach(b => B[b.source] = (B[b.source] || 0) + 1);
+    const max = Math.max(...Object.values(V));
+    $('#src').innerHTML = Object.entries(V).sort((a, b) => b[1] - a[1]).map(([k, n]) => `<div><span>${k}</span><span class="bar" style="width:${Math.max(4, n / max * 100)}%"></span><span class="n">${n} <small>visits · ${B[k] || 0} booked</small></span></div>`).join('');
+  }
+
+  document.querySelectorAll('.tabs button').forEach(b => b.onclick = () => { document.querySelectorAll('.tabs button').forEach(x => x.setAttribute('aria-pressed', 'false')); b.setAttribute('aria-pressed', 'true'); TAB = b.dataset.t; render(); });
+  $('#list').addEventListener('click', e => {
+    const a = e.target.closest('a'); if (!a) return;
+    if (a.dataset.set) { const id = a.dataset.id; if (!TSKDesk.update(SITE, id, { status: a.dataset.set })) { const s = SAMPLE.find(x => x.id === id); if (s) s.status = a.dataset.set; } setTimeout(render, 300); toast(a.dataset.set === 'confirmed' ? 'Confirmed. Your text to the guest is ready to send.' : 'Marked not available. Your text is ready to send.'); }
+    if (a.dataset.toast) toast(a.dataset.toast);
+  });
+  document.querySelectorAll('[data-copy]').forEach(b => b.onclick = async () => { const u = BASE + '?src=' + b.dataset.copy; try { await navigator.clipboard.writeText(u); } catch (e) {} toast('Copied: ' + u.replace(/^https?:\/\//, '')); });
+  $('#reset').onclick = () => { TSKDesk.clear(SITE); render(); toast('Demo reset'); };
+  try { new QRCode($('#qr'), { text: BASE + '?src=qr', width: 224, height: 224, colorDark: '#10323b', colorLight: '#ffffff' }); } catch (e) { $('#qr').hidden = true; }
+  render();
+})();
+</script>
+</body>
+</html>
