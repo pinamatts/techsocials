@@ -10,7 +10,7 @@
   // where this visitor came from: ?src= tag first (QR codes, ads, FB posts), then the referrer
   function source() {
     const q = new URLSearchParams(location.search).get('src');
-    if (q) return ({ fb: 'Facebook', ig: 'Instagram', google: 'Google', qr: 'QR at the gate', tiktok: 'TikTok' })[q] || q;
+    if (q) return ({ fb: 'Facebook', ig: 'Instagram', google: 'Google', qr: w.TSK_QR || 'QR at the gate', tiktok: 'TikTok' })[q] || q;
     const r = document.referrer;
     if (/google\./.test(r)) return 'Google';
     if (/facebook\.|fb\.|messenger\./.test(r)) return 'Facebook';

@@ -13,7 +13,10 @@
 <style>
 :root{--bg:#f5f9fa;--paper:#fff;--aqua:#e3f2f4;--aqua2:#cfe8ec;--tx:#10323b;--mute:#4f6b72;--line:#d6e5e8;--sun:#d9452a;--sun2:#c23a21;--r:18px}
 *{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;accent-color:var(--sun);scrollbar-color:var(--aqua2) var(--bg)}
+::selection{background:var(--sun);color:#fff}
+input,textarea{caret-color:var(--sun)}
+a{text-underline-offset:3px}
 body{background:var(--bg);color:var(--tx);font:400 16px/1.6 "Plus Jakarta Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{display:block;max-width:100%}
 a{color:inherit}
@@ -97,7 +100,7 @@ h2{font-weight:800;font-size:clamp(30px,3.4vw,44px);letter-spacing:-1px;line-hei
 .field label{font-weight:600;font-size:14.5px}
 input[type=text],input[type=tel],input[type=email],select{width:100%;border:1px solid #b9ced3;border-radius:12px;padding:12px 14px;font:inherit;font-size:15px;background:var(--paper);color:var(--tx)}
 input::placeholder{color:#6e878d}
-input:focus,select:focus,button:focus-visible{outline:2px solid var(--sun);outline-offset:2px}
+input:focus,select:focus,button:focus-visible,a:focus-visible{outline:2px solid var(--sun);outline-offset:2px}
 .row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .err{color:#b3261e;font-size:13px;min-height:16px}
 .receipt{position:sticky;top:96px;background:var(--tx);color:#e8f3f5;border-radius:var(--r);padding:28px;overflow:hidden}

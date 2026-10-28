@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Front desk · Scape Skydeck</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+:root{--bg:#0d0d0e;--paper:#141416;--soft:#1c1c1f;--tx:#f2f0ed;--mute:#a7a39d;--line:rgba(255,255,255,.09);--line2:rgba(255,255,255,.18);--acc:#ee7a32;--onacc:#1b0d04;--accglow:rgba(238,122,50,.16);--ok:#ee7a32;--onok:#1b0d04;--okbg:rgba(79,195,138,.14);--oktx:#7ad7a6;--newbg:rgba(238,122,50,.16);--newtx:#f39257;--hot:#ee7a32;--hottx:#1b0d04;--hotmute:#4a2510;--r:16px;color-scheme:dark}
+*{box-sizing:border-box;margin:0}
+html{scrollbar-color:var(--line2) var(--bg);accent-color:var(--acc)}
+body{background:var(--bg);color:var(--tx);font:400 15px/1.55 Outfit,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+::selection{background:var(--acc);color:var(--onacc)}
+button{font:inherit;color:inherit;cursor:pointer}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--acc);outline-offset:2px;border-radius:8px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 18px}
+.demo{background:var(--hot);color:var(--hotmute);font-size:13px;text-align:center;padding:8px 14px}
+.demo b{color:var(--hottx)}
+.demo button{background:none;border:0;color:var(--hottx);text-decoration:underline;text-underline-offset:3px;font-size:13px}
+header{background:var(--paper);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo .tag{font-weight:700;font-size:12px;color:var(--mute);letter-spacing:.6px;border-left:1px solid var(--line2);padding-left:10px}
+.logo svg{width:92px;height:auto;overflow:visible}.logo .word{font:200 40px/1 Outfit;letter-spacing:-.5px;fill:var(--tx)}.logo .deck{font:500 9.5px/1 Outfit;letter-spacing:2.6px;fill:var(--tx)}
+.month{font-weight:600;color:var(--mute);font-size:14px}
+main{padding:22px 0 60px}
+h2{font-size:17px;font-weight:700;margin-bottom:12px;display:flex;align-items:baseline;gap:8px}
+h2 small{font-weight:500;color:var(--mute);font-size:13px}
+
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.kpi{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px}
+.kpi small{color:var(--mute);font-weight:600;font-size:13px;display:flex;gap:6px;align-items:center}
+.kpi b{display:block;font-size:30px;font-weight:700;letter-spacing:-.6px;margin-top:4px;line-height:1.1;font-variant-numeric:tabular-nums}
+.kpi span{font-size:12.5px;color:var(--mute)}
+.kpi.hot{background:var(--hot);border-color:var(--hot);color:var(--hottx)}
+.kpi.hot small,.kpi.hot span{color:var(--hotmute)}
+@media(max-width:820px){.kpis{grid-template-columns:1fr 1fr}}
+
+.grid{display:grid;grid-template-columns:1.55fr 1fr;gap:18px;margin-top:22px;align-items:start}
+@media(max-width:900px){.grid{grid-template-columns:1fr}}
+.panel{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:18px}
+.tabs{display:flex;gap:6px;margin-bottom:14px;overflow-x:auto;scrollbar-width:none}.tabs::-webkit-scrollbar{display:none}
+.tabs button{flex:none}
+.tabs button{border:1px solid var(--line);background:var(--soft);border-radius:999px;padding:7px 13px;font-weight:600;font-size:13.5px}
+.tabs button[aria-pressed=true]{background:var(--tx);border-color:var(--tx);color:var(--bg)}
+.tabs i{font-style:normal;background:var(--acc);color:var(--onacc);border-radius:999px;padding:0 7px;margin-left:4px;font-size:12px}
+.list{display:grid;gap:10px}
+.bk{border:1px solid var(--line);border-radius:14px;padding:14px;display:grid;gap:8px}
+.bk.live{border-color:var(--acc);box-shadow:0 0 0 3px var(--accglow)}
+.bk .top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.bk .who b{font-size:15.5px}
+.bk .who small{display:block;color:var(--mute);font-size:13px}
+.bk .when{text-align:right;font-weight:700;font-size:16px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.bk .when small{display:block;font-weight:600;color:var(--mute);font-size:12px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:12px;font-weight:700;border-radius:999px;padding:3px 9px;background:var(--soft);color:var(--tx)}
+.chip.new{background:var(--newbg);color:var(--newtx)}
+.chip.confirmed{background:var(--okbg);color:var(--oktx)}
+.chip.declined{background:var(--soft);color:var(--mute)}
+.chip.sample{background:transparent;border:1px dashed var(--line2);color:var(--mute)}
+.acts{display:flex;gap:8px;flex-wrap:wrap}
+.act{border:1px solid var(--line2);background:var(--paper);border-radius:10px;padding:8px 12px;font-weight:700;font-size:13.5px;display:inline-flex;gap:6px;align-items:center;text-decoration:none}
+.act.go{background:var(--ok);border-color:var(--ok);color:var(--onok)}
+.act:active{transform:translateY(1px)}
+.empty{color:var(--mute);text-align:center;padding:26px 10px;font-size:14px}
+.empty i{font-size:30px;display:block;margin-bottom:6px}
+
+.src{display:grid;gap:12px}
+.src div{display:grid;grid-template-columns:118px 1fr auto;gap:10px;align-items:center;font-size:13.5px}
+.src .bar{height:10px;border-radius:999px;background:var(--acc);min-width:4px}
+.src .n{font-weight:700;white-space:nowrap;font-variant-numeric:tabular-nums}
+.src small{color:var(--mute);font-weight:500}
+.side{display:grid;gap:18px}
+.qrbox{display:flex;gap:16px;align-items:center}
+#qr{background:#fff;padding:8px;border:1px solid var(--line);border-radius:12px;flex:none}
+#qr img,#qr canvas{display:block;width:112px;height:112px}
+.qrbox p{color:var(--mute);font-size:13.5px}
+.links{display:grid;gap:8px;margin-top:14px}
+.links button{display:flex;justify-content:space-between;align-items:center;border:1px solid var(--line);background:var(--soft);border-radius:10px;padding:10px 12px;font-size:13.5px;font-weight:600;text-align:left}
+.links button span{color:var(--mute);font-weight:500;font-size:12.5px}
+.report{background:var(--soft)}
+.report p{color:var(--mute);font-size:13.5px}
+.report ul{margin:10px 0 0;padding-left:18px;font-size:13.5px}
+.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%) translateY(20px);opacity:0;background:var(--tx);color:var(--bg);border-radius:12px;padding:12px 16px;font-weight:600;font-size:14px;transition:.3s cubic-bezier(.16,1,.3,1);pointer-events:none;max-width:calc(100vw - 32px)}
+.toast.on{opacity:1;transform:translateX(-50%)}
+@media(prefers-reduced-motion:reduce){.toast{transition:none}}
+</style>
+</head>
+<body>
+<div class="demo"><b>Demo of your front desk.</b> Reservations you make on the sample site appear here on this phone. Items marked sample are made up. <button type="button" id="reset">Reset demo</button></div>
+<header><div class="wrap">
+  <a class="logo" href="../"><svg viewBox="0 0 120 56" aria-hidden="true"><path d="M14 9 C 38 0, 58 15, 80 9 S 108 3, 116 6" fill="none" stroke="var(--acc)" stroke-width="2.6" stroke-linecap="round"/><text class="word" x="2" y="38">Scape</text><rect x="4" y="43" width="69" height="11" fill="#5b5b5e"/><text class="deck" x="8" y="52">SKYDECK</text></svg><span class="tag">FRONT DESK</span></a>
+  <span class="month" id="month"></span>
+</div></header>
+
+<main><div class="wrap">
+  <div class="kpis">
+    <div class="kpi hot"><small><i class="ph-bold ph-bell-ringing"></i>New requests</small><b id="kNew">0</b><span>Waiting for your reply</span></div>
+    <div class="kpi"><small><i class="ph-bold ph-fork-knife"></i>Tonight</small><b id="kToday">0</b><span id="kTodaySub">tables, 0 guests</span></div>
+    <div class="kpi"><small><i class="ph-bold ph-users-three"></i>Guests booked</small><b id="kGuests">0</b><span>Confirmed, this month</span></div>
+    <div class="kpi"><small><i class="ph-bold ph-confetti"></i>Celebrations</small><b id="k4">0</b><span>Special occasions, this month</span></div>
+  </div>
+
+  <div class="grid">
+    <section class="panel">
+      <div class="tabs" role="group" aria-label="Show reservations">
+        <button type="button" data-t="new" aria-pressed="true">New<i id="tNew">0</i></button>
+        <button type="button" data-t="upcoming" aria-pressed="false">Coming up</button>
+        <button type="button" data-t="past" aria-pressed="false">Done</button>
+        <button type="button" data-t="all" aria-pressed="false">All</button>
+      </div>
+      <div class="list" id="list"></div>
+    </section>
+
+    <div class="side">
+      <section class="panel">
+        <h2>Where guests found you <small>this month</small></h2>
+        <div class="src" id="src"></div>
+      </section>
+      <section class="panel">
+        <h2>Bring in more</h2>
+        <div class="qrbox"><div id="qr"></div><p>Print this for the tables, the lift lobby and your receipts. Every scan lands on your booking page and shows up above as QR.</p></div>
+        <div class="links">
+          <button type="button" data-copy="fb">Link for Facebook posts <span>Copy</span></button>
+          <button type="button" data-copy="ig">Link for your Instagram bio <span>Copy</span></button>
+          <button type="button" data-copy="google">Link for your Google profile <span>Copy</span></button>
+        </div>
+      </section>
+      <section class="panel report">
+        <h2>Your monthly report</h2>
+        <p>On the 1st of each month, TechSocials sends you one page:</p>
+        <ul><li>Visits and where they came from</li><li>Reservations, confirmed tables, no-shows</li><li>New Google reviews and your rating</li><li>One thing to try next month</li></ul>
+      </section>
+    </div>
+  </div>
+</div></main>
+<div class="toast" id="toast" role="status"></div>
+
+<script>window.TSK_QR = "QR on the table";</script>
+<script src="../desk.js"></script>
+<script>
+(() => {
+  const C = {"site": "scape", "name": "Scape Skydeck", "reply": "sms", "k4": "occasion", "qrInk": "#0d0d0e", "review": "https://www.google.com/maps/search/?api=1&query=Scape+Skydeck+Azon+Residences+Lapu-Lapu", "visits": {"Facebook": 312, "Google": 205, "Instagram": 88, "QR on the table": 41, "Direct": 74}, "sample": [{"id": "SSD-1036", "name": "Carla M.", "mobile": "0917 555 0142", "day": 0, "time": "5 pm", "pax": 2, "seat": "Al fresco deck", "occasion": "Anniversary", "source": "Instagram", "channel": "Text", "status": "new", "notes": "Window seat if possible"}, {"id": "SSD-1035", "name": "Paolo R.", "mobile": "0928 555 0197", "day": 2, "time": "7 pm", "pax": 14, "seat": "Group table", "occasion": "Company dinner", "source": "Facebook", "channel": "Messenger", "status": "new"}, {"id": "SSD-1034", "name": "Lea S.", "mobile": "0905 555 0110", "day": 0, "time": "5:30 pm", "pax": 4, "seat": "Al fresco deck", "occasion": "Birthday", "source": "Google", "channel": "Text", "status": "confirmed", "notes": "Bringing a cake"}, {"id": "SSD-1033", "name": "Mark T.", "mobile": "0918 555 0163", "day": 0, "time": "7:30 pm", "pax": 3, "seat": "Air-con dining room", "occasion": "Just dinner", "source": "QR on the table", "channel": "Text", "status": "confirmed"}, {"id": "SSD-1032", "name": "Andrea G.", "mobile": "0966 555 0121", "day": 1, "time": "6 pm", "pax": 2, "seat": "Al fresco deck", "occasion": "Proposal", "source": "Facebook", "channel": "Messenger", "status": "confirmed", "notes": "Please keep it a surprise"}, {"id": "SSD-1031", "name": "Kevin L.", "mobile": "0927 555 0188", "day": -2, "time": "6:30 pm", "pax": 6, "seat": "Air-con dining room", "occasion": "Birthday", "source": "Google", "channel": "Text", "status": "confirmed"}, {"id": "SSD-1030", "name": "Nica B.", "mobile": "0915 555 0134", "day": -3, "time": "5 pm", "pax": 2, "seat": "Al fresco deck", "occasion": "Date night", "source": "Facebook", "channel": "Text", "status": "confirmed"}]};
+  const $ = s => document.querySelector(s);
+  const BASE = location.href.replace(/owner\/.*$/, '');
+  const MN = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'], DN = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  const now = new Date(), iso = d => TSKDesk.ymd(d), addD = n => { const d = new Date(now); d.setDate(d.getDate() + n); return iso(d); };
+  const TODAY = iso(now), TOMORROW = addD(1);
+  const fmtD = s => { const d = new Date(s + 'T00:00'); return DN[d.getDay()] + ', ' + MN[d.getMonth()] + ' ' + d.getDate(); };
+  $('#month').textContent = MN[now.getMonth()] + ' ' + now.getFullYear();
+
+  // made-up reservations so the desk never looks empty in a demo
+  const SAMPLE = C.sample.map(b => Object.assign({ sample: true, notes: '' }, b, { date: addD(b.day) }));
+  let TAB = 'new';
+  const all = () => TSKDesk.list(C.site).concat(SAMPLE);
+  const thisMonth = b => { const d = new Date(b.date + 'T00:00'); return d.getMonth() === now.getMonth() || Math.abs(d - now) < 20 * 864e5; };
+  const isK4 = b => C.k4 === 'lang' ? b.lang === 'ja' : b.occasion && !/^just/i.test(b.occasion);
+
+  function toast(t) { const el = $('#toast'); el.textContent = t; el.classList.add('on'); clearTimeout(el._t); el._t = setTimeout(() => el.classList.remove('on'), 2400); }
+  // reply on the channel the restaurant already uses: text, or WhatsApp
+  const intl = m => { let d = m.replace(/\D/g, ''); if (d.startsWith('0')) d = '63' + d.slice(1); return d; };
+  const reply = (m, text) => C.reply === 'wa' ? 'https://wa.me/' + intl(m) + '?text=' + encodeURIComponent(text) : 'sms:' + m.replace(/[^\d+]/g, '') + '?&body=' + encodeURIComponent(text);
+  const tgt = C.reply === 'wa' ? ' target="_blank" rel="noopener"' : '';
+
+  function card(b) {
+    const first = b.name.split(' ')[0] + (b.lang === 'ja' ? '-san' : ''), hi = b.lang === 'ja' ? 'ご予約ありがとうございます。\n' : '';
+    const party = b.pax + (b.pax === 1 ? ' guest' : ' guests');
+    const when = b.date === TODAY ? 'tonight' : b.date === TOMORROW ? 'tomorrow' : 'on ' + fmtD(b.date);
+    const T = {
+      confirm: `${hi}Hi ${first}! This is ${C.name}. Your table for ${b.pax} on ${fmtD(b.date)} at ${b.time} is confirmed (${b.id}), ${b.seat.toLowerCase()}. See you! Reply here if plans change.`,
+      offer: `${hi}Hi ${first}! This is ${C.name}. Sorry, ${b.time} on ${fmtD(b.date)} is fully booked. Can we offer you another time? Reply with what works and we'll hold it for you.`,
+      remind: `${hi}Hi ${first}! A reminder from ${C.name}: your table for ${b.pax} is ${when} at ${b.time} (${b.id}). Reply here if you need to change it.`,
+      review: `Hi ${first}! Thank you for dining at ${C.name}. If you enjoyed it, a quick Google review helps other guests find us: ${C.review}`
+    };
+    const a = (k, icon, label, extra) => `<a class="act${k === 'confirm' ? ' go' : ''}" href="${reply(b.mobile, T[k])}"${tgt} ${extra || ''}><i class="ph-bold ${icon}"></i>${label}</a>`;
+    let acts = '';
+    if (b.status === 'new') acts = a('confirm', 'ph-check', 'Confirm', `data-set="confirmed" data-id="${b.id}"`) + a('offer', 'ph-clock-counter-clockwise', 'Offer another time', `data-set="declined" data-id="${b.id}"`);
+    else if (b.status === 'confirmed' && (b.date === TODAY || b.date === TOMORROW)) acts = a('remind', 'ph-alarm', 'Send reminder', 'data-toast="Reminder ready to send"');
+    else if (b.status === 'confirmed' && b.date < TODAY) acts = a('review', 'ph-star', 'Ask for a Google review', 'data-toast="Review request ready to send"');
+    acts += `<a class="act" href="tel:${b.mobile.replace(/[^\d+]/g, '')}"><i class="ph-bold ph-phone"></i>Call</a>`;
+    const extra = [b.occasion && !/^just/i.test(b.occasion) ? b.occasion : '', b.lang === 'ja' ? '日本語 menu' : ''].filter(Boolean);
+    return `<article class="bk${b.live ? ' live' : ''}">
+      <div class="top"><div class="who"><b>${b.name}</b><small>${b.id} · ${party} · ${b.seat}</small>${b.notes ? `<small>${b.notes}</small>` : ''}</div>
+      <div class="when">${b.time}<small>${b.date === TODAY ? 'Today' : b.date === TOMORROW ? 'Tomorrow' : fmtD(b.date)}</small></div></div>
+      <div class="chips"><span class="chip ${b.status}">${b.status === 'new' ? 'New' : b.status === 'confirmed' ? 'Confirmed' : 'Offered another time'}</span><span class="chip">${b.source}</span><span class="chip">via ${b.channel}</span>${extra.map(x => `<span class="chip">${x}</span>`).join('')}${b.sample ? '<span class="chip sample">sample</span>' : ''}</div>
+      <div class="acts">${acts}</div></article>`;
+  }
+
+  const mins = t => { const [hm, ap] = t.split(' '); const [h, m] = hm.split(':').map(Number); return (h % 12 + (ap === 'pm' ? 12 : 0)) * 60 + (m || 0); };
+  const byWhen = (a, b) => a.date.localeCompare(b.date) || mins(a.time) - mins(b.time);
+
+  function render() {
+    const A = all();
+    const pick = { new: A.filter(b => b.status === 'new').sort(byWhen), upcoming: A.filter(b => b.status === 'confirmed' && b.date >= TODAY).sort(byWhen), past: A.filter(b => b.date < TODAY && b.status !== 'new').sort(byWhen).reverse(), all: A.slice().sort(byWhen) }[TAB];
+    $('#list').innerHTML = pick.length ? pick.map(card).join('') : '<div class="empty"><i class="ph ph-tray"></i>Nothing here yet. New reservations from your website show up here.</div>';
+    const M = A.filter(thisMonth), OK = M.filter(b => b.status === 'confirmed'), T = A.filter(b => b.status === 'confirmed' && b.date === TODAY);
+    $('#kNew').textContent = A.filter(b => b.status === 'new').length; $('#tNew').textContent = $('#kNew').textContent;
+    $('#kToday').textContent = T.length; $('#kTodaySub').textContent = (T.length === 1 ? 'table, ' : 'tables, ') + T.reduce((s, b) => s + b.pax, 0) + ' guests';
+    $('#kGuests').textContent = OK.reduce((s, b) => s + b.pax, 0);
+    $('#k4').textContent = M.filter(b => b.status !== 'declined' && isK4(b)).length;
+
+    const V = Object.assign({}, C.visits); const live = TSKDesk.visits(C.site);
+    Object.values(live).forEach(day => Object.entries(day).forEach(([k, n]) => V[k] = (V[k] || 0) + n));
+    const B = {}; M.forEach(b => B[b.source] = (B[b.source] || 0) + 1);
+    const max = Math.max(...Object.values(V));
+    $('#src').innerHTML = Object.entries(V).sort((a, b) => b[1] - a[1]).map(([k, n]) => `<div><span>${k}</span><span class="bar" style="width:${Math.max(4, n / max * 100)}%"></span><span class="n">${n} <small>visits · ${B[k] || 0} booked</small></span></div>`).join('');
+  }
+
+  document.querySelectorAll('.tabs button').forEach(b => b.onclick = () => { document.querySelectorAll('.tabs button').forEach(x => x.setAttribute('aria-pressed', 'false')); b.setAttribute('aria-pressed', 'true'); TAB = b.dataset.t; render(); });
+  $('#list').addEventListener('click', e => {
+    const a = e.target.closest('a'); if (!a) return;
+    if (a.dataset.set) { const id = a.dataset.id; if (!TSKDesk.update(C.site, id, { status: a.dataset.set })) { const s = SAMPLE.find(x => x.id === id); if (s) s.status = a.dataset.set; } setTimeout(render, 300); toast(a.dataset.set === 'confirmed' ? 'Confirmed. Your message to the guest is ready to send.' : 'Another time offered. Your message is ready to send.'); }
+    if (a.dataset.toast) toast(a.dataset.toast);
+  });
+  document.querySelectorAll('[data-copy]').forEach(b => b.onclick = async () => { const u = BASE + '?src=' + b.dataset.copy; try { await navigator.clipboard.writeText(u); } catch (e) {} toast('Copied: ' + u.replace(/^https?:\/\//, '')); });
+  $('#reset').onclick = () => { TSKDesk.clear(C.site); render(); toast('Demo reset'); };
+  try { new QRCode($('#qr'), { text: BASE + '?src=qr', width: 224, height: 224, colorDark: C.qrInk, colorLight: '#ffffff' }); } catch (e) { $('#qr').hidden = true; }
+  render();
+})();
+</script>
+</body>
+</html>

@@ -10,10 +10,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
 <link rel="preload" as="image" href="img/hero.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","name":"Buko Seaside Bar and Restaurant","image":"img/hero.jpg","telephone":"+639171405696","servesCuisine":["Asian fusion","Seafood"],"acceptsReservations":"True","address":{"@type":"PostalAddress","streetAddress":"Kontiki, Datag, Maribago","addressLocality":"Lapu-Lapu City","addressRegion":"Cebu","addressCountry":"PH"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"11:00","closes":"22:00"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"2953"},"sameAs":["https://www.instagram.com/buko_seaside/","https://www.facebook.com/profile.php?id=100088681936244"]}</script>
 <style>
 :root{--blush:#f8ebe3;--blush2:#f2ddd1;--paper:#fffaf6;--navy:#16244a;--mute:#5a6282;--line:#ead6ca;--blue:#1f5fd0;--blue2:#184fb0;--r:22px}
 *{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;accent-color:var(--blue);scrollbar-color:var(--line) var(--paper)}
+::selection{background:var(--blue);color:#fff}
+input{caret-color:var(--blue)}
+a{text-underline-offset:3px}
 body{background:var(--paper);color:var(--navy);font:400 16px/1.65 Manrope,"Noto Sans JP",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 html[lang=ja] body{font-family:"Noto Sans JP",Manrope,sans-serif;line-height:1.8}
 img{display:block;max-width:100%}
@@ -35,7 +39,7 @@ nav a{text-decoration:none;color:var(--mute);font-weight:500;font-size:15px}
 nav a:hover{color:var(--navy)}
 .hright{display:flex;align-items:center;gap:10px}
 .lang{display:flex;border:1px solid var(--line);border-radius:999px;padding:3px;background:var(--paper)}
-.lang button{border:0;background:transparent;border-radius:999px;padding:7px 12px;font-size:13.5px;font-weight:600;color:var(--mute)}
+.lang button{white-space:nowrap;border:0;background:transparent;border-radius:999px;padding:7px 12px;font-size:13.5px;font-weight:600;color:var(--mute)}
 .lang button[aria-pressed=true]{background:var(--navy);color:#fff}
 .btn{display:inline-flex;align-items:center;gap:9px;border:0;border-radius:999px;padding:13px 22px;font-weight:600;font-size:15px;text-decoration:none;white-space:nowrap;transition:transform .2s cubic-bezier(.16,1,.3,1),background .2s}
 .btn:active{transform:translateY(1px) scale(.98)}
@@ -97,11 +101,18 @@ html[lang=ja] h2{font:700 clamp(26px,2.8vw,38px)/1.35 "Noto Sans JP",sans-serif;
 
 /* reserve */
 .res-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.res-grid>*{min-width:0}
 .res-facts{margin-top:30px;display:grid;gap:16px}
 .res-facts div{display:flex;gap:12px;color:var(--mute);font-size:15px}
 .res-facts i{color:var(--blue);font-size:22px;flex:none}
 .res-facts b{display:block;color:var(--navy)}
-form{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:30px;box-shadow:0 30px 60px -40px rgba(22,36,74,.4)}
+form{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:30px;box-shadow:0 30px 60px -40px rgba(22,36,74,.4)}
+.sent{position:absolute;inset:0;border-radius:var(--r);background:var(--paper);padding:36px;display:flex;flex-direction:column;justify-content:flex-start;padding-top:56px;gap:14px}
+.sent[hidden]{display:none}
+.sent>i{font-size:44px;color:#1d8c4f}
+.sent b{font:600 38px/1 "Cormorant Garamond",serif;letter-spacing:1px}
+.sent p{color:var(--mute);max-width:38ch}
+.sent .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
 .blk{margin-bottom:22px}
 .lab{display:block;font-weight:600;font-size:14.5px;margin-bottom:10px}
 .days{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
@@ -124,7 +135,7 @@ form{background:var(--paper);border:1px solid var(--line);border-radius:var(--r)
 .field label{font-weight:600;font-size:14.5px}
 input,select{width:100%;border:1px solid #d9c0b1;border-radius:12px;padding:12px 14px;font:inherit;font-size:15px;background:#fff;color:var(--navy)}
 input::placeholder{color:#7d7f95}
-input:focus,select:focus,button:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+input:focus,select:focus,button:focus-visible,a:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
 .err{color:#b3261e;font-size:13px;min-height:16px}
 .send{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:20px}
 .send p{color:var(--mute);font-size:14px;max-width:32ch}
@@ -152,6 +163,7 @@ input:focus,select:focus,button:focus-visible{outline:2px solid var(--blue);outl
 @media(max-width:860px){.visit-grid{grid-template-columns:1fr;gap:28px}.visit-grid img{aspect-ratio:4/3}}
 footer{border-top:1px solid var(--line);padding:36px 0 120px;color:var(--mute);font-size:14px}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+footer a{color:var(--mute)}
 .mbar{display:none}
 @media(max-width:940px){.mbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:45;gap:8px;background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:7px;box-shadow:0 14px 34px rgba(22,36,74,.25)}.mbar a{flex:1;justify-content:center}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.reveal{opacity:1;transform:none}}
@@ -246,11 +258,18 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
       </div>
       <div class="blk row2">
         <div class="field"><label for="nm" data-i="lName">Name</label><input id="nm" autocomplete="name"><span class="err" id="nmErr"></span></div>
-        <div class="field"><label for="hotel" data-i="lHotel">Staying at (optional)</label><input id="hotel" data-ph="phHotel" placeholder="Hotel or school"></div>
+        <div class="field"><label for="mb" data-i="lMob">WhatsApp number</label><input id="mb" type="tel" inputmode="tel" autocomplete="tel" data-ph="phMob" placeholder="+81 90 or 0917"><span class="err" id="mbErr"></span></div>
       </div>
+      <div class="blk field"><label for="hotel" data-i="lHotel">Staying at (optional)</label><input id="hotel" data-ph="phHotel" placeholder="Hotel or school"></div>
       <div class="send">
         <p id="sum">Pick a time.</p>
         <button type="button" class="btn btn-wa" id="sendWa"><i class="ph ph-whatsapp-logo"></i><span data-i="send">Send on WhatsApp</span></button>
+      </div>
+      <div class="sent" id="sent" hidden>
+        <i class="ph ph-check-circle"></i>
+        <b id="sentRef">BKS-1041</b>
+        <p data-i="sentP">Request sent. The Buko team sees it right away and confirms on WhatsApp.</p>
+        <div class="row"><a class="btn btn-blue" href="owner/"><i class="ph ph-squares-four"></i><span data-i="sentOwner">See what the owner sees</span></a><button type="button" class="btn btn-line" id="again" data-i="sentAgain">Book another table</button></div>
       </div>
     </form>
   </div>
@@ -283,10 +302,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
   </div>
 </section>
 </main>
-<footer><div class="wrap"><span class="logo"><img src="img/mark-blue.png" alt="" style="width:24px"><span>Buko Seaside Bar and Restaurant, Maribago, Lapu-Lapu City</span></span><span>セブ・マクタン島 マリバゴ</span></div></footer>
+<footer><div class="wrap"><span class="logo"><img src="img/mark-blue.png" alt="" style="width:24px"><span>Buko Seaside Bar and Restaurant, Maribago, Lapu-Lapu City</span></span><span>セブ・マクタン島 マリバゴ · <a href="owner/">Owner front desk</a></span></div></footer>
 <div class="mbar"><a class="btn btn-line" href="https://wa.me/639171405696"><i class="ph ph-whatsapp-logo"></i>WhatsApp</a><a class="btn btn-blue" href="#reserve" data-i="ctaRes3">Reserve a table</a></div>
 
 <script src="tsk.js"></script>
+<script>window.TSK_QR = 'QR on the table';</script>
+<script src="desk.js"></script>
 <script>
 (() => {
   const WA = '639171405696';
@@ -301,7 +322,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
     resH: '海辺の席を予約。', resP: '日にち、時間、席を選ぶと、WhatsAppに予約メッセージが入った状態で開きます。',
     f1b: '誕生日やお祝いに', f1: 'ご予約時にお知らせいただければ、テーブルをご用意します。', f2b: '英語と日本語のメニュー', f2: '予約メッセージは英語で送信されるので、スタッフがすぐに確認できます。', f3b: 'ラストオーダー 21時', f3: '毎日22時閉店です。',
     lSeat: 'お席の希望', z1: '海側デッキ', z1s: '海の目の前の席', z2: 'セイルの下', z2s: '日陰のロングテーブル', z3: '屋内', z3s: '扇風機あり、雨でも安心',
-    lDay: '日にち', lTime: '時間', lPax: '人数', lOcc: '目的', o1: 'お食事', o2: '誕生日', o3: '記念日', o4: '団体・学校の旅行', lName: 'お名前', lHotel: '滞在先（任意）', phHotel: 'ホテル名・学校名', send: 'WhatsAppで送信',
+    lDay: '日にち', lTime: '時間', lPax: '人数', lOcc: '目的', o1: 'お食事', o2: '誕生日', o3: '記念日', o4: '団体・学校の旅行', lName: 'お名前', lMob: 'WhatsAppの電話番号', phMob: '+81 90 または 0917', sentP: '予約リクエストを送信しました。スタッフがすぐに確認し、WhatsAppでご連絡します。', sentOwner: 'オーナー画面を見る', sentAgain: 'もう一件予約する', lHotel: '滞在先（任意）', phHotel: 'ホテル名・学校名', send: 'WhatsAppで送信',
     revSub: 'Googleで約3,000件のレビュー', cite: 'Googleレビュー', t1: '新鮮なシーフード', t2: 'ココナッツシェイク', t3: 'フレンドリーなスタッフ', t4: '誕生日ディナー',
     visH: 'マリバゴ、コンティキ・ダタグ。', visP: 'ラプラプ市マリバゴの海沿い。マクタン島のリゾートから車ですぐです。', hours: '毎日11時から22時（ラストオーダー21時）', dir: '地図を見る'
   };
@@ -332,15 +353,25 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
     $('#sum').innerHTML = S.time ? (LANG === 'ja' ? `<b>${S.day} ${S.time}</b>、${$('#pax').value}名、${z}` : `<b>${S.day} at ${S.time}</b>, ${$('#pax').value} ${$('#pax').value === '1' ? 'guest' : 'guests'}, ${z.toLowerCase()}`) : (LANG === 'ja' ? '時間を選んでください。' : 'Pick a time.');
   }
   $('#sendWa').onclick = () => {
-    $('#nmErr').textContent = '';
-    if (!$('#nm').value.trim()) { $('#nmErr').textContent = LANG === 'ja' ? 'お名前を入力してください。' : 'Add your name.'; return; }
+    $('#nmErr').textContent = ''; $('#mbErr').textContent = '';
+    let bad = false;
+    if (!$('#nm').value.trim()) { $('#nmErr').textContent = LANG === 'ja' ? 'お名前を入力してください。' : 'Add your name.'; bad = true; }
+    if ($('#mb').value.replace(/\D/g, '').length < 8) { $('#mbErr').textContent = LANG === 'ja' ? '電話番号を入力してください。' : 'Add your WhatsApp number so we can confirm.'; bad = true; }
+    if (bad) return;
     if (!S.time) { render(); return; }
     // always sent in English so staff can read it; Japanese guests get a greeting line on top
     const L = (LANG === 'ja' ? ['こんにちは！予約をお願いします。'] : []).concat(['Hi Buko Seaside, I would like to reserve a table.', 'Name: ' + $('#nm').value.trim(), 'When: ' + S.day + ' at ' + S.time, 'Guests: ' + $('#pax').value, 'Seating: ' + S.zone, 'Occasion: ' + $('#occ').value]);
     if ($('#hotel').value.trim()) L.push('Staying at: ' + $('#hotel').value.trim());
     if (LANG === 'ja') L.push('(Guest is using the Japanese menu)');
+    // the request also lands on the owner's front desk, with the guest's language and where they came from
+    const db = $('#days').querySelector('[aria-pressed=true]'), t0 = new Date(), d = new Date(t0.getFullYear(), t0.getMonth(), t0.getDate() + [...$('#days').children].indexOf(db));
+    const bk = TSKDesk.add('buko', 'BKS', { date: TSKDesk.ymd(d), time: S.time, pax: +$('#pax').value, seat: S.zone, occasion: $('#occ').value, name: $('#nm').value.trim(), mobile: $('#mb').value.trim(), notes: $('#hotel').value.trim() ? 'Staying at ' + $('#hotel').value.trim() : '', lang: LANG, channel: 'WhatsApp' });
+    L.splice(LANG === 'ja' ? 1 : 0, 0, 'Booking ' + bk.id); L.splice(L.indexOf('Name: ' + $('#nm').value.trim()) + 1, 0, 'WhatsApp: ' + $('#mb').value.trim());
+    $('#sentRef').textContent = bk.id; $('#sent').hidden = false; $('#resForm').scrollIntoView({ block: 'start' });
     window.open('https://wa.me/' + WA + '?text=' + encodeURIComponent(L.join('\n')), '_blank', 'noopener');
   };
+  $('#again').onclick = () => { $('#sent').hidden = true; };
+  TSKDesk.visit('buko');
   const dz = $('#dishes'), step = () => dz.querySelector('.dish').getBoundingClientRect().width + 18;
   $('#prev').onclick = () => dz.scrollBy({ left: -step(), behavior: 'smooth' });
   $('#next').onclick = () => dz.scrollBy({ left: step(), behavior: 'smooth' });

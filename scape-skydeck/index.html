@@ -10,10 +10,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
 <link rel="preload" as="image" href="img/hero.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","name":"Scape Skydeck","image":"img/hero.jpg","telephone":"+639751881928","servesCuisine":["Filipino","International"],"acceptsReservations":"True","address":{"@type":"PostalAddress","streetAddress":"Roofdeck, Azon Residences, M. L. Quezon National Highway, Pusok","addressLocality":"Lapu-Lapu City","addressRegion":"Cebu","addressCountry":"PH"},"geo":{"@type":"GeoCoordinates","latitude":10.3234,"longitude":123.9729},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday"],"opens":"10:00","closes":"23:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday","Sunday"],"opens":"10:00","closes":"23:59"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.4","reviewCount":"1200"},"sameAs":["https://www.facebook.com/scapeskydeck"]}</script>
 <style>
 :root{--ink:#0d0d0e;--ink2:#141416;--ink3:#1c1c1f;--line:rgba(255,255,255,.09);--line2:rgba(255,255,255,.16);--tx:#f2f0ed;--mute:#a7a39d;--dim:#77736d;--or:#ee7a32;--or2:#f39257;--r:14px}
 *{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;color-scheme:dark;accent-color:var(--or);scrollbar-color:#3a3a3e var(--ink)}
+::selection{background:var(--or);color:#1b0d04}
+input,textarea{caret-color:var(--or)}
+a{text-underline-offset:3px}
 body{background:var(--ink);color:var(--tx);font:400 16px/1.6 Outfit,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{display:block;max-width:100%}
 a{color:inherit}
@@ -85,11 +89,18 @@ h2 b{font-weight:500}
 /* booking */
 .book{background:var(--ink2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .book-grid{display:grid;grid-template-columns:5fr 7fr;gap:64px;align-items:start}
+.book-grid>*{min-width:0}
 .book-side .facts{margin-top:36px;display:grid;gap:18px}
 .book-side .facts div{display:flex;gap:14px;align-items:flex-start;color:var(--mute);font-size:15px}
 .book-side .facts i{font-size:22px;color:var(--or);flex:none}
 .book-side .facts b{color:var(--tx);font-weight:500;display:block}
-form{background:var(--ink);border:1px solid var(--line2);border-radius:20px;padding:30px}
+form{position:relative;background:var(--ink);border:1px solid var(--line2);border-radius:20px;padding:30px}
+.sent{position:absolute;inset:0;border-radius:20px;background:var(--ink);padding:36px;display:flex;flex-direction:column;justify-content:flex-start;padding-top:56px;gap:14px}
+.sent[hidden]{display:none}
+.sent>i{font-size:44px;color:var(--or)}
+.sent b{font-size:34px;font-weight:300;letter-spacing:-.5px;font-variant-numeric:tabular-nums}
+.sent p{color:var(--mute);max-width:38ch}
+.sent .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
 .step{margin-bottom:26px}
 .step>label,.step>.lab{display:block;font-size:14px;color:var(--mute);margin-bottom:10px}
 .days{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
@@ -112,12 +123,12 @@ form{background:var(--ink);border:1px solid var(--line2);border-radius:20px;padd
 .noslot{color:var(--mute);font-size:14px;grid-column:1/-1}
 .pax{display:flex;align-items:center;gap:14px}
 .pax button{width:44px;height:44px;border-radius:50%;background:var(--ink3);border:1px solid var(--line2);font-size:20px}
-.pax output{font-size:28px;font-weight:300;min-width:2ch;text-align:center}
+.pax output{font-size:28px;font-weight:300;min-width:2ch;text-align:center;font-variant-numeric:tabular-nums}
 .pax span{color:var(--mute);font-size:14px}
 .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 input,select,textarea{width:100%;background:var(--ink3);border:1px solid var(--line2);border-radius:12px;color:var(--tx);padding:13px 14px;font:inherit;font-size:15px}
 input::placeholder,textarea::placeholder{color:#8d8983}
-input:focus,select:focus,textarea:focus,button:focus-visible{outline:2px solid var(--or);outline-offset:2px}
+input:focus,select:focus,textarea:focus,button:focus-visible,a:focus-visible{outline:2px solid var(--or);outline-offset:2px}
 .field{display:flex;flex-direction:column;gap:8px}
 .field label{font-size:14px;color:var(--mute)}
 .err{color:#ff9b7a;font-size:13px;min-height:18px}
@@ -158,6 +169,7 @@ input:focus,select:focus,textarea:focus,button:focus-visible{outline:2px solid v
 
 footer{border-top:1px solid var(--line);padding:46px 0 120px;color:var(--dim);font-size:14px}
 footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+footer a{color:var(--mute)}
 .mbar{display:none}
 @media(max-width:860px){.mbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:45;gap:8px;background:rgba(20,20,22,.94);backdrop-filter:blur(12px);border:1px solid var(--line2);border-radius:999px;padding:7px}.mbar a{flex:1;justify-content:center}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}.hero-img img{transform:none}}
@@ -253,6 +265,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;
           <button type="button" class="btn btn-line" id="sendFb"><i class="ph ph-messenger-logo"></i>Messenger</button>
         </div>
       </div>
+      <div class="sent" id="sent" hidden>
+        <i class="ph ph-check-circle"></i>
+        <b id="sentRef">SSD-1041</b>
+        <p>Request sent. The Skydeck team sees it right away and texts you to confirm your table.</p>
+        <div class="row"><a class="btn btn-or" href="owner/"><i class="ph ph-squares-four"></i>See what the owner sees</a><button type="button" class="btn btn-line" id="again">Book another table</button></div>
+      </div>
     </form>
   </div>
 </section>
@@ -303,10 +321,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;
 </section>
 </main>
 
-<footer><div class="wrap"><span>Scape Skydeck · Roofdeck Azon Residences, Pusok, Lapu-Lapu City</span><span>Open daily from 10 am</span></div></footer>
+<footer><div class="wrap"><span>Scape Skydeck · Roofdeck Azon Residences, Pusok, Lapu-Lapu City</span><span>Open daily from 10 am · <a href="owner/">Owner front desk</a></span></div></footer>
 <div class="mbar"><a class="btn btn-line" href="tel:+639751881928"><i class="ph ph-phone"></i>Call</a><a class="btn btn-or" href="#book"><i class="ph ph-calendar-check"></i>Book a table</a></div>
 
 <script src="tsk.js"></script>
+<script>window.TSK_QR = 'QR on the table';</script>
+<script src="desk.js"></script>
 <script>
 (() => {
   const PHONE = '+639751881928';
@@ -371,8 +391,17 @@ footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;
     if (!S.time) { $('#sum').innerHTML = '<b style="color:#ff9b7a">Pick a time first.</b>'; ok = false; }
     return ok;
   }
-  $('#sendSms').onclick = () => valid() && TSK.sms(PHONE, lines());
-  $('#sendFb').onclick = () => valid() && TSK.copyOpen('https://m.me/scapeskydeck', lines().concat(['(Copied from the Scape Skydeck website)']));
+  // every request also lands on the owner's front desk with where the guest came from
+  function record(channel) {
+    const b = daysEl.querySelector('[aria-pressed=true]'), d = new Date(today.getFullYear(), today.getMonth(), today.getDate() + [...daysEl.children].indexOf(b));
+    const bk = TSKDesk.add('scape', 'SSD', { date: TSKDesk.ymd(d), time: S.time, pax: S.pax, seat: S.seat, occasion: $('#occ').value, name: $('#nm').value.trim(), mobile: $('#ph').value.trim(), notes: $('#nt').value.trim(), channel });
+    $('#sentRef').textContent = bk.id; $('#sent').hidden = false; $('#bookForm').scrollIntoView({ block: 'start' });
+    return ['Booking ' + bk.id].concat(lines());
+  }
+  $('#sendSms').onclick = () => valid() && TSK.sms(PHONE, record('Text'));
+  $('#sendFb').onclick = () => valid() && TSK.copyOpen('https://m.me/scapeskydeck', record('Messenger').concat(['(Copied from the Scape Skydeck website)']));
+  $('#again').onclick = () => { $('#sent').hidden = true; };
+  TSKDesk.visit('scape');
   $('#planEvent').onclick = () => { document.querySelector('[data-seat="Group table"]').click(); $('#occ').value = 'Birthday'; $('#book').scrollIntoView({ behavior: 'smooth' }); };
 
   TSK.reveal();

@@ -12,6 +12,10 @@
 <style>
 :root{--bg:#f2f7f8;--paper:#fff;--aqua:#e3f2f4;--tx:#10323b;--mute:#4f6b72;--line:#d6e5e8;--sun:#d9452a;--ok:#1d8c5a;--r:16px}
 *{box-sizing:border-box;margin:0}
+html{accent-color:var(--sun);scrollbar-color:var(--line) var(--bg)}
+::selection{background:var(--sun);color:#fff}
+:focus-visible{outline:2px solid var(--sun);outline-offset:2px;border-radius:8px}
+.kpi b,.src .n,.bk .amt{font-variant-numeric:tabular-nums}
 body{background:var(--bg);color:var(--tx);font:400 15px/1.55 "Plus Jakarta Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
 button{font:inherit;color:inherit;cursor:pointer}
 a{color:inherit}
@@ -41,7 +45,8 @@ h2 small{font-weight:600;color:var(--mute);font-size:13px}
 .grid{display:grid;grid-template-columns:1.55fr 1fr;gap:18px;margin-top:22px;align-items:start}
 @media(max-width:900px){.grid{grid-template-columns:1fr}}
 .panel{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:18px}
-.tabs{display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap}
+.tabs{display:flex;gap:6px;margin-bottom:14px;overflow-x:auto;scrollbar-width:none}.tabs::-webkit-scrollbar{display:none}
+.tabs button{flex:none}
 .tabs button{border:1px solid var(--line);background:var(--bg);border-radius:999px;padding:7px 13px;font-weight:600;font-size:13.5px}
 .tabs button[aria-pressed=true]{background:var(--tx);border-color:var(--tx);color:#fff}
 .tabs i{font-style:normal;background:var(--sun);color:#fff;border-radius:999px;padding:0 7px;margin-left:4px;font-size:12px}
