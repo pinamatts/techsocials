@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Buko Seaside Bar and Restaurant · Maribago, Mactan</title>
+<meta name="description" content="Asian fusion by the sea in Maribago, Lapu-Lapu. Menu in English and Japanese, and table reservations on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+<link rel="preload" as="image" href="img/hero.jpg">
+<style>
+:root{--blush:#f8ebe3;--blush2:#f2ddd1;--paper:#fffaf6;--navy:#16244a;--mute:#5a6282;--line:#ead6ca;--blue:#1f5fd0;--blue2:#184fb0;--r:22px}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--navy);font:400 16px/1.65 Manrope,"Noto Sans JP",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html[lang=ja] body{font-family:"Noto Sans JP",Manrope,sans-serif;line-height:1.8}
+img{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+.wrap{max-width:1220px;margin:0 auto;padding:0 24px}
+.preview{background:var(--navy);color:#cfd6ee;font-size:13.5px;text-align:center;padding:8px 14px;line-height:1.45;font-family:Manrope,sans-serif}
+.preview a{color:#fff;font-weight:600}
+.serif{font-family:"Cormorant Garamond",Georgia,serif}
+
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo img{width:34px;height:auto}
+.logo b{font:600 30px/1 "Cormorant Garamond",serif;letter-spacing:5px}
+.logo small{display:block;font:500 10px/1.2 Manrope,sans-serif;letter-spacing:1.6px;color:var(--mute);margin-top:3px}
+header{position:sticky;top:0;z-index:40;background:rgba(255,250,246,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:74px;gap:18px}
+nav{display:flex;gap:28px}
+nav a{text-decoration:none;color:var(--mute);font-weight:500;font-size:15px}
+nav a:hover{color:var(--navy)}
+.hright{display:flex;align-items:center;gap:10px}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;padding:3px;background:var(--paper)}
+.lang button{border:0;background:transparent;border-radius:999px;padding:7px 12px;font-size:13.5px;font-weight:600;color:var(--mute)}
+.lang button[aria-pressed=true]{background:var(--navy);color:#fff}
+.btn{display:inline-flex;align-items:center;gap:9px;border:0;border-radius:999px;padding:13px 22px;font-weight:600;font-size:15px;text-decoration:none;white-space:nowrap;transition:transform .2s cubic-bezier(.16,1,.3,1),background .2s}
+.btn:active{transform:translateY(1px) scale(.98)}
+.btn-blue{background:var(--blue);color:#fff}
+.btn-blue:hover{background:var(--blue2)}
+.btn-line{background:transparent;border:1px solid var(--navy);color:var(--navy)}
+.btn-wa{background:#1d8c4f;color:#fff}
+.btn-wa:hover{background:#177a44}
+@media(max-width:940px){nav{display:none}}
+@media(max-width:520px){header .btn{display:none}}
+
+/* hero: stacked editorial */
+.hero{padding:56px 0 0}
+.hero-top{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:end}
+h1{font:500 clamp(46px,6vw,86px)/.98 "Cormorant Garamond",serif;letter-spacing:-1.5px}
+h1 em{font-style:italic;color:var(--blue);display:inline-block;padding-bottom:4px}
+html[lang=ja] h1{font:700 clamp(34px,4.4vw,58px)/1.25 "Noto Sans JP",sans-serif;letter-spacing:0}
+html[lang=ja] h1 em{font-style:normal}
+.hero-side p{color:var(--mute);font-size:17.5px;max-width:38ch}
+.hero-side .ctas{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.open{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--mute);margin-bottom:14px}
+.open i{color:var(--blue);font-size:18px}
+.hero-img{margin-top:44px;border-radius:var(--r);overflow:hidden;height:clamp(300px,44vw,560px)}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:50% 55%}
+@media(max-width:860px){.hero{padding-top:34px}.hero-top{grid-template-columns:1fr;gap:18px}.hero-img{margin-top:28px;border-radius:16px}}
+
+section{padding:110px 0}
+h2{font:500 clamp(36px,4vw,56px)/1.02 "Cormorant Garamond",serif;letter-spacing:-.5px;max-width:18ch}
+html[lang=ja] h2{font:700 clamp(26px,2.8vw,38px)/1.35 "Noto Sans JP",sans-serif;letter-spacing:0}
+.lede{color:var(--mute);max-width:54ch;margin-top:14px;font-size:17px}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* menu: snap carousel */
+.menu-head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap}
+.arrows{display:flex;gap:8px}
+.arrows button{width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:var(--paper);font-size:20px;display:grid;place-items:center}
+.dishes{--pad:max(24px,calc((100vw - 1220px)/2 + 24px));display:grid;grid-auto-flow:column;grid-auto-columns:minmax(260px,300px);gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:var(--pad);margin-top:40px;padding:0 var(--pad) 10px;scrollbar-width:none}
+.dishes::-webkit-scrollbar{display:none}
+.dish{scroll-snap-align:start}
+.dish figure{border-radius:18px;overflow:hidden;aspect-ratio:3/4;background:var(--blush2)}
+.dish img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.16,1,.3,1)}
+.dish:hover img{transform:scale(1.04)}
+.dish h3{font:600 23px/1.2 "Cormorant Garamond",serif;margin-top:14px}
+.dish .jp{font:500 14px/1.4 "Noto Sans JP",sans-serif;color:var(--mute)}
+.dish p{font-size:14px;color:var(--mute);margin-top:4px}
+
+/* drinks: split with pill list */
+.drinks{background:var(--blush)}
+.drinks-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.drinks-img{position:relative;height:560px}
+.drinks-img img{position:absolute;border-radius:18px;object-fit:cover;box-shadow:0 24px 50px -24px rgba(22,36,74,.45)}
+.drinks-img .a{left:0;top:0;width:62%;height:80%}
+.drinks-img .b{right:0;bottom:0;width:48%;height:62%}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.pills span{background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:14.5px;font-weight:500}
+.pills span small{color:var(--mute);font-family:"Noto Sans JP";margin-left:6px;font-size:12.5px}
+@media(max-width:860px){.drinks-grid{grid-template-columns:1fr;gap:36px}.drinks-img{height:420px}}
+
+/* reserve */
+.res-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.res-facts{margin-top:30px;display:grid;gap:16px}
+.res-facts div{display:flex;gap:12px;color:var(--mute);font-size:15px}
+.res-facts i{color:var(--blue);font-size:22px;flex:none}
+.res-facts b{display:block;color:var(--navy)}
+form{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:30px;box-shadow:0 30px 60px -40px rgba(22,36,74,.4)}
+.blk{margin-bottom:22px}
+.lab{display:block;font-weight:600;font-size:14.5px;margin-bottom:10px}
+.days{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
+.days::-webkit-scrollbar{display:none}
+.days button,.slots button,.zone{background:var(--paper);border:1px solid var(--line);border-radius:14px;transition:border-color .2s,background .2s}
+.days button{flex:none;min-width:70px;padding:10px 6px;text-align:center}
+.days button span{display:block;font-weight:700;font-size:14.5px}
+.days button small{color:var(--mute);font-size:12px}
+.slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:8px}
+.slots button{padding:10px 4px;font-size:14px;font-weight:500}
+.noslot{color:var(--mute);font-size:14px;grid-column:1/-1}
+.zones{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.zone{padding:14px;text-align:left}
+.zone i{font-size:22px;color:var(--blue)}
+.zone b{display:block;margin-top:6px;font-size:15px}
+.zone small{color:var(--mute);font-size:12.5px;line-height:1.35;display:block}
+[aria-pressed=true].zone,.days button[aria-pressed=true],.slots button[aria-pressed=true]{border-color:var(--blue);background:#edf2fd}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.field{display:flex;flex-direction:column;gap:7px}
+.field label{font-weight:600;font-size:14.5px}
+input,select{width:100%;border:1px solid #d9c0b1;border-radius:12px;padding:12px 14px;font:inherit;font-size:15px;background:#fff;color:var(--navy)}
+input::placeholder{color:#7d7f95}
+input:focus,select:focus,button:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.err{color:#b3261e;font-size:13px;min-height:16px}
+.send{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:20px}
+.send p{color:var(--mute);font-size:14px;max-width:32ch}
+.send p b{color:var(--navy)}
+@media(max-width:940px){.res-grid{grid-template-columns:1fr;gap:36px}}
+@media(max-width:560px){form{padding:20px}.zones{grid-template-columns:1fr}.zone{display:flex;gap:12px;align-items:center}.zone b{margin:0}.row2{grid-template-columns:1fr}}
+
+/* reviews */
+.revs{background:var(--navy);color:#e9edf9}
+.revs-grid{display:grid;grid-template-columns:auto 1fr;gap:72px;align-items:center}
+.score{font:500 120px/1 "Cormorant Garamond",serif;color:#fff}
+.score+p{color:#aab4d6;font-size:15px}
+.revs blockquote p{font:500 clamp(26px,2.6vw,36px)/1.25 "Cormorant Garamond",serif;color:#fff;max-width:28ch}
+.revs cite{display:block;margin-top:16px;color:#aab4d6;font-style:normal;font-size:14px}
+.revs .more{display:flex;gap:10px;margin-top:30px;flex-wrap:wrap}
+.revs .more span{border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:8px 14px;font-size:14px;color:#cfd6ee}
+@media(max-width:760px){.revs-grid{grid-template-columns:1fr;gap:24px}.score{font-size:90px}}
+
+/* visit */
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.visit-grid img{border-radius:var(--r);width:100%;aspect-ratio:4/5;object-fit:cover}
+.info{margin-top:26px;display:grid;gap:14px}
+.info a,.info div{display:flex;gap:12px;align-items:center;text-decoration:none;font-size:16px}
+.info i{color:var(--blue);font-size:22px}
+@media(max-width:860px){.visit-grid{grid-template-columns:1fr;gap:28px}.visit-grid img{aspect-ratio:4/3}}
+footer{border-top:1px solid var(--line);padding:36px 0 120px;color:var(--mute);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.mbar{display:none}
+@media(max-width:940px){.mbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:45;gap:8px;background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:7px;box-shadow:0 14px 34px rgba(22,36,74,.25)}.mbar a{flex:1;justify-content:center}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="preview">Sample website for Buko Seaside Bar and Restaurant by TechSocials. We can change anything you like. <a href="techsocials-websites-and-systems.pdf" target="_blank" rel="noopener">See pricing</a> or <a href="tel:+639989919318">message Matt, 0998 991 9318</a></div>
+
+<header><div class="wrap">
+  <a class="logo" href="#top" aria-label="Buko Seaside home"><img src="img/mark-blue.png" alt=""><span><b>BUKO</b><small>SEASIDE BAR AND RESTAURANT</small></span></a>
+  <nav><a href="#menu" data-i="navMenu">Menu</a><a href="#drinks" data-i="navDrinks">Drinks</a><a href="#reserve" data-i="navRes">Reserve</a><a href="#visit" data-i="navVisit">Visit</a></nav>
+  <div class="hright">
+    <div class="lang" role="group" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="ja" aria-pressed="false">日本語</button></div>
+    <a class="btn btn-blue" href="#reserve" data-i="ctaRes">Reserve a table</a>
+  </div>
+</div></header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-top">
+      <h1 data-i="h1" data-html>Asian fusion, <em>right by the sea.</em></h1>
+      <div class="hero-side">
+        <div class="open"><i class="ph ph-clock"></i><span id="openNow">Open daily 11 am to 10 pm</span></div>
+        <p data-i="heroP">Seafood, coconut shakes and island breeze in Maribago. Reserve your seaside table on WhatsApp.</p>
+        <div class="ctas"><a class="btn btn-blue" href="#reserve" data-i="ctaRes2">Reserve a table</a><a class="btn btn-line" href="#menu" data-i="ctaMenu">See the menu</a></div>
+      </div>
+    </div>
+    <div class="hero-img reveal"><img src="img/hero.jpg" alt="Long tables under white sails facing the sea at Buko Seaside" fetchpriority="high"></div>
+  </div>
+</section>
+
+<section id="menu" style="padding-bottom:90px">
+  <div class="wrap menu-head">
+    <div><h2 class="reveal" data-i="menuH">From the kitchen.</h2><p class="lede reveal" data-i="menuP">Dish names in English and Japanese, so every guest can order with confidence.</p></div>
+    <div class="arrows"><button type="button" id="prev" aria-label="Previous dishes"><i class="ph ph-arrow-left"></i></button><button type="button" id="next" aria-label="Next dishes"><i class="ph ph-arrow-right"></i></button></div>
+  </div>
+  <div class="dishes" id="dishes">
+    <article class="dish"><figure><img src="img/paella.jpg" alt="Seafood paella in a pan" loading="lazy"></figure><h3>Seafood paella</h3><div class="jp">シーフードパエリア</div><p data-i="d1">Seafood rice made for sharing.</p></article>
+    <article class="dish"><figure><img src="img/shrimp.jpg" alt="Garlic butter shrimp with grilled corn" loading="lazy"></figure><h3>Garlic butter shrimp</h3><div class="jp">ガーリックバターシュリンプ</div><p data-i="d2">Big prawns, butter, garlic, grilled corn.</p></article>
+    <article class="dish"><figure><img src="img/rice.jpg" alt="Pineapple fried rice served in a pineapple" loading="lazy"></figure><h3>Pineapple fried rice</h3><div class="jp">パイナップルチャーハン</div><p data-i="d3">Served in the pineapple.</p></article>
+    <article class="dish"><figure><img src="img/scallops.jpg" alt="Baked scallops and seafood platter with cocktails" loading="lazy"></figure><h3>Baked scallops</h3><div class="jp">ホタテのオーブン焼き</div><p data-i="d4">Great with a cold cocktail.</p></article>
+    <article class="dish"><figure><img src="img/salad.jpg" alt="Fresh salad with a coconut shake" loading="lazy"></figure><h3>Seaside salad</h3><div class="jp">シーサイドサラダ</div><p data-i="d5">Fresh, light and made to share.</p></article>
+    <article class="dish"><figure><img src="img/shells.jpg" alt="Platter of local sea shells with dipping sauce" loading="lazy"></figure><h3>Local shellfish platter</h3><div class="jp">貝の盛り合わせ</div><p data-i="d6">Ask the staff what came in today.</p></article>
+  </div>
+</section>
+
+<section class="drinks" id="drinks">
+  <div class="wrap drinks-grid">
+    <div class="drinks-img reveal"><img class="a" src="img/coconut.jpg" alt="Mango shake served in a whole coconut" loading="lazy"><img class="b" src="img/bar.jpg" alt="The Buko drinks board and bar" loading="lazy"></div>
+    <div class="reveal">
+      <h2 data-i="drH">Shakes served in the coconut.</h2>
+      <p class="lede" data-i="drP">Our name means young coconut. Most of our shakes come in one.</p>
+      <div class="pills">
+        <span>Buko shake<small>ココナッツシェイク</small></span>
+        <span>Mango shake<small>マンゴーシェイク</small></span>
+        <span>Banana shake<small>バナナシェイク</small></span>
+        <span>Pineapple milk shake<small>パイナップルミルクシェイク</small></span>
+        <span>Piña colada<small>ピニャコラーダ</small></span>
+        <span>Mango daiquiri<small>マンゴーダイキリ</small></span>
+        <span>Calamansi juice<small>カラマンシージュース</small></span>
+        <span>Mojito<small>モヒート</small></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reserve">
+  <div class="wrap res-grid">
+    <div class="reveal">
+      <h2 data-i="resH">Reserve your seaside table.</h2>
+      <p class="lede" data-i="resP">Pick a day, a time and where you'd like to sit. Your request opens in WhatsApp, ready to send.</p>
+      <div class="res-facts">
+        <div><i class="ph ph-cake"></i><p><b data-i="f1b">Birthdays and celebrations</b><span data-i="f1">Tell us the occasion and we'll prepare the table.</span></p></div>
+        <div><i class="ph ph-translate"></i><p><b data-i="f2b">Menu in English and Japanese</b><span data-i="f2">Your booking message is sent in English, so the team reads it right away.</span></p></div>
+        <div><i class="ph ph-clock-countdown"></i><p><b data-i="f3b">Last order 9 pm</b><span data-i="f3">We close at 10 pm every day.</span></p></div>
+      </div>
+    </div>
+    <form id="resForm" class="reveal" novalidate>
+      <div class="blk"><span class="lab" data-i="lSeat">Where would you like to sit?</span>
+        <div class="zones" role="group">
+          <button type="button" class="zone" data-zone="Seaside deck" aria-pressed="true"><i class="ph ph-waves"></i><b data-i="z1">Seaside deck</b><small data-i="z1s">Front row to the water</small></button>
+          <button type="button" class="zone" data-zone="Under the sails" aria-pressed="false"><i class="ph ph-sailboat"></i><b data-i="z2">Under the sails</b><small data-i="z2s">Shaded long tables</small></button>
+          <button type="button" class="zone" data-zone="Indoor" aria-pressed="false"><i class="ph ph-house-line"></i><b data-i="z3">Indoor</b><small data-i="z3s">Fans, out of the rain</small></button>
+        </div>
+      </div>
+      <div class="blk"><span class="lab" data-i="lDay">Day</span><div class="days" id="days"></div></div>
+      <div class="blk"><span class="lab" data-i="lTime">Time</span><div class="slots" id="slots"></div></div>
+      <div class="blk row2">
+        <div class="field"><label for="pax" data-i="lPax">Guests</label><select id="pax"></select></div>
+        <div class="field"><label for="occ" data-i="lOcc">Occasion</label><select id="occ"><option value="Just dinner" data-i="o1">Just a meal</option><option value="Birthday" data-i="o2">Birthday</option><option value="Anniversary" data-i="o3">Anniversary</option><option value="Group or school trip" data-i="o4">Group or school trip</option></select></div>
+      </div>
+      <div class="blk row2">
+        <div class="field"><label for="nm" data-i="lName">Name</label><input id="nm" autocomplete="name"><span class="err" id="nmErr"></span></div>
+        <div class="field"><label for="hotel" data-i="lHotel">Staying at (optional)</label><input id="hotel" data-ph="phHotel" placeholder="Hotel or school"></div>
+      </div>
+      <div class="send">
+        <p id="sum">Pick a time.</p>
+        <button type="button" class="btn btn-wa" id="sendWa"><i class="ph ph-whatsapp-logo"></i><span data-i="send">Send on WhatsApp</span></button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="revs">
+  <div class="wrap revs-grid">
+    <div class="reveal"><div class="score">4.8</div><p data-i="revSub">On Google, from almost 3,000 reviews</p></div>
+    <div class="reveal">
+      <blockquote><p>“The seaside view was absolutely beautiful.”</p><cite data-i="cite">Google review</cite></blockquote>
+      <div class="more"><span data-i="t1">Fresh seafood</span><span data-i="t2">Coconut shakes</span><span data-i="t3">Friendly staff</span><span data-i="t4">Birthday dinners</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap visit-grid">
+    <img class="reveal" src="img/sign.jpg" alt="The Buko Beach sign framing the sea" loading="lazy">
+    <div class="reveal">
+      <h2 data-i="visH">Kontiki, Datag, Maribago.</h2>
+      <p class="lede" data-i="visP">On the Maribago shore in Lapu-Lapu City, a short ride from the Mactan resorts.</p>
+      <div class="info">
+        <div><i class="ph ph-clock"></i><span data-i="hours">Daily 11 am to 10 pm, last order 9 pm</span></div>
+        <a href="https://wa.me/639171405696" target="_blank" rel="noopener"><i class="ph ph-whatsapp-logo"></i>0917 140 5696</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Buko+Seaside+bar+and+Restaurant+Maribago" target="_blank" rel="noopener"><i class="ph ph-map-pin"></i><span data-i="dir">Get directions</span></a>
+        <a href="https://www.instagram.com/buko_seaside/" target="_blank" rel="noopener"><i class="ph ph-instagram-logo"></i>@buko_seaside</a>
+        <a href="https://www.facebook.com/profile.php?id=100088681936244" target="_blank" rel="noopener"><i class="ph ph-facebook-logo"></i>Buko Seaside bar and Restaurant</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer><div class="wrap"><span class="logo"><img src="img/mark-blue.png" alt="" style="width:24px"><span>Buko Seaside Bar and Restaurant, Maribago, Lapu-Lapu City</span></span><span>セブ・マクタン島 マリバゴ</span></div></footer>
+<div class="mbar"><a class="btn btn-line" href="https://wa.me/639171405696"><i class="ph ph-whatsapp-logo"></i>WhatsApp</a><a class="btn btn-blue" href="#reserve" data-i="ctaRes3">Reserve a table</a></div>
+
+<script src="tsk.js"></script>
+<script>
+(() => {
+  const WA = '639171405696';
+  const OPEN = { 0: [660, 1320], 1: [660, 1320], 2: [660, 1320], 3: [660, 1320], 4: [660, 1320], 5: [660, 1320], 6: [660, 1320] };
+  const $ = s => document.querySelector(s);
+  const JA = {
+    navMenu: 'メニュー', navDrinks: 'ドリンク', navRes: '予約', navVisit: 'アクセス', ctaRes: '席を予約', ctaRes2: '席を予約する', ctaRes3: '席を予約', ctaMenu: 'メニューを見る',
+    h1: '海のすぐそばで、<em>アジアンフュージョン。</em>', heroP: 'マリバゴの海辺で、シーフードとココナッツシェイク。WhatsAppで簡単に席を予約できます。',
+    menuH: 'キッチンから。', menuP: '料理名は英語と日本語で表記。どなたでも安心して注文できます。',
+    d1: 'みんなでシェアするシーフードライス。', d2: '大きなエビをバターとガーリックで。焼きとうもろこし添え。', d3: 'パイナップルの器で提供します。', d4: '冷たいカクテルと一緒にどうぞ。', d5: 'フレッシュで軽く、シェアにぴったり。', d6: '本日の入荷はスタッフにお尋ねください。',
+    drH: 'ココナッツに入ったシェイク。', drP: '店名の「ブコ」は若いココナッツのこと。シェイクの多くはココナッツの器で提供します。',
+    resH: '海辺の席を予約。', resP: '日にち、時間、席を選ぶと、WhatsAppに予約メッセージが入った状態で開きます。',
+    f1b: '誕生日やお祝いに', f1: 'ご予約時にお知らせいただければ、テーブルをご用意します。', f2b: '英語と日本語のメニュー', f2: '予約メッセージは英語で送信されるので、スタッフがすぐに確認できます。', f3b: 'ラストオーダー 21時', f3: '毎日22時閉店です。',
+    lSeat: 'お席の希望', z1: '海側デッキ', z1s: '海の目の前の席', z2: 'セイルの下', z2s: '日陰のロングテーブル', z3: '屋内', z3s: '扇風機あり、雨でも安心',
+    lDay: '日にち', lTime: '時間', lPax: '人数', lOcc: '目的', o1: 'お食事', o2: '誕生日', o3: '記念日', o4: '団体・学校の旅行', lName: 'お名前', lHotel: '滞在先（任意）', phHotel: 'ホテル名・学校名', send: 'WhatsAppで送信',
+    revSub: 'Googleで約3,000件のレビュー', cite: 'Googleレビュー', t1: '新鮮なシーフード', t2: 'ココナッツシェイク', t3: 'フレンドリーなスタッフ', t4: '誕生日ディナー',
+    visH: 'マリバゴ、コンティキ・ダタグ。', visP: 'ラプラプ市マリバゴの海沿い。マクタン島のリゾートから車ですぐです。', hours: '毎日11時から22時（ラストオーダー21時）', dir: '地図を見る'
+  };
+  const EN = {};
+  document.querySelectorAll('[data-i]').forEach(el => EN[el.dataset.i] = el.hasAttribute('data-html') ? el.innerHTML : el.textContent);
+  document.querySelectorAll('[data-ph]').forEach(el => EN[el.dataset.ph] = el.placeholder);
+  let LANG = 'en';
+  function setLang(l) {
+    LANG = l; document.documentElement.lang = l;
+    const D = l === 'ja' ? JA : EN;
+    document.querySelectorAll('[data-i]').forEach(el => { const v = D[el.dataset.i]; if (v == null) return; el.hasAttribute('data-html') ? el.innerHTML = v : el.textContent = v; });
+    document.querySelectorAll('[data-ph]').forEach(el => el.placeholder = D[el.dataset.ph]);
+    document.querySelectorAll('.lang button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lang === l)));
+    fillPax(); render();
+    try { localStorage.setItem('buko-lang', l); } catch (e) {}
+  }
+  document.querySelectorAll('.lang button').forEach(b => b.onclick = () => setLang(b.dataset.lang));
+
+  const st = TSK.status(OPEN); $('#openNow').textContent = st.text;
+  const S = { zone: 'Seaside deck', day: '', time: '' };
+  // last order 9 pm, so the latest table is 8:30 pm
+  TSK.slots({ daysEl: $('#days'), slotsEl: $('#slots'), open: Object.fromEntries(Object.keys(OPEN).map(k => [k, [660, 1290]])), step: 30, onPick: p => { S.day = p.day; S.time = p.time; render(); } });
+  document.querySelectorAll('.zone').forEach(b => b.onclick = () => { document.querySelectorAll('.zone').forEach(x => x.setAttribute('aria-pressed', 'false')); b.setAttribute('aria-pressed', 'true'); S.zone = b.dataset.zone; render(); });
+  function fillPax() { const v = $('#pax').value || '2'; $('#pax').innerHTML = Array.from({ length: 30 }, (_, i) => `<option value="${i + 1}">${i + 1}${LANG === 'ja' ? '名' : (i ? ' guests' : ' guest')}</option>`).join(''); $('#pax').value = v; }
+  ['pax', 'occ', 'nm'].forEach(id => $('#' + id).addEventListener('input', render));
+  function render() {
+    const z = document.querySelector('.zone[aria-pressed=true] b').textContent;
+    $('#sum').innerHTML = S.time ? (LANG === 'ja' ? `<b>${S.day} ${S.time}</b>、${$('#pax').value}名、${z}` : `<b>${S.day} at ${S.time}</b>, ${$('#pax').value} ${$('#pax').value === '1' ? 'guest' : 'guests'}, ${z.toLowerCase()}`) : (LANG === 'ja' ? '時間を選んでください。' : 'Pick a time.');
+  }
+  $('#sendWa').onclick = () => {
+    $('#nmErr').textContent = '';
+    if (!$('#nm').value.trim()) { $('#nmErr').textContent = LANG === 'ja' ? 'お名前を入力してください。' : 'Add your name.'; return; }
+    if (!S.time) { render(); return; }
+    // always sent in English so staff can read it; Japanese guests get a greeting line on top
+    const L = (LANG === 'ja' ? ['こんにちは！予約をお願いします。'] : []).concat(['Hi Buko Seaside, I would like to reserve a table.', 'Name: ' + $('#nm').value.trim(), 'When: ' + S.day + ' at ' + S.time, 'Guests: ' + $('#pax').value, 'Seating: ' + S.zone, 'Occasion: ' + $('#occ').value]);
+    if ($('#hotel').value.trim()) L.push('Staying at: ' + $('#hotel').value.trim());
+    if (LANG === 'ja') L.push('(Guest is using the Japanese menu)');
+    window.open('https://wa.me/' + WA + '?text=' + encodeURIComponent(L.join('\n')), '_blank', 'noopener');
+  };
+  const dz = $('#dishes'), step = () => dz.querySelector('.dish').getBoundingClientRect().width + 18;
+  $('#prev').onclick = () => dz.scrollBy({ left: -step(), behavior: 'smooth' });
+  $('#next').onclick = () => dz.scrollBy({ left: step(), behavior: 'smooth' });
+  fillPax();
+  let saved = 'en'; try { saved = localStorage.getItem('buko-lang') || (navigator.language || '').startsWith('ja') && 'ja' || 'en'; } catch (e) {}
+  setLang(saved);
+  TSK.reveal();
+})();
+</script>
+</body>
+</html>
