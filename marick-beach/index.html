@@ -363,6 +363,7 @@ footer .wrap{border-top:1px solid rgba(255,255,255,.12);padding-top:26px;display
   const RATE = { weekday: { adult: 100, kid: 50 }, weekend: { adult: 100, kid: 100 } };
   const ROOM_FROM = 1800;
   const DN = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'], MN = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const fmtDate = d => `${DN[d.getDay()]}, ${MN[d.getMonth()]} ${d.getDate()}`;
   const $ = s => document.querySelector(s), peso = TSK.peso;
   const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Manila' }));
   const S = { mode: 'day', date: null, adults: 2, kids: 2, rooms: 1, nights: 1 };
@@ -385,7 +386,6 @@ footer .wrap{border-top:1px solid rgba(255,255,255,.12);padding-top:26px;display
   document.querySelectorAll('[data-c]').forEach(b => b.onclick = () => { const k = b.dataset.c; S[k] = Math.max(MIN[k], Math.min(MAX[k], S[k] + Number(b.dataset.d))); render(); });
   ['bday', 'cottage'].forEach(id => $('#' + id).onchange = render);
 
-  const fmtDate = d => `${DN[d.getDay()]}, ${MN[d.getMonth()]} ${d.getDate()}`;
   function calc() {
     const we = S.date.getDay() === 0 || S.date.getDay() === 6, r = we ? RATE.weekend : RATE.weekday, L = [];
     let total = 0;

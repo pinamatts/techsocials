@@ -354,6 +354,7 @@ footer a{color:var(--mute)}
   $('#hours').innerHTML = [1,2,3,4,5,6,0].map(d => `<span class="${d === today.getDay() ? 'today' : ''}">${DAYS[d]}</span><span class="${d === today.getDay() ? 'today' : ''}">${TSK.fmt(OPEN[d][0])} to ${OPEN[d][1] >= 1440 ? 'midnight' : TSK.fmt(OPEN[d][1])}</span>`).join('');
 
   // booking state
+  const paxNote = n => n === 1 ? 'Table for one' : n === 2 ? 'Table for two' : n >= 12 ? 'Big group, ask for the long table' : n + ' guests';
   const S = { seat: 'Al fresco deck', day: '', time: '', pax: 2, dayDate: today };
   const daysEl = $('#days'), slotsEl = $('#slots');
   const picked = TSK.slots({ daysEl, slotsEl, open: { ...OPEN, ...Object.fromEntries(Object.entries(OPEN).map(([k, v]) => [k, [660, Math.min(v[1], 1410)]])) }, step: 30, onPick: p => { S.day = p.day; S.time = p.time; markGold(); render(); } });
@@ -370,7 +371,6 @@ footer a{color:var(--mute)}
   markGold();
 
   document.querySelectorAll('.seat').forEach(b => b.onclick = () => { document.querySelectorAll('.seat').forEach(x => x.setAttribute('aria-pressed', 'false')); b.setAttribute('aria-pressed', 'true'); S.seat = b.dataset.seat; if (S.seat === 'Group table' && S.pax < 10) { S.pax = 12; } render(); });
-  const paxNote = n => n === 1 ? 'Table for one' : n === 2 ? 'Table for two' : n >= 12 ? 'Big group, ask for the long table' : n + ' guests';
   $('#paxMinus').onclick = () => { S.pax = Math.max(1, S.pax - 1); render(); };
   $('#paxPlus').onclick = () => { S.pax = Math.min(80, S.pax + 1); render(); };
   ['occ', 'nm', 'ph', 'nt'].forEach(id => $('#' + id).addEventListener('input', render));

@@ -253,6 +253,7 @@ const PHONE='+639983080501',$=id=>document.getElementById(id);
 // lunch and dinner are separate services; the slot picker covers 11:00-22:30 and skips the afternoon break below
 const OPEN={0:[660,1350],2:[660,1350],3:[660,1350],4:[660,1350],5:[660,1350],6:[660,1350]};
 const R={pax:8,occ:'Family lunch',day:'',time:''};
+const dishes=()=>[...document.querySelectorAll('#sig input:checked')].map(i=>i.value);
 function seats(){const rt=$('rt');rt.querySelectorAll('i').forEach(i=>i.remove());const n=Math.min(R.pax,12),r=rt.offsetWidth/2-12;for(let k=0;k<n;k++){const a=k/n*2*Math.PI-Math.PI/2,i=document.createElement('i');i.style.transform=`translate(${Math.cos(a)*r}px,${Math.sin(a)*r}px)`;rt.appendChild(i);}
   $('pax').textContent=R.pax;$('paxNote').textContent=R.pax<=12?'One round table':Math.ceil(R.pax/10)+' round tables';$('sPax').textContent=R.pax;}
 $('minus').onclick=()=>{R.pax=Math.max(2,R.pax-1);seats();};
@@ -263,7 +264,6 @@ TSK.slots({daysEl:$('days'),slotsEl:$('times'),open:OPEN,step:30,onPick:p=>{R.da
 const brk=()=>$('times').querySelectorAll('button').forEach(b=>{const m=b.textContent.match(/(\d+)(?::(\d+))? (am|pm)/);if(!m)return;let h=+m[1]%12+(m[3]==='pm'?12:0),t=h*60+(+m[2]||0);if(t>=870&&t<1050||t>1320)b.remove();});
 new MutationObserver(brk).observe($('times'),{childList:true});brk();
 $('sig').addEventListener('change',upd);
-const dishes=()=>[...document.querySelectorAll('#sig input:checked')].map(i=>i.value);
 function upd(){$('sOcc').textContent=R.occ;$('sDay').textContent=R.day||'-';$('sTime').textContent=R.time||'-';const d=dishes();$('sDish').textContent=d.length?d.join(', '):'None yet';$('send').disabled=!(R.day&&R.time);}
 $('send').onclick=()=>{
   const L=['Hi ChefHaus! Table reservation from your website:','','Guests: '+R.pax,'Occasion: '+R.occ,'When: '+R.day+', '+R.time];
