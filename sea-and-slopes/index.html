@@ -1,0 +1,622 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#095779">
+<title>Sea and Slopes Beach Resort · Carmen, Cebu</title>
+<meta name="description" content="An exclusive beachfront resort in Luyang, Carmen, Cebu for groups of 15 to 32. The Kamalig, three add-on rooms, Mabini Hall, a pool steps from the sea.">
+<meta property="og:title" content="Sea and Slopes Beach Resort, Carmen, Cebu">
+<meta property="og:description" content="Where blue horizons meet golden hills. See open dates and build your stay.">
+<meta property="og:image" content="img/hero.jpg">
+<link rel="icon" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+/* Sea and Slopes: built from their own logo. Sea-blue lettering, the orange sun, the teal wave.
+   Daylight, not night: the place sells sunrise over the pool and the hills behind the house. */
+:root{
+  --sea:#095779; --deep:#063c53; --tide:#1bb2ac; --sun:#f99708; --sun-2:#fcb407; --trunk:#844b23;
+  --mist:#f2f8fa; --shell:#fbf8f2; --paper:#fff; --ink:#0b2f40; --ink-2:#4b6876; --line:#d7e6eb;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --display:'Montserrat',system-ui,sans-serif; --ui:'DM Sans',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;accent-color:var(--sun)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--paper);color:var(--ink);font:400 17px/1.62 var(--ui);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--sun-2);color:var(--deep)}
+:focus-visible{outline:2px solid var(--sun);outline-offset:3px;border-radius:6px}
+img{display:block;max-width:100%}
+a{color:inherit;text-underline-offset:4px}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:1.08;letter-spacing:-.02em;margin:0;color:var(--deep);text-wrap:balance}
+h2{font-size:clamp(2rem,4.6vw,3.3rem)}
+h3{font-size:clamp(1.25rem,2.2vw,1.55rem);letter-spacing:-.01em}
+p{margin:0}
+.wrap{width:100%;max-width:1200px;margin-inline:auto;padding-inline:max(20px,env(safe-area-inset-left)) max(20px,env(safe-area-inset-right))}
+.lede{color:var(--ink-2);font-size:1.1rem;max-width:56ch;margin-top:18px}
+section.pad{padding-block:clamp(72px,10vw,128px)}
+.num{font-variant-numeric:tabular-nums}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;white-space:nowrap;border-radius:999px;border:2px solid currentColor;
+  padding:14px 26px;font:700 15px var(--display);letter-spacing:.01em;text-decoration:none;cursor:pointer;background:transparent;color:inherit;
+  transition:background .25s var(--ease),color .25s var(--ease),border-color .25s var(--ease),transform .15s}
+.btn:active{transform:scale(.98)}
+.btn.sun{background:var(--sun);border-color:var(--sun);color:var(--deep)}
+.btn.sun:hover{background:var(--sun-2);border-color:var(--sun-2)}
+.btn.sea{background:var(--sea);border-color:var(--sea);color:#fff}
+.btn.sea:hover{background:var(--deep);border-color:var(--deep)}
+.btn.ghost:hover{background:#fff;color:var(--deep);border-color:#fff}
+.btn svg{width:20px;height:20px;flex:none}
+
+/* ---------- header ---------- */
+.mast{position:fixed;inset:0 0 auto 0;z-index:50;padding-top:env(safe-area-inset-top);transition:background .4s var(--ease),box-shadow .4s var(--ease)}
+.mast .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+.mast.stuck{background:rgba(255,255,255,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{width:52px;height:52px;border-radius:50%;background:#fff;box-shadow:0 4px 16px rgba(6,60,83,.18)}
+.brand b{display:block;font:800 1.15rem/1 var(--display);color:#fff;letter-spacing:.02em;text-transform:uppercase}
+.brand small{display:block;font:600 .7rem var(--display);letter-spacing:.28em;color:var(--sun-2);margin-top:5px;text-transform:uppercase}
+.mast.stuck .brand b{color:var(--sea)}
+.mast nav{display:flex;gap:26px;font:600 .95rem var(--display)}
+.mast nav a{text-decoration:none;color:#fff;opacity:.9}
+.mast.stuck nav a{color:var(--ink-2)}
+.mast nav a:hover{opacity:1;color:var(--sun-2)}
+.mast .btn{padding:10px 20px;font-size:14px}
+@media (max-width:980px){.mast nav{display:none}}
+@media (max-width:520px){.mast .btn{display:none}}
+
+/* ---------- hero: sunrise over the pool, the logo's sun rising behind the words ---------- */
+.hero{position:relative;min-height:100svh;display:grid;align-items:end;isolation:isolate;overflow:hidden;color:#fff}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-3}
+.hero::after{content:"";position:absolute;inset:0;z-index:-2;
+  background:linear-gradient(180deg,rgba(6,60,83,.55) 0%,rgba(6,60,83,.05) 30%,rgba(6,60,83,.15) 55%,rgba(6,40,56,.88) 100%)}
+.sunrise{position:absolute;z-index:-1;width:min(62vw,560px);aspect-ratio:1;border-radius:50%;left:50%;bottom:-12%;transform:translateX(-50%);
+  background:radial-gradient(circle at 50% 40%,rgba(252,180,7,.55),rgba(249,151,8,.28) 42%,rgba(249,151,8,0) 70%);filter:blur(6px)}
+.js .sunrise{animation:rise 2.6s var(--ease) both}
+@keyframes rise{from{transform:translate(-50%,30%);opacity:0}}
+.hero .wrap{padding-bottom:clamp(36px,7vh,72px);padding-top:120px}
+.hero h1{font-size:clamp(2.6rem,7.4vw,5.6rem);color:#fff;max-width:13ch;text-shadow:0 4px 30px rgba(6,40,56,.5)}
+.hero h1 em{font-style:normal;color:var(--sun-2)}
+.hero .sub{max-width:52ch;margin-top:20px;font-size:clamp(1.02rem,1.6vw,1.2rem);color:rgba(255,255,255,.92);text-shadow:0 2px 16px rgba(6,40,56,.6)}
+.js .up{animation:up 1.2s var(--ease) both}
+.js .up.d2{animation-delay:.2s}.js .up.d3{animation-delay:.4s}
+@keyframes up{from{transform:translateY(24px);filter:blur(6px)}}
+@media (prefers-reduced-motion:reduce){.js .sunrise,.js .up{animation:none}}
+.open{margin-top:30px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.open>span{font:700 .78rem var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--sun-2);margin-right:4px}
+.open button{border:1px solid rgba(255,255,255,.45);background:rgba(6,40,56,.35);color:#fff;border-radius:999px;padding:9px 16px;
+  font:600 .95rem var(--ui);cursor:pointer;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:background .2s,border-color .2s}
+.open button:hover{background:var(--sun);border-color:var(--sun);color:var(--deep)}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.wave{position:absolute;left:0;right:0;bottom:-1px;height:64px;z-index:0;color:#fff}
+.wave svg{width:100%;height:100%;display:block}
+
+/* ---------- facts ---------- */
+.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:18px 28px;padding-block:34px 10px}
+@media (min-width:820px){.facts{grid-template-columns:repeat(4,1fr)}}
+.facts div{border-left:3px solid var(--tide);padding-left:14px}
+.facts b{display:block;font:800 1.45rem var(--display);color:var(--sea)}
+.facts span{color:var(--ink-2);font-size:.95rem}
+
+/* ---------- build your stay ---------- */
+.plan{background:var(--mist)}
+.planner{margin-top:44px;display:grid;gap:22px;grid-template-columns:1fr}
+@media (min-width:1000px){.planner{grid-template-columns:1.15fr .85fr;align-items:start}}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:clamp(20px,3vw,30px);box-shadow:0 20px 50px -30px rgba(6,60,83,.35)}
+.step{font:700 .78rem var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--tide);margin-bottom:10px}
+.calhead{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.calnav{display:flex;gap:8px}
+.calnav button{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--sea);cursor:pointer;display:grid;place-items:center}
+.calnav button:hover{background:var(--sea);color:#fff}
+.calnav svg{width:18px;height:18px}
+.months{display:grid;gap:22px;margin-top:16px;grid-template-columns:1fr}
+@media (min-width:640px){.months{grid-template-columns:1fr 1fr}}
+.mo h4{font:700 1.02rem var(--display);color:var(--deep);margin:0 0 10px}
+.g7{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.g7 .dw{font:600 .72rem var(--ui);color:var(--ink-2);text-align:center;text-transform:uppercase;letter-spacing:.06em;padding-bottom:4px}
+.g7 button{aspect-ratio:1;border:0;border-radius:10px;background:#e9f6f5;color:var(--deep);font:600 .92rem var(--ui);cursor:pointer;padding:0;transition:background .15s,color .15s}
+.g7 button:hover:not(:disabled){background:var(--tide);color:#fff}
+.g7 button:disabled{background:transparent;color:#a9bcc4;cursor:default}
+.g7 button.bk{background:#f1e6dc;color:#a7836a;text-decoration:line-through;cursor:not-allowed}
+.g7 button.in{background:#cdeeec}
+.g7 button.end{background:var(--sea);color:#fff}
+.legend{display:flex;flex-wrap:wrap;gap:16px;margin-top:14px;font-size:.88rem;color:var(--ink-2)}
+.legend i{display:inline-block;width:14px;height:14px;border-radius:4px;vertical-align:-2px;margin-right:6px}
+.calnote{font-size:.88rem;color:var(--ink-2);margin-top:10px}
+
+.who{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:22px;padding-top:20px;border-top:1px solid var(--line)}
+.who b{font:700 1.05rem var(--display);color:var(--deep);display:block}
+.who small{display:block;color:var(--ink-2);font-size:.88rem;line-height:1.45;margin-top:4px;max-width:34ch}
+.stepper{display:flex;align-items:center;gap:10px}
+.stepper button{width:44px;height:44px;border-radius:50%;border:2px solid var(--sea);background:#fff;color:var(--sea);font:800 1.3rem var(--display);cursor:pointer;line-height:1}
+.stepper button:hover{background:var(--sea);color:#fff}
+.stepper output{min-width:3ch;text-align:center;font:800 1.6rem var(--display);color:var(--deep)}
+
+.rooms{display:grid;gap:10px;margin-top:18px}
+.room{display:grid;grid-template-columns:76px 1fr auto;gap:14px;align-items:center;border:2px solid var(--line);border-radius:16px;padding:10px;cursor:pointer;transition:border-color .2s,background .2s}
+.room img{width:76px;height:60px;object-fit:cover;border-radius:10px}
+.room b{font:700 1rem var(--display);color:var(--deep);display:block}
+.room small{color:var(--ink-2);font-size:.86rem}
+.room .tick{width:28px;height:28px;border-radius:50%;border:2px solid var(--line);display:grid;place-items:center;color:transparent}
+.room.on{border-color:var(--tide);background:#effaf9}
+.room.on .tick{background:var(--tide);border-color:var(--tide);color:#fff}
+.room.base{cursor:default;border-color:var(--sea);background:#f2f8fb}
+.room.base .tick{background:var(--sea);border-color:var(--sea);color:#fff}
+.room input{position:absolute;opacity:0;pointer-events:none}
+.cap{margin-top:16px}
+.cap .bar{height:10px;border-radius:999px;background:var(--line);overflow:hidden}
+.cap .bar span{display:block;height:100%;background:linear-gradient(90deg,var(--tide),var(--sea));border-radius:999px;transition:width .5s var(--ease)}
+.cap p{font-size:.88rem;color:var(--ink-2);margin-top:6px}
+.cap p.warn{color:#b4530a}
+
+.sum{position:sticky;top:88px}
+.sum .when{font:700 .8rem var(--display);letter-spacing:.12em;text-transform:uppercase;color:var(--tide)}
+.sum .total{font:800 clamp(2.4rem,5vw,3.2rem)/1 var(--display);color:var(--deep);margin-top:8px;letter-spacing:-.03em}
+.sum ul{list-style:none;padding:0;margin:16px 0 0}
+.sum li{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid var(--line);font-size:.95rem;color:var(--ink-2)}
+.sum li b{color:var(--ink);font-weight:600;white-space:nowrap}
+.sum .note{font-size:.86rem;color:var(--ink-2);margin-top:12px}
+.sum .empty{color:var(--ink-2);font-size:1rem;margin-top:8px}
+.form{display:grid;gap:10px;margin-top:18px}
+.form label{font:600 .8rem var(--ui);color:var(--ink-2)}
+.form input{font:500 16px var(--ui);color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:12px 14px;width:100%;background:#fff}
+.form input:focus{border-color:var(--sea);outline:none;box-shadow:0 0 0 3px rgba(27,178,172,.25)}
+.two{display:grid;gap:10px;grid-template-columns:1fr 1fr}
+.send{display:grid;gap:10px;margin-top:6px}
+.send .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.btn.viber{background:#7360f2;border-color:#7360f2;color:#fff}
+.btn.viber:hover{background:#5b48d6;border-color:#5b48d6}
+.done{margin-top:14px;background:#e8f7f1;border-radius:14px;padding:14px;font-size:.95rem;color:#1f6b4d}
+.done[hidden]{display:none}
+
+/* ---------- the place ---------- */
+.story{display:grid;gap:clamp(48px,8vw,96px);margin-top:56px}
+.feat{display:grid;gap:28px;align-items:center;grid-template-columns:1fr}
+@media (min-width:900px){.feat{grid-template-columns:1.15fr .85fr}.feat.flip{grid-template-columns:.85fr 1.15fr}.feat.flip .pic{order:2}}
+.pic{position:relative;border-radius:28px;overflow:hidden;aspect-ratio:4/3;box-shadow:0 30px 60px -30px rgba(6,60,83,.45)}
+.pic img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.pic:hover img{transform:scale(1.04)}
+.pic .tag{position:absolute;left:16px;bottom:16px;background:rgba(255,255,255,.92);color:var(--deep);border-radius:999px;padding:7px 14px;font:700 .82rem var(--display)}
+.feat h3{font-size:clamp(1.7rem,3.4vw,2.4rem)}
+.feat p{color:var(--ink-2);margin-top:14px;max-width:48ch}
+.feat ul{margin:18px 0 0;padding:0;list-style:none;display:grid;gap:8px}
+.feat li{padding-left:28px;position:relative;color:var(--ink)}
+.feat li::before{content:"";position:absolute;left:0;top:.5em;width:16px;height:8px;border-radius:0 0 16px 16px;background:var(--sun)}
+
+/* ---------- rooms rail ---------- */
+.railbar{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap}
+.rail{display:grid;grid-auto-flow:column;grid-auto-columns:min(78vw,340px);gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;margin-top:40px;padding-bottom:8px;scrollbar-width:none;
+  padding-inline:max(20px,calc((100vw - 1200px)/2 + 20px));scroll-padding-inline:max(20px,calc((100vw - 1200px)/2 + 20px))}
+.rail::-webkit-scrollbar{display:none}
+.rc{scroll-snap-align:start;background:var(--paper);border:1px solid var(--line);border-radius:22px;overflow:hidden}
+.rc img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.rc div{padding:16px 18px 18px}
+.rc b{font:800 1.1rem var(--display);color:var(--deep);display:block}
+.rc span{display:block;color:var(--ink-2);font-size:.92rem;margin-top:4px}
+.rc i{display:inline-block;font-style:normal;margin-top:10px;font:700 .78rem var(--display);letter-spacing:.06em;color:var(--sea);background:#e8f3f7;border-radius:999px;padding:4px 10px}
+
+/* ---------- reviews ---------- */
+.rev{background:var(--deep);color:#fff}
+.rev h2{color:#fff}
+.scores{display:flex;flex-wrap:wrap;gap:16px 48px;margin-top:34px}
+.scores div b{display:block;font:800 3.2rem/1 var(--display);color:var(--sun-2)}
+.scores div span{color:#bcd6e0}
+.quotes{display:grid;gap:18px;margin-top:44px;grid-template-columns:1fr}
+@media (min-width:900px){.quotes{grid-template-columns:1.3fr 1fr 1fr}}
+.q{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:22px;padding:24px}
+.q p{font-size:1.04rem;line-height:1.6;color:#eaf4f7}
+.q footer{margin-top:16px;color:#9fc0cc;font-size:.88rem}
+.q footer b{color:#fff;font-weight:600}
+
+/* ---------- events band ---------- */
+.band{position:relative;isolation:isolate;overflow:hidden;color:#fff}
+.band>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.band::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(6,40,56,.88) 0%,rgba(6,40,56,.55) 50%,rgba(6,40,56,.1) 85%)}
+.band .wrap{padding-block:clamp(80px,12vw,140px)}
+.band h2{color:#fff;max-width:14ch}
+.band p{max-width:46ch;margin-top:18px;color:rgba(255,255,255,.9)}
+.band .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.band .chips span{border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:8px 14px;font-size:.92rem}
+.band .btn{margin-top:28px}
+
+/* ---------- good to know + contact ---------- */
+.know{display:grid;gap:40px 60px;grid-template-columns:1fr}
+@media (min-width:900px){.know{grid-template-columns:1fr 1fr}}
+.rules{list-style:none;padding:0;margin:24px 0 0}
+.rules li{display:grid;grid-template-columns:110px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.rules li b{font:700 .9rem var(--display);color:var(--sea)}
+.rules li span{color:var(--ink-2)}
+.contact{background:var(--shell);border-radius:28px;padding:clamp(24px,4vw,40px)}
+.contact h3{font-size:1.8rem}
+.contact dl{display:grid;grid-template-columns:auto 1fr;gap:12px 20px;margin:22px 0 0}
+.contact dt{font:700 .78rem var(--display);letter-spacing:.1em;text-transform:uppercase;color:var(--tide);padding-top:3px}
+.contact dd{margin:0;color:var(--ink)}
+.contact .acts{display:grid;gap:10px;margin-top:24px}
+@media (min-width:520px){.contact .acts{grid-template-columns:1fr 1fr}}
+.map{margin-top:22px;border-radius:20px;overflow:hidden;aspect-ratio:16/10;border:1px solid var(--line)}
+.map iframe{width:100%;height:100%;border:0;display:block}
+
+footer.site{background:var(--deep);color:#bcd6e0;padding:56px 0 calc(110px + env(safe-area-inset-bottom));text-align:center}
+footer.site img{width:84px;height:84px;border-radius:50%;margin:0 auto 18px;background:#fff}
+footer.site p{font-size:.92rem}
+footer.site .made{margin-top:14px;font-size:.82rem;color:#8fb2bf}
+
+.mbar{position:fixed;z-index:60;inset:auto 12px calc(12px + env(safe-area-inset-bottom)) 12px;display:none;grid-template-columns:1fr 1fr;gap:8px;padding:8px;
+  border-radius:999px;background:rgba(6,40,56,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transform:translateY(160%);transition:transform .5s var(--ease)}
+.mbar.show{transform:none}
+.mbar .btn{padding:12px 8px;font-size:13.5px}
+.mbar .btn.ghost{color:#fff}
+@media (max-width:760px){.mbar{display:grid}}
+
+.js .rv{transition:opacity .8s var(--ease),transform .9s var(--ease)}
+.js .rv.pre{opacity:0;transform:translateY(26px)}
+@media (prefers-reduced-motion:reduce){.js .rv.pre{opacity:1;transform:none}}
+.toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%) translateY(20px);opacity:0;background:var(--deep);color:#fff;border-radius:12px;padding:12px 16px;font-weight:600;font-size:14px;transition:.3s var(--ease);pointer-events:none;z-index:80;max-width:90vw;text-align:center}
+.toast.on{opacity:1;transform:translateX(-50%)}
+</style>
+</head>
+<body>
+
+<header class="mast" id="mast">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Sea and Slopes Beach Resort, back to top"><img src="img/logo.png" alt=""><span><b>Sea &amp; Slopes</b><small>Beach Resort</small></span></a>
+    <nav aria-label="Sections"><a href="#plan">Book</a><a href="#place">The place</a><a href="#rooms">Rooms</a><a href="#reviews">Reviews</a><a href="#events">Events</a><a href="#contact">Contact</a></nav>
+    <a class="btn sun" href="#plan">See open dates</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="top">
+  <img src="img/hero.jpg" alt="Sunrise over the sea, seen across the pool at Sea and Slopes.">
+  <div class="sunrise" aria-hidden="true"></div>
+  <div class="wrap">
+    <h1 class="up">Where blue horizons meet <em>golden hills.</em></h1>
+    <p class="sub up d2">An exclusive beachfront resort in Luyang, Carmen for groups of 15 to 32. The pool, the beach and Mabini Hall are yours alone, an hour and a half from Mactan Airport.</p>
+    <div class="open up d3" id="openDates"><span>Open weekends</span></div>
+    <div class="cta up d3">
+      <a class="btn sun" href="#plan">Build your stay</a>
+      <a class="btn ghost" href="#place">Look around</a>
+    </div>
+  </div>
+  <div class="wave" aria-hidden="true"><svg viewBox="0 0 1440 64" preserveAspectRatio="none"><path fill="currentColor" d="M0 40c120-22 240-30 360-14s240 30 360 14 240-34 360-20 240 26 360 10v34H0z"/></svg></div>
+</section>
+
+<div class="wrap">
+  <div class="facts rv">
+    <div><b>15 to 32</b><span>guests, the whole place</span></div>
+    <div><b>4.91 ★</b><span>from 34 Airbnb reviews</span></div>
+    <div><b>Beachfront</b><span>pool steps from the sea</span></div>
+    <div><b>1½ hours</b><span>from Mactan Airport</span></div>
+  </div>
+</div>
+
+<section class="pad plan" id="plan">
+  <div class="wrap">
+    <div class="rv">
+      <h2>Pick your dates. See your stay.</h2>
+      <p class="lede">The Kamalig sleeps 15. Coming with more? Add the Seaview, Mountainview or Gardenview room and bring up to 32. Booked dates are crossed out, so you only ask about days that are open.</p>
+    </div>
+    <div class="planner">
+      <div class="card rv">
+        <div class="calhead"><p class="step">1 · Your dates</p>
+          <div class="calnav"><button type="button" data-m="-1" aria-label="Earlier months"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 5l-7 7 7 7"/></svg></button><button type="button" data-m="1" aria-label="Later months"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 5l7 7-7 7"/></svg></button></div>
+        </div>
+        <div class="months" id="months"></div>
+        <div class="legend"><span><i style="background:#e9f6f5"></i>Open</span><span><i style="background:#f1e6dc"></i>Booked</span><span><i style="background:var(--sea)"></i>Your stay</span></div>
+        <p class="calnote" id="calnote">Tap the day you arrive, then the day you leave.</p>
+
+        <div class="who">
+          <div><p class="step" style="margin:0 0 4px">2 · Your group</p><b>How many are coming?</b><small>Kids 7 and below stay free without a bed, two per room.</small></div>
+          <div class="stepper"><button type="button" id="minus" aria-label="Fewer guests">−</button><output id="guests" aria-live="polite">15</output><button type="button" id="plus" aria-label="More guests">+</button></div>
+        </div>
+        <div class="rooms" id="roomList"></div>
+        <div class="cap"><div class="bar"><span id="capBar"></span></div><p id="capTxt"></p></div>
+      </div>
+
+      <aside class="card sum rv" aria-live="polite">
+        <p class="step">3 · Your stay</p>
+        <div id="sum"><p class="empty">Pick your dates on the calendar to see your stay here.</p></div>
+        <div class="form">
+          <div class="two">
+            <div><label for="nm">Your name</label><input id="nm" autocomplete="name" placeholder="Juan dela Cruz"></div>
+            <div><label for="mb">Mobile</label><input id="mb" autocomplete="tel" inputmode="tel" placeholder="0917 123 4567"></div>
+          </div>
+          <div class="send">
+            <button class="btn viber" type="button" id="sendViber"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 3 4.9 3 10.4c0 3.1 1.1 5.2 3 6.5V21l3.4-2.3c.8.2 1.7.3 2.6.3 5.5 0 9-2.9 9-8.6S17.5 2 12 2zm4.3 12.2c-.3.7-1.4 1.3-2 1.3-.5 0-1.1.1-3.5-1.1-2.9-1.4-4.6-4.6-4.7-4.8-.2-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.3.5-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1 2.2 1.4 2.5 1.5.3.1.5.1.6-.1l.8-1c.2-.3.4-.2.6-.1l2 1c.3.1.4.2.5.3.1.2.1.9-.2 1.6z"/></svg>Send on Viber</button>
+            <div class="row">
+              <button class="btn sea" type="button" id="sendFb">Messenger</button>
+              <button class="btn" type="button" id="sendSms" style="color:var(--sea)">Text</button>
+            </div>
+          </div>
+          <p class="done" id="done" hidden></p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="pad" id="place">
+  <div class="wrap">
+    <div class="rv"><h2>Native charm, modern comfort.</h2>
+      <p class="lede">Bamboo, nipa and wood on the outside. Hot showers, air-conditioning and a full kitchen inside. Sea in front, the hills of northern Cebu behind.</p></div>
+    <div class="story">
+      <div class="feat rv">
+        <div class="pic"><img src="img/kamalig.jpg" alt="The A-frame Kamalig cottage on the lawn" loading="lazy"><span class="tag">The Kamalig</span></div>
+        <div><h3>The Kamalig sleeps fifteen.</h3>
+          <p>Two big rooms under a native A-frame, each with its own bath, a loft, a refrigerator and a coffee set. Book it and the whole resort closes to everyone else.</p>
+          <ul><li>Kamalig 1: a double bed, a bunk bed and a floor mattress</li><li>Kamalig 2: three bunk beds</li><li>Hot water in every bathroom</li></ul></div>
+      </div>
+      <div class="feat flip rv">
+        <div class="pic"><img src="img/hall.jpg" alt="Mabini Hall with the kitchen, dining tables and sitting area" loading="lazy"><span class="tag">Mabini Hall</span></div>
+        <div><h3>Mabini Hall is where everyone ends up.</h3>
+          <p>The open hall on the ground floor holds the fully equipped kitchen, the long dining tables, a sitting area with a day bed, and the karaoke.</p>
+          <ul><li>Cook your own food, the kitchen is ready</li><li>Free karaoke, and YouTube on the screen</li><li>A standby generator if the power goes out</li></ul></div>
+      </div>
+      <div class="feat rv">
+        <div class="pic"><img src="img/pool.jpg" alt="The swimming pool beside the beach" loading="lazy"><span class="tag">Pool and beach</span></div>
+        <div><h3>A pool steps from the sea.</h3>
+          <p>Swim in the pool or walk straight onto the beach. Mornings, the sun comes up over the water right in front of you.</p>
+          <ul><li>Private pool for your group only</li><li>Beachfront access and a BBQ area</li><li>A caretaker on the property the whole stay</li></ul></div>
+      </div>
+      <div class="feat flip rv">
+        <div class="pic"><img src="img/lawn.jpg" alt="A camping tent on the manicured lawn beside the pool" loading="lazy"><span class="tag">The lawn</span></div>
+        <div><h3>Room for a tent, a stage or a garden reception.</h3>
+          <p>The manicured lawn takes glamping tents, team building games or a full garden reception. Camping tents and event tents can be set up for a fee.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pad" id="rooms" style="background:var(--mist);padding-bottom:clamp(72px,10vw,120px)">
+  <div class="wrap railbar rv"><div><h2>Bring more people. Add a room.</h2>
+    <p class="lede">The Kamalig takes 15. Each add-on room opens the resort to more of your group, up to 32 guests in all.</p></div></div>
+  <div class="rail" id="rail"></div>
+</section>
+
+<section class="pad rev" id="reviews">
+  <div class="wrap">
+    <div class="rv"><h2>Families keep coming back.</h2></div>
+    <div class="scores rv">
+      <div><b>4.91</b><span>out of 5 from 34 Airbnb reviews</span></div>
+      <div><b>4.4</b><span>out of 5 from 32 Google reviews</span></div>
+      <div><b>94%</b><span>recommend it on Facebook</span></div>
+    </div>
+    <div class="quotes">
+      <figure class="q rv" style="margin:0"><p>"Organizing family outings in Cebu has been challenging for me over many years, but Sea and Slopes was a standout. We comfortably accommodated my very large family overnight, with plenty of privacy."</p><footer><b>Ron</b> · Airbnb review, November 2024</footer></figure>
+      <figure class="q rv" style="margin:0"><p>"We had it exclusively for ourselves. My grandparents and aunts had so much fun swimming both in the pool and in the sea."</p><footer><b>Kyzia</b> · Airbnb review, July 2024</footer></figure>
+      <figure class="q rv" style="margin:0"><p>"The privacy and exclusivity makes Sea and Slopes on top of my list. Plus an amazing host."</p><footer><b>Ian Jasper</b> · Airbnb review, January 2023</footer></figure>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="events">
+  <img src="img/house.jpg" alt="The main house and the Kamalig behind the pool, with the hills beyond" loading="lazy">
+  <div class="wrap rv">
+    <h2>Birthdays, reunions and team building.</h2>
+    <p>Only booked guests come through the gate, so the day is yours. Tell us what you're planning and we'll help you set it up.</p>
+    <div class="chips"><span>Family reunions</span><span>Birthdays</span><span>Team building</span><span>Garden receptions</span><span>Barkada weekends</span></div>
+    <a class="btn sun" href="#plan">Check your date</a>
+  </div>
+</section>
+
+<section class="pad" id="contact">
+  <div class="wrap know">
+    <div class="rv">
+      <h2>Good to know.</h2>
+      <ul class="rules">
+        <li><b>Check in</b><span>From 2:00 PM</span></li>
+        <li><b>Check out</b><span>By 12:00 noon</span></li>
+        <li><b>Group size</b><span>15 in the Kamalig, up to 32 with add-on rooms</span></li>
+        <li><b>Kids</b><span>7 and below stay free without a bed, two per room</span></li>
+        <li><b>Guests</b><span>Only booked guests are allowed inside the resort</span></li>
+        <li><b>Power</b><span>A standby generator keeps things running</span></li>
+        <li><b>Getting here</b><span>About an hour and a half from Mactan Airport, in Bantigue, Luyang, Carmen</span></li>
+      </ul>
+    </div>
+    <div class="contact rv">
+      <h3>Talk to Grace.</h3>
+      <p class="lede" style="margin-top:10px">Inquiries are answered daily from 8 AM to 8 PM.</p>
+      <dl>
+        <dt>Viber</dt><dd><a href="tel:+639761076368">0976 107 6368</a></dd>
+        <dt>Grace</dt><dd><a href="tel:+639176275863">0917 627 5863</a></dd>
+        <dt>Email</dt><dd><a href="mailto:ggsemilla@yahoo.com">ggsemilla@yahoo.com</a></dd>
+        <dt>Find us</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=10.5973281,124.0306289" target="_blank" rel="noopener">Bantigue St, Luyang, Carmen, Cebu</a></dd>
+        <dt>Follow</dt><dd><a href="https://www.facebook.com/p/Sea-and-Slopes-100063835881920/" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.tiktok.com/@sea.and.slopes" target="_blank" rel="noopener">TikTok</a></dd>
+      </dl>
+      <div class="acts">
+        <a class="btn viber" href="viber://chat?number=%2B639761076368">Message on Viber</a>
+        <a class="btn sea" href="https://m.me/100063835881920" target="_blank" rel="noopener">Messenger</a>
+      </div>
+      <div class="map"><iframe title="Map to Sea and Slopes Beach Resort" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=10.5973281,124.0306289&amp;z=15&amp;output=embed"></iframe></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <img src="img/logo.png" alt="Sea and Slopes Beach Resort">
+  <p>Sea and Slopes Beach Resort · Bantigue, Luyang, Carmen, Cebu · 0976 107 6368</p>
+  <p class="made">Sample website by TechSocials · photos from Sea and Slopes</p>
+</footer>
+
+<div class="mbar" id="mbar"><a class="btn sun" href="#plan">Open dates</a><a class="btn ghost" href="viber://chat?number=%2B639761076368">Viber us</a></div>
+<div class="toast" id="toast"></div>
+
+<script src="desk.js"></script>
+<script>
+document.documentElement.classList.add('js');
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+  const PHONE = '+639761076368', FB = 'https://m.me/100063835881920', SITE = 'seaslopes';
+  const peso = n => '₱' + Math.round(n).toLocaleString('en-PH');
+
+  /* the stay. Kamalig rate is their current Airbnb nightly price; add-on rates are set by Grace. */
+  const KAMALIG = { name: 'Kamalig', cap: 15, rate: 20089 };
+  const ADDONS = [
+    { id: 'sea', name: 'Seaview Room', cap: 4, img: 'img/seaview.jpg', what: 'Second floor, a terrace and its own way down to the pool. Sunrise from the bed.' },
+    { id: 'mtn', name: 'Mountainview Room', cap: 6, img: 'img/hallway.jpg', what: 'Second floor, on the mountain side of the house, sleeps six.' },
+    { id: 'gdn', name: 'Gardenview Room', cap: 7, img: 'img/garden.jpg', what: 'Ground floor beside the lawn, with a loft and its own bathroom.' },
+  ];
+  const MAX = 32;
+
+  /* booked nights from their Airbnb calendar (read Nov 2, 2026). On launch this syncs every hour. */
+  const BOOKED_RANGES = [['2026-12-06','2026-12-10'],['2026-12-20','2026-12-29'],['2026-12-31','2027-01-03']];
+  const iso = d => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+  const parse = s => { const [y, m, d] = s.split('-').map(Number); return new Date(y, m - 1, d); };
+  const BOOKED = new Set();
+  BOOKED_RANGES.forEach(([a, b]) => { for (let t = parse(a); t < parse(b); t.setDate(t.getDate() + 1)) BOOKED.add(iso(t)); });
+  const MN = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  const fmt = d => d.toLocaleDateString('en-PH', { weekday: 'short', month: 'short', day: 'numeric' });
+  const today = new Date(); today.setHours(0, 0, 0, 0);
+
+  function toast(t) { const el = $('#toast'); el.textContent = t; el.classList.add('on'); clearTimeout(el._t); el._t = setTimeout(() => el.classList.remove('on'), 2400); }
+
+  /* ---------- header + phone bar ---------- */
+  new IntersectionObserver(([e]) => { $('#mast').classList.toggle('stuck', !e.isIntersecting); $('#mbar').classList.toggle('show', !e.isIntersecting); },
+    { rootMargin: '-80px 0px 0px 0px' }).observe($('#top'));
+
+  /* ---------- state ---------- */
+  const S = { a: null, d: null, guests: 15, rooms: new Set(), auto: true, view: new Date(today.getFullYear(), today.getMonth(), 1) };
+
+  /* smallest set of add-on rooms that fits everyone */
+  function fit(g) {
+    const need = g - KAMALIG.cap; if (need <= 0) return new Set();
+    let best = null;
+    for (let m = 1; m < 8; m++) {
+      const set = ADDONS.filter((_, i) => m & (1 << i)), c = set.reduce((t, r) => t + r.cap, 0);
+      if (c >= need && (!best || c < best.c || (c === best.c && set.length < best.set.length))) best = { set, c };
+    }
+    return new Set((best ? best.set : ADDONS).map(r => r.id));
+  }
+  const capacity = () => KAMALIG.cap + ADDONS.filter(r => S.rooms.has(r.id)).reduce((t, r) => t + r.cap, 0);
+  const nights = () => S.a && S.d ? Math.round((S.d - S.a) / 864e5) : 0;
+
+  /* ---------- open weekends in the hero ---------- */
+  (function openWeekends() {
+    const out = []; const t = new Date(today);
+    while (out.length < 4 && out.length < 60) {
+      t.setDate(t.getDate() + 1);
+      if (t.getDay() === 6 && !BOOKED.has(iso(t))) out.push(new Date(t));
+      if (t - today > 120 * 864e5) break;
+    }
+    $('#openDates').insertAdjacentHTML('beforeend', out.map(d => '<button type="button" data-open="' + iso(d) + '">' + fmt(d) + '</button>').join(''));
+    $('#openDates').addEventListener('click', e => {
+      const b = e.target.closest('[data-open]'); if (!b) return;
+      S.a = parse(b.dataset.open); S.d = new Date(S.a); S.d.setDate(S.d.getDate() + 1);
+      S.view = new Date(S.a.getFullYear(), S.a.getMonth(), 1); paint();
+      $('#plan').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
+    });
+  })();
+
+  /* ---------- calendar ---------- */
+  function month(m0) {
+    const m = new Date(m0.getFullYear(), m0.getMonth(), 1), days = new Date(m.getFullYear(), m.getMonth() + 1, 0).getDate();
+    let h = ['S','M','T','W','T','F','S'].map(x => '<span class="dw">' + x + '</span>').join('') + '<span></span>'.repeat(m.getDay());
+    for (let i = 1; i <= days; i++) {
+      const d = new Date(m.getFullYear(), m.getMonth(), i), k = iso(d), past = d < today, bk = BOOKED.has(k);
+      let cls = bk ? 'bk' : '';
+      if (S.a && k === iso(S.a)) cls = 'end'; else if (S.d && k === iso(S.d)) cls = 'end';
+      else if (S.a && S.d && d > S.a && d < S.d) cls = 'in';
+      h += '<button type="button" data-d="' + k + '" class="' + cls + '"' + (past ? ' disabled' : '') + (bk && !past ? ' aria-disabled="true"' : '') +
+           ' aria-label="' + fmt(d) + (bk ? ', booked' : '') + '">' + i + '</button>';
+    }
+    return '<div class="mo"><h4>' + MN[m.getMonth()] + ' ' + m.getFullYear() + '</h4><div class="g7">' + h + '</div></div>';
+  }
+  function paintCal() {
+    $('#months').innerHTML = month(S.view) + month(new Date(S.view.getFullYear(), S.view.getMonth() + 1, 1));
+  }
+  $('#months').addEventListener('click', e => {
+    const b = e.target.closest('button[data-d]'); if (!b || b.disabled) return;
+    const d = parse(b.dataset.d);
+    if (BOOKED.has(b.dataset.d) && (!S.a || S.d)) { toast(fmt(d) + ' is already booked. Try another date.'); return; }
+    if (!S.a || S.d || d <= S.a) { S.a = d; S.d = null; }
+    else {
+      for (let t = new Date(S.a); t < d; t.setDate(t.getDate() + 1)) if (BOOKED.has(iso(t))) { toast('Those nights include a booked date (' + fmt(t) + ').'); return; }
+      S.d = d;
+    }
+    paint();
+  });
+  $$('[data-m]').forEach(b => b.onclick = () => { S.view = new Date(S.view.getFullYear(), S.view.getMonth() + +b.dataset.m, 1); if (S.view < new Date(today.getFullYear(), today.getMonth(), 1)) S.view = new Date(today.getFullYear(), today.getMonth(), 1); paintCal(); });
+
+  /* ---------- rooms ---------- */
+  function paintRooms() {
+    $('#roomList').innerHTML = '<div class="room base"><img src="img/kamalig.jpg" alt=""><div><b>Kamalig</b><small>Two rooms, sleeps 15 · always included</small></div><span class="tick">✓</span></div>' +
+      ADDONS.map(r => '<label class="room' + (S.rooms.has(r.id) ? ' on' : '') + '"><input type="checkbox" data-r="' + r.id + '"' + (S.rooms.has(r.id) ? ' checked' : '') + '><img src="' + r.img + '" alt=""><div><b>' + r.name + '</b><small>Add ' + r.cap + ' guests</small></div><span class="tick">✓</span></label>').join('');
+  }
+  $('#roomList').addEventListener('change', e => {
+    const c = e.target.closest('[data-r]'); if (!c) return;
+    c.checked ? S.rooms.add(c.dataset.r) : S.rooms.delete(c.dataset.r); S.auto = false; paint();
+  });
+  function setGuests(n) { S.guests = Math.max(1, Math.min(MAX, n)); if (S.auto || capacity() < S.guests) { S.rooms = fit(S.guests); } paint(); }
+  $('#minus').onclick = () => setGuests(S.guests - 1);
+  $('#plus').onclick = () => { if (S.guests >= MAX) { toast('32 guests is the most the resort sleeps.'); return; } setGuests(S.guests + 1); };
+
+  /* ---------- summary ---------- */
+  function lines() {
+    const n = nights(), add = ADDONS.filter(r => S.rooms.has(r.id));
+    return { n, add, base: KAMALIG.rate * n };
+  }
+  function paintSum() {
+    const cap = capacity(), g = S.guests;
+    $('#capBar').style.width = Math.min(100, g / MAX * 100) + '%';
+    const t = $('#capTxt'); t.className = '';
+    if (g > cap) { t.textContent = g + ' guests, but these rooms sleep ' + cap + '. Add a room.'; t.className = 'warn'; }
+    else t.textContent = g + ' of ' + cap + ' beds used · up to ' + MAX + ' guests with every room';
+    if (!S.a) { $('#sum').innerHTML = '<p class="empty">Pick your dates on the calendar to see your stay here.</p>'; $('#calnote').textContent = 'Tap the day you arrive, then the day you leave.'; return; }
+    if (!S.d) { $('#sum').innerHTML = '<p class="empty">Arriving ' + fmt(S.a) + '. Now tap the day you leave.</p>'; $('#calnote').textContent = 'Arriving ' + fmt(S.a) + '. Tap the day you leave.'; return; }
+    const L = lines();
+    $('#calnote').textContent = fmt(S.a) + ' to ' + fmt(S.d) + ' · ' + L.n + ' night' + (L.n > 1 ? 's' : '');
+    $('#sum').innerHTML = '<p class="when">' + fmt(S.a) + ' to ' + fmt(S.d) + ' · ' + g + ' guests</p>' +
+      '<p class="total num">' + peso(L.base) + (L.add.length ? '<span style="font-size:.4em;letter-spacing:0;font-weight:700;color:var(--ink-2)"> + rooms</span>' : '') + '</p>' +
+      '<ul><li><span>Kamalig, ' + L.n + ' night' + (L.n > 1 ? 's' : '') + ' at ' + peso(KAMALIG.rate) + '</span><b class="num">' + peso(L.base) + '</b></li>' +
+      L.add.map(r => '<li><span>' + r.name + ' (adds ' + r.cap + ')</span><b>Grace confirms</b></li>').join('') + '</ul>' +
+      '<p class="note">Kamalig rate shown is the current Airbnb nightly price. Add-on room rates are confirmed when Grace replies. The whole resort is yours either way.</p>';
+  }
+  function paint() { paintCal(); paintRooms(); paintSum(); $('#guests').textContent = S.guests; }
+
+  /* ---------- send the request ---------- */
+  function message() {
+    const L = lines();
+    return ['Hi Sea and Slopes! I would like to book:', 'Dates: ' + fmt(S.a) + ' to ' + fmt(S.d) + ' (' + L.n + ' night' + (L.n > 1 ? 's' : '') + ')', 'Guests: ' + S.guests,
+            'Rooms: Kamalig' + (L.add.length ? ' + ' + L.add.map(r => r.name).join(' + ') : ''), 'Name: ' + $('#nm').value.trim(), 'Mobile: ' + $('#mb').value.trim()].join('\n');
+  }
+  function ready() {
+    if (!S.a || !S.d) { toast('Pick your dates first.'); $('#plan').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' }); return false; }
+    if (S.guests > capacity()) { toast('Add a room so everyone has a bed.'); return false; }
+    if (!$('#nm').value.trim() || !$('#mb').value.trim()) { toast('Add your name and mobile so Grace can reply.'); ($('#nm').value.trim() ? $('#mb') : $('#nm')).focus(); return false; }
+    return true;
+  }
+  function record(channel) {
+    const L = lines();
+    const bk = window.TSKDesk ? TSKDesk.add(SITE, 'SNS', { type: 'Overnight', date: iso(S.a), nights: L.n, adults: S.guests, kids: 0, rooms: 1 + L.add.length, addons: L.add.map(r => r.name), total: L.base, name: $('#nm').value.trim(), mobile: $('#mb').value.trim(), channel }) : { id: 'SNS' };
+    $('#done').hidden = false;
+    $('#done').innerHTML = 'Request ' + bk.id + ' is ready. Send it, and Grace confirms your date and the add-on rates. <a href="owner/">See it on the owner’s front desk</a>.';
+    return bk;
+  }
+  const copy = async t => { try { await navigator.clipboard.writeText(t); return true; } catch (e) { return false; } };
+  $('#sendViber').onclick = async () => { if (!ready()) return; const b = record('Viber'); const t = 'Booking ' + b.id + '\n' + message(); await copy(t); toast('Copied. Paste it in Viber.'); location.href = 'viber://chat?number=' + encodeURIComponent(PHONE); };
+  $('#sendFb').onclick = async () => { if (!ready()) return; const b = record('Messenger'); const t = 'Booking ' + b.id + '\n' + message(); await copy(t); toast('Copied. Paste it in Messenger.'); window.open(FB + '?text=' + encodeURIComponent(t), '_blank', 'noopener'); };
+  $('#sendSms').onclick = () => { if (!ready()) return; const b = record('Text'); location.href = 'sms:' + PHONE + (/iPhone|iPad|Mac/.test(navigator.userAgent) ? '&' : '?') + 'body=' + encodeURIComponent('Booking ' + b.id + '\n' + message()); };
+
+  /* ---------- rooms rail ---------- */
+  const RAIL = [
+    { img: 'img/k1.jpg', name: 'Kamalig 1', what: 'A double bed, a bunk bed and a floor mattress. Loft above.', tag: 'In the Kamalig' },
+    { img: 'img/k2.jpg', name: 'Kamalig 2', what: 'Three bunk beds and its own bathroom with hot water.', tag: 'In the Kamalig' },
+    ...ADDONS.map(r => ({ img: r.img, name: r.name, what: r.what, tag: 'Add-on · ' + r.cap + ' guests' })),
+    { img: 'img/karaoke.jpg', name: 'Mabini Hall', what: 'Kitchen, dining, day bed and karaoke for the whole group.', tag: 'Shared' },
+  ];
+  $('#rail').innerHTML = RAIL.map(r => '<article class="rc"><img src="' + r.img + '" alt="' + r.name + '" loading="lazy"><div><b>' + r.name + '</b><span>' + r.what + '</span><i>' + r.tag + '</i></div></article>').join('');
+
+  /* ---------- reveal ---------- */
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.remove('pre'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
+  $$('.rv').forEach(el => { if (el.getBoundingClientRect().top > innerHeight) { el.classList.add('pre'); io.observe(el); } });
+
+  if (window.TSKDesk) TSKDesk.visit(SITE);
+  paint();
+})();
+</script>
+</body>
+</html>
