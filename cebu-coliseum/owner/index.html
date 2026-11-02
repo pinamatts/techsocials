@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Front desk · Cebu Coliseum</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="../img/ccc-mark.png">
+<style>
+:root{--navy:#1f2547;--gold:#f2a227;--ink:#1d1d1f;--muted:#6e6e73;--line:#d2d2d7;--gray:#f5f5f7;--ok:#1f8a4c;--no:#c0392b;--hold:#a35b00;
+  --font:-apple-system,BlinkMacSystemFont,"SF Pro Text","Inter","Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font);background:var(--gray);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.45}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{background:var(--navy);color:#fff}
+header .wrap{display:flex;align-items:center;gap:12px;height:60px}
+header img{height:28px;filter:invert(1)}
+header b{font-size:16px}
+header a{margin-left:auto;color:rgba(255,255,255,.8);font-size:13px;text-decoration:none}
+.note{font-size:13px;color:var(--muted);margin:18px 0 6px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:14px 0 22px}
+.stats>div{background:#fff;border-radius:16px;padding:18px}
+.stats b{display:block;font-size:28px;color:var(--navy)}
+.stats span{font-size:13px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:2fr 1fr;gap:16px;align-items:start}
+.grid>*{min-width:0}
+.panel{background:#fff;border-radius:18px;padding:20px}
+.panel h2{font-size:17px;margin-bottom:12px}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.tabs button{border:0;background:var(--gray);border-radius:980px;padding:6px 14px;font:inherit;font-size:13px;cursor:pointer}
+.tabs button[aria-pressed=true]{background:var(--navy);color:#fff}
+.inq{border-top:1px solid var(--line);padding:14px 0;display:grid;gap:6px}
+.inq:first-of-type{border-top:0}
+.inq .top{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.inq .top b{font-size:15px}
+.tag{font-size:11px;font-weight:600;border-radius:6px;padding:2px 8px;background:var(--gray);color:var(--muted)}
+.tag.new{background:#e8ecfb;color:var(--navy)}.tag.confirmed{background:#e3f4ea;color:var(--ok)}.tag.declined{background:#fbeaea;color:var(--no)}.tag.quoted{background:#fff4e2;color:var(--hold)}
+.inq .meta{font-size:13px;color:#424245}
+.inq .acts{display:flex;gap:8px;flex-wrap:wrap;margin-top:4px}
+.inq .acts button,.inq .acts a{border:1px solid var(--line);background:#fff;border-radius:980px;padding:6px 12px;font:inherit;font-size:12px;cursor:pointer;text-decoration:none;color:var(--ink)}
+.inq .acts .pri{background:var(--navy);color:#fff;border-color:var(--navy)}
+.bar{display:flex;align-items:center;gap:8px;font-size:13px;margin:8px 0}
+.bar span:first-child{width:80px;color:#424245}
+.bar i{display:block;height:8px;border-radius:4px;background:var(--gold)}
+.qr{text-align:center;font-size:13px;color:var(--muted)}
+.qr code{display:block;background:var(--gray);border-radius:10px;padding:8px;margin:8px 0;font-size:12px;color:var(--ink);word-break:break-all}
+.empty{color:var(--muted);font-size:14px;padding:14px 0}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><img src="../img/ccc-mark.png" alt=""><b>Cebu Coliseum · Front desk</b><a href="../">View website ›</a></div></header>
+<div class="wrap">
+  <p class="note">Every inquiry from the website lands here with a reference number, the date asked for and where the person found you. This sample keeps data in this browser only. At launch it moves to a real database.</p>
+  <div class="stats">
+    <div><b id="sNew">0</b><span>New inquiries</span></div>
+    <div><b id="sMonth">0</b><span>Inquiries this month</span></div>
+    <div><b id="sConf">0</b><span>Dates confirmed</span></div>
+    <div><b id="sVisits">0</b><span>Website visits, 30 days</span></div>
+  </div>
+  <div class="grid">
+    <div class="panel">
+      <h2>Inquiries</h2>
+      <div class="tabs" id="tabs">
+        <button data-f="all" aria-pressed="true">All</button>
+        <button data-f="new" aria-pressed="false">New</button>
+        <button data-f="quoted" aria-pressed="false">Quoted</button>
+        <button data-f="confirmed" aria-pressed="false">Confirmed</button>
+        <button data-f="declined" aria-pressed="false">Declined</button>
+      </div>
+      <div id="list"></div>
+    </div>
+    <div>
+      <div class="panel">
+        <h2>Where inquiries come from</h2>
+        <div id="sources"></div>
+      </div>
+      <div class="panel qr" style="margin-top:16px">
+        <h2 style="text-align:left">Tagged links</h2>
+        Use these on posts and posters so every inquiry is counted by source.
+        <code id="lFb"></code><code id="lQr"></code><code id="lGo"></code>
+      </div>
+    </div>
+  </div>
+  <p class="note" style="margin:22px 0 40px">Sample by TechSocials · <button id="reset" style="border:0;background:none;color:#0066cc;font:inherit;cursor:pointer">Reset demo data</button></p>
+</div>
+<script>window.TSK_QR = 'Poster at the gate';</script>
+<script src="../desk.js"></script>
+<script>
+const SITE = 'cebu-coliseum', $ = s => document.querySelector(s);
+const base = location.href.replace(/owner\/.*$/, '');
+$('#lFb').textContent = base + '?src=fb'; $('#lQr').textContent = base + '?src=qr'; $('#lGo').textContent = base + '?src=google';
+
+// demo rows so the desk is not empty the first time it is opened
+if (!localStorage.getItem('tsk-desk-' + SITE)) {
+  const d = n => { const x = new Date(); x.setDate(x.getDate() + n); return TSKDesk.ymd(x); };
+  const now = n => { const x = new Date(); x.setHours(x.getHours() - n); return x.toISOString(); };
+  localStorage.setItem('tsk-desk-' + SITE, JSON.stringify([
+    { id: 'CC-1044', created: now(3), status: 'new', source: 'Facebook', date: d(40), type: 'Concert or show', guests: 4200, needs: ['Stage', 'LED jumbotron', 'Ticket booths'], name: 'Sample: K-pop fan meet organizer', org: 'Demo Promotions', mobile: '0917 000 0000', email: '', notes: 'Saturday evening show' },
+    { id: 'CC-1043', created: now(26), status: 'quoted', source: 'Google', date: d(120), type: 'Graduation', guests: 3500, needs: ['Stage', 'Chairs on the floor', 'Sound system'], name: 'Sample: school registrar', org: 'Demo College', mobile: '0918 000 0000', email: '', notes: 'Two sessions, morning and afternoon' },
+    { id: 'CC-1042', created: now(50), status: 'confirmed', source: 'Poster at the gate', date: d(18), type: 'Company event', guests: 1200, needs: ['Stage', 'Sound system'], name: 'Sample: HR team', org: 'Demo BPO', mobile: '0919 000 0000', email: '', notes: 'Year-end party' },
+    { id: 'CC-1041', created: now(80), status: 'new', source: 'Direct', date: '', type: 'Sports', guests: 2500, needs: ['Ingress the day before'], name: 'Sample: league commissioner', org: 'Demo Inter-barangay League', mobile: '0920 000 0000', email: '', notes: 'Finals weekend, flexible date' }
+  ]));
+}
+
+let filter = 'all';
+function reply(b, kind) {
+  const first = b.name.replace(/^Sample: /, '').split(' ')[0];
+  const t = kind === 'confirm'
+    ? 'Hi ' + first + ', this is Cebu Coliseum. Your date ' + (b.date || '') + ' for ' + b.type.toLowerCase() + ' (ref ' + b.id + ') is confirmed. We will send the contract and reservation details next. Salamat!'
+    : kind === 'quote'
+    ? 'Hi ' + first + ', this is Cebu Coliseum, about inquiry ' + b.id + '. Here is your quote for ' + b.guests.toLocaleString() + ' guests on ' + (b.date || 'your preferred date') + ': [amount]. Shall we hold the date for you?'
+    : 'Hi ' + first + ', this is Cebu Coliseum, about inquiry ' + b.id + '. We are sorry, ' + (b.date || 'that date') + ' is no longer available. Can we offer you another date?';
+  return 'sms:' + b.mobile.replace(/\s/g, '') + '?&body=' + encodeURIComponent(t);
+}
+function draw() {
+  const all = TSKDesk.list(SITE), mon = TSKDesk.ymd(new Date()).slice(0, 7);
+  $('#sNew').textContent = all.filter(b => b.status === 'new').length;
+  $('#sMonth').textContent = all.filter(b => (b.created || '').slice(0, 7) === mon).length;
+  $('#sConf').textContent = all.filter(b => b.status === 'confirmed').length;
+  const v = TSKDesk.visits(SITE); let tot = 0; const cut = new Date(); cut.setDate(cut.getDate() - 30);
+  Object.keys(v).forEach(d => { if (new Date(d) >= cut) Object.values(v[d]).forEach(n => tot += n); });
+  $('#sVisits').textContent = tot;
+
+  const rows = all.filter(b => filter === 'all' || b.status === filter);
+  $('#list').innerHTML = rows.length ? rows.map(b => `
+    <div class="inq">
+      <div class="top"><b>${b.id} · ${b.type}</b><span class="tag ${b.status}">${b.status}</span></div>
+      <div class="meta">${b.date ? new Date(b.date).toLocaleDateString('en-PH', { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' }) : 'Flexible date'} · ${b.guests.toLocaleString()} guests · via ${b.source}</div>
+      <div class="meta">${b.name}${b.org ? ', ' + b.org : ''} · ${b.mobile}${b.needs && b.needs.length ? '<br>Needs: ' + b.needs.join(', ') : ''}${b.notes ? '<br>“' + b.notes + '”' : ''}</div>
+      <div class="acts">
+        <a class="pri" href="${reply(b, 'quote')}" data-id="${b.id}" data-s="quoted">Text a quote</a>
+        <a href="${reply(b, 'confirm')}" data-id="${b.id}" data-s="confirmed">Confirm date</a>
+        <a href="${reply(b, 'decline')}" data-id="${b.id}" data-s="declined">Offer another date</a>
+      </div>
+    </div>`).join('') : '<div class="empty">Nothing here yet.</div>';
+  document.querySelectorAll('.acts a').forEach(a => a.onclick = () => { TSKDesk.update(SITE, a.dataset.id, { status: a.dataset.s }); setTimeout(draw, 300); });
+
+  const src = {}; all.forEach(b => src[b.source] = (src[b.source] || 0) + 1);
+  const max = Math.max(1, ...Object.values(src));
+  $('#sources').innerHTML = Object.entries(src).sort((a, b) => b[1] - a[1]).map(([k, n]) =>
+    `<div class="bar"><span>${k}</span><i style="width:${Math.round(n / max * 140)}px"></i><b>${n}</b></div>`).join('') || '<div class="empty">No inquiries yet.</div>';
+}
+document.querySelectorAll('#tabs button').forEach(b => b.onclick = () => {
+  filter = b.dataset.f; document.querySelectorAll('#tabs button').forEach(x => x.setAttribute('aria-pressed', x === b)); draw();
+});
+$('#reset').onclick = () => { localStorage.removeItem('tsk-desk-' + SITE); localStorage.removeItem('tsk-desk-visits-' + SITE); location.reload(); };
+draw();
+</script>
+</body>
+</html>

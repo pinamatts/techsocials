@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cebu Coliseum · Book the arena on Sanciangko Street</title>
+<meta name="description" content="Cebu Coliseum, downtown Cebu City. Up to 7,300 seats, air-conditioned, four-sided LED jumbotron. Concerts, graduations, games and company events. Check a date and send an inquiry.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Cebu Coliseum">
+<meta property="og:description" content="Cebu's downtown arena, renewed. Check a date for your concert, graduation, game or company event.">
+<meta property="og:image" content="img/arena-concert.jpg">
+<link rel="icon" href="img/ccc-mark.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"StadiumOrArena","name":"Cebu Coliseum","alternateName":"UC Cebu Coliseum","legalName":"Cebu Coliseum Complex, Inc.","address":{"@type":"PostalAddress","streetAddress":"128 Sanciangko St., Pahina Central","addressLocality":"Cebu City","addressCountry":"PH"},"email":"cebucoliseumcomplex@gmail.com","maximumAttendeeCapacity":7300,"geo":{"@type":"GeoCoordinates","latitude":10.2967879,"longitude":123.8954955},"sameAs":["https://www.facebook.com/cebucoliseum"]}
+</script>
+<style>
+:root{
+  --navy:#1f2547; --navy-2:#2b3366; --gold:#f2a227; --orange:#e5822a; --ink:#1d1d1f; --muted:#6e6e73;
+  --line:#d2d2d7; --gray:#f5f5f7; --white:#fff; --ok:#1f8a4c; --held:#c0392b;
+  --font:-apple-system,BlinkMacSystemFont,"SF Pro Text","Inter","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased;line-height:1.47;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+button{font:inherit;cursor:pointer}
+
+/* sample note */
+.sample{background:var(--gray);color:var(--muted);font-size:12px;text-align:center;padding:7px 16px}
+.sample b{color:var(--ink);font-weight:600}
+
+/* nav */
+nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.86);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(0,0,0,.08)}
+nav .wrap{display:flex;align-items:center;gap:22px;height:56px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand img{height:30px;width:auto}
+.brand span{font-weight:700;font-size:15px;letter-spacing:-.01em;line-height:1.1}
+.brand small{display:block;font-weight:500;font-size:11px;color:var(--muted)}
+nav .links{display:flex;gap:22px;margin-left:auto;font-size:13px}
+nav .links a{text-decoration:none;color:#333}
+nav .links a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;border:0;border-radius:980px;background:var(--navy);color:#fff;font-size:15px;font-weight:500;padding:11px 22px;text-decoration:none;transition:background .2s}
+.btn:hover{background:var(--navy-2)}
+.btn.gold{background:var(--gold);color:var(--navy)}
+.btn.gold:hover{background:#f7b24a}
+.btn.ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.6)}
+.btn.small{font-size:13px;padding:7px 15px}
+.more{color:#0066cc;text-decoration:none;font-size:17px}
+.more:hover{text-decoration:underline}
+.more::after{content:" ›"}
+
+/* hero */
+.hero{position:relative;color:#fff;min-height:min(86vh,760px);display:flex;align-items:flex-end;overflow:hidden;background:var(--navy)}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,18,40,.10) 0%,rgba(15,18,40,.45) 35%,rgba(15,18,40,.86) 62%,rgba(15,18,40,.94) 100%)}
+.hero .wrap{position:relative;z-index:1;padding-bottom:64px;text-align:center}
+.hero .new{display:inline-block;color:var(--gold);font-size:15px;font-weight:600;margin-bottom:10px}
+.hero h1{text-wrap:balance;font-size:clamp(40px,7vw,80px);line-height:1.04;letter-spacing:-.025em;font-weight:700}
+.hero p{font-size:clamp(18px,2.2vw,24px);max-width:720px;margin:16px auto 28px;color:rgba(255,255,255,.88);line-height:1.35}
+.hero .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+/* facts strip */
+.facts{background:var(--navy);color:#fff}
+.facts .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.facts div{padding:26px 10px;text-align:center;border-left:1px solid rgba(255,255,255,.12)}
+.facts div:first-child{border-left:0}
+.facts strong{display:block;font-size:28px;font-weight:700;color:var(--gold);letter-spacing:-.01em}
+.facts span{font-size:14px;color:rgba(255,255,255,.78)}
+
+section{padding:96px 0}
+section.gray{background:var(--gray)}
+.head{text-align:center;max-width:760px;margin:0 auto 44px}
+.head h2{font-size:clamp(32px,4.6vw,52px);line-height:1.08;letter-spacing:-.02em;font-weight:700}
+.head p{font-size:clamp(17px,1.8vw,21px);color:var(--muted);margin-top:14px}
+
+/* setups */
+.seg{display:inline-flex;background:#e8e8ed;border-radius:980px;padding:3px;margin:0 auto 36px;flex-wrap:wrap;justify-content:center}
+.seg-row{text-align:center}
+.seg button{border:0;background:transparent;border-radius:980px;padding:8px 18px;font-size:14px;font-weight:500;color:#333}
+.seg button[aria-pressed=true]{background:#fff;color:var(--ink);box-shadow:0 1px 4px rgba(0,0,0,.12)}
+.setup{display:grid;grid-template-columns:1.35fr 1fr;gap:0;background:#fff;border-radius:28px;overflow:hidden;box-shadow:0 2px 24px rgba(0,0,0,.06)}
+.setup>*{min-width:0}
+.setup .ph{aspect-ratio:4/3;background:#ddd}
+.setup .ph img{width:100%;height:100%;object-fit:cover}
+.setup .tx{padding:40px 36px;display:flex;flex-direction:column}
+.setup h3{font-size:30px;letter-spacing:-.015em;line-height:1.1}
+.setup .cap{font-size:17px;color:var(--orange);font-weight:600;margin:10px 0 16px}
+.setup ul{list-style:none;display:grid;gap:10px;font-size:16px;color:#333;margin-bottom:26px}
+.setup li{padding-left:24px;position:relative}
+.setup li::before{content:"";position:absolute;left:2px;top:9px;width:8px;height:8px;border-radius:50%;background:var(--gold)}
+.setup .tx .btn{align-self:flex-start;margin-top:auto}
+
+/* planner */
+.planner{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.planner>*{min-width:0}
+.card{background:#fff;border-radius:22px;padding:28px;box-shadow:0 2px 20px rgba(0,0,0,.05)}
+.card h3{font-size:19px;margin-bottom:4px}
+.card .sub{font-size:14px;color:var(--muted);margin-bottom:18px}
+.cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.cal-head b{font-size:17px}
+.cal-head button{border:0;background:var(--gray);width:34px;height:34px;border-radius:50%;font-size:18px;color:#333}
+.cal-head button:disabled{opacity:.35;cursor:default}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;text-align:center}
+.cal .dow{font-size:11px;color:var(--muted);font-weight:600;padding:4px 0}
+.cal button{border:0;background:var(--gray);border-radius:10px;aspect-ratio:1;font-size:14px;color:var(--ink);position:relative}
+.cal button:hover:not(:disabled){background:#e3e6f2}
+.cal button.held{background:#fbeaea;color:var(--held);text-decoration:line-through}
+.cal button.tent{background:#fff4e2;color:#a35b00}
+.cal button:disabled{cursor:not-allowed}
+.cal button.past{background:transparent;color:#c7c7cc}
+.cal button.sel{background:var(--navy);color:#fff;text-decoration:none}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin-top:14px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.datepick{margin-top:16px;font-size:15px;padding:12px 14px;background:var(--gray);border-radius:12px}
+.datepick b{color:var(--navy)}
+label{display:block;font-size:13px;font-weight:600;color:#333;margin:16px 0 6px}
+input[type=text],input[type=tel],input[type=email],select,textarea{width:100%;font:inherit;font-size:16px;border:1px solid var(--line);border-radius:12px;padding:11px 13px;background:#fff;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--navy);outline-offset:1px;border-color:transparent}
+.types{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.types button{border:1px solid var(--line);background:#fff;border-radius:12px;padding:11px 10px;font-size:14px;font-weight:500;text-align:left}
+.types button[aria-pressed=true]{border-color:var(--navy);box-shadow:inset 0 0 0 1px var(--navy);background:#f3f4fa}
+input[type=range]{width:100%;accent-color:var(--navy)}
+.crowd{display:flex;justify-content:space-between;align-items:baseline}
+.crowd b{font-size:22px;color:var(--navy)}
+.fit{font-size:13px;margin-top:6px;color:var(--ok)}
+.fit.warn{color:#a35b00}
+.needs{display:grid;grid-template-columns:1fr 1fr;gap:8px 12px;font-size:14px}
+.needs label{font-weight:400;margin:0;display:flex;gap:8px;align-items:center}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.two>*{min-width:0}
+.send{width:100%;margin-top:22px;padding:14px}
+.fine{font-size:12px;color:var(--muted);margin-top:10px;text-align:center}
+.done{display:none;text-align:center;padding:10px 0}
+.done.on{display:block}
+.done .ref{font-size:34px;font-weight:700;color:var(--navy);letter-spacing:.02em;margin:6px 0 4px}
+.done p{color:var(--muted);font-size:15px;margin-bottom:18px}
+.done .row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+
+/* venue tiles */
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.tile{border-radius:22px;overflow:hidden;background:#fff;box-shadow:0 2px 20px rgba(0,0,0,.05)}
+.tile>*{min-width:0}
+.tile img{aspect-ratio:4/3;width:100%;object-fit:cover}
+.tile div{padding:20px 22px 24px}
+.tile h3{font-size:19px;margin-bottom:6px}
+.tile p{font-size:15px;color:var(--muted)}
+.specs{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border-radius:22px;overflow:hidden;margin-top:28px}
+.specs div{background:#fff;padding:22px 24px}
+.specs b{display:block;font-size:17px;margin-bottom:2px}
+.specs span{font-size:14px;color:var(--muted)}
+
+/* heritage */
+.heritage{background:var(--navy);color:#fff}
+.heritage .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.heritage .wrap>*{min-width:0}
+.heritage img{border-radius:18px;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+.heritage .new{color:var(--gold);font-weight:600;font-size:15px}
+.heritage h2{font-size:clamp(32px,4.4vw,48px);line-height:1.08;letter-spacing:-.02em;margin:8px 0 16px}
+.heritage p{color:rgba(255,255,255,.82);font-size:17px;margin-bottom:14px}
+.timeline{display:grid;grid-template-columns:auto 1fr;gap:10px 18px;margin-top:22px;font-size:15px}
+.timeline b{color:var(--gold)}
+.timeline span{color:rgba(255,255,255,.85)}
+
+/* visit */
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}
+.visit>*{min-width:0}
+.visit .facade{border-radius:22px;overflow:hidden}
+.visit .facade img{width:100%;height:100%;object-fit:cover;min-height:320px}
+.visit dl{display:grid;gap:18px}
+.visit dt{font-size:13px;font-weight:600;color:var(--muted)}
+.visit dd{font-size:17px}
+.faq{max-width:760px;margin:0 auto}
+details{border-bottom:1px solid var(--line);padding:18px 0}
+summary{font-size:17px;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--muted);font-weight:400;font-size:22px;line-height:1}
+details[open] summary::after{content:"–"}
+details p{color:#424245;font-size:16px;margin-top:10px}
+
+footer{background:var(--gray);font-size:12px;color:var(--muted);padding:34px 0 40px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer a{color:#424245}
+
+@media (max-width:860px){
+  nav .links{display:none}
+  nav .btn{margin-left:auto}
+  .facts .wrap{grid-template-columns:repeat(2,1fr)}
+  .facts div:nth-child(3){border-left:0}
+  .facts div{border-top:1px solid rgba(255,255,255,.12)}
+  .facts div:nth-child(-n+2){border-top:0}
+  .setup,.planner,.heritage .wrap,.visit{grid-template-columns:1fr}
+  .setup .tx{padding:28px 24px}
+  .tiles,.specs{grid-template-columns:1fr}
+  section{padding:68px 0}
+  .heritage .wrap{gap:32px}
+}
+@media (max-width:420px){
+  .brand small{display:none}
+  .types,.needs,.two{grid-template-columns:1fr}
+  .card{padding:22px 18px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="sample"><b>Sample website</b> made by TechSocials for Cebu Coliseum. Every detail here can be changed.</div>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Cebu Coliseum home">
+      <img src="img/ccc-mark.png" alt="">
+      <span>Cebu Coliseum<small>Cebu Coliseum Complex, Inc.</small></span>
+    </a>
+    <div class="links">
+      <a href="#setups">Events</a>
+      <a href="#venue">The venue</a>
+      <a href="#since-1962">Since 1962</a>
+      <a href="#visit">Visit</a>
+    </div>
+    <a class="btn small" href="#plan">Check a date</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <img src="img/arena-concert.jpg" alt="Cebu Coliseum set up for a concert, with LED walls on stage and a full floor of seats">
+  <div class="wrap">
+    <span class="new">Renewed and reopened</span>
+    <h1>Cebu's downtown arena is back.</h1>
+    <p>Up to 7,300 seats, fully air-conditioned, right on Sanciangko Street. Concerts, graduations, games and company events.</p>
+    <div class="cta">
+      <a class="btn gold" href="#plan">Check a date</a>
+      <a class="btn ghost" href="#venue">See the venue</a>
+    </div>
+  </div>
+</header>
+
+<div class="facts">
+  <div class="wrap">
+    <div><strong>7,300</strong><span>seats, basketball setup</span></div>
+    <div><strong>5,200</strong><span>seats, concert setup</span></div>
+    <div><strong>4-sided</strong><span>LED jumbotron</span></div>
+    <div><strong>1962</strong><span>opened, renewed 2025</span></div>
+  </div>
+</div>
+
+<section class="gray" id="setups">
+  <div class="wrap">
+    <div class="head">
+      <h2>One arena. Every kind of crowd.</h2>
+      <p>Pick your event to see how the Coliseum sets up for it.</p>
+    </div>
+    <div class="seg-row">
+      <div class="seg" role="group" aria-label="Event type">
+        <button aria-pressed="true" data-k="concert">Concert</button>
+        <button aria-pressed="false" data-k="graduation">Graduation</button>
+        <button aria-pressed="false" data-k="basketball">Basketball</button>
+        <button aria-pressed="false" data-k="company">Company event</button>
+      </div>
+    </div>
+    <div class="setup">
+      <div class="ph"><img id="sImg" src="img/arena-concert.jpg" alt=""></div>
+      <div class="tx">
+        <h3 id="sTitle"></h3>
+        <div class="cap" id="sCap"></div>
+        <ul id="sList"></ul>
+        <a class="btn" href="#plan" id="sBtn">Check a date</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="plan">
+  <div class="wrap">
+    <div class="head">
+      <h2>Check a date. Send your inquiry.</h2>
+      <p>See which dates are open, tell us about your event, and our team replies with a quote. No phone tag.</p>
+    </div>
+    <div class="planner">
+      <div class="card">
+        <h3>1. Pick your date</h3>
+        <div class="sub">Open dates are in gray.</div>
+        <div class="cal-head">
+          <button id="prev" aria-label="Previous month">‹</button>
+          <b id="mLabel"></b>
+          <button id="next" aria-label="Next month">›</button>
+        </div>
+        <div class="cal" id="cal"></div>
+        <div class="legend">
+          <span><i style="background:var(--gray)"></i>Open</span>
+          <span><i style="background:#fff4e2"></i>On hold, may open up</span>
+          <span><i style="background:#fbeaea"></i>Booked</span>
+        </div>
+        <div class="datepick" id="datePick">No date picked yet.</div>
+      </div>
+
+      <div class="card">
+        <form id="form" novalidate>
+          <h3>2. Tell us about your event</h3>
+          <div class="sub">Takes a minute. We reply within one working day.</div>
+          <label>Type of event</label>
+          <div class="types" id="types">
+            <button type="button" data-v="Concert or show" aria-pressed="true">Concert or show</button>
+            <button type="button" data-v="Graduation" aria-pressed="false">Graduation</button>
+            <button type="button" data-v="Sports" aria-pressed="false">Sports</button>
+            <button type="button" data-v="Company event" aria-pressed="false">Company event</button>
+          </div>
+          <label for="crowd">Expected crowd</label>
+          <div class="crowd"><b id="crowdOut">1,500</b><span class="fine" style="margin:0">people</span></div>
+          <input type="range" id="crowd" min="100" max="7300" step="100" value="1500">
+          <div class="fit" id="fit"></div>
+          <label>What you'll need</label>
+          <div class="needs">
+            <label><input type="checkbox" value="Stage"> Stage</label>
+            <label><input type="checkbox" value="LED jumbotron"> LED jumbotron</label>
+            <label><input type="checkbox" value="Sound system"> Sound system</label>
+            <label><input type="checkbox" value="Chairs on the floor"> Chairs on the floor</label>
+            <label><input type="checkbox" value="Ticket booths"> Ticket booths</label>
+            <label><input type="checkbox" value="Ingress the day before"> Ingress the day before</label>
+          </div>
+          <div class="two">
+            <div><label for="nm">Your name</label><input type="text" id="nm" autocomplete="name" required></div>
+            <div><label for="org">School or company</label><input type="text" id="org" autocomplete="organization"></div>
+          </div>
+          <div class="two">
+            <div><label for="mb">Mobile</label><input type="tel" id="mb" autocomplete="tel" inputmode="tel" required></div>
+            <div><label for="em">Email</label><input type="email" id="em" autocomplete="email"></div>
+          </div>
+          <label for="notes">Anything else</label>
+          <textarea id="notes" rows="2" placeholder="Event name, hours, sponsors, anything we should know"></textarea>
+          <button class="btn send" type="submit">Send inquiry</button>
+          <div class="fine" id="err">No payment now. You get a quote first.</div>
+        </form>
+        <div class="done" id="done">
+          <div class="fine">Your reference</div>
+          <div class="ref" id="ref"></div>
+          <p id="doneTx"></p>
+          <div class="row">
+            <a class="btn" id="mailBtn" href="#">Email it to us</a>
+            <button class="btn gold" id="copyBtn" type="button">Copy for Viber</button>
+          </div>
+          <p style="margin:16px 0 0"><a class="more" href="#plan" id="again">Send another inquiry</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gray" id="venue">
+  <div class="wrap">
+    <div class="head">
+      <h2>Renewed from the roof down.</h2>
+      <p>A ₱100-million upgrade brought new seats, a new roof, centralized air-conditioning and a FIBA-approved wooden floor. The Coliseum reopened on 6 September 2025.</p>
+    </div>
+    <div class="tiles">
+      <div class="tile"><img src="img/court.jpg" alt="The arena floor with chairs set out and the yellow lower box seats" loading="lazy"><div><h3>The floor</h3><p>A FIBA-approved wooden court that clears for chairs, a stage or a full graduation floor.</p></div></div>
+      <div class="tile"><img src="img/graduation.jpg" alt="A graduation ceremony on stage at Cebu Coliseum" loading="lazy"><div><h3>The stage and screens</h3><p>A four-sided LED jumbotron above center court, with room for LED walls on stage.</p></div></div>
+      <div class="tile"><img src="img/lobby.jpg" alt="The Cebu Coliseum lobby with the Home of the Webmasters banner and ticket booths" loading="lazy"><div><h3>The lobby</h3><p>Two entrances to the upper and lower box, with ticket booths right at the door.</p></div></div>
+    </div>
+    <div class="specs">
+      <div><b>7,300 seats</b><span>Basketball setup</span></div>
+      <div><b>About 5,200 seats</b><span>Concert setup</span></div>
+      <div><b>Centralized air-conditioning</b><span>Cool for daytime events</span></div>
+      <div><b>Four-sided LED jumbotron</b><span>Visible from every seat</span></div>
+      <div><b>Upper and lower box</b><span>New seats throughout</span></div>
+      <div><b>Home of the Webmasters</b><span>University of Cebu, CESAFI</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="heritage" id="since-1962">
+  <div class="wrap">
+    <img src="img/opening-1962.jpg" alt="Framed archive photo captioned Cebu Coliseum after completion, August 1, 1962" loading="lazy">
+    <div>
+      <span class="new">Since 1962</span>
+      <h2>Where Cebu has gathered for six decades.</h2>
+      <p>Fights, games, graduations and concerts. Generations of Cebuanos have a memory in this building. Now it's ready for the next ones.</p>
+      <div class="timeline">
+        <b>1962</b><span>Completed on 1 August, downtown on Sanciangko Street.</span>
+        <b>2025</b><span>Reopened on 6 September after a ₱100-million renovation by the University of Cebu.</span>
+        <b>Today</b><span>Home of the UC Webmasters, and open for your event.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <div class="head">
+      <h2>Downtown, where everyone can get to.</h2>
+      <p>Right in the heart of the city, close to Colon Street, the jeepney routes and the downtown malls.</p>
+    </div>
+    <div class="visit">
+      <div class="facade"><img src="img/facade.jpg" alt="The renovated Cebu Coliseum facade on Sanciangko Street" loading="lazy"></div>
+      <div class="card">
+        <dl>
+          <div><dt>Address</dt><dd>128 Sanciangko St., Pahina Central, Cebu City</dd></div>
+          <div><dt>Bookings and inquiries</dt><dd><a href="mailto:cebucoliseumcomplex@gmail.com">cebucoliseumcomplex@gmail.com</a></dd></div>
+          <div><dt>Office hours</dt><dd>Daily, 9 AM to 6 PM</dd></div>
+          <div><dt>Follow us</dt><dd><a href="https://www.facebook.com/cebucoliseum" target="_blank" rel="noopener">facebook.com/cebucoliseum</a></dd></div>
+        </dl>
+        <p style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Cebu+Coliseum+Sanciangko+Cebu+City" target="_blank" rel="noopener">Get directions</a>
+          <a class="btn gold" href="#plan">Check a date</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="faq" style="margin-top:72px">
+      <details><summary>How far ahead should we book?</summary><p>Graduation season and December fill first. For those dates, send your inquiry two to three months ahead. For other dates, a few weeks is usually enough.</p></details>
+      <details><summary>Is there parking?</summary><p>There is no parking inside the Coliseum. We'll point you to the nearest pay parking when we confirm your date, and for big events we can help plan drop-off.</p></details>
+      <details><summary>Can we bring our own sound, lights and caterer?</summary><p>Yes, tell us in your inquiry and we'll include the ingress schedule and house rules with your quote.</p></details>
+      <details><summary>How do we pay?</summary><p>You get a written quote first. A reservation fee holds your date, and the balance is settled before the event. An official receipt is issued for every payment.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© Cebu Coliseum Complex, Inc. · 128 Sanciangko St., Cebu City</span>
+    <span>Sample website by <a href="techsocials-websites-and-systems.pdf">TechSocials</a> · <a href="owner/">Front desk</a></span>
+  </div>
+</footer>
+
+<script src="desk.js"></script>
+<script>
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+const SITE = 'cebu-coliseum';
+TSKDesk.visit(SITE);
+
+/* event setups */
+const SETUPS = {
+  concert: { img: 'arena-concert.jpg', title: 'Concerts and fan meets', cap: 'About 5,200 seats in concert setup',
+    list: ['End stage with room for LED walls', 'Floor seating plus the upper and lower box', 'Four-sided jumbotron for the back rows', 'Ticket booths at both entrances'], type: 'Concert or show' },
+  graduation: { img: 'graduation.jpg', title: 'Graduations', cap: 'Graduates on the floor, families in the stands',
+    list: ['Stage, rostrum and LED backdrop', 'Floor rows for the graduating class', 'Air-conditioned for long ceremonies', 'Morning and afternoon sessions on one day'], type: 'Graduation' },
+  basketball: { img: 'court.jpg', title: 'Basketball and sports', cap: 'Up to 7,300 seats',
+    list: ['FIBA-approved wooden floor', 'Four-sided LED jumbotron', 'Home court of the UC Webmasters', 'Tournaments, leagues and exhibitions'], type: 'Sports' },
+  company: { img: 'court-wide.jpg', title: 'Company events and conventions', cap: 'Assemblies, sales rallies, year-end parties',
+    list: ['Room for a thousand employees and more', 'Stage and screens for keynotes and awards', 'Centralized air-conditioning', 'Downtown, easy for staff to reach'], type: 'Company event' }
+};
+function showSetup(k) {
+  const s = SETUPS[k];
+  $$('.seg button').forEach(b => b.setAttribute('aria-pressed', b.dataset.k === k));
+  $('#sImg').src = 'img/' + s.img; $('#sImg').alt = s.title + ' at Cebu Coliseum';
+  $('#sTitle').textContent = s.title; $('#sCap').textContent = s.cap;
+  $('#sList').innerHTML = s.list.map(x => '<li>' + x + '</li>').join('');
+  $('#sBtn').onclick = () => pickType(s.type);
+}
+$$('.seg button').forEach(b => b.onclick = () => showSetup(b.dataset.k));
+showSetup('concert');
+
+/* calendar: sample availability until it is connected to the real booking list */
+const today = new Date(); today.setHours(0, 0, 0, 0);
+let view = new Date(today.getFullYear(), today.getMonth(), 1), picked = null;
+const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+function status(d) {
+  const booked = TSKDesk.list(SITE).filter(b => b.status === 'confirmed').map(b => b.date);
+  if (booked.includes(TSKDesk.ymd(d))) return 'held';
+  let h = d.getFullYear() * 372 + d.getMonth() * 31 + d.getDate();
+  h = Math.abs(Math.sin(h * 12.9898) * 43758.5453) % 1;
+  const weekend = d.getDay() === 0 || d.getDay() === 6;
+  if (h < (weekend ? .45 : .12)) return 'held';
+  if (h < (weekend ? .60 : .22)) return 'tent';
+  return 'open';
+}
+function drawCal() {
+  $('#mLabel').textContent = MONTHS[view.getMonth()] + ' ' + view.getFullYear();
+  $('#prev').disabled = view <= new Date(today.getFullYear(), today.getMonth(), 1);
+  const first = new Date(view), days = new Date(view.getFullYear(), view.getMonth() + 1, 0).getDate();
+  let h = ['S','M','T','W','T','F','S'].map(x => '<div class="dow">' + x + '</div>').join('');
+  for (let i = 0; i < first.getDay(); i++) h += '<div></div>';
+  for (let i = 1; i <= days; i++) {
+    const d = new Date(view.getFullYear(), view.getMonth(), i), st = d < today ? 'past' : status(d);
+    const sel = picked && +picked === +d ? ' sel' : '';
+    const lab = MONTHS[d.getMonth()] + ' ' + i + (st === 'held' ? ', booked' : st === 'tent' ? ', on hold' : st === 'past' ? '' : ', open');
+    h += '<button type="button" class="' + st + sel + '" data-d="' + i + '"' + (st === 'held' || st === 'past' ? ' disabled' : '') + ' aria-label="' + lab + '">' + i + '</button>';
+  }
+  $('#cal').innerHTML = h;
+  $$('#cal button:not(:disabled)').forEach(b => b.onclick = () => {
+    picked = new Date(view.getFullYear(), view.getMonth(), +b.dataset.d); drawCal();
+    const tent = status(picked) === 'tent';
+    $('#datePick').innerHTML = '<b>' + picked.toLocaleDateString('en-PH', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' }) + '</b>' +
+      (tent ? '<br><span style="color:#a35b00">Someone has this date on hold. We\'ll tell you right away if it opens up.</span>' : '<br><span style="color:var(--ok)">Open. Send your inquiry to hold it.</span>');
+  });
+}
+$('#prev').onclick = () => { view.setMonth(view.getMonth() - 1); drawCal(); };
+$('#next').onclick = () => { view.setMonth(view.getMonth() + 1); drawCal(); };
+drawCal();
+
+/* form */
+let type = 'Concert or show';
+function pickType(v) { type = v; $$('#types button').forEach(b => b.setAttribute('aria-pressed', b.dataset.v === v)); }
+$$('#types button').forEach(b => b.onclick = () => pickType(b.dataset.v));
+function crowd() {
+  const n = +$('#crowd').value; $('#crowdOut').textContent = n.toLocaleString();
+  const f = $('#fit');
+  if (n <= 5200) { f.className = 'fit'; f.textContent = 'Fits any setup, including concert.'; }
+  else { f.className = 'fit warn'; f.textContent = 'Above 5,200 needs the full arena setup, with seats on all four sides.'; }
+}
+$('#crowd').oninput = crowd; crowd();
+
+let last = null;
+function summary(b) {
+  return 'Cebu Coliseum inquiry ' + b.id + '\n' +
+    'Date: ' + (b.date || 'flexible') + '\n' + 'Event: ' + b.type + '\n' + 'Crowd: ' + b.guests.toLocaleString() + '\n' +
+    (b.needs.length ? 'Needs: ' + b.needs.join(', ') + '\n' : '') +
+    'Name: ' + b.name + (b.org ? ' (' + b.org + ')' : '') + '\n' + 'Mobile: ' + b.mobile + (b.email ? '\nEmail: ' + b.email : '') +
+    (b.notes ? '\nNotes: ' + b.notes : '');
+}
+$('#form').onsubmit = e => {
+  e.preventDefault();
+  const name = $('#nm').value.trim(), mobile = $('#mb').value.trim();
+  if (!name || mobile.replace(/\D/g, '').length < 10) { $('#err').textContent = 'Please add your name and a mobile number so we can reply.'; $('#err').style.color = 'var(--held)'; return; }
+  last = TSKDesk.add(SITE, 'CC', {
+    date: picked ? TSKDesk.ymd(picked) : '', type, guests: +$('#crowd').value,
+    needs: $$('.needs input:checked').map(i => i.value), name, org: $('#org').value.trim(), mobile,
+    email: $('#em').value.trim(), notes: $('#notes').value.trim()
+  });
+  $('#ref').textContent = last.id;
+  $('#doneTx').textContent = 'Got it, ' + name.split(' ')[0] + '. ' + (picked ? 'We\'ve noted ' + picked.toLocaleDateString('en-PH', { month: 'long', day: 'numeric' }) + ' for you. ' : '') + 'Our team will reply with a quote within one working day. Keep this reference.';
+  $('#mailBtn').href = 'mailto:cebucoliseumcomplex@gmail.com?subject=' + encodeURIComponent('Inquiry ' + last.id + ' · ' + type) + '&body=' + encodeURIComponent(summary(last));
+  $('#form').style.display = 'none'; $('#done').classList.add('on');
+};
+$('#copyBtn').onclick = async () => {
+  try { await navigator.clipboard.writeText(summary(last)); $('#copyBtn').textContent = 'Copied. Paste it in Viber'; }
+  catch (e) { prompt('Copy this:', summary(last)); }
+};
+$('#again').onclick = () => { $('#form').reset(); crowd(); $('#form').style.display = ''; $('#done').classList.remove('on'); $('#copyBtn').textContent = 'Copy for Viber'; };
+</script>
+</body>
+</html>
