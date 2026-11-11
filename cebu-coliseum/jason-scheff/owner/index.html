@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Box office · Jason Scheff Live · Cebu Coliseum</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="../../img/ccc-mark.png">
+<style>
+:root{--night:#0b0d1c;--navy:#1f2547;--gold:#f2a227;--ink:#1d1d1f;--muted:#6e6e73;--line:#d2d2d7;--gray:#f5f5f7;--ok:#1f8a4c;--no:#b3261e;
+  --vip:#f2a227;--patron:#ff5a6a;--lower:#f5c518;--upper:#c0392b;--gen:#7b86b8;
+  --font:-apple-system,BlinkMacSystemFont,"SF Pro Text","Inter","Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font);background:var(--gray);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.45}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+header{background:var(--night);color:#fff}
+header .wrap{display:flex;align-items:center;gap:12px;height:60px}
+header img{height:28px;filter:invert(1)}
+header b{font-size:16px}
+header small{display:block;font-size:12px;color:rgba(255,255,255,.6);font-weight:500}
+header a{margin-left:auto;color:rgba(255,255,255,.8);font-size:13px;text-decoration:none}
+.note{font-size:13px;color:var(--muted);margin:18px 0 6px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:12px 0 18px}
+.stats>div{background:#fff;border-radius:16px;padding:18px}
+.stats b{display:block;font-size:28px;color:var(--night);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.stats span{font-size:13px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:3fr 2fr;gap:16px;align-items:start;margin-bottom:16px}
+.grid>*{min-width:0}
+.panel{background:#fff;border-radius:18px;padding:20px}
+.panel h2{font-size:17px;margin-bottom:4px}
+.panel .sub{font-size:13px;color:var(--muted);margin-bottom:14px}
+.bar{display:grid;grid-template-columns:120px 1fr 92px;gap:12px;align-items:center;font-size:14px;padding:7px 0}
+.bar .t{display:flex;align-items:center;gap:8px;font-weight:600}
+.bar .t i{width:10px;height:10px;border-radius:3px}
+.bar .track{height:10px;background:var(--gray);border-radius:10px;overflow:hidden}
+.bar .track span{display:block;height:100%;border-radius:10px}
+.bar .n{text-align:right;font-variant-numeric:tabular-nums;color:var(--muted);font-size:13px}
+.bar .n b{color:var(--ink)}
+.chart{display:flex;align-items:flex-end;gap:5px;height:120px;margin-top:6px}
+.chart div{flex:1;background:var(--night);border-radius:5px 5px 0 0;min-height:3px;position:relative}
+.chart div.today{background:var(--gold)}
+.axis{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-top:6px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{text-align:left;font-size:12px;color:var(--muted);font-weight:600;padding:8px 6px;border-bottom:1px solid var(--line)}
+td{padding:10px 6px;border-bottom:1px solid var(--gray);vertical-align:top}
+td.r,th.r{text-align:right;font-variant-numeric:tabular-nums}
+.pill{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px;background:#e8f5ec;color:var(--ok)}
+.pill.in{background:#e8ebf7;color:var(--navy)}
+.pill.new{background:#fff4e2;color:#a35b00}
+.door{display:flex;gap:8px}
+.door input{flex:1;font:inherit;font-size:16px;border:1px solid var(--line);border-radius:12px;padding:10px 12px;text-transform:uppercase}
+.door button,.btn{border:0;border-radius:980px;background:var(--night);color:#fff;font:inherit;font-size:14px;font-weight:600;padding:10px 18px;cursor:pointer}
+.res{margin-top:12px;border-radius:14px;padding:14px;font-size:14px;display:none}
+.res.on{display:block}
+.res.ok{background:#e8f5ec;color:#0f5a30}
+.res.bad{background:#fdeaea;color:var(--no)}
+.res b{display:block;font-size:17px}
+.links{display:grid;gap:8px;font-size:13px}
+.links code{background:var(--gray);border-radius:8px;padding:6px 8px;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:12px}
+.qrrow{display:flex;gap:14px;align-items:center;margin-top:12px}
+.qrrow div{width:96px;height:96px;flex:0 0 96px}
+.qrrow svg{width:100%;height:100%}
+.qrrow p{font-size:13px;color:var(--muted)}
+@media (max-width:860px){
+  .stats{grid-template-columns:1fr 1fr}
+  .grid{grid-template-columns:1fr}
+  .bar{grid-template-columns:96px 1fr 80px}
+  .hide-s{display:none}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <img src="../../img/ccc-mark.png" alt="">
+    <div><b>Box office</b><small>Jason Scheff Live · Fri 12 Feb 2027</small></div>
+    <a href="../">Open ticket page ›</a>
+  </div>
+</header>
+<div class="wrap">
+  <p class="note">Sample data for the proposal, plus any test orders made on this device. On the live site this page is behind your staff login.</p>
+  <div class="stats">
+    <div><b id="sSold">0</b><span>tickets sold</span></div>
+    <div><b id="sRev">₱0</b><span>sales, no fees taken</span></div>
+    <div><b id="sPct">0%</b><span>of the house</span></div>
+    <div><b id="sDays">0</b><span>days to the show</span></div>
+  </div>
+
+  <div class="grid">
+    <div class="panel">
+      <h2>Sales by ticket</h2>
+      <div class="sub">Sold and left in each section. Lower and Upper Box are the yellow and red seats.</div>
+      <div id="tiers"></div>
+    </div>
+    <div class="panel">
+      <h2>Where buyers came from</h2>
+      <div class="sub">Counted from the tagged links on every post, ad and poster.</div>
+      <div id="src"></div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="panel">
+      <h2>Tickets sold, last 14 days</h2>
+      <div class="sub">The spike is the day the early-bird ad ran.</div>
+      <div class="chart" id="chart"></div>
+      <div class="axis"><span id="ax0"></span><span>Today</span></div>
+    </div>
+    <div class="panel">
+      <h2>Door check-in</h2>
+      <div class="sub">Type or scan a ticket reference at the gate.</div>
+      <div class="door"><input id="ref" placeholder="JS-1041" aria-label="Ticket reference"><button id="check">Check in</button></div>
+      <div class="res" id="res"></div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="panel">
+      <h2>Latest orders</h2>
+      <div class="sub">Every order, with its reference, payment and source.</div>
+      <table>
+        <thead><tr><th>Ref</th><th>Buyer</th><th class="hide-s">Ticket</th><th class="r">Amount</th><th class="hide-s">Source</th><th>Status</th></tr></thead>
+        <tbody id="orders"></tbody>
+      </table>
+    </div>
+    <div class="panel">
+      <h2>Links for posts and posters</h2>
+      <div class="sub">Each one counts its own buyers above.</div>
+      <div class="links" id="links"></div>
+      <div class="qrrow"><div id="qr"></div><p>QR for posters and the box-office window. Scans are counted as "QR posters".</p></div>
+    </div>
+  </div>
+  <p class="note" style="margin-bottom:40px">Built by TechSocials for Cebu Coliseum Complex, Inc.</p>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+<script src="../../desk.js"></script>
+<script>
+const SITE = 'jason-scheff';
+const SHOW = new Date('2027-02-12T20:00:00+08:00');
+const TIERS = [
+  {k:'vip',name:'VIP',price:6500,cap:400,sold:312},
+  {k:'patron',name:'Patron',price:4800,cap:800,sold:455},
+  {k:'lower',name:'Lower Box',price:3200,cap:1600,sold:820},
+  {k:'upper',name:'Upper Box',price:1800,cap:1400,sold:510},
+  {k:'gen',name:'General',price:900,cap:1000,sold:260}
+];
+const SRC = {'Facebook ads':972,'Facebook posts':566,'Messenger':283,'Google':212,'QR posters':189,'Direct':135};
+const SAMPLE = [
+  {id:'JS-1040',name:'Maria Cristina L.',tierName:'Patron',qty:2,amount:9600,source:'Facebook ads',status:'paid'},
+  {id:'JS-1039',name:'Ramon D.',tierName:'VIP',qty:2,amount:13000,source:'Messenger',status:'paid'},
+  {id:'JS-1038',name:'Jennifer A.',tierName:'Lower Box',qty:4,amount:12800,source:'Facebook posts',status:'paid'},
+  {id:'JS-1037',name:'Paolo S.',tierName:'Upper Box',qty:2,amount:3600,source:'QR posters',status:'paid'},
+  {id:'JS-1036',name:'Grace T.',tierName:'General Admission',qty:3,amount:2700,source:'Google',status:'paid'}
+];
+const peso = n => '₱' + n.toLocaleString('en-PH');
+const $ = id => document.getElementById(id);
+const live = () => { try { return TSKDesk.list(SITE); } catch(e){ return []; } };
+
+function render(){
+  const L = live();
+  let sold = 0, rev = 0, cap = 0;
+  const rows = TIERS.map(t => {
+    const mine = L.filter(o => o.tier === t.k);
+    const s = t.sold + mine.reduce((a,o)=>a+o.qty,0);
+    const r = t.sold*t.price + mine.reduce((a,o)=>a+o.amount,0);
+    sold += s; rev += r; cap += t.cap;
+    const pct = Math.round(s/t.cap*100);
+    return `<div class="bar"><span class="t"><i style="background:var(--${t.k})"></i>${t.name}</span>
+      <span class="track"><span style="width:${pct}%;background:var(--${t.k})"></span></span>
+      <span class="n"><b>${s.toLocaleString()}</b> / ${t.cap.toLocaleString()}</span></div>`;
+  }).join('');
+  $('tiers').innerHTML = rows;
+  $('sSold').textContent = sold.toLocaleString();
+  $('sRev').textContent = peso(rev);
+  $('sPct').textContent = Math.round(sold/cap*100) + '%';
+  $('sDays').textContent = Math.max(0, Math.ceil((SHOW - Date.now())/86400000));
+
+  const src = Object.assign({}, SRC);
+  L.forEach(o => { const k = o.source === 'Facebook' ? 'Facebook posts' : (o.source || 'Direct'); src[k] = (src[k]||0) + o.qty; });
+  const tot = Object.values(src).reduce((a,b)=>a+b,0);
+  $('src').innerHTML = Object.entries(src).sort((a,b)=>b[1]-a[1]).map(([k,v]) => {
+    const p = Math.round(v/tot*100);
+    return `<div class="bar"><span class="t">${k}</span><span class="track"><span style="width:${p}%;background:var(--night)"></span></span><span class="n"><b>${p}%</b> · ${v}</span></div>`;
+  }).join('');
+
+  const days = [41,38,52,47,60,212,188,96,84,77,91,88,102];
+  const today = days.slice(-1)[0] + L.reduce((a,o)=>a+o.qty,0);
+  const all = days.concat([today]), mx = Math.max(...all);
+  $('chart').innerHTML = all.map((v,i) => `<div class="${i===all.length-1?'today':''}" style="height:${Math.round(v/mx*100)}%" title="${v} tickets"></div>`).join('');
+  const d0 = new Date(Date.now() - 13*86400000);
+  $('ax0').textContent = d0.toLocaleDateString('en-PH',{day:'numeric',month:'short'});
+
+  const list = L.map(o => ({...o, name:o.name})).concat(SAMPLE);
+  $('orders').innerHTML = list.slice(0,8).map(o => `<tr>
+    <td><b>${o.id}</b></td><td>${esc(o.name)}</td><td class="hide-s">${o.qty} × ${o.tierName}</td>
+    <td class="r">${peso(o.amount)}</td><td class="hide-s">${esc(o.source||'Direct')}</td>
+    <td><span class="pill ${o.status==='in'?'in':''}">${o.status==='in'?'Checked in':'Paid'}</span>${o.live?' <span class="pill new">New</span>':''}</td></tr>`).join('');
+}
+function esc(s){ const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+
+$('check').onclick = () => {
+  const id = $('ref').value.trim().toUpperCase(), res = $('res');
+  const L = live(), o = L.find(x => x.id === id) || SAMPLE.find(x => x.id === id);
+  res.className = 'res on';
+  if (!o){ res.classList.add('bad'); res.innerHTML = `<b>Not found</b>No ticket with reference ${esc(id||'(blank)')}. Check the code or ask for their email.`; return; }
+  if (o.status === 'in'){ res.classList.add('bad'); res.innerHTML = `<b>Already used</b>${o.id} was checked in earlier. Ask for ID before letting them in.`; return; }
+  o.status = 'in'; try { if (o.live) TSKDesk.update(SITE, o.id, {status:'in'}); } catch(e){}
+  res.classList.add('ok'); res.innerHTML = `<b>Welcome in</b>${esc(o.name)} · ${o.qty} × ${o.tierName}. Let ${o.qty} ${o.qty>1?'people':'person'} through.`;
+  render();
+};
+$('ref').addEventListener('keydown', e => { if (e.key === 'Enter') $('check').click(); });
+
+const base = location.href.replace(/owner\/.*$/, '');
+$('links').innerHTML = [['Facebook posts','fb'],['Instagram','ig'],['Google profile','google'],['Posters (QR)','qr']]
+  .map(([n,s]) => `<div><b>${n}</b><code>${base}?src=${s}</code></div>`).join('');
+try { const q = qrcode(0,'M'); q.addData(base + '?src=qr'); q.make(); $('qr').innerHTML = q.createSvgTag({cellSize:3, margin:0, scalable:true}); } catch(e){}
+
+render();
+</script>
+</body>
+</html>
