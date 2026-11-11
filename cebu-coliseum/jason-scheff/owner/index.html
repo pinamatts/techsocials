@@ -8,7 +8,7 @@
 <link rel="icon" href="../../img/ccc-mark.png">
 <style>
 :root{--night:#0b0d1c;--navy:#1f2547;--gold:#f2a227;--ink:#1d1d1f;--muted:#6e6e73;--line:#d2d2d7;--gray:#f5f5f7;--ok:#1f8a4c;--no:#b3261e;
-  --vip:#f2a227;--patron:#ff5a6a;--lower:#f5c518;--upper:#c0392b;--gen:#7b86b8;
+  --plat:#ff5c8a;--gold:#f2a227;--silver:#a78bfa;--lower:#2dd4bf;--upper:#60a5fa;
   --font:-apple-system,BlinkMacSystemFont,"SF Pro Text","Inter","Segoe UI",Roboto,Helvetica,Arial,sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:var(--font);background:var(--gray);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.45}
@@ -67,6 +67,7 @@ td.r,th.r{text-align:right;font-variant-numeric:tabular-nums}
   .bar{grid-template-columns:96px 1fr 80px}
   .hide-s{display:none}
 }
+td small{color:var(--mute,#6e6e73);font-size:12px}
 </style>
 </head>
 <body>
@@ -89,7 +90,7 @@ td.r,th.r{text-align:right;font-variant-numeric:tabular-nums}
   <div class="grid">
     <div class="panel">
       <h2>Sales by ticket</h2>
-      <div class="sub">Sold and left in each section. Lower and Upper Box are the yellow and red seats.</div>
+      <div class="sub">Sold and left in each price tier. Every seat is reserved, so nothing oversells.</div>
       <div id="tiers"></div>
     </div>
     <div class="panel">
@@ -119,7 +120,7 @@ td.r,th.r{text-align:right;font-variant-numeric:tabular-nums}
       <h2>Latest orders</h2>
       <div class="sub">Every order, with its reference, payment and source.</div>
       <table>
-        <thead><tr><th>Ref</th><th>Buyer</th><th class="hide-s">Ticket</th><th class="r">Amount</th><th class="hide-s">Source</th><th>Status</th></tr></thead>
+        <thead><tr><th>Ref</th><th>Buyer</th><th class="hide-s">Seats</th><th class="r">Amount</th><th class="hide-s">Source</th><th>Status</th></tr></thead>
         <tbody id="orders"></tbody>
       </table>
     </div>
@@ -139,19 +140,19 @@ td.r,th.r{text-align:right;font-variant-numeric:tabular-nums}
 const SITE = 'jason-scheff';
 const SHOW = new Date('2027-02-12T20:00:00+08:00');
 const TIERS = [
-  {k:'vip',name:'VIP',price:6500,cap:400,sold:312},
-  {k:'patron',name:'Patron',price:4800,cap:800,sold:455},
-  {k:'lower',name:'Lower Box',price:3200,cap:1600,sold:820},
-  {k:'upper',name:'Upper Box',price:1800,cap:1400,sold:510},
-  {k:'gen',name:'General',price:900,cap:1000,sold:260}
+  {k:'plat',name:'Platinum',price:9500,cap:200,sold:164},
+  {k:'gold',name:'Gold',price:6800,cap:520,sold:331},
+  {k:'silver',name:'Silver',price:4500,cap:320,sold:158},
+  {k:'lower',name:'Lower Box',price:2800,cap:1920,sold:858},
+  {k:'upper',name:'Upper Box',price:1500,cap:1920,sold:539}
 ];
 const SRC = {'Facebook ads':972,'Facebook posts':566,'Messenger':283,'Google':212,'QR posters':189,'Direct':135};
 const SAMPLE = [
-  {id:'JS-1040',name:'Maria Cristina L.',tierName:'Patron',qty:2,amount:9600,source:'Facebook ads',status:'paid'},
-  {id:'JS-1039',name:'Ramon D.',tierName:'VIP',qty:2,amount:13000,source:'Messenger',status:'paid'},
-  {id:'JS-1038',name:'Jennifer A.',tierName:'Lower Box',qty:4,amount:12800,source:'Facebook posts',status:'paid'},
-  {id:'JS-1037',name:'Paolo S.',tierName:'Upper Box',qty:2,amount:3600,source:'QR posters',status:'paid'},
-  {id:'JS-1036',name:'Grace T.',tierName:'General Admission',qty:3,amount:2700,source:'Google',status:'paid'}
+  {id:'JS-1040',name:'Maria Cristina L.',tierName:'Gold',section:'Gold · Left',seatText:'Row G, seats 9, 10',qty:2,amount:13600,source:'Facebook ads',status:'paid'},
+  {id:'JS-1039',name:'Ramon D.',tierName:'Platinum',section:'Platinum · Right',seatText:'Row B, seats 3, 4',qty:2,amount:19000,source:'Messenger',status:'paid'},
+  {id:'JS-1038',name:'Jennifer A.',tierName:'Lower Box',section:'Lower Box · Section 106',seatText:'Row C, seats 5–8',qty:4,amount:11200,source:'Facebook posts',status:'paid'},
+  {id:'JS-1037',name:'Paolo S.',tierName:'Upper Box',section:'Upper Box · Section 208',seatText:'Row A, seats 7, 8',qty:2,amount:3000,source:'QR posters',status:'paid'},
+  {id:'JS-1036',name:'Grace T.',tierName:'Silver',section:'Silver · Left',seatText:'Row D, seats 1–3',qty:3,amount:13500,source:'Google',status:'paid'}
 ];
 const peso = n => '₱' + n.toLocaleString('en-PH');
 const $ = id => document.getElementById(id);
@@ -193,7 +194,7 @@ function render(){
 
   const list = L.map(o => ({...o, name:o.name})).concat(SAMPLE);
   $('orders').innerHTML = list.slice(0,8).map(o => `<tr>
-    <td><b>${o.id}</b></td><td>${esc(o.name)}</td><td class="hide-s">${o.qty} × ${o.tierName}</td>
+    <td><b>${o.id}</b></td><td>${esc(o.name)}</td><td class="hide-s">${o.section ? esc(o.section) + '<br><small>' + esc(o.seatText || '') + '</small>' : o.qty + ' × ' + o.tierName}</td>
     <td class="r">${peso(o.amount)}</td><td class="hide-s">${esc(o.source||'Direct')}</td>
     <td><span class="pill ${o.status==='in'?'in':''}">${o.status==='in'?'Checked in':'Paid'}</span>${o.live?' <span class="pill new">New</span>':''}</td></tr>`).join('');
 }
@@ -206,7 +207,7 @@ $('check').onclick = () => {
   if (!o){ res.classList.add('bad'); res.innerHTML = `<b>Not found</b>No ticket with reference ${esc(id||'(blank)')}. Check the code or ask for their email.`; return; }
   if (o.status === 'in'){ res.classList.add('bad'); res.innerHTML = `<b>Already used</b>${o.id} was checked in earlier. Ask for ID before letting them in.`; return; }
   o.status = 'in'; try { if (o.live) TSKDesk.update(SITE, o.id, {status:'in'}); } catch(e){}
-  res.classList.add('ok'); res.innerHTML = `<b>Welcome in</b>${esc(o.name)} · ${o.qty} × ${o.tierName}. Let ${o.qty} ${o.qty>1?'people':'person'} through.`;
+  res.classList.add('ok'); res.innerHTML = `<b>Welcome in</b>${esc(o.name)} · ${o.section ? esc(o.section) + ', ' + esc(o.seatText || '') : o.qty + ' × ' + o.tierName}. Let ${o.qty} ${o.qty>1?'people':'person'} through.`;
   render();
 };
 $('ref').addEventListener('keydown', e => { if (e.key === 'Enter') $('check').click(); });

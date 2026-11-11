@@ -2,406 +2,507 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Jason Scheff Live in Cebu · Tickets · Cebu Coliseum</title>
-<meta name="description" content="Jason Scheff, Chicago's lead singer 1985-2016, live at Cebu Coliseum on Friday, 12 February 2027. Pick your seat and pay with GCash, Maya or card.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jason Scheff of Chicago · Live at Cebu Coliseum · 12 Feb 2027 · Tickets</title>
+<meta name="description" content="Jason Scheff of Chicago, live at Cebu Coliseum on Friday 12 February 2027. Pick your exact seat on the arena map, pay by GCash, Maya or card, and get your phone ticket in a minute.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0a0c1a">
+<meta property="og:title" content="Jason Scheff of Chicago · Live at Cebu Coliseum">
+<meta property="og:description" content="Friday 12 February 2027. Pick your exact seat. Tickets from ₱1,500.">
+<meta property="og:image" content="arena-roof.jpg">
 <link rel="icon" href="../img/ccc-mark.png">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"MusicEvent","name":"Jason Scheff Live in Cebu","startDate":"2027-02-12T20:00:00+08:00","eventStatus":"https://schema.org/EventScheduled","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode",
-"location":{"@type":"Place","name":"Cebu Coliseum","address":{"@type":"PostalAddress","streetAddress":"128 Sanciangko St., Pahina Central","addressLocality":"Cebu City","addressCountry":"PH"}},
-"performer":{"@type":"Person","name":"Jason Scheff"},"organizer":{"@type":"Organization","name":"Cebu Coliseum Complex, Inc."},
-"offers":{"@type":"AggregateOffer","priceCurrency":"PHP","lowPrice":"900","highPrice":"6500","availability":"https://schema.org/InStock"}}
+{"@context":"https://schema.org","@type":"MusicEvent","name":"Jason Scheff of Chicago, Live in Cebu","startDate":"2027-02-12T20:00:00+08:00","doorTime":"2027-02-12T18:30:00+08:00","eventStatus":"https://schema.org/EventScheduled","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","image":["arena-roof.jpg"],"performer":{"@type":"Person","name":"Jason Scheff"},"location":{"@type":"StadiumOrArena","name":"Cebu Coliseum","address":{"@type":"PostalAddress","streetAddress":"128 Sanciangko St., Pahina Central","addressLocality":"Cebu City","addressCountry":"PH"}},"offers":{"@type":"AggregateOffer","priceCurrency":"PHP","lowPrice":"1500","highPrice":"9500","availability":"https://schema.org/InStock","url":"https://pinamatts.github.io/techsocials/cebu-coliseum/jason-scheff/"}}
 </script>
 <style>
-:root{--night:#0b0d1c;--night-2:#151935;--navy:#1f2547;--gold:#f2a227;--red:#d6262f;--rose:#ff5a6a;--ink:#1d1d1f;--muted:#6e6e73;--line:#d2d2d7;--gray:#f5f5f7;--ok:#1f8a4c;
-  --vip:#f2a227;--patron:#ff5a6a;--lower:#f5c518;--upper:#c0392b;--gen:#7b86b8;
-  --font:-apple-system,BlinkMacSystemFont,"SF Pro Text","Inter","Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+:root{
+  --bg:#0a0c1a; --bg-2:#0f1226; --card:#151936; --card-2:#1b2042; --line:rgba(255,255,255,.10); --line-2:rgba(255,255,255,.18);
+  --text:#f5f5f7; --mute:rgba(235,235,245,.62); --faint:rgba(235,235,245,.38);
+  --navy:#1f2547; --gold:#f2a227; --gold-2:#ffb94a; --warn:#fbbf24;
+  --plat:#ff5c8a; --goldt:#f2a227; --silver:#a78bfa; --lower:#2dd4bf; --upper:#60a5fa; --sold:#2a2f52;
+  --font:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Inter","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --r:20px;
+}
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:var(--font);color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased;line-height:1.47;overflow-x:hidden}
+html{scroll-behavior:smooth;background:var(--bg)}
+body{font-family:var(--font);color:var(--text);background:var(--bg);-webkit-font-smoothing:antialiased;line-height:1.47;overflow-x:hidden}
 img{display:block;max-width:100%}
-button{font:inherit;cursor:pointer}
 a{color:inherit}
-.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
-.sample{background:var(--gray);color:var(--muted);font-size:12px;text-align:center;padding:7px 16px}
-.sample b{color:var(--ink);font-weight:600}
-nav{position:sticky;top:0;z-index:20;background:rgba(11,13,28,.86);backdrop-filter:saturate(180%) blur(18px);-webkit-backdrop-filter:saturate(180%) blur(18px);color:#fff}
-nav .wrap{display:flex;align-items:center;gap:14px;height:56px}
+button{font:inherit;cursor:pointer;color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+.sample{background:#05060f;color:var(--faint);font-size:12px;text-align:center;padding:7px 16px}
+.sample b{color:var(--mute);font-weight:600}
+
+nav{position:sticky;top:0;z-index:30;background:rgba(10,12,26,.78);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:22px;height:56px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
 .brand img{height:30px;width:auto;filter:invert(1)}
-.brand span{font-weight:700;font-size:15px;line-height:1.1}
-.brand small{display:block;font-weight:500;font-size:11px;color:rgba(255,255,255,.6)}
+.brand span{font-weight:700;font-size:15px;letter-spacing:-.01em;line-height:1.1}
+.brand small{display:block;font-weight:500;font-size:11px;color:var(--mute)}
 nav .links{display:flex;gap:22px;margin-left:auto;font-size:13px}
-nav .links a{text-decoration:none;color:rgba(255,255,255,.78)}
-nav .links a:hover{color:#fff}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;border:0;border-radius:980px;background:var(--gold);color:var(--night);font-size:15px;font-weight:600;padding:12px 24px;text-decoration:none;transition:transform .15s,background .2s}
-.btn:hover{background:#f7b24a}
+nav .links a{text-decoration:none;color:var(--mute)}
+nav .links a:hover,nav .links a.on{color:var(--text)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:980px;background:var(--gold);color:#14172e;font-size:15px;font-weight:600;padding:12px 24px;text-decoration:none;transition:background .2s,transform .1s;white-space:nowrap}
+.btn:hover{background:var(--gold-2)}
 .btn:active{transform:scale(.98)}
-.btn.small{font-size:13px;padding:8px 16px}
-.btn.ghost{background:rgba(255,255,255,.12);color:#fff}
-.btn.ghost:hover{background:rgba(255,255,255,.2)}
-.btn.dark{background:var(--night);color:#fff}
-.btn.dark:hover{background:var(--night-2)}
-.btn:disabled{opacity:.4;cursor:not-allowed}
+.btn:disabled{background:#3a3f63;color:var(--faint);cursor:not-allowed}
+.btn.ghost{background:rgba(255,255,255,.08);color:var(--text);box-shadow:inset 0 0 0 1px var(--line-2)}
+.btn.ghost:hover{background:rgba(255,255,255,.14)}
+.btn.small{font-size:13px;padding:7px 16px}
+.btn.wide{width:100%}
 
-/* hero */
-.hero{position:relative;background:var(--night);color:#fff;overflow:hidden}
-.hero .bg{position:absolute;inset:0;background:url(arena-roof.jpg) center top/cover;filter:grayscale(1) contrast(1.1) brightness(.55)}
-.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 0%,rgba(214,38,47,.7),transparent 70%),radial-gradient(ellipse 40% 50% at 15% 30%,rgba(214,38,47,.35),transparent 70%),radial-gradient(ellipse 40% 50% at 85% 30%,rgba(214,38,47,.35),transparent 70%),linear-gradient(180deg,rgba(11,13,28,.1),rgba(11,13,28,.7) 60%,var(--night) 100%)}
-.hero .wrap{position:relative;z-index:1;padding:84px 20px 64px;text-align:center}
-.kick{display:inline-flex;flex-wrap:wrap;justify-content:center;gap:8px;align-items:center;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
-.kick i{width:6px;height:6px;border-radius:50%;background:var(--rose);box-shadow:0 0 12px var(--rose)}
-.hero h1{font-size:clamp(54px,11vw,128px);line-height:.92;letter-spacing:-.035em;font-weight:800;margin:18px 0 0;text-transform:uppercase}
-.hero h1 span{display:block;font-size:.34em;letter-spacing:.32em;font-weight:600;color:rgba(255,255,255,.75);margin-top:14px}
-.hero .lede{font-size:clamp(18px,2.2vw,22px);max-width:640px;margin:22px auto 0;color:rgba(255,255,255,.85);line-height:1.4;text-wrap:balance}
-.when{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 26px;margin-top:26px;font-size:15px;color:rgba(255,255,255,.9)}
-.when b{color:#fff}
-.count{display:flex;justify-content:center;gap:10px;margin:30px 0 30px}
-.count div{min-width:76px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:12px 10px}
-.count b{display:block;font-size:30px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1}
-.count span{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6)}
-.hero .cta{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-.perks{background:var(--night);color:rgba(255,255,255,.82);border-top:1px solid rgba(255,255,255,.08)}
-.perks .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:18px 20px;font-size:14px}
-.perks b{color:#fff;display:block;font-size:15px}
+.hero{position:relative;min-height:min(88vh,780px);display:flex;align-items:flex-end;overflow:hidden;isolation:isolate}
+.hero .bg{position:absolute;inset:0;background:url(arena-roof.jpg) center 30%/cover no-repeat;filter:grayscale(1) contrast(1.1) brightness(.55);transform:scale(1.04);z-index:-2}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:
+  radial-gradient(60% 55% at 72% 18%,rgba(242,162,39,.38),transparent 70%),
+  radial-gradient(50% 50% at 18% 30%,rgba(255,92,138,.22),transparent 70%),
+  linear-gradient(180deg,rgba(10,12,26,.15) 0%,rgba(10,12,26,.55) 45%,rgba(10,12,26,.96) 82%,var(--bg) 100%)}
+.hero .wrap{width:100%;padding-bottom:56px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end}
+.hero .wrap>*{min-width:0}
+.date-chip{display:inline-flex;align-items:stretch;border-radius:14px;overflow:hidden;background:rgba(255,255,255,.08);box-shadow:inset 0 0 0 1px var(--line-2);backdrop-filter:blur(10px);margin-bottom:22px}
+.date-chip b{background:var(--gold);color:#14172e;padding:8px 12px;text-align:center;line-height:1;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.date-chip b span{display:block;font-size:26px;letter-spacing:-.02em;margin-top:2px}
+.date-chip em{font-style:normal;padding:8px 14px;display:flex;flex-direction:column;justify-content:center;font-size:13px;color:var(--mute);line-height:1.35}
+.date-chip em strong{color:var(--text);font-size:15px}
+.hero h1{font-size:clamp(50px,10.5vw,148px);line-height:.88;letter-spacing:-.045em;font-weight:800;text-transform:uppercase}
+.hero h1 small{display:block;font-size:clamp(20px,2.6vw,30px);letter-spacing:-.01em;font-weight:600;text-transform:none;color:var(--gold);margin-top:16px;line-height:1.1}
+.hero .lede{font-size:clamp(17px,1.7vw,20px);color:rgba(245,245,247,.82);max-width:560px;margin:18px 0 26px;line-height:1.45}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.hero .from{font-size:14px;color:var(--mute);margin-left:4px}
+.hero .from b{color:var(--text)}
+.side{display:grid;gap:12px;justify-items:end}
+.count{display:flex;gap:8px}
+.count div{width:72px;padding:12px 0 10px;border-radius:14px;text-align:center;background:rgba(255,255,255,.07);box-shadow:inset 0 0 0 1px var(--line);backdrop-filter:blur(10px)}
+.count b{display:block;font-size:28px;font-weight:700;letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1.1}
+.count span{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
+.heat{font-size:13px;color:var(--mute);display:flex;align-items:center;gap:8px}
+.heat i{width:8px;height:8px;border-radius:50%;background:var(--plat);box-shadow:0 0 0 0 rgba(255,92,138,.7);animation:pulse 1.8s infinite;flex:none}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(255,92,138,0)}100%{box-shadow:0 0 0 0 rgba(255,92,138,0)}}
+
+.trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg-2)}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.trust div{padding:18px 16px;font-size:13px;color:var(--mute);border-left:1px solid var(--line)}
+.trust div:first-child{border-left:0;padding-left:0}
+.trust b{display:block;color:var(--text);font-size:14px;margin-bottom:2px}
 
 section{padding:88px 0}
-.head{text-align:center;max-width:760px;margin:0 auto 40px}
-.head h2{font-size:clamp(32px,4.6vw,50px);line-height:1.06;letter-spacing:-.02em;font-weight:700}
-.head p{font-size:clamp(17px,1.8vw,20px);color:var(--muted);margin-top:12px}
+.head{max-width:760px;margin-bottom:34px}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.head h2{font-size:clamp(32px,4.4vw,52px);line-height:1.04;letter-spacing:-.03em;font-weight:800}
+.head p{font-size:clamp(16px,1.6vw,19px);color:var(--mute);margin-top:12px}
 
-/* tickets */
-.tickets{background:var(--gray)}
-.buy{display:grid;grid-template-columns:1.05fr 1fr;gap:24px;align-items:start}
-.buy>*{min-width:0}
-.map{background:#fff;border-radius:24px;padding:22px;box-shadow:0 2px 20px rgba(0,0,0,.05)}
-.map svg{width:100%;height:auto;display:block}
-.map .sec{cursor:pointer;transition:opacity .2s,filter .2s;stroke:#fff;stroke-width:2}
-.map .sec:hover{filter:brightness(1.08)}
-.map.has-sel .sec{opacity:.32}
-.map.has-sel .sec.on{opacity:1}
-.map text{font-size:11px;font-weight:700;fill:#1d1d1f;pointer-events:none;letter-spacing:.04em}
-.map .lt{fill:#fff}
-.map .note{font-size:12px;color:var(--muted);text-align:center;margin-top:10px}
-.tiers{display:grid;gap:10px}
-.tier{display:grid;grid-template-columns:14px 1fr auto;gap:14px;align-items:center;background:#fff;border:1px solid transparent;border-radius:18px;padding:16px 18px;text-align:left;width:100%;transition:border-color .15s,box-shadow .15s}
-.tier:hover{border-color:#c7c7cc}
-.tier[aria-pressed=true]{border-color:var(--night);box-shadow:inset 0 0 0 1px var(--night)}
-.tier i{width:14px;height:14px;border-radius:4px}
-.tier b{display:block;font-size:17px}
-.tier small{display:block;font-size:13px;color:var(--muted);margin-top:2px;line-height:1.35}
-.tier .p{text-align:right}
-.tier .p b{font-size:19px;font-variant-numeric:tabular-nums}
-.tier .p em{display:inline-block;font-style:normal;font-size:11px;font-weight:700;letter-spacing:.04em;margin-top:4px;padding:2px 8px;border-radius:20px;background:#e8f5ec;color:var(--ok)}
-.tier .p em.low{background:#fdeaea;color:#b3261e}
-.order{margin-top:14px;background:var(--night);color:#fff;border-radius:22px;padding:20px 22px}
-.order .row{display:flex;justify-content:space-between;align-items:center;gap:12px}
-.order .what{font-size:14px;color:rgba(255,255,255,.7)}
-.order .what b{display:block;color:#fff;font-size:17px}
-.qty{display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.08);border-radius:980px;padding:4px}
-.qty button{width:34px;height:34px;border-radius:50%;border:0;background:rgba(255,255,255,.12);color:#fff;font-size:18px;line-height:1}
-.qty button:disabled{opacity:.3;cursor:default}
-.qty b{min-width:26px;text-align:center;font-size:17px;font-variant-numeric:tabular-nums}
-.order .tot{margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,.12)}
-.order .tot span{font-size:14px;color:rgba(255,255,255,.7)}
-.order .tot b{font-size:28px;font-variant-numeric:tabular-nums}
-.order .btn{width:100%;margin-top:14px;padding:14px}
-.order .fine{font-size:12px;color:rgba(255,255,255,.55);text-align:center;margin-top:10px}
-.pair{display:flex;gap:10px;align-items:flex-start;margin-top:12px;font-size:13px;color:rgba(255,255,255,.75)}
-.pair input{margin-top:3px;accent-color:var(--gold)}
+.picker{display:grid;grid-template-columns:minmax(0,1.42fr) minmax(0,1fr);gap:20px;align-items:start}
+.panel{background:var(--card);border-radius:var(--r);box-shadow:inset 0 0 0 1px var(--line)}
+.filters{display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding:14px 16px;border-bottom:1px solid var(--line)}
+.qty{display:inline-flex;align-items:center;background:var(--bg-2);border-radius:980px;box-shadow:inset 0 0 0 1px var(--line)}
+.qty button{width:36px;height:36px;border:0;background:none;font-size:18px;border-radius:50%}
+.qty button:hover{background:rgba(255,255,255,.08)}
+.qty b{min-width:86px;text-align:center;font-size:14px;font-weight:600;font-variant-numeric:tabular-nums}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{border:0;background:var(--bg-2);box-shadow:inset 0 0 0 1px var(--line);border-radius:980px;padding:8px 13px;font-size:13px;color:var(--mute)}
+.chip[aria-pressed=true]{background:var(--text);color:#14172e;box-shadow:none;font-weight:600}
+.mapbox{position:relative;padding:8px 10px 6px}
+.mapbox svg{width:100%;height:auto;display:block;touch-action:manipulation}
+.sec{cursor:pointer;transition:opacity .2s,filter .2s;stroke:#10132a;stroke-width:1.5;outline:none}
+.sec:hover,.sec.hot,.sec:focus-visible{filter:brightness(1.25) drop-shadow(0 0 10px rgba(255,255,255,.25))}
+.sec.dim{opacity:.14;cursor:not-allowed}
+.sec.sel{stroke:#fff;stroke-width:4}
+.sec.out{opacity:.3}
+.lab{font-size:15px;font-weight:700;fill:#0a0c1a;pointer-events:none;text-anchor:middle;dominant-baseline:central;letter-spacing:.02em}
+.lab.lt{fill:rgba(255,255,255,.9)}
+.lab.sm{font-size:12px;letter-spacing:.08em}
+.tip{position:absolute;pointer-events:none;background:#fff;color:#14172e;border-radius:12px;padding:9px 12px;font-size:13px;line-height:1.35;box-shadow:0 12px 30px rgba(0,0,0,.45);transform:translate(-50%,calc(-100% - 14px));opacity:0;transition:opacity .12s;white-space:nowrap;z-index:5}
+.tip.on{opacity:1}
+.tip b{display:block;font-size:14px}
+.tip em{font-style:normal;color:#5b6080}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;padding:4px 16px 16px;font-size:12px;color:var(--mute)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:10px;height:10px;border-radius:3px}
+.legend b{color:var(--text);font-weight:600}
 
-/* night */
-.night{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border-radius:22px;overflow:hidden}
-.night div{background:#fff;padding:24px}
-.night small{display:block;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-.night b{display:block;font-size:24px;margin-top:4px;letter-spacing:-.01em}
-.night span{font-size:14px;color:var(--muted)}
-.artist{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-top:56px}
+.right{position:sticky;top:72px;display:flex;flex-direction:column;height:min(680px,calc(100vh - 92px));overflow:hidden}
+.rhead{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 16px;border-bottom:1px solid var(--line)}
+.rhead h3{font-size:16px;letter-spacing:-.01em}
+.sort{display:inline-flex;background:var(--bg-2);border-radius:980px;padding:3px;box-shadow:inset 0 0 0 1px var(--line)}
+.sort button{border:0;background:none;border-radius:980px;padding:6px 12px;font-size:12px;color:var(--mute)}
+.sort button[aria-pressed=true]{background:var(--card-2);color:var(--text);font-weight:600}
+.list{overflow:auto;flex:1;overscroll-behavior:contain}
+.item{display:grid;grid-template-columns:4px 1fr auto;gap:12px;align-items:center;width:100%;text-align:left;border:0;background:none;padding:14px 16px;border-bottom:1px solid var(--line)}
+.item:hover,.item.hot{background:rgba(255,255,255,.05)}
+.item i{align-self:stretch;border-radius:4px}
+.item b{display:block;font-size:15px;letter-spacing:-.01em}
+.item small{font-size:12px;color:var(--mute)}
+.item .p{text-align:right}
+.item .p b{font-size:16px}
+.item .left{color:var(--warn)}
+.badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:2px 7px;border-radius:6px;background:rgba(242,162,39,.16);color:var(--gold);margin-left:6px;vertical-align:2px}
+.empty{padding:30px 16px;color:var(--mute);font-size:14px;text-align:center}
+
+.listview,.seatview{display:flex;flex-direction:column;flex:1;min-height:0}
+.seatview{display:none}
+.right.seating .seatview{display:flex}
+.right.seating .listview{display:none}
+.back{border:0;background:var(--bg-2);box-shadow:inset 0 0 0 1px var(--line);width:34px;height:34px;border-radius:50%;font-size:16px;flex:none}
+.svhead{display:flex;gap:12px;align-items:center;padding:14px 16px;border-bottom:1px solid var(--line)}
+.svhead div{flex:1;min-width:0}
+.svhead b{display:block;font-size:16px}
+.svhead small{color:var(--mute);font-size:12px}
+.svhead .pr{font-size:18px;font-weight:700}
+.seatscroll{overflow:auto;padding:16px 14px 6px;flex:1;min-height:0}
+.toward{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);text-align:center;margin-bottom:12px}
+.toward::before{content:"";display:block;height:6px;border-radius:6px;background:linear-gradient(90deg,transparent,rgba(242,162,39,.7),transparent);margin:0 12% 8px}
+.seats{display:grid;gap:4px;align-items:center;margin:0 auto}
+.seats .rl{font-size:10px;color:var(--faint);text-align:center;font-weight:600}
+.st{aspect-ratio:1;border-radius:35% 35% 45% 45%;border:0;padding:0;background:transparent;box-shadow:inset 0 0 0 1.5px var(--c);transition:transform .1s}
+.st:hover:not(:disabled){transform:scale(1.25);background:color-mix(in srgb,var(--c) 35%,transparent)}
+.st:disabled{box-shadow:none;background:var(--sold);cursor:not-allowed}
+.st.on{background:var(--c);box-shadow:0 0 0 2px #fff}
+.skey{display:flex;gap:14px;justify-content:center;font-size:11px;color:var(--mute);padding:12px 0 4px}
+.skey i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.cart{border-top:1px solid var(--line);padding:14px 16px 16px;background:var(--bg-2);border-radius:0 0 var(--r) var(--r)}
+.cart .sum{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:4px;font-size:14px;color:var(--mute)}
+.cart .sum b{font-size:22px;letter-spacing:-.02em;color:var(--text)}
+.cart .what{font-size:13px;color:var(--mute);margin-bottom:12px;min-height:19px}
+.cart .what.warn{color:var(--warn)}
+.cart .fine{font-size:11px;color:var(--faint);text-align:center;margin-top:8px}
+
+.know{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.know div{background:var(--card);border-radius:var(--r);padding:22px;box-shadow:inset 0 0 0 1px var(--line)}
+.know small{display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:8px}
+.know b{display:block;font-size:20px;letter-spacing:-.01em;margin-bottom:4px}
+.know p{font-size:14px;color:var(--mute)}
+
+.band2{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.artist{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
 .artist>*{min-width:0}
-.artist .card{background:var(--night);color:#fff;border-radius:24px;padding:36px;position:relative;overflow:hidden}
-.artist .card::before{content:"";position:absolute;inset:-40% -20% auto auto;width:360px;height:360px;background:radial-gradient(circle,rgba(214,38,47,.5),transparent 65%)}
-.artist .card *{position:relative}
-.artist .card small{color:var(--gold);font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:12px}
-.artist .card h3{font-size:34px;line-height:1.05;letter-spacing:-.02em;margin:10px 0 14px}
-.artist .card p{color:rgba(255,255,255,.8);font-size:16px}
-.artist .tx h3{font-size:28px;letter-spacing:-.015em;line-height:1.15}
-.artist .tx p{font-size:17px;color:#424245;margin-top:12px}
-.artist .tx ul{list-style:none;margin-top:18px;display:grid;gap:10px;font-size:16px}
-.artist .tx li{display:flex;gap:10px}
-.artist .tx li::before{content:"";flex:0 0 8px;height:8px;border-radius:50%;background:var(--red);margin-top:8px}
+.quote{font-size:clamp(26px,3.2vw,40px);line-height:1.15;letter-spacing:-.025em;font-weight:700}
+.quote em{font-style:normal;color:var(--gold)}
+.artist p.body{color:var(--mute);font-size:17px;margin-top:16px}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border-radius:var(--r);overflow:hidden}
+.facts div{background:var(--card);padding:22px}
+.facts b{display:block;font-size:30px;letter-spacing:-.03em}
+.facts span{font-size:13px;color:var(--mute)}
 
-/* visit + faq */
-.visit{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}
+.visit{display:grid;grid-template-columns:1.1fr 1fr;gap:20px}
 .visit>*{min-width:0}
-.visit img{border-radius:22px;width:100%;height:100%;object-fit:cover;min-height:300px}
-.visit dl{display:grid;gap:18px;align-content:center}
-.visit dt{font-size:13px;font-weight:600;color:var(--muted)}
-.visit dd{font-size:17px}
-.faq{max-width:760px;margin:0 auto}
+.visit img{border-radius:var(--r);width:100%;height:100%;object-fit:cover;min-height:300px}
+.visit dl{background:var(--card);border-radius:var(--r);padding:26px;display:grid;gap:18px;box-shadow:inset 0 0 0 1px var(--line)}
+.visit dt{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);font-weight:600}
+.visit dd{font-size:16px;margin-top:2px}
+.visit a.more{color:var(--gold);text-decoration:none;font-weight:600}
+
+.faq{max-width:820px}
 details{border-bottom:1px solid var(--line);padding:18px 0}
 summary{font-size:17px;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
 summary::-webkit-details-marker{display:none}
-summary::after{content:"+";color:var(--muted);font-weight:400;font-size:22px;line-height:1}
+summary::after{content:"+";color:var(--faint);font-weight:400;font-size:22px;line-height:1}
 details[open] summary::after{content:"–"}
-details p{color:#424245;font-size:16px;margin-top:10px}
-.gray{background:var(--gray)}
-footer{background:var(--night);font-size:12px;color:rgba(255,255,255,.55);padding:34px 0 40px}
-footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-footer a{color:rgba(255,255,255,.8)}
+details p{color:var(--mute);font-size:16px;margin-top:10px}
 
-/* checkout sheet */
-.sheet{position:fixed;inset:0;z-index:50;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(11,13,28,.6);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+footer{border-top:1px solid var(--line);font-size:12px;color:var(--faint);padding:30px 0 100px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer a{color:var(--mute)}
+
+.buybar{position:fixed;left:0;right:0;bottom:0;z-index:25;background:rgba(10,12,26,.9);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .25s;padding:10px 0 calc(10px + env(safe-area-inset-bottom))}
+.buybar.on{transform:none}
+.buybar .wrap{display:flex;align-items:center;gap:14px}
+.buybar div{flex:1;min-width:0;font-size:13px;color:var(--mute);line-height:1.3}
+.buybar b{display:block;color:var(--text);font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+.sheet{position:fixed;inset:0;z-index:50;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(3,4,12,.72);backdrop-filter:blur(6px)}
 .sheet.on{display:flex}
-.panel{background:#fff;border-radius:24px;width:100%;max-width:520px;max-height:calc(100vh - 32px);overflow:auto;padding:26px 26px 22px;position:relative}
-.panel .x{position:absolute;top:14px;right:14px;width:34px;height:34px;border-radius:50%;border:0;background:var(--gray);font-size:18px;color:#333}
-.panel h3{font-size:24px;letter-spacing:-.015em}
-.panel .sum{margin-top:10px;background:var(--gray);border-radius:14px;padding:12px 14px;font-size:15px;display:flex;justify-content:space-between;gap:10px}
-.panel .sum b{font-variant-numeric:tabular-nums}
-label{display:block;font-size:13px;font-weight:600;color:#333;margin:14px 0 6px}
-input[type=text],input[type=tel],input[type=email]{width:100%;font:inherit;font-size:16px;border:1px solid var(--line);border-radius:12px;padding:11px 13px;background:#fff;color:var(--ink)}
-input:focus{outline:2px solid var(--night);outline-offset:1px;border-color:transparent}
+.box{background:#fff;color:#1d1d1f;border-radius:24px;width:min(480px,100%);max-height:calc(100vh - 40px);overflow:auto;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.box .top{display:flex;align-items:center;justify-content:space-between;padding:18px 22px;border-bottom:1px solid #eee;position:sticky;top:0;background:#fff;z-index:1}
+.box .top h3{font-size:18px}
+.x{border:0;background:#f2f2f5;width:32px;height:32px;border-radius:50%;font-size:16px;color:#333}
+.timer{display:flex;align-items:center;gap:8px;margin:16px 22px 0;padding:10px 14px;border-radius:12px;background:#fff6e6;color:#8a5200;font-size:13px}
+.timer b{font-variant-numeric:tabular-nums;font-size:15px}
+.timer.low{background:#fdecec;color:#b42318}
+.osum{margin:14px 22px 0;border-radius:14px;background:#f5f5f7;padding:14px 16px;font-size:14px}
+.osum .r{display:flex;justify-content:space-between;gap:14px;padding:3px 0}
+.osum .r span:first-child{color:#6e6e73;flex:none}
+.osum .r span:last-child{text-align:right}
+.osum .t{border-top:1px solid #e3e3e8;margin-top:8px;padding-top:8px;font-weight:700;font-size:16px}
+.osum .t span:first-child{color:#1d1d1f}
+.form{padding:6px 22px 22px}
+.form label{display:block;font-size:13px;font-weight:600;color:#333;margin:14px 0 6px}
+.form input{width:100%;font:inherit;font-size:16px;border:1px solid #d2d2d7;border-radius:12px;padding:11px 13px;color:#1d1d1f;background:#fff}
+.form input:focus{outline:2px solid var(--navy);outline-offset:1px;border-color:transparent}
 .pay{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.pay button{border:1px solid var(--line);background:#fff;border-radius:12px;padding:12px 8px;font-size:14px;font-weight:600}
-.pay button[aria-pressed=true]{border-color:var(--night);box-shadow:inset 0 0 0 1px var(--night);background:#f3f4fa}
-.panel .go{width:100%;margin-top:20px;padding:14px}
-.panel .fine{font-size:12px;color:var(--muted);text-align:center;margin-top:10px}
-.err{color:#b3261e;font-size:13px;margin-top:8px;min-height:1em}
-/* e-ticket */
-.ticket{display:none}
-.ticket.on{display:block}
-.tk{margin-top:14px;border-radius:20px;overflow:hidden;background:var(--night);color:#fff}
-.tk .top{padding:18px 20px;background:linear-gradient(135deg,#2a0d18,#0b0d1c 70%)}
-.tk .top small{color:var(--gold);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
-.tk .top b{display:block;font-size:24px;letter-spacing:-.01em;margin-top:4px;text-transform:uppercase}
-.tk .top span{font-size:13px;color:rgba(255,255,255,.75)}
-.tk .mid{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;padding:18px 20px;border-top:2px dashed rgba(255,255,255,.18)}
-.tk .mid dl{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;font-size:14px}
-.tk .mid dt{color:rgba(255,255,255,.55)}
-.tk .qr{background:#fff;border-radius:12px;padding:8px;width:132px;height:132px}
-.tk .qr svg{width:100%;height:100%}
-.tk .ref{font-size:22px;font-weight:700;letter-spacing:.04em;color:var(--gold)}
-.ticket .row{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
-.ticket .row .btn{flex:1}
+.pay button{border:1px solid #d2d2d7;background:#fff;border-radius:12px;padding:12px 6px;font-size:14px;font-weight:600;color:#1d1d1f}
+.pay button[aria-pressed=true]{border-color:var(--navy);box-shadow:inset 0 0 0 1px var(--navy);background:#f3f4fa}
+.form .btn{margin-top:14px}
+.form .fine{font-size:12px;color:#6e6e73;text-align:center;margin-top:10px}
+.err{color:#b42318;font-size:13px;margin-top:8px;min-height:18px}
+
+.wallet{display:none;padding:22px}
+.wallet.on{display:block}
+.wallet h4{font-size:26px;letter-spacing:-.02em}
+.wallet .sub{color:#6e6e73;font-size:14px;margin:4px 0 16px}
+.tix{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px}
+.tk{flex:0 0 100%;scroll-snap-align:center;border-radius:20px;overflow:hidden;background:#0a0c1a;color:#fff}
+.tk .tt{padding:18px 18px 14px;background:radial-gradient(80% 120% at 85% 0%,rgba(242,162,39,.45),transparent 60%),#14183a}
+.tk .tt small{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+.tk .tt b{display:block;font-size:22px;letter-spacing:-.02em;margin-top:2px}
+.tk .tt span{font-size:13px;color:rgba(255,255,255,.75)}
+.tk .grid3{display:grid;grid-template-columns:repeat(3,1fr);text-align:center;border-top:1px dashed rgba(255,255,255,.2);border-bottom:1px dashed rgba(255,255,255,.2)}
+.tk .grid3 div{padding:12px 4px}
+.tk .grid3 small{display:block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+.tk .grid3 b{font-size:22px}
+.tk .qrw{padding:18px;display:grid;justify-items:center;gap:10px}
+.tk .qr{background:#fff;padding:12px;border-radius:14px;width:190px;height:190px}
+.tk .qr svg{width:100%;height:100%;display:block}
+.tk .live{font-size:12px;color:rgba(255,255,255,.7);display:flex;align-items:center;gap:8px}
+.tk .live i{width:28px;height:4px;border-radius:4px;background:rgba(255,255,255,.15);overflow:hidden;position:relative}
+.tk .live i::after{content:"";position:absolute;inset:0;background:var(--gold);transform-origin:left;animation:roll 20s linear infinite}
+@keyframes roll{from{transform:scaleX(1)}to{transform:scaleX(0)}}
+.tk .ref{font-size:12px;color:rgba(255,255,255,.55);letter-spacing:.06em}
+.wallet .row{display:flex;gap:10px;margin-top:14px}
+.wallet .row .btn{flex:1}
+.wallet .btn.ghost{background:#f2f2f5;color:#1d1d1f;box-shadow:none}
+
+@media (max-width:980px){
+  .picker{grid-template-columns:1fr}
+  .right{position:relative;top:0;height:auto}
+  .list{max-height:430px}
+  .hero .wrap{grid-template-columns:1fr;gap:26px}
+  .side{justify-items:start}
+}
 @media (max-width:860px){
   nav .links{display:none}
   nav .btn{margin-left:auto}
-  .buy,.artist,.visit{grid-template-columns:1fr}
-  .night{grid-template-columns:1fr 1fr}
-  .perks .wrap{grid-template-columns:1fr;gap:8px}
+  .trust .wrap{grid-template-columns:1fr 1fr}
+  .trust div:nth-child(3){border-left:0;padding-left:0}
+  .trust div:nth-child(n+3){border-top:1px solid var(--line)}
+  .know{grid-template-columns:1fr}
+  .artist,.visit{grid-template-columns:1fr}
+  .artist{gap:28px}
   section{padding:64px 0}
-  .artist{gap:24px}
 }
-@media (max-width:420px){
+@media (max-width:520px){
+  .wrap{padding:0 16px}
   .brand small{display:none}
-  .count div{min-width:64px}
-  .kick i{display:none}
+  .count div{width:62px}
   .count b{font-size:24px}
-  .pay{grid-template-columns:1fr}
-  .tk .mid{grid-template-columns:1fr}
-  .tk .qr{justify-self:center}
+  .filters{padding:12px}
+  .qty b{min-width:74px}
+  .mapbox{padding:4px 2px}
+  .lab{font-size:20px}
+  .lab.sm{font-size:16px}
+  .trust div{padding:14px 10px 14px 0}
+  .trust div:nth-child(even){padding-left:10px}
+  .hero .from{width:100%;margin:0}
 }
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
-<div class="sample"><b>Sample ticket page</b> made by TechSocials for Cebu Coliseum. Prices, time and seat plan are samples until confirmed. No payment is taken.</div>
+<div class="sample"><b>Sample ticket page</b> by TechSocials for Cebu Coliseum. Prices, times and policies are samples until the producer confirms them. No payment is taken.</div>
 
 <nav>
   <div class="wrap">
     <a class="brand" href="../" aria-label="Cebu Coliseum home">
       <img src="../img/ccc-mark.png" alt="">
-      <span>Cebu Coliseum<small>Tickets</small></span>
+      <span>Cebu Coliseum<small>Cebu Coliseum Complex, Inc.</small></span>
     </a>
     <div class="links">
-      <a href="#tickets">Tickets</a>
-      <a href="#the-night">The night</a>
-      <a href="#getting-there">Getting there</a>
-      <a href="#faq">FAQ</a>
+      <a href="../#whats-on" class="on">What's on</a>
+      <a href="../#setups">Events</a>
+      <a href="../#venue">The venue</a>
+      <a href="../#visit">Visit</a>
     </div>
-    <a class="btn small" href="#tickets">Get tickets</a>
+    <a class="btn small" href="#tickets">Buy tickets</a>
   </div>
 </nav>
 
 <header class="hero" id="top">
   <div class="bg" aria-hidden="true"></div>
   <div class="wrap">
-    <div class="kick"><i></i>Cebu Coliseum presents · Valentine's weekend</div>
-    <h1>Jason Scheff<span>Live in Cebu</span></h1>
-    <p class="lede">The voice of Chicago from 1985 to 2016, singing the love songs a generation slow-danced to. One night only, in Cebu's own arena.</p>
-    <div class="when"><span><b>Friday, 12 February 2027</b></span><span>Show at <b>8:00 PM</b> · gates 6:30 PM</span><span>Cebu Coliseum, Sanciangko St.</span></div>
-    <div class="count" id="count" aria-label="Time until the show">
-      <div><b id="cd-d">--</b><span>Days</span></div>
-      <div><b id="cd-h">--</b><span>Hours</span></div>
-      <div><b id="cd-m">--</b><span>Minutes</span></div>
-      <div><b id="cd-s">--</b><span>Seconds</span></div>
+    <div>
+      <div class="date-chip"><b>Feb<span>12</span></b><em><strong>Friday · 8:00 PM</strong>Cebu Coliseum, Sanciangko St.</em></div>
+      <h1>Jason Scheff<small>of Chicago · Live in Cebu</small></h1>
+      <p class="lede">For 31 years he was the voice of Chicago. On Valentine's weekend he sings the love songs a generation slow-danced to, one night only, in Cebu's own arena.</p>
+      <div class="cta">
+        <a class="btn" href="#tickets">Get tickets</a>
+        <a class="btn ghost" id="cal1" href="#" download="jason-scheff-cebu.ics">Add to calendar</a>
+        <span class="from">from <b>₱1,500</b> · no booking fee</span>
+      </div>
     </div>
-    <div class="cta">
-      <a class="btn" href="#tickets">Get tickets</a>
-      <a class="btn ghost" href="#the-night">About the night</a>
+    <div class="side">
+      <div class="count" aria-label="Time until the show">
+        <div><b id="cd-d">--</b><span>Days</span></div>
+        <div><b id="cd-h">--</b><span>Hrs</span></div>
+        <div><b id="cd-m">--</b><span>Min</span></div>
+        <div><b id="cd-s">--</b><span>Sec</span></div>
+      </div>
+      <div class="heat"><i></i><span id="heat">Floor seats are selling fast</span></div>
     </div>
   </div>
 </header>
-<div class="perks">
+
+<div class="trust">
   <div class="wrap">
-    <div><b>No booking fee</b>The price you see is the price you pay.</div>
+    <div><b>Every seat reserved</b>Pick the exact chair you'll sit in.</div>
+    <div><b>No booking fee</b>The price you see is what you pay.</div>
     <div><b>GCash, Maya or card</b>Paid straight to Cebu Coliseum.</div>
-    <div><b>E-ticket in a minute</b>A QR code by email and text, scanned at the gate.</div>
+    <div><b>Ticket on your phone</b>A live QR code. Nothing to print.</div>
   </div>
 </div>
 
-<section class="tickets" id="tickets">
+<section id="tickets">
   <div class="wrap">
     <div class="head">
-      <h2>Pick your seat.</h2>
-      <p>Tap a section on the map or a ticket below. Seats are kept together on one order.</p>
+      <div class="eyebrow">Tickets</div>
+      <h2>Choose your seat.</h2>
+      <p>This is the Coliseum's real concert layout: stage at one end, reserved seats on the floor, and the lower and upper boxes wrapped around them. Tap a section to see its seats.</p>
     </div>
-    <div class="buy">
-      <div class="map" id="map">
-        <svg viewBox="0 0 420 400" role="img" aria-label="Seat map of Cebu Coliseum, concert setup">
-          <rect x="140" y="14" width="140" height="34" rx="6" fill="#0b0d1c"/>
-          <text x="210" y="36" text-anchor="middle" class="lt">STAGE</text>
-          <!-- upper box: outer ring (red seats) -->
-          <path class="sec" data-k="upper" fill="var(--upper)" d="M14 40 h44 v300 h304 v-300 h44 v344 h-392z"/>
-          <!-- lower box: inner ring (yellow seats) -->
-          <path class="sec" data-k="lower" fill="var(--lower)" d="M66 60 h40 v226 h208 v-226 h40 v270 h-288z"/>
-          <!-- floor -->
-          <rect class="sec" data-k="vip" fill="var(--vip)" x="126" y="64" width="168" height="62" rx="8"/>
-          <rect class="sec" data-k="patron" fill="var(--patron)" x="126" y="134" width="168" height="84" rx="8"/>
-          <rect class="sec" data-k="gen" fill="var(--gen)" x="126" y="226" width="168" height="52" rx="8"/>
-          <text x="210" y="100" text-anchor="middle">VIP</text>
-          <text x="210" y="181" text-anchor="middle" class="lt">PATRON</text>
-          <text x="210" y="257" text-anchor="middle" class="lt">GENERAL</text>
-          <text x="86" y="200" text-anchor="middle" transform="rotate(-90 86 200)">LOWER BOX</text>
-          <text x="334" y="200" text-anchor="middle" transform="rotate(90 334 200)">LOWER BOX</text>
-          <text x="210" y="312" text-anchor="middle">LOWER BOX</text>
-          <text x="36" y="200" text-anchor="middle" class="lt" transform="rotate(-90 36 200)">UPPER BOX</text>
-          <text x="384" y="200" text-anchor="middle" class="lt" transform="rotate(90 384 200)">UPPER BOX</text>
-          <text x="210" y="366" text-anchor="middle" class="lt">UPPER BOX</text>
-        </svg>
-        <p class="note">Floor seating faces the stage. Lower box is the yellow seats, upper box the red, as in the arena.</p>
+    <div class="picker">
+      <div class="panel">
+        <div class="filters">
+          <div class="qty" aria-label="Number of tickets">
+            <button id="qMinus" aria-label="One ticket less">−</button><b id="qN" aria-live="polite">2 tickets</b><button id="qPlus" aria-label="One ticket more">+</button>
+          </div>
+          <div class="chips" id="chips" role="group" aria-label="Price range">
+            <button class="chip" data-p="all" aria-pressed="true">All prices</button>
+            <button class="chip" data-p="lo" aria-pressed="false">Under ₱3,000</button>
+            <button class="chip" data-p="mid" aria-pressed="false">₱3,000–₱7,000</button>
+            <button class="chip" data-p="hi" aria-pressed="false">₱7,000+</button>
+          </div>
+        </div>
+        <div class="mapbox" id="mapbox">
+          <svg id="map" viewBox="20 10 960 760" role="group" aria-label="Seat map of Cebu Coliseum in concert setup"></svg>
+          <div class="tip" id="tip"></div>
+        </div>
+        <div class="legend" id="legend"></div>
       </div>
-      <div>
-        <div class="tiers" id="tiers"></div>
-        <div class="order" id="order">
-          <div class="row">
-            <div class="what" id="oWhat"><b>Choose a ticket</b>Tap a section or ticket</div>
-            <div class="qty" aria-label="Number of tickets">
-              <button id="minus" aria-label="One less">−</button><b id="qn">2</b><button id="plus" aria-label="One more">+</button>
+
+      <div class="panel right" id="right">
+        <div class="listview">
+          <div class="rhead">
+            <h3 id="lcount">Sections</h3>
+            <div class="sort" role="group" aria-label="Sort tickets">
+              <button data-s="price" aria-pressed="true">Lowest price</button>
+              <button data-s="best" aria-pressed="false">Best seats</button>
             </div>
           </div>
-          <label class="pair"><input type="checkbox" id="pair" checked> Seat us side by side. Buying for a date? Pairs are always kept together.</label>
-          <div class="row tot"><span>Total</span><b id="tot">₱0</b></div>
-          <button class="btn" id="checkout" disabled>Continue to payment</button>
-          <div class="fine">Up to 8 tickets per order. No booking fee.</div>
+          <div class="list" id="list"></div>
+        </div>
+        <div class="seatview">
+          <div class="svhead">
+            <button class="back" id="back" aria-label="Back to all sections">←</button>
+            <div><b id="svName">Section</b><small id="svSub">Tap seats to choose</small></div>
+            <span class="pr" id="svPrice"></span>
+          </div>
+          <div class="seatscroll">
+            <div class="toward" id="toward">Stage</div>
+            <div class="seats" id="seats"></div>
+            <div class="skey"><span><i style="box-shadow:inset 0 0 0 1.5px var(--text)"></i>Open</span><span><i style="background:var(--text)"></i>Yours</span><span><i style="background:var(--sold)"></i>Taken</span></div>
+          </div>
+          <div class="cart">
+            <div class="sum"><span id="cQty">2 tickets</span><b id="cTot">₱0</b></div>
+            <div class="what" id="cWhat"></div>
+            <button class="btn wide" id="hold">Continue</button>
+            <div class="fine">We picked the best seats together. Tap others to change. Seats are held 8 minutes while you pay.</div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="the-night">
+<section id="know" style="padding-top:0">
   <div class="wrap">
-    <div class="head">
-      <h2>The night.</h2>
-      <p>A Valentine's weekend date, two days early, in the arena Cebu grew up with.</p>
-    </div>
-    <div class="night">
-      <div><small>Date</small><b>Fri, 12 Feb 2027</b><span>Valentine's weekend</span></div>
-      <div><small>Gates open</small><b>6:30 PM</b><span>Show starts 8:00 PM</span></div>
-      <div><small>Seats</small><b>5,200</b><span>Concert setup, air-conditioned</span></div>
-      <div><small>Venue</small><b>Since 1962</b><span>Renewed and reopened 2025</span></div>
-    </div>
-    <div class="artist">
-      <div class="card">
-        <small>The artist</small>
-        <h3>Jason Scheff</h3>
-        <p>Lead singer and bassist of Chicago from 1985 to 2016, the band's longest-serving voice after Peter Cetera. "Will You Still Love Me?" was his first big hit with them.</p>
-      </div>
-      <div class="tx">
-        <h3>Bring the person you'd slow-dance with.</h3>
-        <p>An evening of the ballads your parents played on the radio, and you probably still know every word to.</p>
-        <ul>
-          <li>Full live band, four-sided LED jumbotron over the floor</li>
-          <li>Floor seats for VIP, Patron and General, raked boxes all around</li>
-          <li>E-tickets scanned at the gate. No printing, no queue for pick-up</li>
-        </ul>
-      </div>
+    <div class="head"><div class="eyebrow">Know before you go</div><h2>The night, sorted.</h2></div>
+    <div class="know">
+      <div><small>Gates</small><b>6:30 PM</b><p>Show starts at 8:00 PM. Come early, the jumbotron runs the pre-show.</p></div>
+      <div><small>Your ticket</small><b>On your phone</b><p>Open it at the gate and the QR code is scanned. It refreshes itself, so screenshots won't get anyone in.</p></div>
+      <div><small>Bring</small><b>A valid ID</b><p>Small bags only, checked at entry. No outside food, drinks or professional cameras.</p></div>
+      <div><small>All seats</small><b>Reserved</b><p>Your section, row and seat are on your ticket. Ushers walk you to your seat.</p></div>
+      <div><small>Accessible seating</small><b>Floor level</b><p>Wheelchair spaces are on the floor. Message us after buying and we'll set yours up.</p></div>
+      <div><small>Ages</small><b>All welcome</b><p>Children 3 and up need their own ticket and must sit with an adult.</p></div>
     </div>
   </div>
 </section>
 
-<section class="gray" id="getting-there">
+<section id="artist" class="band2">
+  <div class="wrap artist">
+    <div>
+      <div class="eyebrow">The artist</div>
+      <p class="quote">The voice behind <em>"Will You Still Love Me?"</em> Thirty-one years at the front of Chicago.</p>
+      <p class="body">Jason Scheff joined Chicago in 1985 as lead singer and bassist and stayed until 2016, the band's longest-serving voice after Peter Cetera. Bring the person you'd slow-dance with: it's a night of the ballads your parents played on the radio, and you still know every word.</p>
+    </div>
+    <div class="facts">
+      <div><b>1985–2016</b><span>Lead vocals and bass, Chicago</span></div>
+      <div><b>31 years</b><span>On the road with the band</span></div>
+      <div><b>1 night</b><span>Friday, 12 February 2027</span></div>
+      <div><b>~5,000</b><span>Reserved seats, concert setup</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="getting-there">
   <div class="wrap">
-    <div class="head"><h2>Getting there.</h2><p>Downtown Cebu, a short walk from Colon Street.</p></div>
+    <div class="head"><div class="eyebrow">Getting there</div><h2>Downtown, off Colon Street.</h2></div>
     <div class="visit">
       <img src="../img/facade.jpg" alt="The Cebu Coliseum building on Sanciangko Street" loading="lazy">
       <dl>
         <div><dt>Address</dt><dd>128 Sanciangko St., Pahina Central, Cebu City</dd></div>
-        <div><dt>Gates</dt><dd>Open at 6:30 PM. Bring your e-ticket on your phone and a valid ID.</dd></div>
-        <div><dt>Getting there</dt><dd>Jeepneys to Colon and Carbon pass nearby. Ride-hail drop-off is at the front of the building.</dd></div>
-        <div><dt>Questions</dt><dd>Message Cebu Coliseum on Facebook. We answer every day, 9 AM to 6 PM.</dd></div>
+        <div><dt>Ride-hail and taxis</dt><dd>Drop-off and pick-up at the front of the building.</dd></div>
+        <div><dt>Jeepneys</dt><dd>Routes to Colon and Carbon pass a short walk away.</dd></div>
+        <div><dt>Questions</dt><dd>Message Cebu Coliseum on Facebook, 9 AM to 6 PM daily.</dd></div>
+        <div><a class="more" href="https://maps.google.com/?q=10.2967879,123.8954955" target="_blank" rel="noopener">Open in Google Maps ›</a></div>
       </dl>
     </div>
   </div>
 </section>
 
-<section id="faq">
-  <div class="wrap">
-    <div class="head"><h2>Questions.</h2></div>
-    <div class="faq">
-      <details><summary>How do I get my ticket?</summary><p>Right after you pay, your e-ticket with a QR code appears on screen and is sent to your email and mobile number. Show it at the gate, on your phone.</p></details>
-      <details><summary>Can I give my ticket to someone else?</summary><p>Yes. Forward the e-ticket. Each QR code lets one person in, once, so keep it private until the show.</p></details>
-      <details><summary>I lost my e-ticket. What now?</summary><p>Message us with your reference number or the email you used, and we'll send it again. The old QR code stops working when a new one is issued.</p></details>
-      <details><summary>Can I get a refund?</summary><p>Tickets are refundable only if the show is cancelled or moved and you can't make the new date. (Sample policy, to be confirmed by Cebu Coliseum.)</p></details>
-      <details><summary>Is there an age limit?</summary><p>All ages are welcome. Children aged 3 and up need their own ticket. (Sample policy, to be confirmed.)</p></details>
-    </div>
+<section id="faq" style="padding-top:0">
+  <div class="wrap faq">
+    <div class="head"><div class="eyebrow">Questions</div><h2>Good to know.</h2></div>
+    <details><summary>How do I get my ticket?</summary><p>Right after you pay, your tickets open on screen, one per seat, and a link is sent to your email and mobile number. Show it at the gate on your phone.</p></details>
+    <details><summary>Can I send a ticket to someone in my group?</summary><p>Yes. Each seat has its own ticket and link, so everyone can walk in on their own phone. Each code lets one person in, once.</p></details>
+    <details><summary>Why can't I just screenshot my ticket?</summary><p>The QR code changes every 20 seconds, so a screenshot or a copied photo won't scan. It keeps your seat safe from fakes and scalpers.</p></details>
+    <details><summary>I lost my ticket. What now?</summary><p>Message us with your order number or the email you used, and we'll send it again. The old link stops working the moment a new one is issued.</p></details>
+    <details><summary>Can I get a refund?</summary><p>Tickets are refunded in full if the show is cancelled, or if it's moved and you can't make the new date.</p></details>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <span>Tickets sold by Cebu Coliseum Complex, Inc. · 128 Sanciangko St., Cebu City</span>
-    <span><a href="../">Cebu Coliseum</a> · Site by TechSocials</span>
+    <span>© Cebu Coliseum Complex, Inc. · 128 Sanciangko St., Cebu City</span>
+    <span>Ticketing by <a href="../techsocials-websites-and-systems.pdf">TechSocials</a> · <a href="owner/">Box office</a></span>
   </div>
 </footer>
 
-<!-- checkout -->
-<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
-  <div class="panel">
-    <button class="x" id="close" aria-label="Close">×</button>
-    <div id="formView">
-      <h3 id="sheetTitle">Your details</h3>
-      <div class="sum"><span id="sWhat"></span><b id="sTot"></b></div>
-      <label for="nm">Full name</label><input type="text" id="nm" autocomplete="name" placeholder="Name on the ticket">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-        <div><label for="mb">Mobile</label><input type="tel" id="mb" autocomplete="tel" placeholder="09XX XXX XXXX"></div>
-        <div><label for="em">Email</label><input type="email" id="em" autocomplete="email" placeholder="you@email.com"></div>
+<div class="buybar" id="buybar">
+  <div class="wrap">
+    <div><b>Jason Scheff · Fri 12 Feb, 8 PM</b>Reserved seats from ₱1,500</div>
+    <a class="btn" href="#tickets">Get tickets</a>
+  </div>
+</div>
+
+<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="shTitle">
+  <div class="box">
+    <div class="top"><h3 id="shTitle">Checkout</h3><button class="x" id="shX" aria-label="Close">✕</button></div>
+    <div id="payView">
+      <div class="timer" id="timer">⏱ Your seats are held for <b id="tLeft">8:00</b></div>
+      <div class="osum" id="osum"></div>
+      <div class="form">
+        <label for="fName">Full name</label><input id="fName" autocomplete="name" placeholder="As on your ID">
+        <label for="fMob">Mobile number</label><input id="fMob" type="tel" autocomplete="tel" placeholder="09XX XXX XXXX">
+        <label for="fMail">Email</label><input id="fMail" type="email" autocomplete="email" placeholder="you@email.com">
+        <label>Pay with</label>
+        <div class="pay" id="pay"><button aria-pressed="true" data-m="GCash">GCash</button><button aria-pressed="false" data-m="Maya">Maya</button><button aria-pressed="false" data-m="Card">Card</button></div>
+        <div class="err" id="err" role="alert"></div>
+        <button class="btn wide" id="payBtn">Pay</button>
+        <div class="fine">Sample checkout. No money is taken.</div>
       </div>
-      <label>Pay with</label>
-      <div class="pay" id="pay"><button aria-pressed="true" data-m="GCash">GCash</button><button aria-pressed="false" data-m="Maya">Maya</button><button aria-pressed="false" data-m="Card">Card</button></div>
-      <div class="err" id="err"></div>
-      <button class="btn dark go" id="payBtn">Pay</button>
-      <div class="fine">Sample checkout: no payment is taken. On the live site this opens GCash, Maya or a card form, and the money goes straight to Cebu Coliseum's account.</div>
     </div>
-    <div class="ticket" id="ticketView">
-      <h3>You're going.</h3>
-      <p style="color:var(--muted);font-size:15px;margin-top:6px">Your e-ticket is below and was sent to <b id="tEm"></b>.</p>
-      <div class="tk">
-        <div class="top"><small>Cebu Coliseum · 12 Feb 2027 · 8:00 PM</small><b>Jason Scheff Live</b><span id="tName"></span></div>
-        <div class="mid">
-          <dl>
-            <dt>Ticket</dt><dd id="tTier"></dd>
-            <dt>Admits</dt><dd id="tQty"></dd>
-            <dt>Paid</dt><dd id="tPaid"></dd>
-            <dt>Ref</dt><dd class="ref" id="tRef"></dd>
-          </dl>
-          <div class="qr" id="tQr" aria-label="QR code for the gate"></div>
-        </div>
-      </div>
-      <div class="row">
-        <a class="btn dark" id="ics" download="jason-scheff-cebu.ics">Add to calendar</a>
-        <button class="btn" id="again">Buy more</button>
-      </div>
+    <div class="wallet" id="wallet">
+      <h4>You're going.</h4>
+      <p class="sub" id="wSub"></p>
+      <div class="tix" id="tix"></div>
+      <div class="row"><a class="btn ghost" id="cal2" href="#" download="jason-scheff-cebu.ics">Add to calendar</a><button class="btn" id="done">Done</button></div>
     </div>
   </div>
 </div>
@@ -410,111 +511,317 @@ input:focus{outline:2px solid var(--night);outline-offset:1px;border-color:trans
 <script src="../desk.js"></script>
 <script>
 const SITE = 'jason-scheff';
-const SHOW = new Date('2027-02-12T20:00:00+08:00');
-const TIERS = [
-  {k:'vip',    name:'VIP',             price:6500, cap:400,  sold:312, note:'Floor, front rows. Signed-poster raffle entry.'},
-  {k:'patron', name:'Patron',          price:4800, cap:800,  sold:455, note:'Floor, right behind VIP.'},
-  {k:'lower',  name:'Lower Box',       price:3200, cap:1600, sold:820, note:'The yellow seats. Raised view of the whole stage.'},
-  {k:'upper',  name:'Upper Box',       price:1800, cap:1400, sold:510, note:'The red seats. The whole arena in view.'},
-  {k:'gen',    name:'General Admission', price:900, cap:1000, sold:260, note:'Floor, back section. First come, first seated.'}
-];
-const peso = n => '₱' + n.toLocaleString('en-PH');
 const $ = id => document.getElementById(id);
-let sel = null, qty = 2, method = 'GCash';
-
+const peso = n => '₱' + n.toLocaleString('en-PH');
 try { TSKDesk.visit(SITE); } catch (e) {}
 
-// countdown
+/* tiers: sample prices until the producer confirms */
+const TIERS = {
+  plat:  {name:'Platinum',  price:9500, color:'var(--plat)',   hex:'#ff5c8a', where:'Floor, first rows',        rank:1, sold:.80},
+  gold:  {name:'Gold',      price:6800, color:'var(--goldt)',  hex:'#f2a227', where:'Floor, centre',            rank:2, sold:.62},
+  silver:{name:'Silver',    price:4500, color:'var(--silver)', hex:'#a78bfa', where:'Floor, sides',             rank:3, sold:.48},
+  lower: {name:'Lower Box', price:2800, color:'var(--lower)',  hex:'#2dd4bf', where:'Raked, close to the floor', rank:4, sold:.44},
+  upper: {name:'Upper Box', price:1500, color:'var(--upper)',  hex:'#60a5fa', where:'Raked, full view',         rank:5, sold:.30}
+};
+
+/* The map: Cebu Coliseum in concert setup, drawn from the published plan of a Feb 2026 concert there.
+   Stage at one end; reserved floor blocks split by a centre aisle, side blocks, control booth behind;
+   lower box wrapping three sides in angled blocks; upper box as the outer ring. */
+const SECS = [];
+const rect = (id, tier, label, x, y, w, h, rows, per, firstRow) =>
+  SECS.push({id, tier, label, name: TIERS[tier].name + ' · ' + label, pts: [[x,y],[x+w,y],[x+w,y+h],[x,y+h]], rows, per, firstRow: firstRow || 0, floor: true});
+rect('PL','plat','Left',  385,160,107,52, 5,20);
+rect('PR','plat','Right', 508,160,107,52, 5,20);
+rect('GL','gold','Left',  385,220,107,206,13,20,5);
+rect('GR','gold','Right', 508,220,107,206,13,20,5);
+rect('SL','silver','Left', 300,172,72,254,16,10);
+rect('SR','silver','Right',628,172,72,254,16,10);
+
+function band(poly, d0, thick, splits, gap, tier, startNo, rows, per){
+  const segs = [];
+  for (let i = 0; i < poly.length - 1; i++){
+    const [x1,y1] = poly[i], [x2,y2] = poly[i+1], L = Math.hypot(x2-x1, y2-y1), u = [(x2-x1)/L, (y2-y1)/L];
+    segs.push({a:[x1,y1], u, L, n:[-u[1], u[0]]});
+  }
+  const miter = (k, d) => {
+    const n1 = segs[k-1].n, n2 = segs[k].n, m = [n1[0]+n2[0], n1[1]+n2[1]], ml = Math.hypot(m[0], m[1]), mm = [m[0]/ml, m[1]/ml];
+    const s = d / (mm[0]*n1[0] + mm[1]*n1[1]);
+    return [poly[k][0] + mm[0]*s, poly[k][1] + mm[1]*s];
+  };
+  let no = startNo;
+  segs.forEach((g, i) => {
+    const n = splits[i];
+    for (let j = 0; j < n; j++){
+      const s = g.L*j/n, e = g.L*(j+1)/n;
+      const P = (t, d, vtxStart, vtxEnd) => {
+        if (vtxStart && i > 0) return miter(i, d);
+        if (vtxEnd && i < segs.length - 1) return miter(i+1, d);
+        return [g.a[0] + g.u[0]*t + g.n[0]*d, g.a[1] + g.u[1]*t + g.n[1]*d];
+      };
+      const iA = P(s, d0, j === 0, false), iB = P(e, d0, false, j === n-1), oB = P(e, d0+thick, false, j === n-1), oA = P(s, d0+thick, j === 0, false);
+      const sh = (p, q) => { const L2 = Math.hypot(q[0]-p[0], q[1]-p[1]); return [p[0] + (q[0]-p[0])/L2*gap, p[1] + (q[1]-p[1])/L2*gap]; };
+      SECS.push({id: (tier === 'lower' ? 'L' : 'U') + no, tier, label: 'Section ' + no, name: TIERS[tier].name + ' · Section ' + no,
+        pts: [sh(iA, iB), sh(iB, iA), sh(oB, oA), sh(oA, oB)], rows, per, no, firstRow: 0});
+      no++;
+    }
+  });
+}
+const U = [[250,140],[250,470],[320,540],[680,540],[750,470],[750,140]];
+band(U, 0,   96, [3,1,4,1,3], 4, 'lower', 101, 10, 16);
+band(U, 112, 88, [4,1,5,1,4], 4, 'upper', 201, 8, 16);
+
+/* seats: sold ones are seeded so the map looks the same for everyone, plus whatever was bought in this browser */
+function rng(seed){ let a = 0; for (const c of seed) a = (a * 31 + c.charCodeAt(0)) | 0; return () => { a = a + 0x6D2B79F5 | 0; let t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+const ROWS = 'ABCDEFGHJKLMNPQRSTUV';
+const bought = () => { try { return TSKDesk.list(SITE).flatMap(o => o.seats || []); } catch (e) { return []; } };
+function build(){
+  const taken = new Set(bought());
+  SECS.forEach(s => {
+    const r = rng('js27-' + s.id), base = TIERS[s.tier].sold;
+    s.grid = [];
+    for (let row = 0; row < s.rows; row++){
+      const line = [], bias = base * (1.35 - .7 * row / Math.max(1, s.rows - 1));
+      for (let k = 0; k < s.per; k++){
+        const id = s.id + '-' + ROWS[row + s.firstRow] + '-' + (k + 1);
+        line.push({id, row: ROWS[row + s.firstRow], n: k + 1, sold: taken.has(id) || r() < bias});
+      }
+      s.grid.push(line);
+    }
+    s.left = s.grid.flat().filter(x => !x.sold).length;
+    s.cap = s.rows * s.per;
+    s.c = [s.pts.reduce((a, p) => a + p[0], 0) / s.pts.length, s.pts.reduce((a, p) => a + p[1], 0) / s.pts.length];
+    s.dist = Math.hypot(s.c[0] - 500, (s.c[1] - 80) * 1.3);
+  });
+}
+build();
+
+let qty = 2, band_ = 'all', sortBy = 'price', cur = null, picked = [];
+const inBand = t => { const p = TIERS[t].price; return band_ === 'all' || (band_ === 'lo' && p < 3000) || (band_ === 'mid' && p >= 3000 && p <= 7000) || (band_ === 'hi' && p > 7000); };
+const fits = s => inBand(s.tier) && s.left >= qty;
+
+/* draw the map */
+const NS = 'http://www.w3.org/2000/svg', map = $('map'), tip = $('tip'), mapbox = $('mapbox');
+function el(tag, attrs){ const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); map.appendChild(e); return e; }
+function drawMap(){
+  map.innerHTML = '';
+  el('rect', {x:30, y:18, width:940, height:742, rx:36, fill:'#10132a', stroke:'rgba(255,255,255,.08)'});
+  el('rect', {x:330, y:40, width:340, height:84, rx:10, fill:'#2a2f52'});
+  el('text', {x:500, y:82, class:'lab lt sm'}).textContent = 'STAGE';
+  el('rect', {x:450, y:446, width:100, height:34, rx:6, fill:'#1d2146'});
+  el('text', {x:500, y:463, class:'lab lt', style:'font-size:10px;opacity:.55;letter-spacing:.12em'}).textContent = 'CONTROL';
+  SECS.forEach(s => {
+    const p = el('polygon', {points: s.pts.map(q => q.map(v => v.toFixed(1)).join(',')).join(' '), fill: TIERS[s.tier].hex, class:'sec', tabindex: 0, role:'button',
+      'aria-label': s.name + ', ' + peso(TIERS[s.tier].price) + ', ' + s.left + ' seats left'});
+    s.el = p;
+    const t = el('text', {x:s.c[0], y:s.c[1], class:'lab' + (s.floor ? ' sm' : '')});
+    t.textContent = s.floor ? (s.tier === 'plat' ? 'PLATINUM' : s.tier.toUpperCase()) : s.no;
+    if (s.tier === 'plat') t.setAttribute('style', 'font-size:11px');
+    if (s.tier === 'silver') t.setAttribute('transform', `rotate(${s.id === 'SL' ? -90 : 90} ${s.c[0]} ${s.c[1]})`);
+    p.addEventListener('mouseenter', e => hover(s, true, e));
+    p.addEventListener('mousemove', e => hover(s, true, e));
+    p.addEventListener('mouseleave', () => hover(s, false));
+    p.addEventListener('click', () => openSec(s));
+    p.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openSec(s); } });
+  });
+  paint();
+}
+function paint(){
+  SECS.forEach(s => { s.el.classList.toggle('dim', !fits(s)); s.el.classList.toggle('sel', cur === s); s.el.classList.toggle('out', !!cur && cur !== s && fits(s)); });
+}
+function hover(s, on, e){
+  document.querySelectorAll('.item').forEach(i => i.classList.toggle('hot', on && i.dataset.id === s.id));
+  if (!on || !e || matchMedia('(hover:none)').matches){ tip.classList.remove('on'); return; }
+  const r = mapbox.getBoundingClientRect();
+  tip.style.left = Math.min(Math.max(e.clientX - r.left, 110), r.width - 110) + 'px';
+  tip.style.top = (e.clientY - r.top) + 'px';
+  tip.innerHTML = fits(s)
+    ? `<b>${s.name}</b>${peso(TIERS[s.tier].price)} each · <em>${s.left} seats left</em>`
+    : `<b>${s.name}</b><em>${s.left < qty ? 'Not enough seats left for ' + qty : 'Outside your price range'}</em>`;
+  tip.classList.add('on');
+}
+
+/* the list beside the map */
+function drawList(){
+  const vis = SECS.filter(fits).sort(sortBy === 'price'
+    ? (a, b) => TIERS[a.tier].price - TIERS[b.tier].price || a.dist - b.dist
+    : (a, b) => TIERS[a.tier].rank - TIERS[b.tier].rank || a.dist - b.dist);
+  $('lcount').textContent = vis.length + ' section' + (vis.length === 1 ? '' : 's') + ' for ' + qty;
+  $('list').innerHTML = vis.length ? vis.map((s, i) => {
+    const t = TIERS[s.tier], low = s.left <= 25;
+    const badge = i === 0 ? `<span class="badge">${sortBy === 'best' ? 'Best view' : 'Lowest'}</span>` : '';
+    return `<button class="item" data-id="${s.id}"><i style="background:${t.color}"></i>
+      <span><b>${s.name}${badge}</b><small>${t.where} · <span class="${low ? 'left' : ''}">${low ? 'Only ' : ''}${s.left} left</span></small></span>
+      <span class="p"><b>${peso(t.price)}</b><small>each</small></span></button>`;
+  }).join('') : '<div class="empty">No sections match. Try fewer tickets or another price range.</div>';
+  document.querySelectorAll('.item').forEach(b => {
+    const s = SECS.find(x => x.id === b.dataset.id);
+    b.onmouseenter = () => s.el.classList.add('hot');
+    b.onmouseleave = () => s.el.classList.remove('hot');
+    b.onclick = () => openSec(s);
+  });
+}
+$('legend').innerHTML = Object.values(TIERS).map(t => `<span><i style="background:${t.color}"></i>${t.name} <b>${peso(t.price)}</b></span>`).join('');
+
+/* seats inside one section */
+function bestBlock(s){
+  const mid = (s.per - qty) / 2;
+  const starts = [...Array(Math.max(0, s.per - qty + 1)).keys()].sort((a, b) => Math.abs(a - mid) - Math.abs(b - mid));
+  for (const line of s.grid) for (const st of starts){ const blk = line.slice(st, st + qty); if (blk.length === qty && blk.every(x => !x.sold)) return blk; }
+  return s.grid.flat().filter(x => !x.sold).slice(0, qty);
+}
+function openSec(s){
+  if (!fits(s)) return;
+  tip.classList.remove('on');
+  cur = s; picked = bestBlock(s).map(x => x.id);
+  $('right').classList.add('seating');
+  $('svName').textContent = s.name;
+  $('svSub').textContent = TIERS[s.tier].where + ' · ' + s.left + ' seats left';
+  $('svPrice').textContent = peso(TIERS[s.tier].price);
+  $('toward').textContent = s.floor ? 'Stage' : 'Floor and stage this way';
+  drawSeats(); paint();
+  if (matchMedia('(max-width:980px)').matches) $('right').scrollIntoView({behavior:'smooth', block:'start'});
+}
+function drawSeats(){
+  const s = cur, c = TIERS[s.tier].hex, box = $('seats');
+  box.style.gridTemplateColumns = `16px repeat(${s.per}, minmax(0, 1fr)) 16px`;
+  box.style.maxWidth = s.per <= 10 ? '290px' : s.per <= 16 ? '440px' : '520px';
+  box.innerHTML = s.grid.map(line => `<span class="rl">${line[0].row}</span>` + line.map(x =>
+    `<button class="st${picked.includes(x.id) ? ' on' : ''}" style="--c:${c}" data-id="${x.id}" ${x.sold ? 'disabled' : ''} aria-label="Row ${x.row}, seat ${x.n}${x.sold ? ', taken' : ''}" aria-pressed="${picked.includes(x.id)}"></button>`
+  ).join('') + `<span class="rl">${line[0].row}</span>`).join('');
+  box.querySelectorAll('.st').forEach(b => b.onclick = () => {
+    const id = b.dataset.id;
+    if (picked.includes(id)) picked = picked.filter(x => x !== id);
+    else { picked.push(id); if (picked.length > qty) picked.shift(); }
+    drawSeats();
+  });
+  drawCart();
+}
+const seatOf = id => cur.grid.flat().find(x => x.id === id);
+function together(){
+  if (picked.length < 2) return true;
+  const ss = picked.map(seatOf);
+  return ss.every(x => x.row === ss[0].row) && Math.max(...ss.map(x => x.n)) - Math.min(...ss.map(x => x.n)) === ss.length - 1;
+}
+function describe(){
+  const ss = picked.map(seatOf).sort((a, b) => a.row.localeCompare(b.row) || a.n - b.n), rows = [...new Set(ss.map(x => x.row))];
+  return rows.map(r => { const ns = ss.filter(x => x.row === r).map(x => x.n); return 'Row ' + r + ', seat' + (ns.length > 1 ? 's ' + ns.join(', ') : ' ' + ns[0]); }).join(' · ');
+}
+function drawCart(){
+  const t = TIERS[cur.tier], w = $('cWhat');
+  $('cQty').textContent = picked.length + ' of ' + qty + ' seat' + (qty > 1 ? 's' : '') + ' chosen';
+  $('cTot').textContent = peso(t.price * picked.length);
+  if (picked.length < qty){ w.textContent = 'Tap ' + (qty - picked.length) + ' more seat' + (qty - picked.length > 1 ? 's' : '') + '.'; w.className = 'what'; }
+  else if (!together()){ w.textContent = describe() + '. Heads up: not side by side.'; w.className = 'what warn'; }
+  else { w.textContent = describe() + (qty > 1 ? ', side by side.' : '.'); w.className = 'what'; }
+  $('hold').disabled = picked.length !== qty;
+  $('hold').textContent = picked.length === qty ? 'Continue · ' + peso(t.price * qty) : 'Choose your seats';
+}
+function closeSec(){ cur = null; picked = []; $('right').classList.remove('seating'); paint(); }
+$('back').onclick = closeSec;
+
+/* filters */
+function setQty(n){
+  qty = Math.max(1, Math.min(8, n)); $('qN').textContent = qty + ' ticket' + (qty > 1 ? 's' : '');
+  if (cur && !fits(cur)) closeSec(); else if (cur){ picked = bestBlock(cur).map(x => x.id); drawSeats(); }
+  paint(); drawList();
+}
+$('qMinus').onclick = () => setQty(qty - 1);
+$('qPlus').onclick = () => setQty(qty + 1);
+document.querySelectorAll('#chips .chip').forEach(b => b.onclick = () => {
+  band_ = b.dataset.p; document.querySelectorAll('#chips .chip').forEach(x => x.setAttribute('aria-pressed', x === b));
+  if (cur && !fits(cur)) closeSec(); paint(); drawList();
+});
+document.querySelectorAll('.sort button').forEach(b => b.onclick = () => {
+  sortBy = b.dataset.s; document.querySelectorAll('.sort button').forEach(x => x.setAttribute('aria-pressed', x === b)); drawList();
+});
+
+/* checkout, with the seats held for 8 minutes */
+let holdEnd = 0, holdT = null, qrT = null, method = 'GCash';
+const payLabel = () => 'Pay ' + peso(TIERS[cur.tier].price * qty) + ' with ' + method;
+$('hold').onclick = () => {
+  const t = TIERS[cur.tier];
+  $('osum').innerHTML = `<div class="r"><span>Event</span><span>Jason Scheff · Fri 12 Feb, 8 PM</span></div>
+    <div class="r"><span>Section</span><span>${cur.name}</span></div>
+    <div class="r"><span>Seats</span><span>${describe()}</span></div>
+    <div class="r"><span>${qty} × ${peso(t.price)}</span><span>${peso(t.price * qty)}</span></div>
+    <div class="r"><span>Booking fee</span><span>₱0</span></div>
+    <div class="r t"><span>Total</span><span>${peso(t.price * qty)}</span></div>`;
+  $('payBtn').textContent = payLabel();
+  $('payView').style.display = ''; $('wallet').classList.remove('on'); $('shTitle').textContent = 'Checkout'; $('err').textContent = '';
+  $('sheet').classList.add('on'); document.body.style.overflow = 'hidden';
+  holdEnd = Date.now() + 8 * 60 * 1000; tick(); clearInterval(holdT); holdT = setInterval(tick, 1000);
+};
 function tick(){
-  let s = Math.max(0, Math.floor((SHOW - Date.now())/1000));
-  const d = Math.floor(s/86400); s -= d*86400;
-  const h = Math.floor(s/3600); s -= h*3600;
-  const m = Math.floor(s/60); s -= m*60;
-  $('cd-d').textContent = d; $('cd-h').textContent = String(h).padStart(2,'0');
-  $('cd-m').textContent = String(m).padStart(2,'0'); $('cd-s').textContent = String(s).padStart(2,'0');
+  const ms = Math.max(0, holdEnd - Date.now()), m = Math.floor(ms / 60000), s = Math.floor(ms % 60000 / 1000);
+  $('tLeft').textContent = m + ':' + String(s).padStart(2, '0');
+  $('timer').classList.toggle('low', ms < 60000);
+  if (!ms){ closeSheet(); closeSec(); alert('Your 8 minutes ran out, so the seats went back on sale. Pick again whenever you\'re ready.'); }
 }
-tick(); setInterval(tick, 1000);
-
-// tiers
-function soldNow(t){ // sample sales + this browser's orders
-  let extra = 0; try { TSKDesk.list(SITE).forEach(o => { if (o.tier === t.k) extra += o.qty; }); } catch(e){}
-  return t.sold + extra;
-}
-function renderTiers(){
-  $('tiers').innerHTML = TIERS.map(t => {
-    const left = t.cap - soldNow(t), low = left / t.cap < 0.3;
-    return `<button class="tier" data-k="${t.k}" aria-pressed="${sel===t.k}">
-      <i style="background:var(--${t.k})"></i>
-      <span><b>${t.name}</b><small>${t.note}</small></span>
-      <span class="p"><b>${peso(t.price)}</b><br><em class="${low?'low':''}">${low ? 'Only ' + left + ' left' : 'Available'}</em></span>
-    </button>`;
-  }).join('');
-  document.querySelectorAll('.tier').forEach(b => b.onclick = () => pick(b.dataset.k));
-}
-function pick(k, fromMap){
-  sel = k;
-  document.getElementById('map').classList.add('has-sel');
-  document.querySelectorAll('.sec').forEach(p => p.classList.toggle('on', p.dataset.k === k));
-  renderTiers(); renderOrder();
-  if (fromMap && matchMedia('(max-width:860px)').matches) $('order').scrollIntoView({behavior:'smooth',block:'center'});
-}
-document.querySelectorAll('.sec').forEach(p => p.addEventListener('click', () => pick(p.dataset.k, true)));
-function renderOrder(){
-  const t = TIERS.find(x => x.k === sel);
-  $('qn').textContent = qty;
-  $('minus').disabled = qty <= 1; $('plus').disabled = qty >= 8;
-  if (!t){ $('tot').textContent = peso(0); $('checkout').disabled = true; return; }
-  $('oWhat').innerHTML = `<b>${t.name}</b>${peso(t.price)} each`;
-  $('tot').textContent = peso(t.price * qty);
-  $('checkout').disabled = false;
-}
-$('minus').onclick = () => { qty = Math.max(1, qty-1); renderOrder(); };
-$('plus').onclick = () => { qty = Math.min(8, qty+1); renderOrder(); };
-
-// checkout
-const sheet = $('sheet');
-function openSheet(){
-  const t = TIERS.find(x => x.k === sel);
-  $('sWhat').textContent = `${qty} × ${t.name}`;
-  $('sTot').textContent = peso(t.price*qty);
-  $('payBtn').textContent = `Pay ${peso(t.price*qty)} with ${method}`;
-  $('formView').style.display = ''; $('ticketView').classList.remove('on'); $('err').textContent = '';
-  sheet.classList.add('on'); setTimeout(() => $('nm').focus(), 50);
-}
-$('checkout').onclick = openSheet;
-$('close').onclick = () => sheet.classList.remove('on');
-sheet.addEventListener('click', e => { if (e.target === sheet) sheet.classList.remove('on'); });
-document.addEventListener('keydown', e => { if (e.key === 'Escape') sheet.classList.remove('on'); });
+function closeSheet(){ $('sheet').classList.remove('on'); document.body.style.overflow = ''; clearInterval(holdT); clearInterval(qrT); }
+$('shX').onclick = closeSheet;
+$('sheet').addEventListener('click', e => { if (e.target === $('sheet')) closeSheet(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && $('sheet').classList.contains('on')) closeSheet(); });
 document.querySelectorAll('#pay button').forEach(b => b.onclick = () => {
-  method = b.dataset.m;
-  document.querySelectorAll('#pay button').forEach(x => x.setAttribute('aria-pressed', x === b));
-  const t = TIERS.find(x => x.k === sel); $('payBtn').textContent = `Pay ${peso(t.price*qty)} with ${method}`;
+  method = b.dataset.m; document.querySelectorAll('#pay button').forEach(x => x.setAttribute('aria-pressed', x === b)); $('payBtn').textContent = payLabel();
 });
 $('payBtn').onclick = () => {
-  const nm = $('nm').value.trim(), mb = $('mb').value.trim(), em = $('em').value.trim();
-  if (!nm || !/^[0-9+ ()-]{10,}$/.test(mb) || !/^\S+@\S+\.\S+$/.test(em)){ $('err').textContent = 'Please fill in your name, a mobile number and an email address.'; return; }
-  const t = TIERS.find(x => x.k === sel);
+  const nm = $('fName').value.trim(), mb = $('fMob').value.trim(), em = $('fMail').value.trim();
+  if (nm.length < 3) return $('err').textContent = 'Please enter your full name.';
+  if (mb.replace(/\D/g, '').length < 10) return $('err').textContent = 'Please enter a mobile number we can text.';
+  if (!/^\S+@\S+\.\S+$/.test(em)) return $('err').textContent = 'Please enter a valid email.';
+  clearInterval(holdT);
+  const t = TIERS[cur.tier], seats = [...picked], sec = cur;
   let o;
-  try { o = TSKDesk.add(SITE, 'JS', {name:nm, mobile:mb, email:em, tier:t.k, tierName:t.name, qty, amount:t.price*qty, method, pair:$('pair').checked, status:'paid'}); }
-  catch(e){ o = {id:'JS-' + (1041 + Math.floor(Math.random()*900))}; }
-  showTicket(o, nm, em, t);
-  renderTiers();
+  try { o = TSKDesk.add(SITE, 'JS', {name:nm, mobile:mb, email:em, tier:sec.tier, tierName:t.name, section:sec.name, seats, seatText:describe(), qty, amount:t.price * qty, method, status:'paid'}); }
+  catch (e) { o = {id: 'JS-' + (1041 + Math.floor(Math.random() * 900))}; }
+  showWallet(o, nm, sec, seats);
+  cur = null; picked = []; $('right').classList.remove('seating');
+  build(); drawMap(); drawList(); heat();
 };
-function showTicket(o, nm, em, t){
-  $('formView').style.display = 'none'; $('ticketView').classList.add('on');
-  $('tEm').textContent = em; $('tName').textContent = nm;
-  $('tTier').textContent = t.name; $('tQty').textContent = qty + (qty>1?' people':' person') + ($('pair').checked && qty>1 ? ', seated together' : '');
-  $('tPaid').textContent = peso(t.price*qty) + ' · ' + method; $('tRef').textContent = o.id;
-  try { const q = qrcode(0,'M'); q.addData('CCC|JASON-SCHEFF-2027|' + o.id + '|' + t.k + '|' + qty); q.make(); $('tQr').innerHTML = q.createSvgTag({cellSize:4, margin:0, scalable:true}); }
-  catch(e){ $('tQr').textContent = o.id; }
-  const ics = ['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Cebu Coliseum//Tickets//EN','BEGIN:VEVENT','UID:' + o.id + '@cebucoliseum','DTSTAMP:20261111T000000Z',
-    'DTSTART:20270212T120000Z','DTEND:20270212T140000Z','SUMMARY:Jason Scheff Live in Cebu','LOCATION:Cebu Coliseum\\, 128 Sanciangko St.\\, Cebu City',
-    'DESCRIPTION:Ticket ' + o.id + ' · ' + t.name + ' x' + qty + '. Gates open 6:30 PM.','END:VEVENT','END:VCALENDAR'].join('\r\n');
-  $('ics').href = 'data:text/calendar;charset=utf-8,' + encodeURIComponent(ics);
-}
-$('again').onclick = () => { sheet.classList.remove('on'); location.hash = 'tickets'; };
 
-renderTiers(); renderOrder();
+/* the phone ticket: one per seat, with a QR that changes every 20 seconds */
+function showWallet(o, nm, s, seats){
+  $('payView').style.display = 'none'; $('wallet').classList.add('on'); $('shTitle').textContent = 'Your tickets';
+  $('wSub').textContent = 'Order ' + o.id + ' · ' + seats.length + ' ticket' + (seats.length > 1 ? 's' : '') + ', also sent to your email and phone.' + (seats.length > 1 ? ' Swipe to see each seat.' : '');
+  const sec = s.floor ? TIERS[s.tier].name.slice(0, 4).toUpperCase() + ' ' + s.label[0] : String(s.no);
+  $('tix').innerHTML = seats.map((id, i) => { const [, row, n] = id.split('-'); return `<div class="tk">
+    <div class="tt"><small>Admit one · ${i + 1} of ${seats.length}</small><b>Jason Scheff of Chicago</b><span>Fri 12 Feb 2027 · Gates 6:30 PM · Cebu Coliseum</span></div>
+    <div class="grid3"><div><small>Section</small><b>${sec}</b></div><div><small>Row</small><b>${row}</b></div><div><small>Seat</small><b>${n}</b></div></div>
+    <div class="qrw"><div class="qr" data-seat="${id}"></div><div class="live"><i></i>Live code · changes every 20 s</div><div class="ref">${o.id}-${i + 1} · ${nm.toUpperCase()}</div></div></div>`; }).join('');
+  const draw = () => document.querySelectorAll('.qr[data-seat]').forEach(q => {
+    try { const c = qrcode(0, 'M'); c.addData('CCC|JS27|' + o.id + '|' + q.dataset.seat + '|' + Math.floor(Date.now() / 20000).toString(36)); c.make(); q.innerHTML = c.createSvgTag({cellSize:4, margin:0, scalable:true}); } catch (e) {}
+  });
+  draw(); clearInterval(qrT); qrT = setInterval(draw, 20000);
+}
+$('done').onclick = closeSheet;
+
+/* calendar file */
+const ics = 'data:text/calendar;charset=utf-8,' + encodeURIComponent(['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Cebu Coliseum//Tickets//EN','BEGIN:VEVENT','UID:jason-scheff-2027@cebucoliseum','DTSTAMP:20261111T000000Z','DTSTART:20270212T120000Z','DTEND:20270212T150000Z','SUMMARY:Jason Scheff of Chicago · Cebu Coliseum','LOCATION:Cebu Coliseum, 128 Sanciangko St., Cebu City','DESCRIPTION:Gates 6:30 PM, show 8:00 PM. Bring your phone ticket and a valid ID.','END:VEVENT','END:VCALENDAR'].join('\r\n'));
+$('cal1').href = ics; $('cal2').href = ics;
+
+/* countdown, and how fast the floor is going */
+const SHOW = new Date('2027-02-12T20:00:00+08:00');
+function count(){
+  let ms = Math.max(0, SHOW - Date.now());
+  const d = Math.floor(ms / 864e5); ms -= d * 864e5; const h = Math.floor(ms / 36e5); ms -= h * 36e5; const m = Math.floor(ms / 6e4), s = Math.floor(ms % 6e4 / 1000);
+  $('cd-d').textContent = d; $('cd-h').textContent = String(h).padStart(2, '0'); $('cd-m').textContent = String(m).padStart(2, '0'); $('cd-s').textContent = String(s).padStart(2, '0');
+}
+count(); setInterval(count, 1000);
+function heat(){
+  const fl = SECS.filter(s => s.floor), cap = fl.reduce((a, s) => a + s.cap, 0), left = fl.reduce((a, s) => a + s.left, 0);
+  const pl = SECS.filter(s => s.tier === 'plat').reduce((a, s) => a + s.left, 0);
+  $('heat').textContent = Math.round(100 * (cap - left) / cap) + '% of floor seats sold · ' + pl + ' Platinum left';
+}
+
+/* sticky buy bar once the hero is gone and the picker isn't on screen */
+const bar = $('buybar'); let heroOut = false, tixIn = false;
+new IntersectionObserver(es => es.forEach(e => {
+  if (e.target.id === 'top') heroOut = !e.isIntersecting; else tixIn = e.isIntersecting;
+  bar.classList.toggle('on', heroOut && !tixIn);
+})).observe($('top'));
+new IntersectionObserver(es => es.forEach(e => { tixIn = e.isIntersecting; bar.classList.toggle('on', heroOut && !tixIn); })).observe($('tickets'));
+
+drawMap(); drawList(); heat();
 </script>
 </body>
 </html>

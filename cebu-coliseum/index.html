@@ -75,6 +75,38 @@ section.gray{background:var(--gray)}
 .head h2{font-size:clamp(32px,4.6vw,52px);line-height:1.08;letter-spacing:-.02em;font-weight:700}
 .head p{font-size:clamp(17px,1.8vw,21px);color:var(--muted);margin-top:14px}
 
+.nowsell{display:inline-flex;align-items:center;gap:10px;margin-bottom:18px;padding:5px 14px 5px 5px;border-radius:980px;background:rgba(255,255,255,.12);box-shadow:inset 0 0 0 1px rgba(255,255,255,.25);backdrop-filter:blur(10px);color:#fff;text-decoration:none;font-size:14px}
+.nowsell b{background:var(--gold);color:var(--navy);border-radius:980px;padding:4px 10px;font-size:12px}
+.nowsell:hover{background:rgba(255,255,255,.2)}
+/* what's on */
+.whatson{padding:72px 0 8px}
+.whatson .row{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:22px}
+.whatson h2{font-size:clamp(30px,4vw,44px);letter-spacing:-.02em;line-height:1.05}
+.whatson .row p{color:var(--muted);font-size:15px}
+.gig{position:relative;display:grid;grid-template-columns:auto 1fr auto;gap:28px;align-items:center;padding:28px 32px;border-radius:28px;overflow:hidden;color:#fff;text-decoration:none;background:#0a0c1a;isolation:isolate;box-shadow:0 20px 50px rgba(15,18,40,.25)}
+.gig::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(60% 120% at 85% 0%,rgba(242,162,39,.45),transparent 60%),radial-gradient(40% 90% at 10% 100%,rgba(255,92,138,.25),transparent 70%),linear-gradient(90deg,rgba(10,12,26,.96),rgba(10,12,26,.7)),url(jason-scheff/arena-roof.jpg) center/cover;filter:saturate(.9)}
+.gig .d{width:84px;border-radius:16px;overflow:hidden;text-align:center;background:rgba(255,255,255,.1);box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
+.gig .d b{display:block;background:var(--gold);color:var(--navy);font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:5px 0}
+.gig .d span{display:block;font-size:36px;font-weight:800;letter-spacing:-.03em;padding:6px 0 2px}
+.gig .d small{display:block;font-size:11px;color:rgba(255,255,255,.7);padding-bottom:8px}
+.gig h3{font-size:clamp(26px,3.4vw,40px);font-weight:800;letter-spacing:-.035em;line-height:1;text-transform:uppercase}
+.gig h3 em{display:block;font-style:normal;text-transform:none;font-size:16px;font-weight:600;letter-spacing:0;color:var(--gold);margin-top:8px}
+.gig p{font-size:14px;color:rgba(255,255,255,.72);margin-top:8px}
+.gig .go{display:grid;justify-items:end;gap:8px}
+.gig .go small{font-size:13px;color:rgba(255,255,255,.7)}
+.gig .go small b{color:#fff}
+.gig:hover .btn{background:#f7b24a}
+.later{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px}
+.later div{background:var(--gray);border-radius:20px;padding:18px 22px;font-size:14px;color:var(--muted)}
+.later b{display:block;color:var(--ink);font-size:16px}
+@media (max-width:860px){
+  .gig{grid-template-columns:auto 1fr;padding:24px 22px;gap:18px}
+  .gig .go{grid-column:1/-1;justify-items:stretch}
+  .gig .go small{text-align:center}
+  .later{grid-template-columns:1fr}
+  .whatson .row{flex-direction:column;align-items:flex-start}
+}
+
 /* setups */
 .seg{display:inline-flex;background:#e8e8ed;border-radius:980px;padding:3px;margin:0 auto 36px;flex-wrap:wrap;justify-content:center}
 .seg-row{text-align:center}
@@ -215,6 +247,7 @@ footer a{color:#424245}
       <span>Cebu Coliseum<small>Cebu Coliseum Complex, Inc.</small></span>
     </a>
     <div class="links">
+      <a href="#whats-on">What's on</a>
       <a href="#setups">Events</a>
       <a href="#venue">The venue</a>
       <a href="#since-1962">Since 1962</a>
@@ -227,7 +260,7 @@ footer a{color:#424245}
 <header class="hero" id="top">
   <img src="img/arena-concert.jpg" alt="Cebu Coliseum set up for a concert, with LED walls on stage and a full floor of seats">
   <div class="wrap">
-    <span class="new">Renewed and reopened</span>
+    <a class="nowsell" href="jason-scheff/"><b>Now selling</b>Jason Scheff of Chicago · Fri 12 Feb ›</a>
     <h1>Cebu's downtown arena is back.</h1>
     <p>Up to 7,300 seats, fully air-conditioned, right on Sanciangko Street. Concerts, graduations, games and company events.</p>
     <div class="cta">
@@ -245,6 +278,21 @@ footer a{color:#424245}
     <div><strong>1962</strong><span>opened, renewed 2025</span></div>
   </div>
 </div>
+
+<section class="whatson" id="whats-on">
+  <div class="wrap">
+    <div class="row"><h2>What's on.</h2><p>Tickets sold here, straight from the Coliseum. No booking fee.</p></div>
+    <a class="gig" href="jason-scheff/">
+      <div class="d"><b>Feb</b><span>12</span><small>Fri · 8 PM</small></div>
+      <div><h3>Jason Scheff<em>of Chicago · Live in Cebu</em></h3><p>The voice of Chicago for 31 years. Valentine's weekend, reserved seats only.</p></div>
+      <div class="go"><span class="btn gold">Get tickets</span><small>from <b>₱1,500</b></small></div>
+    </a>
+    <div class="later">
+      <div><b>Your event here next</b>Concerts, games and graduations get their own ticket page and seat map.</div>
+      <div><b>Booking the arena?</b><a class="more" href="#plan" style="font-size:14px">Check a date</a></div>
+    </div>
+  </div>
+</section>
 
 <section class="gray" id="setups">
   <div class="wrap">
