@@ -184,6 +184,12 @@ dialog::backdrop{background:rgba(2,4,8,.72);backdrop-filter:blur(4px)}
  html,body{background:#fff!important;color:#000}.head p{color:#333}.planner{border:1px solid #999;background:#fff;grid-template-columns:1fr}.ctrl{display:none}
  .tp[hidden]{display:block!important}.tp li,.kit div{background:#fff;color:#000;border-color:#bbb}.kit b,.tp li b,.big,.head h2{color:#000}.stagebox{-webkit-print-color-adjust:exact;print-color-adjust:exact}
  #planner{padding:0}.reveal{opacity:1!important;transform:none!important}}
+.ind{margin-top:36px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.ind article{border:1px solid var(--line2);border-radius:20px;padding:22px;background:var(--bg2)}
+.ind b{display:block;font-family:var(--disp);font-size:17px;font-weight:700;margin-bottom:6px}
+.ind p{color:var(--mute);font-size:15px}
+.indcta{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+@media (max-width:860px){.ind{grid-template-columns:1fr}}
 footer{border-top:1px solid var(--line);padding:34px 0 46px;color:var(--mute);font-size:14px}
 footer .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
 .sample{font-size:12.5px;color:var(--dim);margin-top:8px}
@@ -196,7 +202,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
     <svg viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e4c160"/><stop offset=".5" stop-color="#57BCBC"/><stop offset="1" stop-color="#1F4789"/></linearGradient></defs><rect x="4" y="4" width="56" height="56" rx="13" fill="url(#lg)"/><rect x="15" y="15" width="34" height="34" rx="6" fill="#05080f"/><path d="M22 24l10 16 10-16" fill="none" stroke="#f6e3a1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
     <span><b>Veloso Visuals</b><small>STAGE · LED · PROJECTION</small></span>
   </a>
-  <nav class="links" aria-label="Main"><a href="#planner">Stage planner</a><a href="#services">What we do</a><a href="#work">Our work</a><a href="#how">How it works</a></nav>
+  <nav class="links" aria-label="Main"><a href="#planner">Stage planner</a><a href="#services">What we do</a><a href="#work">Our work</a><a href="#inductions">Inductions</a><a href="#how">How it works</a></nav>
   <a class="cta" href="#planner">Plan your stage</a>
 </div></header>
 
@@ -319,6 +325,17 @@ footer .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
     </div>
     <div class="ph"><span>Photos and video from the night go here after 12 December</span></div>
   </div>
+</div></section>
+
+<section id="inductions" style="background:linear-gradient(180deg,transparent,rgba(31,71,137,.22),transparent)"><div class="wrap">
+  <div class="head reveal"><span class="eyebrow">Induction season</span><h2 class="disp">Planning your chapter's <span class="gold">induction?</span></h2>
+    <p>We are the stage behind JCI Cebu's 79th Induction, the first induction ceremony of the season in Central Visayas. Inductions run on a set program, and we plan the stage around it.</p></div>
+  <div class="ind">
+    <article class="reveal"><b>The solemn parts, done right</b><p>The anthem and the oath-taking get the flag and the oath on the wall, house lights down, and no ads on screen.</p></article>
+    <article class="reveal"><b>Your partners, seen all night</b><p>A partner logo loop during dinner and breaks, so every sponsor gets the screen time they paid for.</p></article>
+    <article class="reveal"><b>The turnover on the big screen</b><p>Live camera on the side screens for the gavel, the speeches and the photos.</p></article>
+  </div>
+  <div class="indcta reveal"><button class="cta" type="button" id="indplan">Plan an induction stage</button><button class="cta ghost" type="button" id="indask">Ask about the chapter package</button></div>
 </div></section>
 
 <section id="how"><div class="wrap">
@@ -503,6 +520,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
   }));
   $('#lnk').addEventListener('click', async () => { try { await navigator.clipboard.writeText(location.href); $('#lnk').textContent = 'Link copied'; } catch { $('#lnk').textContent = 'Copy the address bar'; } setTimeout(() => $('#lnk').textContent = 'Copy link to this plan', 1800); });
   $('#pdf').addEventListener('click', () => print());
+  const preset = (ev, vn, a, name) => { setRadio('ev', ev); setRadio('vn', vn); setRadio('lk', EVENTS[ev].look); $('#vname').value = name || '';
+    ADDS.forEach(([k]) => $('#pf')[k].checked = a.includes(k)); update(); };
+  $('#indplan').addEventListener('click', () => { preset('Induction', 'Convention hall', ['side', 'heads', 'up', 'cam']); document.querySelector('[data-t=cue]').click(); $('#planner').scrollIntoView(); });
+  $('#indask').addEventListener('click', () => { preset('Induction', 'Convention hall', ['side', 'heads', 'up', 'cam']); $('#qbtn').click(); });
   $('#like').addEventListener('click', () => {
     setRadio('ev', 'Debut'); setRadio('vn', 'Hotel ballroom'); setRadio('lk', 'Grand'); $('#vname').value = 'Nustar Grand Ballroom';
     ADDS.forEach(([k]) => $('#pf')[k].checked = ['side', 'map', 'heads', 'up', 'haze'].includes(k)); update(); $('#planner').scrollIntoView();
