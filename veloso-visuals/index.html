@@ -492,7 +492,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
     $('#vs').textContent = `Back row about ${Math.round(p.back)} m from the screen`;
   }
 
-  let cur;
+  let cur, touched = false;
   function panels(p) {
     const r = p.res, ar = (r[0] / r[1]).toFixed(2);
     $('#vid').innerHTML = `<h4>Make your videos this size</h4><p class="big">${r[0]} × ${r[1]} px</p>
@@ -513,7 +513,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
   function update() {
     cur = plan(); $('#go').textContent = cur.g; draw(cur); kit(cur); panels(cur);
     const q = new URLSearchParams({ e: cur.ev, v: cur.vn, g: cur.g, l: cur.lk, a: ADDS.filter(([k]) => cur.a[k]).map(([k]) => k).join(','), n: cur.name });
-    history.replaceState(null, '', '#' + q);
+    if (touched || location.hash.includes('e=')) history.replaceState(null, '', '#' + q);
+    touched = true;
   }
   document.querySelectorAll('[role=tab]').forEach(b => b.addEventListener('click', () => {
     document.querySelectorAll('[role=tab]').forEach(x => { x.setAttribute('aria-selected', x === b); $('#' + x.dataset.t).hidden = x !== b; });
