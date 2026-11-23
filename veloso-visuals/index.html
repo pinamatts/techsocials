@@ -147,6 +147,43 @@ dialog::backdrop{background:rgba(2,4,8,.72);backdrop-filter:blur(4px)}
 .x{position:absolute;right:14px;top:12px;background:none;border:0;color:var(--mute);font-size:26px;cursor:pointer;line-height:1}
 @media (max-width:460px){.two{grid-template-columns:1fr}}
 
+/* tabs */
+.tabs{display:flex;gap:6px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:10px}
+.tabs button{background:none;border:1px solid transparent;border-radius:999px;padding:8px 14px;font-size:14px;font-weight:700;color:var(--mute);cursor:pointer}
+.tabs button[aria-selected=true]{background:var(--bg3);border-color:var(--line2);color:var(--tx)}
+.tp h4{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin:4px 0 10px}
+.tp ul{padding:0;list-style:none;display:grid;gap:8px}
+.tp li{background:var(--bg3);border:1px solid var(--line);border-radius:12px;padding:10px 13px;font-size:14.5px;color:#c4cfdf}
+.tp li b{color:var(--tx)}
+.big{font-family:var(--disp);font-size:clamp(22px,3vw,30px);font-weight:700;color:var(--gold2)}
+.cues{counter-reset:c}.cues li{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;align-items:baseline}
+.cues li:before{counter-increment:c;content:counter(c);font-family:var(--disp);font-weight:700;color:var(--gold);font-size:13px;grid-row:span 2}
+.cues li span{font-size:13px;color:var(--mute)}
+.tools{display:flex;gap:8px;flex-wrap:wrap}
+.tools .cta{padding:10px 16px;font-size:14px}
+.ctrl input[list]{width:100%;background:var(--bg3);border:1px solid var(--line2);border-radius:12px;padding:10px 12px;font-size:15px;color:var(--tx)}
+.case{margin-top:36px;border:1px solid rgba(228,193,96,.4);border-radius:24px;overflow:hidden;background:linear-gradient(135deg,#140a10,#070a14)}
+.realms{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.realm{position:relative;aspect-ratio:3/4;display:flex;flex-direction:column;justify-content:flex-end;padding:18px;overflow:hidden}
+.realm svg{position:absolute;right:-18px;top:-10px;width:62%;opacity:.5}
+.realm small{font-size:11px;font-weight:800;letter-spacing:.2em;opacity:.85}
+.realm b{font-family:var(--disp);font-size:clamp(18px,2.2vw,26px);font-weight:700;line-height:1.05}
+.r1{background:linear-gradient(160deg,#f7c6d9,#7fbf8e 70%,#2f5d3a)}.r2{background:linear-gradient(160deg,#ffe08a,#f29b38 60%,#8a3b12)}
+.r3{background:linear-gradient(160deg,#e9a25c,#a8462b 60%,#3b1610)}.r4{background:linear-gradient(160deg,#e8f3ff,#8fb6e6 55%,#1f3a6b)}
+.r1,.r2,.r3{color:#1a0f08}.r4{color:#0b1a33}
+.case .t{display:grid;grid-template-columns:1.3fr 1fr;gap:28px;padding:32px 34px}
+.case h3{font-family:var(--disp);font-size:clamp(24px,3vw,36px);font-weight:800;line-height:1.08;margin-top:10px}
+.case p{margin-top:12px;color:#c4cfdf}
+.part{background:rgba(228,193,96,.1);border:1px solid rgba(228,193,96,.35);border-radius:16px;padding:18px}
+.part b{display:block;color:var(--gold);font-size:12px;letter-spacing:.18em;margin-bottom:8px}
+.part ul{padding-left:18px;color:#e4ebf5}
+.cred{margin-top:14px;font-size:13.5px;color:var(--mute)}
+.cred a{color:var(--teal)}
+@media (max-width:860px){.realms{grid-template-columns:1fr 1fr}.case .t{grid-template-columns:1fr;padding:24px 20px}}
+@media print{.nav,.hero,#services,#work,#how,footer,.tools,.tabs,#qbtn{display:none!important}
+ html,body{background:#fff!important;color:#000}.head p{color:#333}.planner{border:1px solid #999;background:#fff;grid-template-columns:1fr}.ctrl{display:none}
+ .tp[hidden]{display:block!important}.tp li,.kit div{background:#fff;color:#000;border-color:#bbb}.kit b,.tp li b,.big,.head h2{color:#000}.stagebox{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ #planner{padding:0}.reveal{opacity:1!important;transform:none!important}}
 footer{border-top:1px solid var(--line);padding:34px 0 46px;color:var(--mute);font-size:14px}
 footer .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
 .sample{font-size:12.5px;color:var(--dim);margin-top:8px}
@@ -169,7 +206,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
     <span class="eyebrow">Cebu stage &amp; screen rentals</span>
     <h1 class="disp">Your stage,<br><span class="gold">planned before<br>you call.</span></h1>
     <p class="lede">LED walls, projection mapping, trusses and stage lights for weddings, debuts, galas and concerts. Tell us the event; we show you the stage.</p>
-    <div class="row"><a class="cta" href="#planner">Open the stage planner</a><a class="cta ghost" href="#work">See our first show</a></div>
+    <div class="row"><a class="cta" href="#planner">Open the stage planner</a><a class="cta ghost" href="#work">See our work</a></div>
     <div class="tags"><span>LED walls</span><span>Projection mapping</span><span>Box truss</span><span>Moving heads</span><span>Uplighting</span></div>
   </div>
   <div class="show reveal" aria-hidden="true">
@@ -208,7 +245,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
   <div class="planner reveal">
     <form class="ctrl" id="pf" onsubmit="return false">
       <fieldset class="pills" id="ev"><legend>Event</legend></fieldset>
-      <fieldset class="pills" id="vn"><legend>Venue</legend></fieldset>
+      <div class="fld"><span id="vnl">Venue name</span><input id="vname" list="venues" aria-labelledby="vnl" placeholder="Type or pick a Cebu venue" autocomplete="off">
+        <datalist id="venues"></datalist></div>
+      <fieldset class="pills" id="vn"><legend>Venue type</legend></fieldset>
       <div class="fld"><span id="gl">Guests</span>
         <div class="guests"><input type="range" id="gs" min="50" max="1500" step="25" value="300" aria-labelledby="gl"><output id="go" for="gs">300</output></div>
       </div>
@@ -221,9 +260,19 @@ footer .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
     <div class="view">
       <div class="viewtop"><span class="eyebrow" id="vt">Suggested layout · front view</span><small id="vs"></small></div>
       <div class="stagebox"><svg id="st" viewBox="0 0 800 460" role="img" aria-labelledby="stt"><title id="stt">Suggested stage layout</title></svg></div>
-      <div class="kit" id="kit" aria-live="polite"></div>
+      <div class="tabs" role="tablist" aria-label="Your plan">
+        <button role="tab" aria-selected="true" aria-controls="kit" data-t="kit">Equipment</button>
+        <button role="tab" aria-selected="false" aria-controls="vid" data-t="vid">Video sizes</button>
+        <button role="tab" aria-selected="false" aria-controls="pwr" data-t="pwr">Venue &amp; power</button>
+        <button role="tab" aria-selected="false" aria-controls="cue" data-t="cue">Cue sheet</button>
+      </div>
+      <div class="tp kit" id="kit" role="tabpanel" aria-live="polite"></div>
+      <div class="tp" id="vid" role="tabpanel" hidden></div>
+      <div class="tp" id="pwr" role="tabpanel" hidden></div>
+      <div class="tp" id="cue" role="tabpanel" hidden></div>
+      <p class="fine">Suggested by the planner. We confirm the final plan on a site visit.</p>
       <div class="go">
-        <p class="fine">Suggested by the planner. We confirm the final plan on a site visit.</p>
+        <div class="tools"><button class="cta ghost" type="button" id="lnk">Copy link to this plan</button><button class="cta ghost" type="button" id="pdf">Save as PDF</button></div>
         <button class="cta" type="button" id="qbtn">Send me a quote</button>
       </div>
     </div>
@@ -241,10 +290,29 @@ footer .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
 </div></section>
 
 <section id="work"><div class="wrap">
-  <div class="head reveal"><span class="eyebrow">Our work</span><h2 class="disp">Our first show is <span class="gold">a big one.</span></h2></div>
-  <div class="first reveal">
+  <div class="head reveal"><span class="eyebrow">Our work</span><h2 class="disp">Stages that <span class="gold">tell a story.</span></h2></div>
+  <article class="case reveal">
+    <div class="realms" aria-hidden="true">
+      <div class="realm r1"><svg viewBox="0 0 100 100"><g fill="#fff"><circle cx="50" cy="30" r="14"/><circle cx="72" cy="46" r="14"/><circle cx="64" cy="72" r="14"/><circle cx="36" cy="72" r="14"/><circle cx="28" cy="46" r="14"/></g><circle cx="50" cy="52" r="10" fill="#f6c94a"/></svg><small>REALM I</small><b>Spring</b></div>
+      <div class="realm r2"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="20" fill="#fff"/><g stroke="#fff" stroke-width="6" stroke-linecap="round"><path d="M50 8v12M50 80v12M8 50h12M80 50h12M20 20l9 9M71 71l9 9M80 20l-9 9M29 71l-9 9"/></g></svg><small>REALM II</small><b>Summer</b></div>
+      <div class="realm r3"><svg viewBox="0 0 100 100"><path d="M50 6C70 26 86 40 80 62 74 84 50 92 50 92S26 84 20 62C14 40 30 26 50 6z" fill="#fff"/><path d="M50 20v74" stroke="#a8462b" stroke-width="4"/></svg><small>REALM III</small><b>Autumn</b></div>
+      <div class="realm r4"><svg viewBox="0 0 100 100"><g stroke="#fff" stroke-width="6" stroke-linecap="round"><path d="M50 6v88M12 28l76 44M12 72l76-44M50 20l-10-10M50 20l10-10M50 80l-10 10M50 80l10 10"/></g></svg><small>REALM IV</small><b>Winter</b></div>
+    </div>
     <div class="t">
-      <span class="eyebrow">Official Stage &amp; Screen Partner</span>
+      <div>
+        <span class="eyebrow">Debut · Nustar Grand Ballroom · 14 November 2026</span>
+        <h3>The Guardian of Time and the Four Realms</h3>
+        <p>Pristina's 18th, staged as a full fantasy production. A young woman becomes the Guardian of Time and restores balance to four realms, one for each season, with ballet, a live orchestra and a ballroom dressed in crimson and gold.</p>
+        <p class="cred">Stage director Gabriel Gomez · show director Mark Masa · line producer Hejie Suralta · live orchestra SFORZANDO under Joseph Franz · visuals by Joseph Ong and Cebu Orange. <a href="https://www.sunstar.com.ph/cebu/pristina-steps-into-18-with-a-cebuano-made-production" rel="noopener" target="_blank">Read the SunStar feature</a></p>
+      </div>
+      <div class="part"><b>OUR PART</b><ul><li>LED wall</li><li>Trusses</li><li>Stage lights</li><li>Projection</li></ul>
+        <p class="fine" style="margin-top:12px">Photos from the night go here.</p>
+        <button class="cta" type="button" id="like" style="margin-top:14px">Plan a stage like this</button></div>
+    </div>
+  </article>
+  <div class="first reveal" style="margin-top:18px">
+    <div class="t">
+      <span class="eyebrow">Next show · Official Stage &amp; Screen Partner</span>
       <h3>JCI Cebu 79th Induction and Turnover Ceremonies</h3>
       <p>We are building the full stage for JCI Cebu's 79th year: the LED wall, projection, trusses and lights, from the benefit concert to the last dance.</p>
       <dl><dt>Date</dt><dd>Saturday, 12 December 2026</dd><dt>Venue</dt><dd>Mactan Expo, Lapu-Lapu City</dd><dt>Program</dt><dd>5:00 PM Benefit Concert · 7:00 PM Induction</dd></dl>
@@ -298,11 +366,31 @@ footer .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
   const LOOKS = { Clean: 4, Grand: 8, Concert: 12 };
   const ADDS = [['side', 'Side screens', true], ['map', 'Projection mapping', true], ['heads', 'Moving heads', true], ['up', 'Uplighting', true], ['cam', 'Live camera feed', false], ['haze', 'Haze', false]];
   const $ = s => document.querySelector(s);
+  const PLACES = { 'Nustar Grand Ballroom': 'Hotel ballroom', 'Mactan Expo': 'Convention hall', 'Waterfront Cebu City Hotel': 'Hotel ballroom',
+    'Radisson Blu Cebu': 'Hotel ballroom', 'Marco Polo Plaza Cebu': 'Hotel ballroom', 'Shangri-La Mactan': 'Hotel ballroom', 'IEC Convention Center Cebu': 'Convention hall',
+    'SM Seaside City Cebu Sky Hall': 'Convention hall', 'Cebu Coliseum': 'Convention hall', 'Hotel function room': 'Function room', 'Garden or beach resort': 'Garden / outdoor' };
+  const PPP = { 'P2.6': 192, 'P3.9': 128, 'P4.8': 104 }; // pixels per 0.5 m panel
+  const CUES = {
+    Debut: [['Guest arrival', 'Slow loop of her name and photos'], ['Grand entrance', 'Lights dim, spotlight on the stairs, name in full on the wall'], ['18 Roses', 'Soft wash, each name on the wall as he steps up'], ['18 Candles', 'Warm amber, names on the wall'], ['18 Treasures', 'Photo of each giver'], ['Birthday video', 'Full-screen video, house lights down'], ['Cotillion', 'Moving heads on the dancers'], ['Party', 'Concert look and haze']],
+    Wedding: [['Guest arrival', 'Monogram loop'], ['Grand entrance', 'Spotlight, couple names on the wall'], ['First dance', 'Warm wash, slow beams'], ['Same-day edit video', 'Full screen, house lights down'], ['Toasts and speeches', 'Live camera on the side screens'], ['Party', 'Concert look']],
+    'Corporate gala': [['Arrival', 'Logo and sponsor loop'], ['Opening video', 'Full screen, house lights down'], ['Speeches', 'Lectern spot, live camera on the side screens'], ['Awards', 'Nominee cards, winner reveal'], ['Dinner', 'Soft loop'], ['Party', 'Concert look']],
+    Induction: [['Arrival', 'Event key visual loop'], ['Processional', 'Spotlight on the aisle'], ['National anthem', 'Flag on the wall, house lights down'], ['Oath-taking', 'Oath text on the wall, no ads'], ['Turnover', 'Gavel moment on the live camera'], ['Speeches', 'Live camera on the side screens'], ['Partners', 'Partner logo loop'], ['Party', 'Concert look']],
+    Concert: [['Walk-in', 'Event poster loop'], ['Opening act', 'Live camera on the side screens'], ['Main set', 'Song-by-song visuals, full beams'], ['Encore', 'Haze and full rig']],
+    Conference: [['Registration', 'Holding slide and sponsor loop'], ['Keynote', 'Slides on the main wall, live camera on the sides'], ['Panel', 'Names and titles on the wall'], ['Breaks', 'Sponsor loop and schedule'], ['Closing', 'Thank-you slide']] };
   const pills = (el, name, list, on) => list.forEach(v => { el.insertAdjacentHTML('beforeend', `<label><input type="radio" name="${name}" value="${v}"${v === on ? ' checked' : ''}><span>${v}</span></label>`); });
   pills($('#ev'), 'ev', Object.keys(EVENTS), 'Debut');
   pills($('#vn'), 'vn', Object.keys(VENUES), 'Hotel ballroom');
   pills($('#lk'), 'lk', Object.keys(LOOKS), 'Grand');
   ADDS.forEach(([k, t, on]) => $('#ad').insertAdjacentHTML('beforeend', `<label><input type="checkbox" name="${k}"${on ? ' checked' : ''}>${t}</label>`));
+  Object.keys(PLACES).forEach(n => $('#venues').insertAdjacentHTML('beforeend', `<option value="${n}">`));
+  const setRadio = (name, v) => { const el = [...document.getElementsByName(name)].find(i => i.value === v); if (el) el.checked = true; };
+  function readHash() {
+    const q = new URLSearchParams(location.hash.slice(1)); if (!q.has('e')) return;
+    setRadio('ev', q.get('e')); setRadio('vn', q.get('v')); setRadio('lk', q.get('l'));
+    if (q.get('g')) $('#gs').value = q.get('g'); $('#vname').value = q.get('n') || '';
+    const on = (q.get('a') || '').split(','); ADDS.forEach(([k]) => $('#pf')[k].checked = on.includes(k));
+  }
+  readHash();
 
   const half = x => Math.round(x * 2) / 2;
   function plan() {
@@ -320,7 +408,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
     const ups = a.up ? 8 + 2 * Math.floor(g / 100) : 0;
     const crew = 3 + Math.ceil(panels / 40) + (a.map ? 1 : 0) + (a.cam ? 2 : 0);
     const ingress = Math.ceil(3 + panels / 48 + (a.map ? 1 : 0));
-    return { ev, vn, lk, g, a, w, h, panels, pitch, sideW, sideH, stageW, stageD, heads, ups, crew, ingress, back, V };
+    const px = PPP[pitch.split(' ')[0]], res = [w / 0.5 * px, h / 0.5 * px], sres = a.side ? [sideW / 0.5 * px, sideH / 0.5 * px] : null;
+    const kw = Math.ceil(((w * h + (a.side ? 2 * sideW * sideH : 0)) * (V.out ? 0.8 : 0.65) + heads * 0.4 + ups * 0.06 + (a.map ? 1.5 : 0) + (a.haze ? 1 : 0)) * 1.2);
+    const ceil = Math.ceil((1 + 0.6 + h + 1.3 + 0.6) * 2) / 2;
+    return { ev, vn, lk, g, a, w, h, panels, pitch, sideW, sideH, stageW, stageD, heads, ups, crew, ingress, back, V, px, res, sres, kw, ceil, name: $('#vname').value.trim() };
   }
 
   function draw(p) {
@@ -369,7 +460,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
     const dy = ly - 12;
     o += `<g stroke="#e4c160" stroke-width="1.2"><path d="M${lx} ${dy}h${m(p.w)}M${lx} ${dy - 5}v10M${lx + m(p.w)} ${dy - 5}v10"/></g>
       <text x="${cx}" y="${dy - 7}" text-anchor="middle" font-size="12" font-weight="800" fill="#f6e3a1" font-family="Plus Jakarta Sans,sans-serif">LED ${p.w} × ${p.h} m</text>
-      <g fill="#93a3ba" font-size="11" font-weight="600" font-family="Plus Jakarta Sans,sans-serif"><text x="18" y="${H - 14}">Front view · person shown for scale</text><text x="${W - 18}" y="${H - 14}" text-anchor="end">${p.vn} · ${p.g} guests</text></g>`;
+      <g fill="#93a3ba" font-size="11" font-weight="600" font-family="Plus Jakarta Sans,sans-serif"><text x="18" y="${H - 14}">Front view · person shown for scale</text><text x="${W - 18}" y="${H - 14}" text-anchor="end">${(p.name || p.vn).replace(/[<&]/g, '')} · ${p.g} guests</text></g>`;
     $('#st').innerHTML = '<title id="stt">Suggested stage layout</title>' + o;
   }
 
@@ -385,9 +476,40 @@ footer .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
   }
 
   let cur;
-  function update() { cur = plan(); $('#go').textContent = cur.g; draw(cur); kit(cur); }
+  function panels(p) {
+    const r = p.res, ar = (r[0] / r[1]).toFixed(2);
+    $('#vid').innerHTML = `<h4>Make your videos this size</h4><p class="big">${r[0]} × ${r[1]} px</p>
+      <ul style="margin-top:12px"><li><b>Main wall</b> · ${p.w} × ${p.h} m at ${p.pitch.split(' ')[0]} · shape ${ar} : 1${Math.abs(ar - 1.78) < .05 ? ' (same as 16:9)' : ', not exactly 16:9, so design to this size'}</li>
+      ${p.sres ? `<li><b>Side screens</b> · ${p.sres[0]} × ${p.sres[1]} px each (portrait)</li>` : ''}
+      <li><b>Video</b> · MP4 (H.264), 30 fps, no black bars. Keep names and text inside the middle 90%.</li>
+      <li><b>Photos and slides</b> · PNG or JPG at the size above. Slides from PowerPoint or Canva: set a custom size first.</li>
+      <li><b>Tip</b> · Bring your files on a USB and send a copy ahead, so we can play them on the wall at rehearsal.</li></ul>`;
+    $('#pwr').innerHTML = `<h4>Power to ask the venue for</h4><p class="big">About ${p.kw} kW</p>
+      <ul style="margin-top:12px"><li><b>Power</b> · ${p.kw} kW for the screens and lights, ideally three-phase near the stage. Sound is separate.</li>
+      <li><b>Ceiling height at the stage</b> · at least ${p.ceil} m for this truss</li>
+      <li><b>Setup time</b> · ${p.ingress + 1} hours before doors open (${p.ingress} hours setup + 1 hour rehearsal)</li>
+      <li><b>Load-in</b> · ask about the loading bay, freight lift and the route to the hall</li>
+      <li><b>Rigging</b> · ask whether trusses may stand on the floor only or hang from the ceiling</li>
+      ${p.V.out ? '<li><b>Outdoor</b> · ask about a covered stage and a rain plan; screens need a solid, level base</li>' : ''}</ul>`;
+    $('#cue').innerHTML = `<h4>${p.ev} cue sheet · what the stage does at each moment</h4><ol class="cues" style="padding:0">${CUES[p.ev].map(([m, d]) => `<li><b>${m}</b><span>${d}</span></li>`).join('')}</ol>`;
+  }
+  function update() {
+    cur = plan(); $('#go').textContent = cur.g; draw(cur); kit(cur); panels(cur);
+    const q = new URLSearchParams({ e: cur.ev, v: cur.vn, g: cur.g, l: cur.lk, a: ADDS.filter(([k]) => cur.a[k]).map(([k]) => k).join(','), n: cur.name });
+    history.replaceState(null, '', '#' + q);
+  }
+  document.querySelectorAll('[role=tab]').forEach(b => b.addEventListener('click', () => {
+    document.querySelectorAll('[role=tab]').forEach(x => { x.setAttribute('aria-selected', x === b); $('#' + x.dataset.t).hidden = x !== b; });
+  }));
+  $('#lnk').addEventListener('click', async () => { try { await navigator.clipboard.writeText(location.href); $('#lnk').textContent = 'Link copied'; } catch { $('#lnk').textContent = 'Copy the address bar'; } setTimeout(() => $('#lnk').textContent = 'Copy link to this plan', 1800); });
+  $('#pdf').addEventListener('click', () => print());
+  $('#like').addEventListener('click', () => {
+    setRadio('ev', 'Debut'); setRadio('vn', 'Hotel ballroom'); setRadio('lk', 'Grand'); $('#vname').value = 'Nustar Grand Ballroom';
+    ADDS.forEach(([k]) => $('#pf')[k].checked = ['side', 'map', 'heads', 'up', 'haze'].includes(k)); update(); $('#planner').scrollIntoView();
+  });
   $('#pf').addEventListener('input', e => {
     if (e.target.name === 'ev') { const l = EVENTS[e.target.value].look; $(`#lk input[value="${l}"]`).checked = true; }
+    if (e.target.id === 'vname' && PLACES[e.target.value]) setRadio('vn', PLACES[e.target.value]);
     update();
   });
   update();
@@ -400,10 +522,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
     const who = ['Name', 'Mobile', 'Date', 'Venue name'].map(k => f[k].value.trim() ? `${k}: ${f[k].value.trim()}` : '').filter(Boolean);
     return [`Veloso Visuals stage plan ${R}`, ...who, `Event: ${p.ev} · ${p.vn} · ${p.g} guests · ${p.lk} look`,
       `LED wall ${p.w} × ${p.h} m (${p.panels} panels, ${p.pitch})`, `Stage ${p.stageW} × ${p.stageD} m with box truss`,
-      `Add-ons: ${on}`, `Moving heads ${p.heads || 0} · Uplights ${p.ups || 0}`];
+      `Add-ons: ${on}`, `Moving heads ${p.heads || 0} · Uplights ${p.ups || 0}`,
+      `Video size ${p.res[0]} × ${p.res[1]} px · Power about ${p.kw} kW · Ceiling ${p.ceil} m+`, `Plan: ${location.href}`];
   };
   const refresh = () => { $('#qs').textContent = lines().join('\n'); };
-  $('#qbtn').addEventListener('click', () => { R = ref(); refresh(); dlg.showModal(); });
+  $('#qbtn').addEventListener('click', () => { R = ref(); const vf = $('#qf')['Venue name']; if (!vf.value) vf.value = cur.name; refresh(); dlg.showModal(); });
   $('#qf').addEventListener('input', refresh);
   $('#qc').addEventListener('click', async () => { try { await navigator.clipboard.writeText(lines().join('\n')); $('#qc').textContent = 'Copied'; setTimeout(() => $('#qc').textContent = 'Copy plan', 1600); } catch { $('#qc').textContent = 'Select the text above'; } });
   $('#qf').addEventListener('submit', e => {
