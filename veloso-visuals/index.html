@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Veloso Visuals · LED walls, projection and stage design in Cebu</title>
+<meta name="description" content="Plan your stage before you call. LED walls, projection mapping, trusses and stage lights for weddings, debuts, galas and concerts in Cebu.">
+<meta name="theme-color" content="#05080f">
+<meta property="og:title" content="Veloso Visuals · Plan your stage">
+<meta property="og:description" content="Pick your event, venue and guests. See the LED wall, trusses and lights your stage needs.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23e4c160'/%3E%3Cstop offset='.5' stop-color='%2357BCBC'/%3E%3Cstop offset='1' stop-color='%231F4789'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='6' y='6' width='52' height='52' rx='12' fill='url(%23g)'/%3E%3Crect x='17' y='17' width='30' height='30' rx='5' fill='%2305080f'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#05080f;--bg2:#0a1120;--bg3:#111b2e;--line:rgba(255,255,255,.09);--line2:rgba(255,255,255,.16);
+  --tx:#eef2f8;--mute:#93a3ba;--dim:#64748b;
+  --gold:#e4c160;--gold2:#f6e3a1;--teal:#57BCBC;--blue:#1F4789;
+  --r:18px;--disp:Unbounded,system-ui,sans-serif;--sans:"Plus Jakarta Sans",system-ui,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box;margin:0}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:76px;-webkit-text-size-adjust:100%;background:var(--bg)}
+body{font-family:var(--sans);color:var(--tx);background:var(--bg);line-height:1.5;overflow-x:clip}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+button,input,select{font:inherit;color:inherit}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+.disp{font-family:var(--disp);letter-spacing:-.02em;line-height:1.02}
+.gold{background:linear-gradient(180deg,var(--gold2),var(--gold) 55%,#b88a2c);-webkit-background-clip:text;background-clip:text;color:transparent}
+.eyebrow{font-size:12.5px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+@media (prefers-reduced-motion:no-preference){.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}.reveal.in{opacity:1;transform:none}}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:20;background:rgba(5,8,15,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none}
+.brand svg{width:34px;height:34px;flex:none}
+.brand b{font-family:var(--disp);font-weight:700;font-size:17px;letter-spacing:-.01em;display:block;line-height:1.1}
+.brand small{display:block;font-size:9.5px;font-weight:700;letter-spacing:.3em;color:var(--mute)}
+.links{display:flex;gap:24px;font-size:14.5px;font-weight:600;color:var(--mute)}
+.links a{text-decoration:none}.links a:hover{color:var(--tx)}
+.cta{display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer;text-decoration:none;font-weight:800;font-size:15px;padding:12px 20px;border-radius:999px;background:linear-gradient(90deg,var(--gold),var(--gold2));color:#0b0f18}
+.cta.ghost{background:transparent;color:var(--tx);border:1px solid var(--line2)}
+@media (max-width:820px){.links{display:none}.nav .cta{padding:10px 15px;font-size:14px}}
+
+/* hero */
+.hero{position:relative;padding:64px 0 40px;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:-20% -10% auto;height:120%;background:radial-gradient(600px 420px at 70% 30%,rgba(31,71,137,.55),transparent 70%),radial-gradient(500px 380px at 15% 10%,rgba(87,188,188,.16),transparent 70%);pointer-events:none}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.02fr 1fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(40px,6vw,74px);font-weight:800;margin-top:16px}
+.hero p.lede{margin-top:20px;font-size:clamp(17px,1.6vw,20px);color:#c4cfdf;max-width:34ch}
+.hero .row{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.tags span{font-size:13px;font-weight:600;color:var(--mute);border:1px solid var(--line2);border-radius:999px;padding:6px 12px}
+.show{position:relative;border-radius:22px;overflow:hidden;border:1px solid var(--line2);background:#03060c;aspect-ratio:16/11;box-shadow:0 40px 80px rgba(0,0,0,.55)}
+.show svg{width:100%;height:100%}
+@media (prefers-reduced-motion:no-preference){
+  .sweep{transform-box:fill-box;animation:sw 5s ease-in-out infinite alternate}
+  .sweep.b{animation-duration:6.2s;animation-delay:-2s}.sweep.c{animation-duration:4.4s;animation-delay:-1s}
+  @keyframes sw{from{transform:rotate(-14deg)}to{transform:rotate(14deg)}}
+  .ledflow{animation:lf 9s linear infinite}@keyframes lf{to{transform:translateX(-50%)}}
+}
+.sweep{transform-origin:50% 0}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr}.hero{padding-top:40px}}
+
+/* planner */
+section{padding:84px 0}
+.head{max-width:720px}
+.head h2{font-size:clamp(30px,4.2vw,48px);font-weight:800;margin-top:12px}
+.head p{margin-top:14px;color:#c4cfdf;font-size:18px}
+.planner{margin-top:36px;display:grid;grid-template-columns:360px minmax(0,1fr);border:1px solid var(--line2);border-radius:24px;overflow:hidden;background:var(--bg2)}
+.planner>*{min-width:0}
+.ctrl{padding:26px 24px;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:20px}
+.fld>span{display:block;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);margin-bottom:9px}
+.pills{display:flex;flex-wrap:wrap;gap:7px;border:0;padding:0}
+.pills legend{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);margin-bottom:9px;padding:0}
+.pills label{position:relative}
+.pills input{position:absolute;opacity:0;inset:0;cursor:pointer}
+.pills label span{display:block;font-size:14px;font-weight:600;padding:8px 13px;border-radius:999px;background:var(--bg3);border:1px solid var(--line2);color:#c4cfdf;transition:background .2s,color .2s}
+.pills input:checked+span{background:var(--gold);border-color:var(--gold);color:#0b0f18;font-weight:800}
+.pills input:focus-visible+span{outline:2px solid var(--teal);outline-offset:2px}
+.guests{display:flex;align-items:center;gap:14px}
+.guests input[type=range]{flex:1;accent-color:var(--gold)}
+.guests output{font-family:var(--disp);font-weight:700;font-size:20px;min-width:62px;text-align:right}
+.adds{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.adds label{display:flex;align-items:center;gap:9px;font-size:14px;font-weight:600;color:#c4cfdf;background:var(--bg3);border:1px solid var(--line);border-radius:12px;padding:9px 11px;cursor:pointer}
+.adds input{accent-color:var(--gold);width:16px;height:16px;flex:none}
+.view{padding:22px 24px 24px;display:flex;flex-direction:column;gap:18px}
+.viewtop{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.viewtop .eyebrow{color:var(--teal)}
+.viewtop small{font-size:13px;color:var(--mute)}
+.stagebox{border-radius:16px;overflow:hidden;background:#03060c;border:1px solid var(--line)}
+.stagebox svg{width:100%;height:auto}
+.kit{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.kit div{background:var(--bg3);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.kit b{display:block;font-family:var(--disp);font-size:18px;font-weight:700;line-height:1.15}
+.kit span{display:block;font-size:12.5px;color:var(--mute);margin-top:4px}
+.fine{font-size:13px;color:var(--dim)}
+.go{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+@media (max-width:980px){.planner{grid-template-columns:1fr}.ctrl{border-right:0;border-bottom:1px solid var(--line)}}
+@media (max-width:560px){.kit{grid-template-columns:1fr 1fr}.view,.ctrl{padding:20px 16px}}
+
+/* services */
+.svc{margin-top:36px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.svc article{border:1px solid var(--line2);border-radius:20px;padding:24px 22px;background:linear-gradient(180deg,var(--bg2),var(--bg))}
+.svc svg{width:44px;height:44px;margin-bottom:18px}
+.svc h3{font-family:var(--disp);font-size:18px;font-weight:700}
+.svc p{margin-top:8px;color:var(--mute);font-size:15px}
+@media (max-width:900px){.svc{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.svc{grid-template-columns:1fr}}
+
+/* work */
+.first{margin-top:36px;display:grid;grid-template-columns:1.1fr 1fr;border-radius:24px;overflow:hidden;border:1px solid rgba(228,193,96,.4);background:linear-gradient(135deg,#0d1730,#060a14)}
+.first .t{padding:36px 34px}
+.first h3{font-family:var(--disp);font-size:clamp(24px,3vw,34px);font-weight:800;margin-top:12px;line-height:1.08}
+.first p{margin-top:14px;color:#c4cfdf}
+.first dl{margin-top:22px;display:grid;grid-template-columns:auto 1fr;gap:8px 18px;font-size:15px}
+.first dt{color:var(--mute);font-weight:600}.first dd{margin:0;font-weight:700}
+.first .ph{position:relative;min-height:300px;display:grid;place-items:center;background:repeating-linear-gradient(90deg,rgba(255,255,255,.025) 0 1px,transparent 1px 34px),radial-gradient(400px 260px at 50% 60%,rgba(87,188,188,.22),transparent 70%)}
+.first .ph span{font-size:14px;font-weight:700;color:var(--mute);border:1px dashed var(--line2);border-radius:12px;padding:12px 16px;text-align:center;max-width:240px}
+@media (max-width:860px){.first{grid-template-columns:1fr}}
+
+/* steps */
+.steps{margin-top:36px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;counter-reset:s}
+.steps li{list-style:none;border-top:2px solid rgba(228,193,96,.5);padding-top:16px}
+.steps li:before{counter-increment:s;content:"0" counter(s);font-family:var(--disp);font-weight:700;color:var(--gold);font-size:14px}
+.steps h3{font-size:18px;font-weight:800;margin-top:6px}
+.steps p{color:var(--mute);font-size:15px;margin-top:6px}
+.steps{padding:0}
+@media (max-width:860px){.steps{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.steps{grid-template-columns:1fr}}
+
+/* dialog */
+dialog{margin:auto;border:1px solid var(--line2);border-radius:22px;background:var(--bg2);color:var(--tx);padding:0;width:min(520px,100% - 24px);max-height:calc(100dvh - 24px)}
+dialog::backdrop{background:rgba(2,4,8,.72);backdrop-filter:blur(4px)}
+.dlg{padding:26px 24px;display:flex;flex-direction:column;gap:14px}
+.dlg h3{font-family:var(--disp);font-size:22px;font-weight:700}
+.dlg label{display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:700;color:var(--mute)}
+.dlg input{background:var(--bg3);border:1px solid var(--line2);border-radius:12px;padding:11px 13px;font-size:16px;color:var(--tx)}
+.dlg input:focus{outline:2px solid var(--gold);outline-offset:1px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.sum{background:#03060c;border:1px solid var(--line);border-radius:14px;padding:12px 14px;font-size:13.5px;color:#c4cfdf;white-space:pre-line;max-height:180px;overflow:auto}
+.dlg .row{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+.x{position:absolute;right:14px;top:12px;background:none;border:0;color:var(--mute);font-size:26px;cursor:pointer;line-height:1}
+@media (max-width:460px){.two{grid-template-columns:1fr}}
+
+footer{border-top:1px solid var(--line);padding:34px 0 46px;color:var(--mute);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.sample{font-size:12.5px;color:var(--dim);margin-top:8px}
+</style>
+</head>
+<body>
+
+<header class="nav"><div class="wrap">
+  <a class="brand" href="#top" aria-label="Veloso Visuals home">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e4c160"/><stop offset=".5" stop-color="#57BCBC"/><stop offset="1" stop-color="#1F4789"/></linearGradient></defs><rect x="4" y="4" width="56" height="56" rx="13" fill="url(#lg)"/><rect x="15" y="15" width="34" height="34" rx="6" fill="#05080f"/><path d="M22 24l10 16 10-16" fill="none" stroke="#f6e3a1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span><b>Veloso Visuals</b><small>STAGE · LED · PROJECTION</small></span>
+  </a>
+  <nav class="links" aria-label="Main"><a href="#planner">Stage planner</a><a href="#services">What we do</a><a href="#work">Our work</a><a href="#how">How it works</a></nav>
+  <a class="cta" href="#planner">Plan your stage</a>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap">
+  <div>
+    <span class="eyebrow">Cebu stage &amp; screen rentals</span>
+    <h1 class="disp">Your stage,<br><span class="gold">planned before<br>you call.</span></h1>
+    <p class="lede">LED walls, projection mapping, trusses and stage lights for weddings, debuts, galas and concerts. Tell us the event; we show you the stage.</p>
+    <div class="row"><a class="cta" href="#planner">Open the stage planner</a><a class="cta ghost" href="#work">See our first show</a></div>
+    <div class="tags"><span>LED walls</span><span>Projection mapping</span><span>Box truss</span><span>Moving heads</span><span>Uplighting</span></div>
+  </div>
+  <div class="show reveal" aria-hidden="true">
+    <svg viewBox="0 0 640 440" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <linearGradient id="hl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1F4789"/><stop offset=".25" stop-color="#57BCBC"/><stop offset=".5" stop-color="#e4c160"/><stop offset=".75" stop-color="#57BCBC"/><stop offset="1" stop-color="#1F4789"/></linearGradient>
+        <linearGradient id="hb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff3c8" stop-opacity=".5"/><stop offset="1" stop-color="#fff3c8" stop-opacity="0"/></linearGradient>
+        <pattern id="hm" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M0 15h30M15 0v30" stroke="#57BCBC" stroke-opacity=".18"/><circle cx="15" cy="15" r="2.5" fill="#e4c160" fill-opacity=".3"/></pattern>
+        <pattern id="ht" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M0 10L10 0M0 0l10 10" stroke="#8796ab" stroke-width="1"/></pattern>
+        <clipPath id="hc"><rect x="170" y="110" width="300" height="168" rx="3"/></clipPath>
+      </defs>
+      <rect width="640" height="440" fill="#03060c"/>
+      <rect width="640" height="330" fill="url(#hm)"/>
+      <rect x="90" y="62" width="460" height="12" fill="url(#ht)" stroke="#8796ab"/>
+      <rect x="90" y="62" width="12" height="268" fill="url(#ht)" stroke="#8796ab"/><rect x="538" y="62" width="12" height="268" fill="url(#ht)" stroke="#8796ab"/>
+      <g clip-path="url(#hc)"><g class="ledflow"><rect x="170" y="110" width="600" height="168" fill="url(#hl)"/><rect x="770" y="110" width="600" height="168" fill="url(#hl)"/></g></g>
+      <text x="320" y="200" text-anchor="middle" font-family="Unbounded,sans-serif" font-weight="800" font-size="26" fill="#fff">YOUR NAME HERE</text>
+      <text x="320" y="228" text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-weight="700" font-size="12" letter-spacing="4" fill="#ffffffcc">LIVE ON THE WALL</text>
+      <rect x="116" y="130" width="40" height="128" rx="3" fill="url(#hl)" opacity=".75"/><rect x="484" y="130" width="40" height="128" rx="3" fill="url(#hl)" opacity=".75"/>
+      <g><polygon class="sweep" points="150,74 108,330 192,330" fill="url(#hb)"/><polygon class="sweep b" points="260,74 222,330 298,330" fill="url(#hb)"/><polygon class="sweep c" points="380,74 342,330 418,330" fill="url(#hb)"/><polygon class="sweep b" points="490,74 448,330 532,330" fill="url(#hb)"/></g>
+      <g fill="#e4c160"><rect x="142" y="74" width="16" height="10" rx="2"/><rect x="252" y="74" width="16" height="10" rx="2"/><rect x="372" y="74" width="16" height="10" rx="2"/><rect x="482" y="74" width="16" height="10" rx="2"/></g>
+      <rect x="60" y="330" width="520" height="34" fill="#1b2434"/><rect x="60" y="330" width="520" height="4" fill="#e4c160"/>
+      <g fill="#57BCBC"><circle cx="80" cy="380" r="5"/><circle cx="200" cy="380" r="5"/><circle cx="320" cy="380" r="5"/><circle cx="440" cy="380" r="5"/><circle cx="560" cy="380" r="5"/></g>
+      <g fill="#0b1220"><circle cx="150" cy="430" r="26"/><circle cx="230" cy="436" r="24"/><circle cx="320" cy="428" r="27"/><circle cx="410" cy="436" r="24"/><circle cx="490" cy="430" r="26"/></g>
+    </svg>
+  </div>
+</div></section>
+
+<section id="planner" style="padding-top:40px"><div class="wrap">
+  <div class="head reveal">
+    <span class="eyebrow">Stage planner</span>
+    <h2 class="disp">Plan your stage in <span class="gold">one minute.</span></h2>
+    <p>Pick your event, venue and guest count. The planner sizes the LED wall, picks the right screen for the distance, and lists the trusses and lights. Send it to us, and we quote from your plan.</p>
+  </div>
+
+  <div class="planner reveal">
+    <form class="ctrl" id="pf" onsubmit="return false">
+      <fieldset class="pills" id="ev"><legend>Event</legend></fieldset>
+      <fieldset class="pills" id="vn"><legend>Venue</legend></fieldset>
+      <div class="fld"><span id="gl">Guests</span>
+        <div class="guests"><input type="range" id="gs" min="50" max="1500" step="25" value="300" aria-labelledby="gl"><output id="go" for="gs">300</output></div>
+      </div>
+      <fieldset class="pills" id="lk"><legend>Look</legend></fieldset>
+      <div class="fld"><span>Add to the stage</span>
+        <div class="adds" id="ad"></div>
+      </div>
+    </form>
+
+    <div class="view">
+      <div class="viewtop"><span class="eyebrow" id="vt">Suggested layout · front view</span><small id="vs"></small></div>
+      <div class="stagebox"><svg id="st" viewBox="0 0 800 460" role="img" aria-labelledby="stt"><title id="stt">Suggested stage layout</title></svg></div>
+      <div class="kit" id="kit" aria-live="polite"></div>
+      <div class="go">
+        <p class="fine">Suggested by the planner. We confirm the final plan on a site visit.</p>
+        <button class="cta" type="button" id="qbtn">Send me a quote</button>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section id="services" style="background:linear-gradient(180deg,transparent,rgba(17,27,46,.45),transparent)"><div class="wrap">
+  <div class="head reveal"><span class="eyebrow">What we do</span><h2 class="disp">Everything behind <span class="gold">the big moment.</span></h2></div>
+  <div class="svc">
+    <article class="reveal"><svg viewBox="0 0 48 48" fill="none" stroke="#e4c160" stroke-width="2.4" stroke-linejoin="round"><rect x="5" y="9" width="38" height="24" rx="2"/><path d="M5 17h38M5 25h38M15 9v24M24 9v24M33 9v24" stroke-opacity=".45"/><path d="M17 41h14M24 33v8"/></svg><h3>LED walls</h3><p>Sized to your room and your guests' distance, so names, photos and videos read clearly from the back row.</p></article>
+    <article class="reveal"><svg viewBox="0 0 48 48" fill="none" stroke="#57BCBC" stroke-width="2.4" stroke-linejoin="round"><rect x="4" y="30" width="14" height="10" rx="2"/><path d="M18 33l22-20M18 37l22 4"/><path d="M40 10v34" stroke-dasharray="3 3"/></svg><h3>Projection mapping</h3><p>Turn plain walls, ceilings or a cake table into moving scenes that match your theme.</p></article>
+    <article class="reveal"><svg viewBox="0 0 48 48" fill="none" stroke="#e4c160" stroke-width="2.4" stroke-linejoin="round"><path d="M6 10h36v6H6zM6 16v26M42 16v26M12 42V16M36 42V16"/><path d="M6 10l6 6M12 10l6 6M18 10l6 6M24 10l6 6M30 10l6 6M36 10l6 6" stroke-opacity=".5"/></svg><h3>Trusses &amp; rigging</h3><p>Box truss frames that hold the screens and lights safely, built and checked by our own crew.</p></article>
+    <article class="reveal"><svg viewBox="0 0 48 48" fill="none" stroke="#57BCBC" stroke-width="2.4" stroke-linejoin="round"><rect x="18" y="5" width="12" height="8" rx="2"/><path d="M20 13l-10 30h28L28 13" stroke-opacity=".6"/><path d="M8 43h32"/></svg><h3>Stage lighting</h3><p>Moving heads, washes and uplighting programmed for your entrance, your speeches and your dance floor.</p></article>
+  </div>
+</div></section>
+
+<section id="work"><div class="wrap">
+  <div class="head reveal"><span class="eyebrow">Our work</span><h2 class="disp">Our first show is <span class="gold">a big one.</span></h2></div>
+  <div class="first reveal">
+    <div class="t">
+      <span class="eyebrow">Official Stage &amp; Screen Partner</span>
+      <h3>JCI Cebu 79th Induction and Turnover Ceremonies</h3>
+      <p>We are building the full stage for JCI Cebu's 79th year: the LED wall, projection, trusses and lights, from the benefit concert to the last dance.</p>
+      <dl><dt>Date</dt><dd>Saturday, 12 December 2026</dd><dt>Venue</dt><dd>Mactan Expo, Lapu-Lapu City</dd><dt>Program</dt><dd>5:00 PM Benefit Concert · 7:00 PM Induction</dd></dl>
+    </div>
+    <div class="ph"><span>Photos and video from the night go here after 12 December</span></div>
+  </div>
+</div></section>
+
+<section id="how"><div class="wrap">
+  <div class="head reveal"><span class="eyebrow">How it works</span><h2 class="disp">From plan to <span class="gold">show night.</span></h2></div>
+  <ol class="steps">
+    <li class="reveal"><h3>Plan it here</h3><p>Use the stage planner and send us your plan with your date and venue.</p></li>
+    <li class="reveal"><h3>Site visit</h3><p>We check the venue's power, ceiling height and load-in, then confirm the quote.</p></li>
+    <li class="reveal"><h3>Setup and rehearsal</h3><p>Our crew builds the stage and runs your videos and cues with your host.</p></li>
+    <li class="reveal"><h3>Show night</h3><p>A technician stays at the controls from doors open to the last song.</p></li>
+  </ol>
+  <div class="go" style="margin-top:44px"><p style="font-size:20px;font-weight:700">Have a date? Start with the planner.</p><a class="cta" href="#planner">Plan your stage</a></div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <div><b style="color:var(--tx)">Veloso Visuals</b> · Stage, LED and projection · Cebu<p class="sample">Sample website by TechSocials. Contact details are added once the owner confirms them.</p></div>
+  <div>Website by <a href="https://mecm.netlify.app">TechSocials</a></div>
+</div></footer>
+
+<dialog id="qd" aria-labelledby="qdh">
+  <form class="dlg" method="dialog" id="qf" style="position:relative">
+    <button class="x" value="cancel" aria-label="Close" formnovalidate>&times;</button>
+    <h3 id="qdh">Send your stage plan</h3>
+    <div class="two">
+      <label>Your name<input name="Name" required autocomplete="name"></label>
+      <label>Mobile<input name="Mobile" required type="tel" inputmode="tel" autocomplete="tel" placeholder="09XX XXX XXXX"></label>
+    </div>
+    <div class="two">
+      <label>Event date<input name="Date" type="date" required></label>
+      <label>Venue name<input name="Venue name" placeholder="e.g. Nustar Grand Ballroom"></label>
+    </div>
+    <div class="sum" id="qs"></div>
+    <div class="row"><button class="cta ghost" type="button" id="qc">Copy plan</button><button class="cta" type="submit" value="send" id="qsend">Text it to us</button></div>
+    <p class="fine" id="qn">Sample site: the request opens your messaging app with your plan filled in.</p>
+  </form>
+</dialog>
+
+<script>
+(() => {
+  const PHONE = ''; // owner's mobile, once confirmed
+  const EVENTS = { Wedding: { look: 'Grand', text: 'A & J', sub: 'FOREVER STARTS TONIGHT' }, Debut: { look: 'Grand', text: 'HAPPY 18TH', sub: 'A NIGHT TO REMEMBER' },
+    'Corporate gala': { look: 'Clean', text: 'ANNUAL GALA', sub: 'THANK YOU FOR A GREAT YEAR' }, Induction: { look: 'Grand', text: 'INDUCTION NIGHT', sub: 'OATH · TURNOVER · CELEBRATION' },
+    Concert: { look: 'Concert', text: 'LIVE', sub: 'ONE NIGHT ONLY' }, Conference: { look: 'Clean', text: 'KEYNOTE', sub: 'SLIDES · LIVE CAMERA' } };
+  const VENUES = { 'Function room': { cap: 4.5, out: false }, 'Hotel ballroom': { cap: 8, out: false }, 'Convention hall': { cap: 12, out: false }, 'Garden / outdoor': { cap: 10, out: true } };
+  const LOOKS = { Clean: 4, Grand: 8, Concert: 12 };
+  const ADDS = [['side', 'Side screens', true], ['map', 'Projection mapping', true], ['heads', 'Moving heads', true], ['up', 'Uplighting', true], ['cam', 'Live camera feed', false], ['haze', 'Haze', false]];
+  const $ = s => document.querySelector(s);
+  const pills = (el, name, list, on) => list.forEach(v => { el.insertAdjacentHTML('beforeend', `<label><input type="radio" name="${name}" value="${v}"${v === on ? ' checked' : ''}><span>${v}</span></label>`); });
+  pills($('#ev'), 'ev', Object.keys(EVENTS), 'Debut');
+  pills($('#vn'), 'vn', Object.keys(VENUES), 'Hotel ballroom');
+  pills($('#lk'), 'lk', Object.keys(LOOKS), 'Grand');
+  ADDS.forEach(([k, t, on]) => $('#ad').insertAdjacentHTML('beforeend', `<label><input type="checkbox" name="${k}"${on ? ' checked' : ''}>${t}</label>`));
+
+  const half = x => Math.round(x * 2) / 2;
+  function plan() {
+    const f = $('#pf'), ev = f.ev.value, vn = f.vn.value, lk = f.lk.value, g = +$('#gs').value, V = VENUES[vn];
+    const a = Object.fromEntries(ADDS.map(([k]) => [k, f[k].checked]));
+    // LED width grows with the room: the back row sits ~ sqrt(guests) * 1.3 m away; width ~ 1/4 of that distance
+    const back = Math.max(8, Math.sqrt(g) * 1.3 + (V.out ? 6 : 0));
+    let w = Math.min(V.cap, Math.max(3, half(back / 4 + (lk === 'Concert' ? 1 : 0))));
+    let h = Math.max(2, half(w * 9 / 16));
+    const panels = (w / 0.5) * (h / 0.5);
+    const pitch = V.out ? 'P4.8 outdoor' : back > 26 ? 'P3.9 indoor' : 'P2.6 indoor';
+    const sideW = a.side ? Math.max(1, half(w / 6)) : 0, sideH = a.side ? half(h * 0.8) : 0;
+    const stageW = Math.ceil(w + 4 + (a.side ? 2 * sideW + 2 : 0)), stageD = g > 600 ? 8 : 6;
+    const heads = a.heads ? LOOKS[lk] + 2 * Math.floor(g / 400) : 0;
+    const ups = a.up ? 8 + 2 * Math.floor(g / 100) : 0;
+    const crew = 3 + Math.ceil(panels / 40) + (a.map ? 1 : 0) + (a.cam ? 2 : 0);
+    const ingress = Math.ceil(3 + panels / 48 + (a.map ? 1 : 0));
+    return { ev, vn, lk, g, a, w, h, panels, pitch, sideW, sideH, stageW, stageD, heads, ups, crew, ingress, back, V };
+  }
+
+  function draw(p) {
+    const W = 800, H = 460, ground = 382, stageH = 1;
+    const span = p.stageW + 2, s = Math.min(54, (W - 60) / span), cx = W / 2;
+    const m = v => v * s, X = v => cx + m(v), Y = v => ground - m(v);
+    const top = stageH + 0.6 + p.h, trussY = top + 1.3, half = p.stageW / 2;
+    const E = EVENTS[p.ev];
+    let o = `<defs><linearGradient id="pl" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1F4789"/><stop offset=".5" stop-color="#57BCBC"/><stop offset="1" stop-color="#e4c160"/></linearGradient>
+      <linearGradient id="pb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff3c8" stop-opacity=".5"/><stop offset="1" stop-color="#fff3c8" stop-opacity="0"/></linearGradient>
+      <pattern id="pm" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M0 14h28M14 0v28" stroke="#57BCBC" stroke-opacity=".22"/><circle cx="14" cy="14" r="2.6" fill="#e4c160" fill-opacity=".32"/></pattern>
+      <pattern id="pt" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M0 10L10 0M0 0l10 10" stroke="#8796ab" stroke-width="1"/></pattern>
+      <radialGradient id="ph"><stop offset="0" stop-color="#cfd8e6" stop-opacity=".16"/><stop offset="1" stop-color="#cfd8e6" stop-opacity="0"/></radialGradient></defs>
+      <rect width="${W}" height="${H}" fill="${p.V.out ? '#040913' : '#03060c'}"/>`;
+    if (p.V.out) o += `<g fill="#fff" opacity=".5"><circle cx="60" cy="40" r="1.2"/><circle cx="180" cy="22" r="1"/><circle cx="640" cy="30" r="1.3"/><circle cx="740" cy="60" r="1"/><circle cx="420" cy="18" r="1"/></g>`;
+    else if (p.a.map) o += `<rect width="${W}" height="${ground}" fill="url(#pm)"/><text x="18" y="26" fill="#57BCBC" font-size="11" font-weight="700" letter-spacing="1.6" font-family="Plus Jakarta Sans,sans-serif">PROJECTION MAPPING · BACK WALL</text>`;
+    if (p.a.haze) o += `<ellipse cx="${cx}" cy="${Y(top * 0.6)}" rx="${W * 0.45}" ry="${m(top * 0.55)}" fill="url(#ph)"/>`;
+    // truss
+    const tw = Math.max(8, m(0.3));
+    o += `<rect x="${X(-half)}" y="${Y(trussY)}" width="${m(p.stageW)}" height="${tw}" fill="url(#pt)" stroke="#8796ab"/>
+      <rect x="${X(-half)}" y="${Y(trussY)}" width="${tw}" height="${m(trussY - stageH)}" fill="url(#pt)" stroke="#8796ab"/>
+      <rect x="${X(half) - tw}" y="${Y(trussY)}" width="${tw}" height="${m(trussY - stageH)}" fill="url(#pt)" stroke="#8796ab"/>`;
+    // beams + heads
+    if (p.heads) { const n = Math.min(p.heads, 14), gap = (p.stageW - 1) / (n - 1 || 1);
+      for (let i = 0; i < n; i++) { const hx = X(-half + 0.5 + i * gap), y0 = Y(trussY) + tw, bw = m(0.9);
+        o += `<polygon points="${hx},${y0} ${hx - bw},${Y(stageH)} ${hx + bw},${Y(stageH)}" fill="url(#pb)" opacity="${p.lk === 'Concert' ? .9 : .6}"/><rect x="${hx - 7}" y="${y0}" width="14" height="9" rx="2" fill="#e4c160"/>`; } }
+    // LED wall
+    const ly = Y(top), lx = X(-p.w / 2);
+    o += `<rect x="${lx}" y="${ly}" width="${m(p.w)}" height="${m(p.h)}" rx="2" fill="url(#pl)"/>`;
+    const fs = Math.max(9, Math.min(m(p.h) * 0.2, m(p.w) * 0.86 / (E.text.length * 0.9)));
+    o += `<text x="${cx}" y="${ly + m(p.h) / 2}" text-anchor="middle" font-family="Unbounded,sans-serif" font-weight="800" font-size="${fs.toFixed(1)}" fill="#fff">${E.text}</text>
+      <text x="${cx}" y="${ly + m(p.h) / 2 + fs * 0.95}" text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-weight="700" font-size="${Math.min(fs * 0.34, m(p.w) * 0.88 / (E.sub.length * 0.78)).toFixed(1)}" letter-spacing="1.5" fill="#ffffffcc">${E.sub}</text>`;
+    // side screens
+    if (p.a.side) { const sy = Y(stageH + 0.6 + p.sideH + (p.h - p.sideH) / 2), off = p.w / 2 + 1;
+      o += `<rect x="${X(-off - p.sideW)}" y="${sy}" width="${m(p.sideW)}" height="${m(p.sideH)}" rx="2" fill="url(#pl)" opacity=".8"/><rect x="${X(off)}" y="${sy}" width="${m(p.sideW)}" height="${m(p.sideH)}" rx="2" fill="url(#pl)" opacity=".8"/>`;
+      if (p.a.cam) o += `<text x="${X(off + p.sideW / 2)}" y="${sy + m(p.sideH) / 2 + 4}" text-anchor="middle" font-size="10" font-weight="800" fill="#fff" font-family="Plus Jakarta Sans,sans-serif">LIVE</text><text x="${X(-off - p.sideW / 2)}" y="${sy + m(p.sideH) / 2 + 4}" text-anchor="middle" font-size="10" font-weight="800" fill="#fff" font-family="Plus Jakarta Sans,sans-serif">LIVE</text>`; }
+    // stage deck
+    o += `<rect x="${X(-half)}" y="${Y(stageH)}" width="${m(p.stageW)}" height="${m(stageH)}" fill="#1b2434"/><rect x="${X(-half)}" y="${Y(stageH)}" width="${m(p.stageW)}" height="3" fill="#e4c160"/>
+      <text x="${cx}" y="${Y(stageH / 2) + 4}" text-anchor="middle" font-size="11" font-weight="700" letter-spacing="2" fill="#c4cfdf" font-family="Plus Jakarta Sans,sans-serif">STAGE ${p.stageW} × ${p.stageD} m</text>`;
+    // person for scale
+    const px = X(-p.w / 2 - 0.2) - 4, py = Y(stageH);
+    o += `<g fill="#cfd8e6" opacity=".8"><circle cx="${px}" cy="${py - m(1.55)}" r="${m(0.12)}"/><rect x="${px - m(0.17)}" y="${py - m(1.42)}" width="${m(0.34)}" height="${m(1.42)}" rx="${m(0.12)}"/></g>`;
+    // uplights
+    if (p.ups) { const n = Math.min(p.ups, 16); for (let i = 0; i < n; i++) o += `<circle cx="${30 + i * (W - 60) / (n - 1)}" cy="${ground + 22}" r="4.5" fill="${i % 2 ? '#57BCBC' : '#e4c160'}"/>`; }
+    // dimension for LED
+    const dy = ly - 12;
+    o += `<g stroke="#e4c160" stroke-width="1.2"><path d="M${lx} ${dy}h${m(p.w)}M${lx} ${dy - 5}v10M${lx + m(p.w)} ${dy - 5}v10"/></g>
+      <text x="${cx}" y="${dy - 7}" text-anchor="middle" font-size="12" font-weight="800" fill="#f6e3a1" font-family="Plus Jakarta Sans,sans-serif">LED ${p.w} × ${p.h} m</text>
+      <g fill="#93a3ba" font-size="11" font-weight="600" font-family="Plus Jakarta Sans,sans-serif"><text x="18" y="${H - 14}">Front view · person shown for scale</text><text x="${W - 18}" y="${H - 14}" text-anchor="end">${p.vn} · ${p.g} guests</text></g>`;
+    $('#st').innerHTML = '<title id="stt">Suggested stage layout</title>' + o;
+  }
+
+  function kit(p) {
+    const items = [[`${p.w} × ${p.h} m`, `Main LED wall · ${p.panels} panels`], [p.pitch.split(' ')[0], `Screen pitch · ${p.pitch.split(' ')[1]} rated`],
+      [`${p.stageW} × ${p.stageD} m`, 'Stage deck + box truss'],
+      [p.a.side ? `${p.sideW} × ${p.sideH} m` : 'None', p.a.side ? (p.a.cam ? 'Two side screens · live camera' : 'Two side screens') : 'Side screens'],
+      [p.heads ? `${p.heads}` : 'None', 'Moving heads'], [p.ups ? `${p.ups}` : 'None', 'Uplights'],
+      [p.a.map ? (p.V.out ? 'Facade' : 'Back wall') : 'None', 'Projection mapping'],
+      [`${p.crew} crew`, 'Including a show technician'], [`${p.ingress} hours`, 'Setup before doors open']];
+    $('#kit').innerHTML = items.map(([b, s]) => `<div><b>${b}</b><span>${s}</span></div>`).join('');
+    $('#vs').textContent = `Back row about ${Math.round(p.back)} m from the screen`;
+  }
+
+  let cur;
+  function update() { cur = plan(); $('#go').textContent = cur.g; draw(cur); kit(cur); }
+  $('#pf').addEventListener('input', e => {
+    if (e.target.name === 'ev') { const l = EVENTS[e.target.value].look; $(`#lk input[value="${l}"]`).checked = true; }
+    update();
+  });
+  update();
+
+  // quote
+  const dlg = $('#qd'), ref = () => 'VV-' + Math.random().toString(36).slice(2, 6).toUpperCase();
+  let R = '';
+  const lines = () => {
+    const p = cur, f = $('#qf'), on = ADDS.filter(([k]) => p.a[k]).map(([, t]) => t).join(', ') || 'none';
+    const who = ['Name', 'Mobile', 'Date', 'Venue name'].map(k => f[k].value.trim() ? `${k}: ${f[k].value.trim()}` : '').filter(Boolean);
+    return [`Veloso Visuals stage plan ${R}`, ...who, `Event: ${p.ev} · ${p.vn} · ${p.g} guests · ${p.lk} look`,
+      `LED wall ${p.w} × ${p.h} m (${p.panels} panels, ${p.pitch})`, `Stage ${p.stageW} × ${p.stageD} m with box truss`,
+      `Add-ons: ${on}`, `Moving heads ${p.heads || 0} · Uplights ${p.ups || 0}`];
+  };
+  const refresh = () => { $('#qs').textContent = lines().join('\n'); };
+  $('#qbtn').addEventListener('click', () => { R = ref(); refresh(); dlg.showModal(); });
+  $('#qf').addEventListener('input', refresh);
+  $('#qc').addEventListener('click', async () => { try { await navigator.clipboard.writeText(lines().join('\n')); $('#qc').textContent = 'Copied'; setTimeout(() => $('#qc').textContent = 'Copy plan', 1600); } catch { $('#qc').textContent = 'Select the text above'; } });
+  $('#qf').addEventListener('submit', e => {
+    if (e.submitter && e.submitter.value === 'send') { e.preventDefault(); if (!$('#qf').reportValidity()) return;
+      location.href = 'sms:' + PHONE + '?&body=' + encodeURIComponent(lines().join('\n')); }
+  });
+  dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
+
+  // reveal
+  const els = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) { const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .08 }); els.forEach(el => io.observe(el)); }
+  else els.forEach(el => el.classList.add('in'));
+})();
+</script>
+</body>
+</html>
