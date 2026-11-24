@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>AdenZ Travel · Vietnam DMC · Build your Vietnam journey</title>
+<meta name="description" content="Build a Vietnam itinerary in minutes: choose your stops, days and hotel level, see an indicative price, and send it to AdenZ Travel for a confirmed quotation.">
+<meta name="theme-color" content="#183443">
+<link rel="icon" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/app.css">
+<style>
+.hero{position:relative;color:#fff;isolation:isolate}
+.hero .bg{position:absolute;inset:0;z-index:-1;background:#183443}
+.hero .bg img{width:100%;height:100%;object-fit:cover}
+.hero .bg:after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(15,35,46,.9) 0%,rgba(15,35,46,.66) 46%,rgba(15,35,46,.2) 100%),linear-gradient(0deg,rgba(15,35,46,.72),transparent 46%)}
+.hero .wrap{padding-top:86px;padding-bottom:150px}
+.hero h1{font-size:clamp(40px,6.6vw,78px);max-width:13ch;margin-top:16px}
+.hero h1 em{font-style:italic;color:#f0d9a8}
+.hero p.lead{font-size:clamp(17px,1.5vw,20px);max-width:56ch;margin-top:20px;color:#e6eef0}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.hero .reply{margin-top:16px;font-size:14px;color:#cfe0e4}
+/* quick start */
+.quick{position:relative;margin-top:-92px;z-index:2}
+.quick form{background:#fff;border-radius:24px;box-shadow:var(--shadow);border:1px solid var(--line);padding:22px;display:grid;grid-template-columns:1.5fr .8fr .9fr 1fr auto;gap:14px;align-items:end}
+.quick h2{grid-column:1/-1;font-size:22px}
+@media (max-width:900px){.quick form{grid-template-columns:1fr 1fr}.quick form .btn{grid-column:1/-1}}
+@media (max-width:520px){.quick form{grid-template-columns:1fr}}
+section{padding:78px 0}
+.sec-h{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:30px}
+.sec-h h2{font-size:clamp(30px,3.6vw,46px);max-width:18ch;margin-top:10px}
+.sec-h p{max-width:46ch;color:var(--mute)}
+/* values */
+.vals{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:44px}
+.vals div{border-top:2px solid var(--gold);padding-top:14px}
+.vals b{font-family:var(--serif);font-size:24px;font-weight:500;display:block}
+.vals span{font-size:14.5px;color:var(--mute)}
+@media (max-width:760px){.vals{grid-template-columns:1fr 1fr}}
+/* journeys */
+.jgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media (max-width:980px){.jgrid{grid-template-columns:1fr 1fr}}@media (max-width:640px){.jgrid{grid-template-columns:1fr}}
+.j{display:flex;flex-direction:column;overflow:hidden;transition:transform .2s,box-shadow .2s}
+.j:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.j .ph{position:relative;aspect-ratio:16/10;background:var(--soft);display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:2px}
+.j .ph img{width:100%;height:100%;object-fit:cover;min-width:0}
+.j .ph .tag{position:absolute;left:12px;top:12px;background:#fff}
+.j .bd{padding:18px 18px 20px;display:flex;flex-direction:column;gap:9px;flex:1}
+.j h3{font-size:25px}
+.j .route{font-size:14px;font-weight:600;color:var(--green)}
+.j .foot{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:auto;padding-top:12px;border-top:1px solid var(--line)}
+.j .from{font-size:13px;color:var(--mute)}.j .from b{display:block;font-size:19px;color:var(--ink)}
+/* how */
+.how{background:var(--navy);color:#fff}
+.how .eyebrow{color:#e6c88f}
+.how .sec-h p{color:#c4d3d8}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media (max-width:820px){.steps{grid-template-columns:1fr}}
+.steps article{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:var(--r);padding:24px}
+.steps .n{font-family:var(--serif);font-size:44px;color:#e6c88f;line-height:1}
+.steps h3{font-size:23px;margin:12px 0 8px}
+.steps p{color:#cfdbe0;font-size:15.5px}
+.partner{margin-top:26px;display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:center;background:#fff;color:var(--ink);border-radius:24px;padding:28px}
+@media (max-width:820px){.partner{grid-template-columns:1fr}}
+.partner h3{font-size:30px;margin:10px 0}
+.partner ul{margin:14px 0 0;padding:0;list-style:none;display:grid;gap:9px}
+.partner li{padding-left:26px;position:relative}
+.partner li:before{content:"";position:absolute;left:0;top:8px;width:12px;height:12px;border-radius:50%;background:var(--green)}
+.sheet{border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);font-size:13px}
+.sheet .hd{background:var(--soft);padding:12px 14px;display:flex;justify-content:space-between;align-items:center;font-weight:700}
+.sheet .hd span{border:1.5px dashed var(--green);border-radius:8px;padding:5px 9px;color:var(--green);font-size:12px}
+.sheet .ln{display:flex;gap:10px;padding:10px 14px;border-top:1px solid var(--line)}
+.sheet .ln b{color:var(--green);min-width:44px}
+.sheet .tot{display:flex;justify-content:space-between;padding:12px 14px;border-top:1px solid var(--line);font-weight:700;background:#fffaf0}
+/* destinations */
+.region{margin-top:34px}
+.region h3{font-size:26px;display:flex;align-items:baseline;gap:12px}
+.region h3 small{font:600 13px var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.dgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:14px}
+@media (max-width:760px){.dgrid{grid-template-columns:1fr}}
+.d{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:4/3;color:#fff;text-decoration:none;display:block}
+.d img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.d:hover img{transform:scale(1.05)}
+.d:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(15,35,46,.86),rgba(15,35,46,0) 58%)}
+.d div{position:absolute;left:16px;right:16px;bottom:14px;z-index:1}
+.d small{font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#f0d9a8}
+.d b{display:block;font-family:var(--serif);font-weight:500;font-size:27px;line-height:1.1}
+.d span{font-size:13.5px;color:#dbe7ea}
+/* faq + contact */
+.faq{max-width:820px}
+.faq details{border-bottom:1px solid var(--line);padding:16px 0}
+.faq summary{font-weight:700;font-size:17.5px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary:after{content:"+";color:var(--green);font-size:22px;line-height:1}
+.faq details[open] summary:after{content:"–"}
+.faq p{margin-top:10px;color:var(--mute)}
+.close{background:var(--soft)}
+.close .box{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.close h2{font-size:clamp(28px,3.4vw,42px);max-width:17ch}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="logo" href="./" aria-label="AdenZ Travel, home"><img src="img/logo.png" alt="AdenZ Travel" width="907" height="243"></a>
+  <nav class="nav" aria-label="Main"><a href="#journeys">Journeys</a><a href="#destinations">Destinations</a><a href="#partners">For partners</a><a href="#faq">Questions</a><a class="btn pri sm" href="plan/">Build a trip</a></nav>
+</div></header>
+
+<main>
+<div class="hero">
+  <div class="bg"><img src="img/hoian.jpg" alt="" width="1200" height="798" fetchpriority="high"></div>
+  <div class="wrap">
+    <span class="eyebrow" style="color:#f0d9a8">Vietnam Destination Management</span>
+    <h1 class="serif">Vietnam, built around <em>your guests.</em></h1>
+    <p class="lead">AdenZ Travel is a Vietnam DMC for travel advisors, tour operators and private groups. Shape the route yourself, see an indicative price as you go, and send it to us for a confirmed quotation.</p>
+    <div class="cta"><a class="btn gold" href="plan/">Build your Vietnam trip</a><a class="btn ghost" href="#journeys">Start from a sample journey</a></div>
+    <p class="reply">Most quotation requests receive a reply within 12–24 hours.</p>
+  </div>
+</div>
+
+<div class="wrap quick">
+  <form id="quick" action="plan/" method="get">
+    <h2 class="serif">Where would your guests like to begin?</h2>
+    <label class="field">Start from<select name="j" id="qj"></select></label>
+    <label class="field">Travellers<input name="p" type="number" min="1" max="60" value="2" inputmode="numeric"></label>
+    <label class="field">Hotel level<select name="l"><option value="3">3 star</option><option value="4" selected>4 star</option><option value="5">5 star</option></select></label>
+    <label class="field">Arrival date<input name="s" type="date"></label>
+    <button class="btn pri" type="submit">Open the builder</button>
+  </form>
+</div>
+
+<section style="padding-top:56px">
+  <div class="wrap">
+    <span class="eyebrow">Why international partners work with us</span>
+    <div class="vals">
+      <div><b>Private</b><span>Tailor-made journeys rather than one-size-fits-all series products.</span></div>
+      <div><b>Flexible</b><span>Adaptable by market, budget, comfort level and travel pace.</span></div>
+      <div><b>Responsive</b><span>Clear quotation flow, practical coordination and local support.</span></div>
+      <div><b>Trusted</b><span>Designed for international guests, travel advisors and overseas partners.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="journeys" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-h"><div><span class="eyebrow">Signature journeys</span><h2 class="serif">Polished starting points, ready to make your own.</h2></div>
+      <p>Every journey opens in the builder. Change the stops, the days, the hotel level and the experiences, then send it to us.</p></div>
+    <div class="jgrid" id="jgrid"></div>
+  </div>
+</section>
+
+<section class="how" id="partners">
+  <div class="wrap">
+    <div class="sec-h"><div><span class="eyebrow">How it works</span><h2 class="serif">From first idea to a proposal your client can read.</h2></div>
+      <p>Built for travel advisors and tour operators who need a Vietnam programme today, not next week.</p></div>
+    <div class="steps">
+      <article><div class="n">1</div><h3 class="serif">Shape the route</h3><p>Start from a signature journey or a blank page. Add days, move them, change the city and tick the experiences for each one.</p></article>
+      <article><div class="n">2</div><h3 class="serif">See it priced</h3><p>An indicative price per person follows your group size and hotel level, with the transfers and flights between stops flagged.</p></article>
+      <article><div class="n">3</div><h3 class="serif">Send or present it</h3><p>Send the plan to AdenZ on WhatsApp for a confirmed quotation, share a link, or print a client proposal under your own agency name.</p></article>
+    </div>
+    <div class="partner">
+      <div><span class="eyebrow">For travel partners</span>
+        <h3 class="serif">Your logo, your selling price, our ground handling.</h3>
+        <p class="mute">Switch on agent mode in the builder and the proposal carries your agency’s name and contact details, with your markup already in the price. Your client sees your brand.</p>
+        <ul><li>Client-ready proposal as a PDF, day by day with photos</li><li>A link that reopens the same plan for changes</li><li>Net price for you, selling price for your client</li></ul>
+        <a class="btn pri" style="margin-top:20px" href="plan/?agent=1">Try it as a travel agent</a></div>
+      <div class="sheet" aria-hidden="true">
+        <div class="hd">Central Vietnam, 5 days<span>YOUR AGENCY LOGO</span></div>
+        <div class="ln"><b>Day 1</b><span>Arrive Da Nang, transfer to Hue. Dinner of Hue specialties.</span></div>
+        <div class="ln"><b>Day 2</b><span>Imperial City, Thien Mu Pagoda, Khai Dinh’s Tomb. On to Da Nang.</span></div>
+        <div class="ln"><b>Day 3</b><span>Coconut forest basket boat, Hoi An old town, night market.</span></div>
+        <div class="ln"><b>Day 4</b><span>Ba Na Hills and the Golden Bridge. Seafood farewell dinner.</span></div>
+        <div class="tot"><span>Selling price per person</span><span>Set by you</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="destinations">
+  <div class="wrap">
+    <div class="sec-h"><div><span class="eyebrow">Explore Vietnam</span><h2 class="serif">Three regions, distinct moods, one remarkable destination.</h2></div>
+      <p>The heritage and scenery of the North, the elegance of the Central region, and the energy and tropical ease of the South.</p></div>
+    <div id="regions"></div>
+  </div>
+</section>
+
+<section id="faq" style="padding-top:10px">
+  <div class="wrap faq">
+    <span class="eyebrow">Common questions</span>
+    <h2 class="serif" style="font-size:clamp(28px,3.4vw,42px);margin:10px 0 14px">From inbound partners and Vietnam travel buyers</h2>
+    <details><summary>Do you work as a Vietnam DMC for overseas travel advisors and tour operators?</summary><p>Yes. AdenZ Travel works as a Vietnam DMC for international travel advisors, overseas tour operators, boutique agencies, faith-based organizers and direct clients who need reliable local ground handling and tailor-made Vietnam programs.</p></details>
+    <details><summary>Can you customize itineraries for different markets?</summary><p>Yes. We can adapt routing, pace, hotel level, dining style, guide language and trip focus according to the market and guest profile.</p></details>
+    <details><summary>Is the price in the builder final?</summary><p>No. It is an indicative price so you can plan. Rates are subject to reconfirmation based on travel dates, final hotel level, group size and supplier availability, and we reply to most requests within 12–24 hours.</p></details>
+  </div>
+</section>
+
+<section class="close">
+  <div class="wrap box">
+    <h2 class="serif">Have a group in mind? Build it now, or simply ask us.</h2>
+    <div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn pri" href="plan/">Open the trip builder</a><a class="btn wa" id="waBtn" href="#">Chat on WhatsApp</a></div>
+  </div>
+</section>
+</main>
+
+<footer class="site"><div class="wrap">
+  <div class="cols">
+    <div><b style="color:#fff;font-size:17px">AdenZ Travel</b><br>Vietnam DMC · tailor-made tours and ground handling</div>
+    <div>Email: <a href="mailto:cskh@atoztravel.vn">cskh@atoztravel.vn</a><br>WhatsApp: <a href="https://wa.me/84938146118">+84 938 146 118</a></div>
+    <div><a href="plan/">Trip builder</a> · <a href="owner/">Team desk</a></div>
+  </div>
+  <p class="sample">Sample website by TechSocials, prepared for AdenZ Travel. Journeys, destinations and starting prices are taken from atoztravel.vn; builder prices use a sample rate card until AdenZ sets its own.</p>
+</div></footer>
+
+<script src="desk.js"></script>
+<script src="assets/data.js"></script>
+<script>
+(function () {
+  const A = window.AZ, $ = s => document.querySelector(s);
+  if (window.TSKDesk) TSKDesk.visit('adenz-travel');
+  // quick start options
+  $('#qj').innerHTML = '<option value="">A blank page</option>' + A.JOURNEYS.map(j => `<option value="${j.id}"${j.id === 'highlights10' ? ' selected' : ''}>${j.name}</option>`).join('');
+  $('#quick').addEventListener('submit', e => { const f = e.target; [...f.elements].forEach(el => { if (el.name && !el.value) el.disabled = true; }); setTimeout(() => [...f.elements].forEach(el => el.disabled = false), 400); });
+  // journeys
+  const uniq = plan => [...new Set(plan.map(d => d[0]))];
+  $('#jgrid').innerHTML = A.JOURNEYS.map(j => {
+    const cs = uniq(j.plan).slice(0, 3), from = j.from || A.estimate(j.days, 2, j.level);
+    return `<article class="card j"><div class="ph">${cs.map(c => `<img src="img/${A.CITIES[c].img}-s.jpg" alt="${A.CITIES[c].name}" loading="lazy" width="640" height="420">`).join('')}<span class="tag">${j.tag}</span></div>
+      <div class="bd"><h3 class="serif">${j.name}</h3><div class="route">${j.route}</div><p class="mute" style="font-size:15px">${j.note}</p>
+      <div class="foot"><div class="from">${j.from ? 'From' : 'Indicative, from'}<b>${A.usd(from)}</b>per person</div><a class="btn pri sm" href="plan/?j=${j.id}">Customize</a></div></div></article>`;
+  }).join('') + (r => `<article class="card j"><div class="ph"><img src="img/ninhbinh-s.jpg" alt="Northern Vietnam highlands" loading="lazy" width="640" height="360"><span class="tag">${r.tag}</span></div>
+      <div class="bd"><h3 class="serif">${r.name}</h3><div class="route">${r.route}</div><p class="mute" style="font-size:15px">${r.note}</p>
+      <div class="foot"><div class="from">From<b>${A.usd(r.from)}</b>per person</div><a class="btn line sm" href="https://wa.me/${A.WA}?text=${encodeURIComponent('Hello AdenZ Travel, I would like to ask about the ' + r.name + '.')}">Ask us</a></div></div></article>`)(A.BY_REQUEST);
+  // destinations by region
+  const moods = { North: 'Heritage & Scenery', Central: 'Elegance & Culture', South: 'Energy & Tropical Escape' };
+  $('#regions').innerHTML = Object.keys(moods).map(r => `<div class="region"><h3 class="serif">${r}ern Vietnam <small>${moods[r]}</small></h3><div class="dgrid">${
+    Object.entries(A.CITIES).filter(([, c]) => c.region === r).map(([id, c]) => `<a class="d" href="plan/?c=${id}"><img src="img/${c.img}-s.jpg" alt="${c.name}" loading="lazy" width="640" height="420"><div><small>${c.tag}</small><b>${c.name}</b><span>${c.blurb}</span></div></a>`).join('')
+  }</div></div>`).join('');
+  $('#waBtn').href = 'https://wa.me/' + A.WA + '?text=' + encodeURIComponent('Hello AdenZ Travel, I have a group in mind for Vietnam.');
+})();
+</script>
+</body>
+</html>
